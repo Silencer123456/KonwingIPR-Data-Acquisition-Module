@@ -26,8 +26,11 @@ public class Main extends Application {
 
         BorderPane root = new BorderPane();
 
+        BorderPane centerPane = new BorderPane();
+        root.setCenter(centerPane);
+
         FXMLLoader listLoader = new FXMLLoader(getClass().getResource("/list.fxml"));
-        root.setCenter(listLoader.load());
+        centerPane.setCenter(listLoader.load());
         ListController listController = listLoader.getController();
 
         FXMLLoader detailLoader = new FXMLLoader(getClass().getResource("/detail.fxml"));

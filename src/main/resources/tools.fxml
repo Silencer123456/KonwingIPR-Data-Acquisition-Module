@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="knowingipr.dam.controller.ToolsController">
+
+    <columnConstraints>
+        <ColumnConstraints halignment="RIGHT" hgrow="NEVER" />
+        <ColumnConstraints halignment="RIGHT" hgrow="NEVER" />
+      <ColumnConstraints halignment="RIGHT" hgrow="NEVER" />
+      <ColumnConstraints halignment="LEFT" hgrow="ALWAYS" />
+    </columnConstraints>
+
+    <Label text="Source directory" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+    <Label text="Target directory" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+
+    <TextField fx:id="sourceDirectoryTextField" GridPane.columnIndex="3" />
+    <TextField fx:id="targetDirectoryTextField" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+   <Button mnemonicParsing="false" onAction="#onXmlToJsonButtonClick" text="XML -&gt; JSON" GridPane.columnIndex="3" GridPane.rowIndex="2" fx:id="xmlToJsonButton" />
+   <Button fx:id="zipExtractButton" mnemonicParsing="false" onAction="#onZipExtractButtonClick" text="ZIP extract" GridPane.rowIndex="2" />
+
+
+    <padding>
+        <Insets bottom="10" left="10" right="10" top="10" />
+    </padding>
+   <rowConstraints>
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+   </rowConstraints>
+</GridPane>
