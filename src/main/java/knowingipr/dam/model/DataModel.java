@@ -6,9 +6,14 @@ import javafx.beans.property.SimpleObjectProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
+import java.util.List;
+
 public class DataModel {
 
-    public DataModel() {
+    private DataSourceDataAccessor dataAccessor;
+
+    public DataModel(DataSourceDataAccessor dataAccessor) {
+        this.dataAccessor = dataAccessor;
         loadData();
     }
 
@@ -38,11 +43,12 @@ public class DataModel {
     }
 
     public void loadData() {
+        sourcesList.setAll(dataAccessor.load());
         // mock data
-        sourcesList.setAll(
+        /*sourcesList.setAll(
                 new DataSource("test1", "this is test 1"),
                 new DataSource("test2", "this is test 2"),
                 new DataSource("test3", "this is test 3")
-        );
+        );*/
     }
 }

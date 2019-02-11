@@ -1,15 +1,48 @@
 package knowingipr.dam.model;
 
+import javafx.beans.property.IntegerProperty;
+import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
+
+import java.util.Date;
 
 public class DataSource {
     private final StringProperty name = new SimpleStringProperty();
     private final StringProperty description = new SimpleStringProperty();
+    private final StringProperty url = new SimpleStringProperty();
+    private final StringProperty schemaPath = new SimpleStringProperty();
+    private final StringProperty mappingPath = new SimpleStringProperty();
+    private final StringProperty licenceType = new SimpleStringProperty();
+    private final StringProperty licencePath = new SimpleStringProperty();
+    private final StringProperty categoryType = new SimpleStringProperty();
+    private StringProperty dateLastUpdated = new SimpleStringProperty();
 
-    public DataSource(String name, String description) {
+    private final IntegerProperty updateIntervalDays = new SimpleIntegerProperty();
+
+    /**
+     * Flag indicating if the current DataSource record is present in the source database.
+     */
+    private boolean inSourceDb;
+
+    public DataSource(String name, String description, String url, String schemaPath, String mappingPath, String licenceType,
+                      String licencePath, String categoryType) {
         setName(name);
         setDescription(description);
+        setUrl(url);
+        setSchemaPath(schemaPath);
+        setMappingPath(mappingPath);
+        setLicencePath(licencePath);
+        setLicenceType(licenceType);
+        setCategoryType(categoryType);
+    }
+
+    public boolean isInSourceDb() {
+        return inSourceDb;
+    }
+
+    public void setInSourceDb(boolean inSourceDb) {
+        this.inSourceDb = inSourceDb;
     }
 
     public String getName() {
@@ -34,5 +67,97 @@ public class DataSource {
 
     public void setDescription(String description) {
         this.description.set(description);
+    }
+
+    public String getUrl() {
+        return url.get();
+    }
+
+    public StringProperty urlProperty() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url.set(url);
+    }
+
+    public String getSchemaPath() {
+        return schemaPath.get();
+    }
+
+    public StringProperty schemaPathProperty() {
+        return schemaPath;
+    }
+
+    public void setSchemaPath(String schemaPath) {
+        this.schemaPath.set(schemaPath);
+    }
+
+    public String getMappingPath() {
+        return mappingPath.get();
+    }
+
+    public StringProperty mappingPathProperty() {
+        return mappingPath;
+    }
+
+    public void setMappingPath(String mappingPath) {
+        this.mappingPath.set(mappingPath);
+    }
+
+    public String getLicenceType() {
+        return licenceType.get();
+    }
+
+    public StringProperty licenceTypeProperty() {
+        return licenceType;
+    }
+
+    public void setLicenceType(String licenceType) {
+        this.licenceType.set(licenceType);
+    }
+
+    public String getLicencePath() {
+        return licencePath.get();
+    }
+
+    public StringProperty licencePathProperty() {
+        return licencePath;
+    }
+
+    public void setLicencePath(String licencePath) {
+        this.licencePath.set(licencePath);
+    }
+
+    public String getCategoryType() {
+        return categoryType.get();
+    }
+
+    public StringProperty categoryTypeProperty() {
+        return categoryType;
+    }
+
+    public void setCategoryType(String categoryType) {
+        this.categoryType.set(categoryType);
+    }
+
+    public int getUpdateIntervalDays() {
+        return updateIntervalDays.get();
+    }
+
+    public IntegerProperty updateIntervalDaysProperty() {
+        return updateIntervalDays;
+    }
+
+    public void setUpdateIntervalDays(int updateIntervalDays) {
+        this.updateIntervalDays.set(updateIntervalDays);
+    }
+
+    public StringProperty getDateLastUpdated() {
+        return dateLastUpdated;
+    }
+
+    public void setDateLastUpdated(StringProperty dateLastUpdated) {
+        this.dateLastUpdated = dateLastUpdated;
     }
 }
