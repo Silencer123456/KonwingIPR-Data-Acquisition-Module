@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.geometry.Insets?>
+<GridPane xmlns="http://javafx.com/javafx"
+          xmlns:fx="http://javafx.com/fxml"
+          fx:controller="knowingipr.dam.controller.DetailController">
+
+    <columnConstraints>
+        <ColumnConstraints halignment="RIGHT" hgrow="NEVER"/>
+        <ColumnConstraints halignment="LEFT" hgrow="ALWAYS"/>
+    </columnConstraints>
+
+    <Label text="First Name:" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+    <Label text="Last Name:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+
+    <TextField fx:id="sourceNameTextField" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+    <TextField fx:id="descriptionTextField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+    <padding>
+        <Insets top="10" left="10" right="10" bottom="10"/>
+    </padding>
+
+</GridPane>
