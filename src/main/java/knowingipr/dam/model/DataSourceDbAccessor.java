@@ -9,6 +9,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -44,13 +45,15 @@ public class DataSourceDbAccessor implements DataSourceDataAccessor {
                 String licenceType = resultSet.getString("licenceType");
                 String licenceFilePath = resultSet.getString("licenceFilePath");
                 String categoryType = resultSet.getString("categoryType");
+                int updateInterval = resultSet.getInt("updateIntervalDays");
+                Date dateLastUpdated = resultSet.getDate("dateLastUpdated");
 
-                DataSource dataSource = new DataSource(name, description, url, schemaPath, mappingPath, licenceType, licenceFilePath, categoryType);
+                DataSource dataSource = new DataSource(name, description, url, schemaPath, mappingPath, licenceType, licenceFilePath, categoryType, updateInterval, dateLastUpdated.toString());
 
                 // TODO: Move to data model
-                SourceDbManager sourceDbManager = new SourceDbManager();
+                /*SourceDbManager sourceDbManager = new SourceDbManager();
 
-                MongoDatabase mongoDatabase = sourceDbManager.getMongoDatabase();
+                MongoDatabase mongoDatabase = sourceDbManager.getMongoDatabase();*/
 
                 sourcesList.add(dataSource);
             }

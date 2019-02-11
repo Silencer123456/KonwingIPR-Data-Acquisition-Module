@@ -11,6 +11,7 @@ import javafx.stage.Stage;
 import knowingipr.dam.controller.DetailController;
 import knowingipr.dam.controller.ErrorController;
 import knowingipr.dam.controller.ListController;
+import knowingipr.dam.controller.ToolsController;
 import knowingipr.dam.model.DataModel;
 import knowingipr.dam.model.DataSourceDbAccessor;
 
@@ -32,6 +33,10 @@ public class Main extends Application {
         FXMLLoader listLoader = new FXMLLoader(getClass().getResource("/list.fxml"));
         centerPane.setCenter(listLoader.load());
         ListController listController = listLoader.getController();
+
+        FXMLLoader toolLoader = new FXMLLoader(getClass().getResource("/tools.fxml"));
+        centerPane.setBottom(toolLoader.load());
+        ToolsController toolsController = toolLoader.getController();
 
         FXMLLoader detailLoader = new FXMLLoader(getClass().getResource("/detail.fxml"));
         root.setRight(detailLoader.load());

@@ -26,7 +26,7 @@ public class DataSource {
     private boolean inSourceDb;
 
     public DataSource(String name, String description, String url, String schemaPath, String mappingPath, String licenceType,
-                      String licencePath, String categoryType) {
+                      String licencePath, String categoryType, int updateInterval, String dateLastUpdated) {
         setName(name);
         setDescription(description);
         setUrl(url);
@@ -35,6 +35,8 @@ public class DataSource {
         setLicencePath(licencePath);
         setLicenceType(licenceType);
         setCategoryType(categoryType);
+        setUpdateIntervalDays(updateInterval);
+        setDateLastUpdated(dateLastUpdated);
     }
 
     public boolean isInSourceDb() {
@@ -153,11 +155,19 @@ public class DataSource {
         this.updateIntervalDays.set(updateIntervalDays);
     }
 
-    public StringProperty getDateLastUpdated() {
+    public StringProperty getDateLastUpdatedProperty() {
         return dateLastUpdated;
     }
 
-    public void setDateLastUpdated(StringProperty dateLastUpdated) {
-        this.dateLastUpdated = dateLastUpdated;
+    public String getDateLastUpdated() {
+        return dateLastUpdated.get();
+    }
+
+    public StringProperty dateLastUpdatedProperty() {
+        return dateLastUpdated;
+    }
+
+    public void setDateLastUpdated(String dateLastUpdated) {
+        this.dateLastUpdated.set(dateLastUpdated);
     }
 }
