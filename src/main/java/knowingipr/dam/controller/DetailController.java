@@ -3,10 +3,15 @@ package knowingipr.dam.controller;
 import javafx.beans.binding.Bindings;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import knowingipr.dam.model.DataModel;
+
+import java.awt.*;
+import java.io.File;
+import java.io.IOException;
 
 public class DetailController {
 
@@ -121,5 +126,21 @@ public class DetailController {
         licenceTypeTextField.setDisable(false);
         categoryTypeTextField.setDisable(false);
         updateIntervalTextField.setDisable(false);
+    }
+
+    public void onOpenSchemeFileButton(ActionEvent actionEvent) {
+        try {
+            /*String path = schemeFileLabel.getText();
+            File file = new File(path);
+            if (!file.isAbsolute()) {
+                path = System.getProperty("user.dir") + path;
+            }*/
+
+            Desktop.getDesktop().open(new File(schemeFileLabel.getText()));
+        } catch (IOException e) {
+            Alert alert = new Alert(Alert.AlertType.ERROR, "Path does not exist: " + e.getMessage());
+            alert.showAndWait();
+            e.printStackTrace();
+        }
     }
 }

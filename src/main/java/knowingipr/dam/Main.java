@@ -71,7 +71,7 @@ public class Main extends Application {
         e.printStackTrace(new PrintWriter(errorMsg));
         Stage dialog = new Stage();
         dialog.initModality(Modality.APPLICATION_MODAL);
-        FXMLLoader loader = new FXMLLoader(Main.class.getResource("Error.fxml"));
+        FXMLLoader loader = new FXMLLoader(Main.class.getResource("/error.fxml"));
         try {
             Parent root = loader.load();
             ((ErrorController)loader.getController()).setErrorText(errorMsg.toString());

@@ -21,6 +21,8 @@ public class ToolsController {
     public TextField sourceDirectoryTextField;
     @FXML
     public Button zipExtractButton;
+    @FXML
+    public Button xmlToJsonButton;
 
     public void onXmlToJsonButtonClick(ActionEvent actionEvent) {
         try {
