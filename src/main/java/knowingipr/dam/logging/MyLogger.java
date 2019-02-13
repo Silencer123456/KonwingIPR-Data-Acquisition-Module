@@ -1,4 +1,4 @@
-package knowingipr.dam.log;
+package knowingipr.dam.logging;
 
 import java.io.IOException;
 import java.util.Date;

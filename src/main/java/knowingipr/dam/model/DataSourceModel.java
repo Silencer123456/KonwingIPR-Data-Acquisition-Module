@@ -6,19 +6,32 @@ import javafx.beans.property.SimpleObjectProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
-import java.util.List;
+/**
+ * A model class providing access to the repository for Data Sources.
+ */
+public class DataSourceModel {
 
-public class DataModel {
+   private DataSourceDAO dataSourceDAO;
 
-    private DataSourceDataAccessor dataAccessor;
-
-    public DataModel(DataSourceDataAccessor dataAccessor) {
-        this.dataAccessor = dataAccessor;
+    public DataSourceModel(DataSourceDAO dataSourceDAO) {
+        this.dataSourceDAO = dataSourceDAO;
+        try {
+            dataSourceDAO.connect();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         loadData();
+        loadCategoryTypes();
     }
 
     private final ObservableList<DataSource> sourcesList = FXCollections.observableArrayList( source ->
             new Observable[] {source.nameProperty(), source.descriptionProperty()});
+
+    private final ObservableList<String> categoryTypesList = FXCollections.observableArrayList();
+
+    public ObservableList<String> getCategoryTypesList() {
+        return categoryTypesList;
+    }
 
     private final ObjectProperty<DataSource> currentSource = new SimpleObjectProperty<>(null);
 
@@ -42,8 +55,12 @@ public class DataModel {
         return currentSource;
     }
 
+    public void loadCategoryTypes() {
+        categoryTypesList.setAll(dataSourceDAO.getCategoryTypes());
+    }
+
     public void loadData() {
-        sourcesList.setAll(dataAccessor.load());
+        sourcesList.setAll(dataSourceDAO.findAll());
         // mock data
         /*sourcesList.setAll(
                 new DataSource("test1", "this is test 1"),

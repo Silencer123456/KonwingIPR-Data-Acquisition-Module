@@ -8,11 +8,16 @@ import java.sql.SQLException;
 import java.util.Properties;
 import java.util.logging.Logger;
 
+/**
+ * Provides a connection to SQL Knowledge database.
+ */
 public class DbManager {
 
     private final static Logger LOGGER = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
 
     private static final int LoginTimeout = 10;
+
+    private Connection connection;
 
     public Connection createConnection() throws SQLException, ClassNotFoundException {
         String configPath = "mydb.cfg";
@@ -28,7 +33,7 @@ public class DbManager {
             password = prop.getProperty("password");
             driver = prop.getProperty("driver");
         } catch (IOException e) {
-            LOGGER.warning("Unable to find mydb.cfg file in " + configPath);
+            LOGGER.warning("Unable to find " + configPath + " file in " + configPath);
             e.printStackTrace();
 
             host = "Unknown HOST";
@@ -47,6 +52,15 @@ public class DbManager {
         Connection connection = DriverManager.getConnection(host, username, password);
         LOGGER.info("CONNECTION: " + connection);
 
+        this.connection = connection;
         return connection;
+    }
+
+    public void closeConnection() {
+        try {
+            connection.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 }

@@ -12,8 +12,10 @@ import knowingipr.dam.controller.DetailController;
 import knowingipr.dam.controller.ErrorController;
 import knowingipr.dam.controller.ListController;
 import knowingipr.dam.controller.ToolsController;
-import knowingipr.dam.model.DataModel;
-import knowingipr.dam.model.DataSourceDbAccessor;
+import knowingipr.dam.logging.MyLogger;
+import knowingipr.dam.model.DataSourceDAO;
+import knowingipr.dam.model.DataSourceModel;
+import knowingipr.dam.model.SourceDAO;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -24,6 +26,7 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
         Thread.setDefaultUncaughtExceptionHandler(Main::showError);
+        MyLogger.setup("dam");
 
         BorderPane root = new BorderPane();
 
@@ -42,7 +45,9 @@ public class Main extends Application {
         root.setRight(detailLoader.load());
         DetailController detailController = detailLoader.getController();
 
-        DataModel model = new DataModel(new DataSourceDbAccessor());
+        DataSourceDAO sourceDAO = new SourceDAO();
+
+        DataSourceModel model = new DataSourceModel(sourceDAO);
         listController.initModel(model);
         detailController.initModel(model);
 

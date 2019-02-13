@@ -3,7 +3,7 @@ package knowingipr.dam.controller;
 import javafx.fxml.FXML;
 import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
-import knowingipr.dam.model.DataModel;
+import knowingipr.dam.model.DataSourceModel;
 import knowingipr.dam.model.DataSource;
 
 public class ListController {
@@ -11,9 +11,9 @@ public class ListController {
     @FXML
     public ListView<DataSource> listView;
 
-    private DataModel model;
+    private DataSourceModel model;
 
-    public void initModel(DataModel model) {
+    public void initModel(DataSourceModel model) {
         if (this.model != null) {
             throw new IllegalStateException("Model can only be initialized once");
         }

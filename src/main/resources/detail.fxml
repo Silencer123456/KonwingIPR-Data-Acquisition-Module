@@ -2,6 +2,7 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.ColumnConstraints?>
@@ -19,14 +20,13 @@
     <Label text="Name" GridPane.columnIndex="0" GridPane.rowIndex="0" />
     <Label text="Description" GridPane.columnIndex="0" GridPane.rowIndex="1" />
 
-    <TextField fx:id="sourceNameTextField" disable="true" GridPane.columnIndex="1" GridPane.rowIndex="0" />
-    <TextField fx:id="descriptionTextField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+    <TextField fx:id="sourceNameTextField" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+    <TextField fx:id="descriptionTextField" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
    <Label text="URL" GridPane.rowIndex="2" />
    <Label text="Category type" GridPane.rowIndex="3" />
    <Label text="Licence type" GridPane.rowIndex="4" />
-   <TextField fx:id="urlTextField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-   <TextField fx:id="categoryTypeTextField" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-   <TextField fx:id="licenceTypeTextField" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+   <TextField fx:id="urlTextField" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+   <TextField fx:id="licenceTypeTextField" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="4" />
    <Label text="Scheme file" GridPane.rowIndex="7" />
    <Label text="Mapping file" GridPane.rowIndex="8" />
    <Label text="Licence file" GridPane.rowIndex="9" />
@@ -34,7 +34,7 @@
    <Label fx:id="licenceFileLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="9" />
    <Label text="Date last updated" GridPane.rowIndex="5" />
    <Label text="Update interval" GridPane.rowIndex="6" />
-   <TextField fx:id="updateIntervalTextField" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+   <TextField fx:id="updateIntervalTextField" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="6" />
    <Label fx:id="dateLastUpdatedLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="5" />
    <Button fx:id="editButton" mnemonicParsing="false" onAction="#onEditButtonClicked" text="Edit" GridPane.rowIndex="10" />
    <GridPane GridPane.columnIndex="1" GridPane.rowIndex="10">
@@ -59,11 +59,15 @@
          <Insets />
       </GridPane.margin>
    </HBox>
+   <ComboBox fx:id="categoryTypeComboBox" disable="true" prefHeight="25.0" prefWidth="154.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+   <TextField fx:id="loadPathTextField" GridPane.rowIndex="11" />
+   <Button fx:id="loadCollectionButton" mnemonicParsing="false" onAction="#onLoadCollectionButtonClicked" text="Load to collection" GridPane.columnIndex="1" GridPane.rowIndex="11" />
 
     <padding>
         <Insets bottom="10" left="10" right="10" top="10" />
     </padding>
    <rowConstraints>
+      <RowConstraints />
       <RowConstraints />
       <RowConstraints />
       <RowConstraints />
