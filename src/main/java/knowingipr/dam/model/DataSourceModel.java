@@ -6,14 +6,16 @@ import javafx.beans.property.SimpleObjectProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
+import java.util.List;
+
 /**
  * A model class providing access to the repository for Data Sources.
  */
 public class DataSourceModel {
 
-   private DataSourceDAO dataSourceDAO;
+   private IDataSourceDAO dataSourceDAO;
 
-    public DataSourceModel(DataSourceDAO dataSourceDAO) {
+    public DataSourceModel(IDataSourceDAO dataSourceDAO) {
         this.dataSourceDAO = dataSourceDAO;
         try {
             dataSourceDAO.connect();
@@ -29,11 +31,11 @@ public class DataSourceModel {
 
     private final ObservableList<String> categoryTypesList = FXCollections.observableArrayList();
 
+    private final ObjectProperty<DataSource> currentSource = new SimpleObjectProperty<>(null);
+
     public ObservableList<String> getCategoryTypesList() {
         return categoryTypesList;
     }
-
-    private final ObjectProperty<DataSource> currentSource = new SimpleObjectProperty<>(null);
 
     public ObjectProperty<DataSource> getCurrentSourceProperty() {
         return currentSource;
@@ -51,16 +53,40 @@ public class DataSourceModel {
         return sourcesList;
     }
 
-    public ObjectProperty<DataSource> currentSourceProperty() {
-        return currentSource;
-    }
-
     public void loadCategoryTypes() {
         categoryTypesList.setAll(dataSourceDAO.getCategoryTypes());
     }
 
+    public void addNewDataSource(String name, String description, String url, String schemaPath, String mappingPath, String licenceType,
+                                 String licencePath, String categoryType, int updateInterval, String dateLastUpdated) {
+        DataSource dataSource = new DataSource(name, description, url, schemaPath, mappingPath, licenceType, licencePath,
+                categoryType, updateInterval, dateLastUpdated);
+        dataSourceDAO.insertDataSource(dataSource);
+    }
+
+    public boolean deleteDataSource(long id) {
+        DataSource dataSource = getDataSourceWithId(id);
+        if (dataSource != null) {
+            return dataSourceDAO.deleteDataSource(dataSource);
+        }
+
+        return false;
+    }
+
+    // TODO: CHANGE TO FETCH FROM DATABASE INSTEAD
+    private DataSource getDataSourceWithId(long id) {
+        for (DataSource dataSource : getSourcesList()) {
+            if (dataSource.getId() == id) {
+                return dataSource;
+            }
+        }
+
+        return null;
+    }
+
     public void loadData() {
-        sourcesList.setAll(dataSourceDAO.findAll());
+        List<DataSource> loadedSources = dataSourceDAO.findAll();
+        sourcesList.setAll(loadedSources);
         // mock data
         /*sourcesList.setAll(
                 new DataSource("test1", "this is test 1"),

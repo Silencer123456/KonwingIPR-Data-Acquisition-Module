@@ -1,14 +1,12 @@
 package knowingipr.dam.model;
 
-import javafx.beans.property.IntegerProperty;
-import javafx.beans.property.SimpleIntegerProperty;
-import javafx.beans.property.SimpleStringProperty;
-import javafx.beans.property.StringProperty;
+import javafx.beans.property.*;
 
 /**
  * Domain object representing metadata for one source of data.
  */
 public class DataSource {
+    private final LongProperty id = new SimpleLongProperty();
     private final StringProperty name = new SimpleStringProperty();
     private final StringProperty description = new SimpleStringProperty();
     private final StringProperty url = new SimpleStringProperty();
@@ -40,6 +38,13 @@ public class DataSource {
         setDateLastUpdated(dateLastUpdated);
     }
 
+    /**
+     * Constructor creating an empty data source instance.
+     */
+    public DataSource() {
+        this("", "", "", "", "", "", "", "", 0, "");
+    }
+
     public boolean isInSourceDb() {
         return inSourceDb;
     }
@@ -47,6 +52,20 @@ public class DataSource {
     public void setInSourceDb(boolean inSourceDb) {
         this.inSourceDb = inSourceDb;
     }
+
+
+    public long getId() {
+        return id.get();
+    }
+
+    public LongProperty idProperty() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id.set(id);
+    }
+
 
     public String getName() {
         return name.get();

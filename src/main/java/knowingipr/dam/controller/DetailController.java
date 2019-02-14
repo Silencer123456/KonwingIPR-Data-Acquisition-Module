@@ -1,11 +1,15 @@
 package knowingipr.dam.controller;
 
+import javafx.beans.binding.Bindings;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.stage.FileChooser;
+import javafx.stage.Stage;
+import knowingipr.dam.model.DataSource;
 import knowingipr.dam.model.DataSourceModel;
 import knowingipr.data.loader.MongoDbConnection;
 import knowingipr.data.loader.PatentLoader;
@@ -23,12 +27,6 @@ public class DetailController {
     @FXML
     public TextField licenceTypeTextField;
     @FXML
-    public Label schemeFileLabel;
-    @FXML
-    public Label mappingFileLabel;
-    @FXML
-    public Label licenceFileLabel;
-    @FXML
     public TextField updateIntervalTextField;
     @FXML
     public Label dateLastUpdatedLabel;
@@ -45,6 +43,12 @@ public class DetailController {
     @FXML
     public Button loadCollectionButton;
     @FXML
+    public TextField licenceFileTextField;
+    @FXML
+    public TextField schemeFileTextField;
+    @FXML
+    public TextField mappingFileTextField;
+    @FXML
     private TextField sourceNameTextField;
     @FXML
     private TextField descriptionTextField;
@@ -60,7 +64,7 @@ public class DetailController {
         }
 
         this.model = model;
-        model.currentSourceProperty().addListener((obs, oldSource, newSource) -> {
+        model.getCurrentSourceProperty().addListener((obs, oldSource, newSource) -> {
             if (oldSource != null) {
                 //sourceNameTextField.textProperty().unbindBidirectional(oldSource.nameProperty());
                 //descriptionTextField.textProperty().unbindBidirectional(oldSource.descriptionProperty());
@@ -69,90 +73,53 @@ public class DetailController {
                 sourceNameTextField.setText("");
                 descriptionTextField.setText("");
                 urlTextField.setText("");
-                schemeFileLabel.setText("");
-                mappingFileLabel.setText("");
-                licenceFileLabel.setText("");
+                schemeFileTextField.setText("");
+                mappingFileTextField.setText("");
+                licenceFileTextField.setText("");
                 licenceTypeTextField.setText("");
                 dateLastUpdatedLabel.setText("");
                 updateIntervalTextField.setText("");
+                toggleEditMode(false);
             } else {
                 sourceNameTextField.setText(newSource.getName());
                 descriptionTextField.setText(newSource.getDescription());
                 urlTextField.setText(newSource.getUrl());
-                schemeFileLabel.setText(newSource.getSchemaPath());
-                mappingFileLabel.setText(newSource.getMappingPath());
-                licenceFileLabel.setText(newSource.getLicencePath());
+                schemeFileTextField.setText(newSource.getSchemaPath());
+                mappingFileTextField.setText(newSource.getMappingPath());
+                licenceFileTextField.setText(newSource.getLicencePath());
                 licenceTypeTextField.setText(newSource.getLicenceType());
                 dateLastUpdatedLabel.setText(newSource.getDateLastUpdated());
                 updateIntervalTextField.setText(newSource.getUpdateIntervalDays()+"");
                 categoryTypeComboBox.getSelectionModel().select(newSource.getCategoryType());
-
-                /*sourceNameTextField.textProperty().bind(newSource.nameProperty());
-                descriptionTextField.textProperty().bind(newSource.descriptionProperty());
-                urlTextField.textProperty().bind(newSource.urlProperty());
-                schemeFileLabel.textProperty().bind(newSource.schemaPathProperty());
-                mappingFileLabel.textProperty().bind(newSource.mappingPathProperty());
-                licenceFileLabel.textProperty().bind(newSource.licencePathProperty());
-                licenceTypeTextField.textProperty().bind(newSource.licenceTypeProperty());
-                dateLastUpdatedLabel.textProperty().bind(newSource.getDateLastUpdatedProperty());
-                categoryTypeTextField.textProperty().bind(newSource.categoryTypeProperty());
-                dateLastUpdatedLabel.textProperty().bind(newSource.getDateLastUpdatedProperty());
-                updateIntervalTextField.textProperty().bind(Bindings.convert(newSource.updateIntervalDaysProperty()));*/
+                toggleEditMode(false);
             }
         });
 
         categoryTypeComboBox.setItems(model.getCategoryTypesList());
+
+        model.getCurrentSourceProperty().addListener((obs, oldSource, newSource) -> {
+            if (newSource == null) {
+                editButton.setVisible(false);
+            } else {
+                editButton.setVisible(true);
+            }
+        });
     }
 
-    public void onSaveButtonClicked(ActionEvent actionEvent) {
-        onDiscardButtonClicked(actionEvent);
-    }
-
-    public void onDiscardButtonClicked(ActionEvent actionEvent) {
-        editButton.setDisable(false);
-        saveButton.setVisible(false);
-        discardButton.setVisible(false);
-
-        toggleEditable(false);
-
-        model.loadData();
-    }
-
-    public void onEditButtonClicked(ActionEvent actionEvent) {
-        editButton.setDisable(true);
-        saveButton.setVisible(true);
-        discardButton.setVisible(true);
-
-        toggleEditable(true);
-    }
-
-    private void toggleEditable(boolean value) {
+    private void toggleEditableTextFields(boolean value) {
         sourceNameTextField.setEditable(value);
         descriptionTextField.setEditable(value);
         urlTextField.setEditable(value);
         licenceTypeTextField.setEditable(value);
         updateIntervalTextField.setEditable(value);
-    }
-
-    public void onOpenSchemeFileButton(ActionEvent actionEvent) {
-        try {
-            /*String path = schemeFileLabel.getText();
-            File file = new File(path);
-            if (!file.isAbsolute()) {
-                path = System.getProperty("user.dir") + path;
-            }*/
-
-            Desktop.getDesktop().open(new File(schemeFileLabel.getText()));
-        } catch (IOException e) {
-            Alert alert = new Alert(Alert.AlertType.ERROR, "Path does not exist: " + e.getMessage());
-            alert.showAndWait();
-            e.printStackTrace();
-        }
+        mappingFileTextField.setEditable(value);
+        licenceFileTextField.setEditable(value);
+        schemeFileTextField.setEditable(value);
     }
 
     public void onLoadCollectionButtonClicked(ActionEvent actionEvent) {
         if (sourceNameTextField.getText().equals("uspto")) {
-            sourceDbLoader = new PatentLoader(dbConnection, mappingFileLabel.getText(), categoryTypeComboBox.getSelectionModel().getSelectedItem());
+            sourceDbLoader = new PatentLoader(dbConnection, mappingFileTextField.getText(), categoryTypeComboBox.getSelectionModel().getSelectedItem());
             try {
                 sourceDbLoader.loadFromDirectory(loadPathTextField.getText(), new String[]{"json"});
             } catch (IOException e) {
@@ -163,5 +130,114 @@ public class DetailController {
             Alert alert = new Alert(Alert.AlertType.WARNING, "The parser for selected data source does not exist yet");
             alert.showAndWait();
         }
+    }
+
+    public void onSaveButtonClicked(ActionEvent actionEvent) {
+        int updateInterval;
+        try {
+            updateInterval = Integer.parseInt(updateIntervalTextField.getText());
+        } catch (NumberFormatException e) {
+            showAlert(Alert.AlertType.ERROR, "The update interval is not a number.");
+            return;
+        }
+
+        model.addNewDataSource(sourceNameTextField.getText(), descriptionTextField.getText(), urlTextField.getText(),
+                schemeFileTextField.getText(), mappingFileTextField.getText(), licenceTypeTextField.getText(), licenceFileTextField.getText(),
+                categoryTypeComboBox.getSelectionModel().getSelectedItem(), updateInterval, "");
+        toggleEditMode(false);
+
+        model.loadData();
+    }
+
+    public void onDiscardButtonClicked(ActionEvent actionEvent) {
+        toggleEditMode(false);
+
+        model.loadData();
+    }
+
+    /**
+     * Toggles the activeness of the edit mode, where the user can edit
+     * the text fields.
+     * @param value - value indicating whether to activate the edit mode
+     */
+    private void toggleEditMode(boolean value) {
+        editButton.setDisable(value);
+        saveButton.setVisible(value);
+        discardButton.setVisible(value);
+
+        toggleEditableTextFields(value);
+    }
+
+    public void onEditButtonClicked(ActionEvent actionEvent) {
+        toggleEditMode(true);
+    }
+
+    public void onAddNewButtonClicked(ActionEvent actionEvent) {
+        DataSource empty = new DataSource();
+        model.getSourcesList().add(empty);
+        model.setCurrentSource(empty);
+        onEditButtonClicked(actionEvent);
+    }
+
+    public void onOpenSchemeFileButton(ActionEvent actionEvent) {
+        openDesktopPath(schemeFileTextField.getText());
+    }
+
+    public void onOpenMappingFileButton(ActionEvent actionEvent) {
+        openDesktopPath(mappingFileTextField.getText());
+    }
+
+    public void onOpenLicenceFileButton(ActionEvent actionEvent) {
+        openDesktopPath(licenceFileTextField.getText());
+    }
+
+    /**
+     * Attempts to open a file from desktop environment.
+     * If the path does not exist, displays an error alert to the user.
+     * @param path - Path to the file or folder to be opened
+     */
+    private void openDesktopPath(String path) {
+        try {
+            File f = new File(path);
+            Desktop.getDesktop().open(f);
+        } catch (Exception e) {
+            showAlert(Alert.AlertType.ERROR, "Path does not exist: " + e.getMessage());
+        }
+    }
+
+    /**
+     * Displays a File Chooser to the user. After the user selected the requested file,
+     * the textField is set to its path.
+     * @param textField - Textfield to be set after the user chooses the file.
+     */
+    private void showFileChooserAndSet(TextField textField) {
+        Stage stage = (Stage) textField.getScene().getWindow();
+        FileChooser fileChooser = new FileChooser();
+        File selectedFile = fileChooser.showOpenDialog(stage);
+        if (selectedFile != null) {
+            try {
+                textField.setText("File selected: " + selectedFile.getCanonicalPath());
+            } catch (IOException e) {
+                mappingFileTextField.setText("Selected file does not exist.");
+            }
+        }
+        else {
+            mappingFileTextField.setText("File selection cancelled.");
+        }
+    }
+
+    /**
+     * Shows an alert to the user and waits for his response
+     * @param alertType - The type of alert
+     * @param content - The text to be displayed in the alert
+     */
+    private void showAlert(Alert.AlertType alertType, String content) {
+        Alert alert = new Alert(alertType, content);
+        alert.showAndWait();
+    }
+
+    public void onDeleteButtonClicked(ActionEvent actionEvent) {
+        boolean value = model.deleteDataSource(model.getCurrentSource().getId());
+        model.loadData();
     }
 }

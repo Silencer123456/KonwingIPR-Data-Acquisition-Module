@@ -17,27 +17,24 @@
         <ColumnConstraints halignment="LEFT" hgrow="ALWAYS" />
     </columnConstraints>
 
-    <Label text="Name" GridPane.columnIndex="0" GridPane.rowIndex="0" />
-    <Label text="Description" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+    <Label text="Name" GridPane.rowIndex="1" />
+    <Label text="Description" GridPane.rowIndex="2" />
 
-    <TextField fx:id="sourceNameTextField" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="0" />
-    <TextField fx:id="descriptionTextField" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-   <Label text="URL" GridPane.rowIndex="2" />
-   <Label text="Category type" GridPane.rowIndex="3" />
-   <Label text="Licence type" GridPane.rowIndex="4" />
-   <TextField fx:id="urlTextField" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-   <TextField fx:id="licenceTypeTextField" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-   <Label text="Scheme file" GridPane.rowIndex="7" />
-   <Label text="Mapping file" GridPane.rowIndex="8" />
-   <Label text="Licence file" GridPane.rowIndex="9" />
-   <Label fx:id="mappingFileLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="8" />
-   <Label fx:id="licenceFileLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="9" />
-   <Label text="Date last updated" GridPane.rowIndex="5" />
-   <Label text="Update interval" GridPane.rowIndex="6" />
-   <TextField fx:id="updateIntervalTextField" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="6" />
-   <Label fx:id="dateLastUpdatedLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-   <Button fx:id="editButton" mnemonicParsing="false" onAction="#onEditButtonClicked" text="Edit" GridPane.rowIndex="10" />
-   <GridPane GridPane.columnIndex="1" GridPane.rowIndex="10">
+    <TextField fx:id="sourceNameTextField" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+    <TextField fx:id="descriptionTextField" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+   <Label text="URL" GridPane.rowIndex="3" />
+   <Label text="Category type" GridPane.rowIndex="4" />
+   <Label text="Licence type" GridPane.rowIndex="5" />
+   <TextField fx:id="urlTextField" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+   <TextField fx:id="licenceTypeTextField" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+   <Label text="Scheme file" GridPane.rowIndex="8" />
+   <Label text="Mapping file" GridPane.rowIndex="9" />
+   <Label text="Licence file" GridPane.rowIndex="10" />
+   <Label text="Date last updated" GridPane.rowIndex="6" />
+   <Label text="Update interval" GridPane.rowIndex="7" />
+   <TextField fx:id="updateIntervalTextField" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+   <Label fx:id="dateLastUpdatedLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+   <GridPane GridPane.columnIndex="1" GridPane.rowIndex="11">
      <columnConstraints>
        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -50,23 +47,43 @@
          <Button fx:id="discardButton" mnemonicParsing="false" onAction="#onDiscardButtonClicked" text="Discard" visible="false" GridPane.columnIndex="1" />
       </children>
    </GridPane>
-   <HBox alignment="CENTER_LEFT" prefHeight="0.0" prefWidth="200.0" spacing="8.0" GridPane.columnIndex="1" GridPane.rowIndex="7">
+   <HBox alignment="CENTER_LEFT" prefHeight="0.0" prefWidth="200.0" spacing="8.0" GridPane.columnIndex="1" GridPane.rowIndex="8">
       <children>
-         <Label fx:id="schemeFileLabel" text="Label" />
+         <TextField fx:id="schemeFileTextField" editable="false" />
          <Button mnemonicParsing="false" onAction="#onOpenSchemeFileButton" text="." />
       </children>
       <GridPane.margin>
          <Insets />
       </GridPane.margin>
    </HBox>
-   <ComboBox fx:id="categoryTypeComboBox" disable="true" prefHeight="25.0" prefWidth="154.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-   <TextField fx:id="loadPathTextField" GridPane.rowIndex="11" />
-   <Button fx:id="loadCollectionButton" mnemonicParsing="false" onAction="#onLoadCollectionButtonClicked" text="Load to collection" GridPane.columnIndex="1" GridPane.rowIndex="11" />
+   <ComboBox fx:id="categoryTypeComboBox" disable="true" prefHeight="25.0" prefWidth="154.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+   <TextField fx:id="loadPathTextField" GridPane.rowIndex="12" />
+   <Button fx:id="loadCollectionButton" mnemonicParsing="false" onAction="#onLoadCollectionButtonClicked" text="Load to collection" GridPane.columnIndex="1" GridPane.rowIndex="12" />
+   <HBox prefHeight="24.0" prefWidth="200.0" spacing="8.0" GridPane.columnIndex="1" GridPane.rowIndex="9">
+      <children>
+         <TextField fx:id="mappingFileTextField" editable="false" />
+         <Button mnemonicParsing="false" onAction="#onOpenMappingFileButton" text="." />
+      </children>
+   </HBox>
+   <HBox prefHeight="0.0" prefWidth="200.0" spacing="8.0" GridPane.columnIndex="1" GridPane.rowIndex="10">
+      <children>
+         <TextField fx:id="licenceFileTextField" editable="false" />
+         <Button mnemonicParsing="false" onAction="#onOpenLicenceFileButton" text="." />
+      </children>
+   </HBox>
+   <Button fx:id="addNewButton" mnemonicParsing="false" onAction="#onAddNewButtonClicked" text="Add New Data Source" />
+   <HBox spacing="8.0" GridPane.rowIndex="11">
+      <children>
+         <Button fx:id="editButton" mnemonicParsing="false" onAction="#onEditButtonClicked" text="Edit" />
+         <Button fx:id="deleteButton" mnemonicParsing="false" onAction="#onDeleteButtonClicked" text="Delete" />
+      </children>
+   </HBox>
 
     <padding>
         <Insets bottom="10" left="10" right="10" top="10" />
     </padding>
    <rowConstraints>
+      <RowConstraints />
       <RowConstraints />
       <RowConstraints />
       <RowConstraints />

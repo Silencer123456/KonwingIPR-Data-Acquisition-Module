@@ -13,9 +13,9 @@ import knowingipr.dam.controller.ErrorController;
 import knowingipr.dam.controller.ListController;
 import knowingipr.dam.controller.ToolsController;
 import knowingipr.dam.logging.MyLogger;
-import knowingipr.dam.model.DataSourceDAO;
+import knowingipr.dam.model.IDataSourceDAO;
 import knowingipr.dam.model.DataSourceModel;
-import knowingipr.dam.model.SourceDAO;
+import knowingipr.dam.model.DataSourceDAO;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -45,11 +45,11 @@ public class Main extends Application {
         root.setRight(detailLoader.load());
         DetailController detailController = detailLoader.getController();
 
-        DataSourceDAO sourceDAO = new SourceDAO();
+        IDataSourceDAO sourceDAO = new DataSourceDAO();
 
         DataSourceModel model = new DataSourceModel(sourceDAO);
-        listController.initModel(model);
         detailController.initModel(model);
+        listController.initModel(model);
 
         Scene scene = new Scene(root, 800, 600);
         primaryStage.setScene(scene);
