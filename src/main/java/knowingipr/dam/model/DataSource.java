@@ -2,6 +2,8 @@ package knowingipr.dam.model;
 
 import javafx.beans.property.*;
 
+import java.util.Date;
+
 /**
  * Domain object representing metadata for one source of data.
  */
@@ -19,13 +21,15 @@ public class DataSource {
 
     private final IntegerProperty updateIntervalDays = new SimpleIntegerProperty();
 
+    private Date lastUpdatedDate;
+
     /**
      * Flag indicating if the current DataSource record is present in the source database.
      */
     private boolean inSourceDb;
 
     public DataSource(String name, String description, String url, String schemaPath, String mappingPath, String licenceType,
-                      String licencePath, String categoryType, int updateInterval, String dateLastUpdated) {
+                      String licencePath, String categoryType, int updateInterval, Date dateLastUpdated) {
         setName(name);
         setDescription(description);
         setUrl(url);
@@ -35,14 +39,15 @@ public class DataSource {
         setLicenceType(licenceType);
         setCategoryType(categoryType);
         setUpdateIntervalDays(updateInterval);
-        setDateLastUpdated(dateLastUpdated);
+        setDateLastUpdated(dateLastUpdated.toString());
+        lastUpdatedDate = dateLastUpdated;
     }
 
     /**
      * Constructor creating an empty data source instance.
      */
     public DataSource() {
-        this("", "", "", "", "", "", "", "", 0, "");
+        this("", "", "", "", "", "", "", "", 0, new Date());
     }
 
     public boolean isInSourceDb() {
@@ -189,5 +194,13 @@ public class DataSource {
 
     public void setDateLastUpdated(String dateLastUpdated) {
         this.dateLastUpdated.set(dateLastUpdated);
+    }
+
+    public Date getLastUpdatedDate() {
+        return lastUpdatedDate;
+    }
+
+    public void setLastUpdatedDate(Date lastUpdatedDate) {
+        this.lastUpdatedDate = lastUpdatedDate;
     }
 }

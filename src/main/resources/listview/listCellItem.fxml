@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+
+<HBox spacing="10.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:id="hBox">
+   <children>
+      <Label text="Name:" />
+      <Label fx:id="sourceNameLabel" text="Label" />
+      <Label text="Collection:" />
+      <Label fx:id="collectionLabel" text="Label" />
+      <Label text="Expired" />
+      <Label fx:id="expiredLabel" text="Label" />
+   </children>
+</HBox>

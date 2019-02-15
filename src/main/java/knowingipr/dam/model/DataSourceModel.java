@@ -3,9 +3,13 @@ package knowingipr.dam.model;
 import javafx.beans.Observable;
 import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.SimpleObjectProperty;
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.StringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -33,34 +37,16 @@ public class DataSourceModel {
 
     private final ObjectProperty<DataSource> currentSource = new SimpleObjectProperty<>(null);
 
-    public ObservableList<String> getCategoryTypesList() {
-        return categoryTypesList;
-    }
-
-    public ObjectProperty<DataSource> getCurrentSourceProperty() {
-        return currentSource;
-    }
-
-    public DataSource getCurrentSource() {
-        return currentSource.get();
-    }
-
-    public void setCurrentSource(DataSource currentSource) {
-        this.currentSource.set(currentSource);
-    }
-
-    public ObservableList<DataSource> getSourcesList() {
-        return sourcesList;
-    }
+    private final StringProperty currentStatus = new SimpleStringProperty();
 
     public void loadCategoryTypes() {
         categoryTypesList.setAll(dataSourceDAO.getCategoryTypes());
     }
 
     public void addNewDataSource(String name, String description, String url, String schemaPath, String mappingPath, String licenceType,
-                                 String licencePath, String categoryType, int updateInterval, String dateLastUpdated) {
+                                 String licencePath, String categoryType, int updateInterval) {
         DataSource dataSource = new DataSource(name, description, url, schemaPath, mappingPath, licenceType, licencePath,
-                categoryType, updateInterval, dateLastUpdated);
+                categoryType, updateInterval, new Date());
         dataSourceDAO.insertDataSource(dataSource);
     }
 
@@ -93,5 +79,56 @@ public class DataSourceModel {
                 new DataSource("test2", "this is test 2"),
                 new DataSource("test3", "this is test 3")
         );*/
+    }
+
+    /**
+     * Calculates if the source is expired and should be updated
+     * @return - true if the source is expired, else false
+     */
+    public boolean isSourceExpired(DataSource dataSource) {
+        Date lastUpdateDate = dataSource.getLastUpdatedDate();
+        Calendar expirationCal = Calendar.getInstance();
+        expirationCal.setTime(lastUpdateDate);
+
+        int updateInterval = dataSource.getUpdateIntervalDays();
+        expirationCal.add(Calendar.DAY_OF_MONTH, updateInterval);
+
+        Date today = java.util.Calendar.getInstance().getTime();
+        Calendar todayCal = Calendar.getInstance();
+        todayCal.setTime(today);
+
+        return expirationCal.getTime().before(todayCal.getTime());
+    }
+
+    public ObservableList<String> getCategoryTypesList() {
+        return categoryTypesList;
+    }
+
+    public ObjectProperty<DataSource> currentSourceProperty() {
+        return currentSource;
+    }
+
+    public DataSource getCurrentSource() {
+        return currentSource.get();
+    }
+
+    public void setCurrentSource(DataSource currentSource) {
+        this.currentSource.set(currentSource);
+    }
+
+    public ObservableList<DataSource> getSourcesList() {
+        return sourcesList;
+    }
+
+    public String getCurrentStatus() {
+        return currentStatus.get();
+    }
+
+    public StringProperty currentStatusProperty() {
+        return currentStatus;
+    }
+
+    public void setCurrentStatus(String currentStatus) {
+        this.currentStatus.set(currentStatus);
     }
 }

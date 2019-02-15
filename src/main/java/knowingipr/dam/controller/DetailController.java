@@ -1,6 +1,5 @@
 package knowingipr.dam.controller;
 
-import javafx.beans.binding.Bindings;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
@@ -64,7 +63,7 @@ public class DetailController {
         }
 
         this.model = model;
-        model.getCurrentSourceProperty().addListener((obs, oldSource, newSource) -> {
+        model.currentSourceProperty().addListener((obs, oldSource, newSource) -> {
             if (oldSource != null) {
                 //sourceNameTextField.textProperty().unbindBidirectional(oldSource.nameProperty());
                 //descriptionTextField.textProperty().unbindBidirectional(oldSource.descriptionProperty());
@@ -97,7 +96,7 @@ public class DetailController {
 
         categoryTypeComboBox.setItems(model.getCategoryTypesList());
 
-        model.getCurrentSourceProperty().addListener((obs, oldSource, newSource) -> {
+        model.currentSourceProperty().addListener((obs, oldSource, newSource) -> {
             if (newSource == null) {
                 editButton.setVisible(false);
             } else {
@@ -143,7 +142,7 @@ public class DetailController {
 
         model.addNewDataSource(sourceNameTextField.getText(), descriptionTextField.getText(), urlTextField.getText(),
                 schemeFileTextField.getText(), mappingFileTextField.getText(), licenceTypeTextField.getText(), licenceFileTextField.getText(),
-                categoryTypeComboBox.getSelectionModel().getSelectedItem(), updateInterval, "");
+                categoryTypeComboBox.getSelectionModel().getSelectedItem(), updateInterval);
         toggleEditMode(false);
 
         model.loadData();

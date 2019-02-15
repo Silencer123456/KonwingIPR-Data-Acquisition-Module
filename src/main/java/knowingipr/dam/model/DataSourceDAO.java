@@ -46,7 +46,7 @@ public class DataSourceDAO implements IDataSourceDAO {
                 int updateInterval = resultSet.getInt("updateIntervalDays");
                 Date dateLastUpdated = resultSet.getDate("dateLastUpdated");
 
-                DataSource dataSource = new DataSource(name, description, url, schemaPath, mappingPath, licenceType, licenceFilePath, categoryType, updateInterval, dateLastUpdated.toString());
+                DataSource dataSource = new DataSource(name, description, url, schemaPath, mappingPath, licenceType, licenceFilePath, categoryType, updateInterval, dateLastUpdated);
                 dataSource.setId(id);
 
                 // TODO: Move to data model

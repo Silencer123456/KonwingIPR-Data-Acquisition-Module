@@ -8,10 +8,7 @@ import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
-import knowingipr.dam.controller.DetailController;
-import knowingipr.dam.controller.ErrorController;
-import knowingipr.dam.controller.ListController;
-import knowingipr.dam.controller.ToolsController;
+import knowingipr.dam.controller.*;
 import knowingipr.dam.logging.MyLogger;
 import knowingipr.dam.model.IDataSourceDAO;
 import knowingipr.dam.model.DataSourceModel;
@@ -45,11 +42,16 @@ public class Main extends Application {
         root.setRight(detailLoader.load());
         DetailController detailController = detailLoader.getController();
 
+        FXMLLoader statusBarLoader = new FXMLLoader(getClass().getResource("/statusBar.fxml"));
+        root.setBottom(statusBarLoader.load());
+        StatusBarController statusBarController = statusBarLoader.getController();
+
         IDataSourceDAO sourceDAO = new DataSourceDAO();
 
         DataSourceModel model = new DataSourceModel(sourceDAO);
         detailController.initModel(model);
         listController.initModel(model);
+        statusBarController.initModel(model);
 
         Scene scene = new Scene(root, 800, 600);
         primaryStage.setScene(scene);
