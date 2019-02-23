@@ -4,7 +4,8 @@ public enum MappedFields {
     TITLE("title"),
     ABSTRACT("abstract"),
     YEAR("year"),
-    AUTHORS("authors");
+    AUTHORS("authors"),
+    OWNERS("owners");
 
     final String value;
 
