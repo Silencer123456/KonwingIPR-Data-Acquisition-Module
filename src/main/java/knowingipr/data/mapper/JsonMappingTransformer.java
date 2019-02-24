@@ -21,9 +21,10 @@ public class JsonMappingTransformer {
     /**
      * Extracts all the array values from the paths specified in the mapping.
      * If the node is not an array, it extracts present fields.
-     * @param node - The target node from which to extract the values
+     *
+     * @param node        - The target node from which to extract the values
      * @param mappingRoot - The root node of the mapping file
-     * @param field - The field in the mapping file to use
+     * @param field       - The field in the mapping file to use
      * @return - List of values of the
      * @throws MappingException
      */
@@ -66,11 +67,12 @@ public class JsonMappingTransformer {
 
     /**
      * Returns a merged string value from multiple fields.
+     *
      * @param valuePartPaths - Paths in the json document to fields I want to merge
-     * @param node - The json node in which I want to search the path
+     * @param node           - The json node in which I want to search the path
      * @return The merged string value from multiple fields
      */
-    public static String getMergedValue(List<String> valuePartPaths, JsonNode node) {
+    private static String getMergedValue(List<String> valuePartPaths, JsonNode node) {
         StringBuilder resultValue = new StringBuilder();
         // Iterate the value parts that need to be merged into one string
         for (String valuePartPath : valuePartPaths) {
@@ -83,13 +85,14 @@ public class JsonMappingTransformer {
     /**
      * Puts a list of values to the target json node with the specified
      * field name.
+     *
      * @param valuesList - List of values to insert into the target json node
      * @param targetNode - Target json node
-     * @param fieldName - How to name the field in the target json node
+     * @param fieldName  - How to name the field in the target json node
      */
     public static void putArrayToNode(List<String> valuesList, JsonNode targetNode, MappedFields arrayName, String fieldName) {
         if (!valuesList.isEmpty()) {
-            ArrayNode array = ((ObjectNode)targetNode).putArray(arrayName.value);
+            ArrayNode array = ((ObjectNode) targetNode).putArray(arrayName.value);
 
             JsonNodeFactory f = JsonNodeFactory.instance;
             for (String authorName : valuesList) {
@@ -104,8 +107,9 @@ public class JsonMappingTransformer {
     /**
      * Searches the field in the mapping and extracts the path from it. The path
      * is then used to find the node in the json whose value we want to add to the top level.
-     * @param mappingRoot - Root node of the mapping json file
-     * @param field - Field, that we want the path to be extracted from in the mapping
+     *
+     * @param mappingRoot      - Root node of the mapping json file
+     * @param field            - Field, that we want the path to be extracted from in the mapping
      * @param nodeToPreprocess - Json node that we want to put the value into.
      *                         TODO: Handle deletion of the old record, change method to moveValueFromPathToTopLevel
      */
@@ -117,11 +121,12 @@ public class JsonMappingTransformer {
 
     /**
      * Puts a field name with value to the json node
-     * @param node - Node to which we want to add the field name with value
-     * @param name - Name of the field name
+     *
+     * @param node  - Node to which we want to add the field name with value
+     * @param name  - Name of the field name
      * @param value - Value for the field name
      */
     public static void putPair(JsonNode node, String name, String value) {
-        ((ObjectNode)node).put(name, value);
+        ((ObjectNode) node).put(name, value);
     }
 }

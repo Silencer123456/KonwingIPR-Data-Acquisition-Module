@@ -3,6 +3,9 @@ package knowingipr.dam.controller.ui;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Label;
+import javafx.scene.control.Tooltip;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
 import knowingipr.dam.model.DataSource;
 import knowingipr.dam.model.DataSourceModel;
@@ -20,6 +23,8 @@ public class ListViewData {
     @FXML
     public HBox hBox;
 
+    private Tooltip expiredTooltip;
+
     private DataSourceModel model;
 
     public ListViewData(DataSourceModel model) {
@@ -36,12 +41,29 @@ public class ListViewData {
         {
             throw new RuntimeException(e);
         }
+
+        expiredTooltip = new Tooltip();
+        expiredTooltip.setText("This data source is expired.");
     }
 
     public void setData(DataSource source) {
         sourceNameLabel.setText(source.getName());
         collectionLabel.setText(source.getCategoryType());
-        expiredLabel.setText(model.isSourceExpired(source)+"");
+
+        if (model.isSourceExpired(source)) {
+            Image image = new Image("icons/warning.png");
+            ImageView view = new ImageView(image);
+            view.setFitWidth(20);
+            view.setFitHeight(20);
+            expiredLabel.setGraphic(view);
+            expiredLabel.setTooltip(expiredTooltip);
+        }
+        else {
+            expiredLabel.setGraphic(null);
+            expiredLabel.setTooltip(null);
+        }
+
+        //expiredLabel.setText(model.isSourceExpired(source)+"");
     }
 
     public HBox getBox() {

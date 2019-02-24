@@ -14,7 +14,6 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 import org.bson.Document;
 
-
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -114,6 +113,7 @@ public class PatentLoader extends SourceDbLoader {
     /**
      * Preprocesses a json node, so that it contains all the necessary fields in the top level
      * in the json hierarchy.
+     *
      * @param nodeToPreprocess - Node to preprocess.
      * @throws MappingException - if there is an error in the mapping file
      */
@@ -145,11 +145,11 @@ public class PatentLoader extends SourceDbLoader {
 
         // Authors
         List<String> authorsList = JsonMappingTransformer.extractArrayFromMapping(nodeToPreprocess, mappingRoot, MappedFields.AUTHORS);
-        JsonMappingTransformer.putArrayToNode(authorsList, nodeToPreprocess, MappedFields.AUTHORS,"name");
+        JsonMappingTransformer.putArrayToNode(authorsList, nodeToPreprocess, MappedFields.AUTHORS, "name");
 
         // Owners
         List<String> ownersList = JsonMappingTransformer.extractArrayFromMapping(nodeToPreprocess, mappingRoot, MappedFields.OWNERS);
-        JsonMappingTransformer.putArrayToNode(ownersList, nodeToPreprocess, MappedFields.OWNERS,"name");
+        JsonMappingTransformer.putArrayToNode(ownersList, nodeToPreprocess, MappedFields.OWNERS, "name");
 
         // Title
         JsonMappingTransformer.putValueFromPath(mappingRoot, MappedFields.TITLE, nodeToPreprocess);
@@ -157,7 +157,7 @@ public class PatentLoader extends SourceDbLoader {
         // Year
         String yearPath = mappingRoot.path(MappedFields.YEAR.value).path("path").textValue();
         JsonNode yearNode = nodeToPreprocess.at(yearPath);
-        ((ObjectNode)nodeToPreprocess).put(MappedFields.YEAR.value, yearNode.toString().substring(0, 4));
+        ((ObjectNode) nodeToPreprocess).put(MappedFields.YEAR.value, yearNode.toString().substring(0, 4));
 
         // Data Source
         JsonMappingTransformer.putPair(nodeToPreprocess, "dataSource", "uspto");
