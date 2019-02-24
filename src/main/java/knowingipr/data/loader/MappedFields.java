@@ -1,5 +1,8 @@
 package knowingipr.data.loader;
 
+/**
+ * Fields, that are mapped in the external mapping configuration
+ */
 public enum MappedFields {
     TITLE("title"),
     ABSTRACT("abstract"),
@@ -7,7 +10,7 @@ public enum MappedFields {
     AUTHORS("authors"),
     OWNERS("owners");
 
-    final String value;
+    public final String value;
 
     MappedFields(String value) {
         this.value = value;
