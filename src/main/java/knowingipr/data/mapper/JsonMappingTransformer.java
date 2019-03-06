@@ -23,18 +23,17 @@ public class JsonMappingTransformer {
      * If the node is not an array, it extracts present fields.
      *
      * @param node        - The target node from which to extract the values
-     * @param mappingRoot - The root node of the mapping file
-     * @param field       - The field in the mapping file to use
+     * @param mappingNode - Node in the mapping file to process
      * @return - List of values of the
      * @throws MappingException
      */
-    public static List<String> extractArrayFromMapping(JsonNode node, JsonNode mappingRoot, MappedFields field) throws MappingException {
-        String arrayRootPath = mappingRoot.path(field.value).path("array-root").textValue();
+    public static List<String> extractArrayFromMapping(JsonNode node, JsonNode mappingNode) throws MappingException {
+        String arrayRootPath = mappingNode.path("array-root").textValue();
         JsonNode arrayNode = node.at(arrayRootPath);
 
         // In case the field consists of multiple fields, e.g. Authors first name and last name
         List<String> valueParts = new ArrayList<>();
-        JsonNode values = mappingRoot.path(field.value).path("values");
+        JsonNode values = mappingNode.path("values");
         if (!values.isArray()) {
             LOGGER.severe("The field values must be an array!");
             throw new MappingException("The field values must be an array!");
@@ -76,7 +75,10 @@ public class JsonMappingTransformer {
         StringBuilder resultValue = new StringBuilder();
         // Iterate the value parts that need to be merged into one string
         for (String valuePartPath : valuePartPaths) {
-            resultValue.append(node.at(valuePartPath).textValue()).append(" ");
+            String nodeText = node.at(valuePartPath).textValue();
+            if (nodeText != null) {
+                resultValue.append(nodeText).append(" ");
+            }
         }
 
         return resultValue.toString().trim();
@@ -128,5 +130,29 @@ public class JsonMappingTransformer {
      */
     public static void putPair(JsonNode node, String name, String value) {
         ((ObjectNode) node).put(name, value);
+    }
+
+    /**
+     * Gets a list of String values from a node specified in the mapping. The mapping node can be an array
+     * (have multiple mappings for the same field -- mainly if the data source changes structure over time)
+     * @param mappingRoot - Root mapping node
+     * @param field - Field in the mapping to look for
+     * @param nodeToPreprocess - Node, in which we search mapped fields and add the new extracted fields
+     * @return list of String values extracted from the mapping
+     * @throws MappingException
+     */
+    public static List<String> getValuesListFromMappingArray(JsonNode mappingRoot, MappedFields field, JsonNode nodeToPreprocess) throws MappingException {
+        JsonNode mappingNode = mappingRoot.path(field.value);
+        List<String> valuesList = new ArrayList<>();
+        if (mappingNode.isArray()) {
+            for (JsonNode node : mappingNode) {
+                valuesList = JsonMappingTransformer.extractArrayFromMapping(nodeToPreprocess, node);
+                if (!valuesList.isEmpty()) {
+                    return valuesList;
+                }
+            }
+        }
+
+        return valuesList;
     }
 }

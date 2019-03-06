@@ -27,8 +27,6 @@ import java.util.List;
  */
 public class PatentLoader extends SourceDbLoader {
 
-    private static final String COLLECTION_NAME = "test";
-
     private String mappingFilePath;
     private String collectionName;
 
@@ -53,7 +51,7 @@ public class PatentLoader extends SourceDbLoader {
 
         IDbLoadArgs loadArgs;
         if (dbConnection instanceof MongoDbConnection) {
-            loadArgs = new MongoDbLoadArgs(COLLECTION_NAME, docs);
+            loadArgs = new MongoDbLoadArgs(collectionName, docs);
         } else {
             LOGGER.severe("Unknown connection specified. Exiting now.");
             throw new RuntimeException();
@@ -144,11 +142,11 @@ public class PatentLoader extends SourceDbLoader {
         }
 
         // Authors
-        List<String> authorsList = JsonMappingTransformer.extractArrayFromMapping(nodeToPreprocess, mappingRoot, MappedFields.AUTHORS);
+        List<String> authorsList = JsonMappingTransformer.getValuesListFromMappingArray(mappingRoot, MappedFields.AUTHORS, nodeToPreprocess);
         JsonMappingTransformer.putArrayToNode(authorsList, nodeToPreprocess, MappedFields.AUTHORS, "name");
 
         // Owners
-        List<String> ownersList = JsonMappingTransformer.extractArrayFromMapping(nodeToPreprocess, mappingRoot, MappedFields.OWNERS);
+        List<String> ownersList = JsonMappingTransformer.getValuesListFromMappingArray(mappingRoot, MappedFields.OWNERS, nodeToPreprocess);
         JsonMappingTransformer.putArrayToNode(ownersList, nodeToPreprocess, MappedFields.OWNERS, "name");
 
         // Title
