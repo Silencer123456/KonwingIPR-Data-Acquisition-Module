@@ -1,5 +1,6 @@
 package knowingipr.dam.controller;
 
+import javafx.concurrent.Task;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
@@ -10,10 +11,7 @@ import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import knowingipr.dam.model.DataSource;
 import knowingipr.dam.model.DataSourceModel;
-import knowingipr.data.loader.MongoDbConnection;
-import knowingipr.data.loader.PatentLoader;
-import knowingipr.data.loader.SourceDbConnection;
-import knowingipr.data.loader.SourceDbLoader;
+import knowingipr.data.loader.*;
 
 import java.awt.*;
 import java.io.File;
@@ -118,17 +116,41 @@ public class DetailController {
 
     public void onLoadCollectionButtonClicked(ActionEvent actionEvent) {
         if (sourceNameTextField.getText().equals("uspto")) {
-            sourceDbLoader = new PatentLoader(dbConnection, mappingFileTextField.getText(), categoryTypeComboBox.getSelectionModel().getSelectedItem());
-            try {
-                sourceDbLoader.loadFromDirectory(loadPathTextField.getText(), new String[]{"json"});
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+            sourceDbLoader = new PatentLoader(dbConnection, mappingFileTextField.getText(), "test");
+            doLoad();
+        }
+        else if (sourceNameTextField.getText().equals("patstat")) {
+            sourceDbLoader = new PatstatLoader(dbConnection, mappingFileTextField.getText(), "test");
+            doLoad();
         }
         else {
             Alert alert = new Alert(Alert.AlertType.WARNING, "The parser for selected data source does not exist yet");
             alert.showAndWait();
         }
+    }
+
+    private void doLoad() {
+        //try {
+        // TODO: run as a task on separate thread
+
+        Task<Void> task = new Task<Void>() {
+            @Override
+            protected Void call() throws Exception {
+                sourceDbLoader.loadFromDirectory(loadPathTextField.getText(), new String[]{"json"});
+                return null;
+            }
+        };
+        new Thread(task).start();
+
+        task.setOnSucceeded(evt -> System.out.println(task.getValue()));
+        task.setOnFailed(evt -> {
+            System.err.println("The task failed with the following exception:");
+            task.getException().printStackTrace(System.err);
+        });
+
+            /*} catch (IOException e) {
+                e.printStackTrace();
+            }*/
     }
 
     public void onSaveButtonClicked(ActionEvent actionEvent) {

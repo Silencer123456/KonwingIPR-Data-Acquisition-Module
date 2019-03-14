@@ -1,7 +1,12 @@
 package knowingipr.data.loader;
 
+import com.fasterxml.jackson.databind.JsonNode;
+import knowingipr.data.exception.MappingException;
+import knowingipr.data.utils.DirectoryHandler;
+
 import java.io.File;
 import java.io.IOException;
+import java.util.List;
 import java.util.logging.Logger;
 
 /**
@@ -11,9 +16,11 @@ public abstract class SourceDbLoader {
     protected final static Logger LOGGER = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
 
     protected SourceDbConnection dbConnection;
+    protected String mappingFilePath;
 
-    public SourceDbLoader(SourceDbConnection dbConnection) {
+    public SourceDbLoader(SourceDbConnection dbConnection, String mappingFile) {
         this.dbConnection = dbConnection;
+        this.mappingFilePath = mappingFile;
     }
 
     /**
@@ -30,5 +37,13 @@ public abstract class SourceDbLoader {
      * @param extensions - The extensions of the files to get
      * @throws IOException if there was error reading or accessing files
      */
-    public abstract void loadFromDirectory(String dirPath, String[] extensions) throws IOException;
+    public void loadFromDirectory(String dirPath, String[] extensions) throws IOException {
+        List<File> files = DirectoryHandler.ListFilesFromDirectory(dirPath, extensions, true);
+        for (File file : files) {
+            LOGGER.info("Processing " + file.getCanonicalPath());
+            insertFromFile(file);
+        }
+    }
+
+    public abstract void preprocessNode(JsonNode nodeToPreprocess) throws MappingException;
 }
