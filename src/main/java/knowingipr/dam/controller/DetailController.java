@@ -103,6 +103,10 @@ public class DetailController {
         });
     }
 
+    /**
+     * Toggles the editable value of the fields
+     * @param value = value to toggle the editable value to.
+     */
     private void toggleEditableTextFields(boolean value) {
         sourceNameTextField.setEditable(value);
         descriptionTextField.setEditable(value);
@@ -116,11 +120,11 @@ public class DetailController {
 
     public void onLoadCollectionButtonClicked(ActionEvent actionEvent) {
         if (sourceNameTextField.getText().equals("uspto")) {
-            sourceDbLoader = new PatentLoader(dbConnection, mappingFileTextField.getText(), "test");
+            sourceDbLoader = new PatentLoader(dbConnection, mappingFileTextField.getText(), categoryTypeComboBox.getSelectionModel().getSelectedItem());
             doLoad();
         }
         else if (sourceNameTextField.getText().equals("patstat")) {
-            sourceDbLoader = new PatstatLoader(dbConnection, mappingFileTextField.getText(), "test");
+            sourceDbLoader = new PatstatLoader(dbConnection, mappingFileTextField.getText(), categoryTypeComboBox.getSelectionModel().getSelectedItem());
             doLoad();
         }
         else {
@@ -129,23 +133,30 @@ public class DetailController {
         }
     }
 
+    /**
+     * Performs the loading of the data into the database.
+     */
     private void doLoad() {
-        //try {
-        // TODO: run as a task on separate thread
+        //try
 
         Task<Void> task = new Task<Void>() {
             @Override
             protected Void call() throws Exception {
                 sourceDbLoader.loadFromDirectory(loadPathTextField.getText(), new String[]{"json"});
+                loadCollectionButton.setDisable(true);
                 return null;
             }
         };
         new Thread(task).start();
 
-        task.setOnSucceeded(evt -> System.out.println(task.getValue()));
+        task.setOnSucceeded(evt -> {
+            System.out.println(task.getValue());
+            loadCollectionButton.setDisable(false);
+        });
         task.setOnFailed(evt -> {
             System.err.println("The task failed with the following exception:");
             task.getException().printStackTrace(System.err);
+            loadCollectionButton.setDisable(false);
         });
 
             /*} catch (IOException e) {

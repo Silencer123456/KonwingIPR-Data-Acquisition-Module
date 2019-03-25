@@ -4,6 +4,7 @@ package knowingipr.data.loader;
  * Fields, that are mapped in the external mapping configuration
  */
 public enum MappedFields {
+    ID("number"),
     TITLE("title"),
     ABSTRACT("abstract"),
     YEAR("year"),

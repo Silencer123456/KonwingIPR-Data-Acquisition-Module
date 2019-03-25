@@ -86,6 +86,11 @@ public class PatentLoader extends SourceDbLoader {
             JsonMappingTransformer.putPair(nodeToPreprocess, MappedFields.ABSTRACT.value, abstractText.toString());
         }
 
+        // Patent number
+        String patentIdPath = mappingRoot.path(MappedFields.ID.value).textValue();
+        String patNumberId = nodeToPreprocess.at(patentIdPath).textValue();
+        JsonMappingTransformer.putPair(nodeToPreprocess, MappedFields.ID.value, extractPatentNumber(patNumberId));
+
         // Authors
         List<String> authorsList = JsonMappingTransformer.getValuesListFromMappingArray(mappingRoot, MappedFields.AUTHORS, nodeToPreprocess);
         JsonMappingTransformer.putArrayToNode(authorsList, nodeToPreprocess, MappedFields.AUTHORS, "name");
@@ -100,7 +105,8 @@ public class PatentLoader extends SourceDbLoader {
         // Year
         String yearPath = mappingRoot.path(MappedFields.YEAR.value).path("path").textValue();
         JsonNode yearNode = nodeToPreprocess.at(yearPath);
-        ((ObjectNode) nodeToPreprocess).put(MappedFields.YEAR.value, yearNode.toString().substring(0, 4));
+        JsonMappingTransformer.putPair(nodeToPreprocess, MappedFields.YEAR.value, yearNode.toString().substring(0, 4));
+        //((ObjectNode) nodeToPreprocess).put(MappedFields.YEAR.value, yearNode.toString().substring(0, 4));
 
         // Data Source
         JsonMappingTransformer.putPair(nodeToPreprocess, "dataSource", "uspto");
@@ -111,5 +117,18 @@ public class PatentLoader extends SourceDbLoader {
 
         InputStream input = new FileInputStream(mappingFilePath);
         return objectMapper.readTree(input);
+    }
+
+    /**
+     * Extracts a patent number from a string.
+     * In USPTO, patent number field can look like this: USPP027521-20170103.XML
+     * In this case, extracted patent number would be : USPP27521
+     * @return patent number
+     */
+    private String extractPatentNumber(String patentId) {
+        StringBuilder patentNumber = new StringBuilder(patentId.split("-")[0]);
+        patentNumber.deleteCharAt(patentNumber.indexOf("0"));
+
+        return patentNumber.toString();
     }
 }

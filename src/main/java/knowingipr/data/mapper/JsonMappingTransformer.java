@@ -119,6 +119,8 @@ public class JsonMappingTransformer {
         String path = mappingRoot.get(field.value).textValue();
         JsonNode searchedNode = nodeToPreprocess.at(path);
         putPair(nodeToPreprocess, field.value, searchedNode.textValue());
+
+        //((ObjectNode) nodeToPreprocess).remove(path);
     }
 
     /**

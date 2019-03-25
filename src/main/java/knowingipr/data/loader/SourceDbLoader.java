@@ -24,7 +24,7 @@ public abstract class SourceDbLoader {
     }
 
     /**
-     * Inserts to the target database.
+     * Inserts list of documents to the target database.
      * @param file - File to be loaded into the database
      * @throws IOException if the file loading fails
      */
