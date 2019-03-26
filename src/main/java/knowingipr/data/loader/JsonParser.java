@@ -9,6 +9,7 @@ import knowingipr.data.exception.MappingException;
 import org.bson.Document;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -29,7 +30,7 @@ public class JsonParser {
      * @return - List of parsed documents to be added to the database. If there is an error parsing
      * the file, an empty list is returned
      */
-    public List<Document> parseFileStreaming(File file, SourceDbLoader loader, String arrayName) throws IOException {
+    public List<Document> parseFileStreaming(File file, SourceDbLoader loader, String arrayName) throws IOException, MappingException {
         List<Document> documents = new ArrayList<>();
 
         JsonFactory factory = new MappingJsonFactory();
@@ -51,9 +52,6 @@ public class JsonParser {
         } catch (JsonParseException e) {
             LOGGER.warning("Error parsing file " + file.getCanonicalPath());
             e.printStackTrace();
-            return Collections.emptyList();
-        } catch (MappingException e) {
-            LOGGER.warning("Mapping file error: " + e.getMessage());
             return Collections.emptyList();
         }
 

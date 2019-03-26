@@ -7,10 +7,7 @@ import knowingipr.data.exception.MappingException;
 import knowingipr.data.mapper.JsonMappingTransformer;
 import org.bson.Document;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStream;
+import java.io.*;
 import java.util.List;
 
 /**
@@ -29,9 +26,8 @@ public class PatentLoader extends SourceDbLoader {
         jsonParser = new JsonParser();
     }
 
-    // TODO: Maybe remove from parent and make private
     @Override
-    public void insertFromFile(File file) throws IOException {
+    public void insertFromFile(File file) throws IOException, MappingException {
         LOGGER.finer("Parsing file " + file.getCanonicalPath());
         List<Document> docs = jsonParser.parseFileStreaming(file, this, "us-patent-grant");
         LOGGER.finer("Parsing done");
@@ -60,15 +56,8 @@ public class PatentLoader extends SourceDbLoader {
      * @throws MappingException - if there is an error in the mapping file
      */
     @Override
-    public void preprocessNode(JsonNode nodeToPreprocess) throws MappingException {
-        JsonNode mappingRoot;
-        try {
-            mappingRoot = loadMappingFile().get("uspto");
-        } catch (IOException e) {
-            e.printStackTrace();
-            LOGGER.severe("Error loading the mapping");
-            return;
-        }
+    public void preprocessNode(JsonNode nodeToPreprocess) throws MappingException, IOException {
+        JsonNode mappingRoot = loadMappingFile().get("uspto");
 
         // Abstract
         String abstractPath = mappingRoot.get(MappedFields.ABSTRACT.value).textValue();

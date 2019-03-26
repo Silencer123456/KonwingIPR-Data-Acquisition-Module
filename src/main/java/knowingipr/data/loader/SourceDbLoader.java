@@ -27,8 +27,9 @@ public abstract class SourceDbLoader {
      * Inserts list of documents to the target database.
      * @param file - File to be loaded into the database
      * @throws IOException if the file loading fails
+     * @throws MappingException in case of mapping file error
      */
-    public abstract void insertFromFile(File file) throws IOException;
+    public abstract void insertFromFile(File file) throws IOException, MappingException;
 
     /**
      * Loads all the files with the specified extension from the directory (including
@@ -37,7 +38,7 @@ public abstract class SourceDbLoader {
      * @param extensions - The extensions of the files to get
      * @throws IOException if there was error reading or accessing files
      */
-    public void loadFromDirectory(String dirPath, String[] extensions) throws IOException {
+    public void loadFromDirectory(String dirPath, String[] extensions) throws IOException, MappingException {
         List<File> files = DirectoryHandler.ListFilesFromDirectory(dirPath, extensions, true);
         for (File file : files) {
             LOGGER.info("Processing " + file.getCanonicalPath());
@@ -45,5 +46,5 @@ public abstract class SourceDbLoader {
         }
     }
 
-    public abstract void preprocessNode(JsonNode nodeToPreprocess) throws MappingException;
+    public abstract void preprocessNode(JsonNode nodeToPreprocess) throws MappingException, IOException;
 }

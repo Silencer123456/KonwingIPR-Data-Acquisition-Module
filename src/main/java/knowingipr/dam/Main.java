@@ -54,9 +54,11 @@ public class Main extends Application {
         detailController.initModel(model);
         listController.initModel(model);
         statusBarController.initModel(model);
+        toolsController.initModel(model);
 
         Scene scene = new Scene(root, 800, 600);
         primaryStage.setScene(scene);
+        primaryStage.setTitle("Data Administrator");
         primaryStage.show();
 
         /*Parent root = FXMLLoader.load(getClass().getResource("/sample.fxml"));

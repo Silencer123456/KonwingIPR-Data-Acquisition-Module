@@ -1,10 +1,12 @@
 package knowingipr.dam.controller;
 
+import javafx.concurrent.Task;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import knowingipr.dam.model.DataSourceModel;
 import knowingipr.dam.tools.XmlToJsonConverter;
 import knowingipr.dam.tools.ZipHandler;
 
@@ -15,6 +17,8 @@ import java.io.IOException;
  */
 public class ToolsController {
 
+    private DataSourceModel model;
+
     @FXML
     public TextField targetDirectoryTextField;
     @FXML
@@ -24,23 +28,53 @@ public class ToolsController {
     @FXML
     public Button xmlToJsonButton;
 
+    public void initModel(DataSourceModel model) {
+        this.model = model;
+    }
+
     public void onXmlToJsonButtonClick(ActionEvent actionEvent) {
-        try {
-            XmlToJsonConverter.convertDirectory(sourceDirectoryTextField.getText(), targetDirectoryTextField.getText());
-        } catch (IOException e) {
-            Alert alert = new Alert(Alert.AlertType.ERROR, "Error while reading files from directory: " + e.getMessage());
+        Task<Void> task = new Task<Void>() {
+            @Override
+            protected Void call() throws Exception {
+                XmlToJsonConverter.convertDirectory(sourceDirectoryTextField.getText(), targetDirectoryTextField.getText());
+                return null;
+            }
+        };
+        new Thread(task).start();
+
+        task.setOnSucceeded(evt -> {
+            System.out.println(task.getValue());
+            model.currentStatusProperty().setValue("Conversion complete");
+        });
+
+        task.setOnFailed(evt -> {
+            Alert alert = new Alert(Alert.AlertType.ERROR, "Error while reading files from directory: " + task.getException().getMessage());
             alert.showAndWait();
-            e.printStackTrace();
-        }
+            System.err.println("The task failed with the following exception:");
+            task.getException().printStackTrace(System.err);
+        });
     }
 
     public void onZipExtractButtonClick(ActionEvent actionEvent) {
-        try {
-            ZipHandler.extractDirectory(sourceDirectoryTextField.getText(), targetDirectoryTextField.getText());
-        } catch (IOException e) {
-            Alert alert = new Alert(Alert.AlertType.ERROR, "Error while reading files from directory: " + e.getMessage());
+        Task<Void> task = new Task<Void>() {
+            @Override
+            protected Void call() throws Exception {
+                ZipHandler.extractDirectory(sourceDirectoryTextField.getText(), targetDirectoryTextField.getText());
+                return null;
+            }
+        };
+        new Thread(task).start();
+
+        task.setOnSucceeded(evt -> {
+            System.out.println(task.getValue());
+            model.currentStatusProperty().setValue("Extraction complete");
+        });
+
+        task.setOnFailed(evt -> {
+            Alert alert = new Alert(Alert.AlertType.ERROR, "Error while reading files from directory: " + task.getException().getMessage());
             alert.showAndWait();
-            e.printStackTrace();
-        }
+            System.err.println("The task failed with the following exception:");
+            task.getException().printStackTrace(System.err);
+        });
     }
 }

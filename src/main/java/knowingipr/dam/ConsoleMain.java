@@ -1,5 +1,6 @@
 package knowingipr.dam;
 
+import knowingipr.data.exception.MappingException;
 import knowingipr.data.loader.MongoDbConnection;
 import knowingipr.data.loader.PatentLoader;
 import knowingipr.data.loader.SourceDbConnection;
@@ -15,7 +16,7 @@ public class ConsoleMain {
         SourceDbLoader sourceDbLoader = new PatentLoader(dbConnection, args[2], args[0]);
         try {
             sourceDbLoader.loadFromDirectory(args[1], new String[]{"json"});
-        } catch (IOException e) {
+        } catch (IOException | MappingException e) {
             e.printStackTrace();
         }
     }

@@ -137,8 +137,6 @@ public class DetailController {
      * Performs the loading of the data into the database.
      */
     private void doLoad() {
-        //try
-
         Task<Void> task = new Task<Void>() {
             @Override
             protected Void call() throws Exception {
@@ -151,17 +149,15 @@ public class DetailController {
 
         task.setOnSucceeded(evt -> {
             System.out.println(task.getValue());
+            model.currentStatusProperty().setValue("Loading finished");
             loadCollectionButton.setDisable(false);
         });
         task.setOnFailed(evt -> {
             System.err.println("The task failed with the following exception:");
+            model.currentStatusProperty().setValue(task.getException().getMessage());
             task.getException().printStackTrace(System.err);
             loadCollectionButton.setDisable(false);
         });
-
-            /*} catch (IOException e) {
-                e.printStackTrace();
-            }*/
     }
 
     public void onSaveButtonClicked(ActionEvent actionEvent) {
@@ -290,5 +286,9 @@ public class DetailController {
     public void onDeleteButtonClicked(ActionEvent actionEvent) {
         boolean value = model.deleteDataSource(model.getCurrentSource().getId());
         model.loadData();
+    }
+
+    public void onOpenLoadButtonClicked(ActionEvent actionEvent) {
+
     }
 }
