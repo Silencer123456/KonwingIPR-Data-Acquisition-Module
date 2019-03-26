@@ -17,7 +17,7 @@ public class DataSource {
     private final StringProperty licenceType = new SimpleStringProperty();
     private final StringProperty licencePath = new SimpleStringProperty();
     private final StringProperty categoryType = new SimpleStringProperty();
-    private StringProperty dateLastUpdated = new SimpleStringProperty();
+    private StringProperty dateLastUpdatedString = new SimpleStringProperty();
 
     private final IntegerProperty updateIntervalDays = new SimpleIntegerProperty();
 
@@ -39,7 +39,7 @@ public class DataSource {
         setLicenceType(licenceType);
         setCategoryType(categoryType);
         setUpdateIntervalDays(updateInterval);
-        setDateLastUpdated(dateLastUpdated.toString());
+        setDateLastUpdatedString(dateLastUpdated.toString());
         lastUpdatedDate = dateLastUpdated;
     }
 
@@ -181,19 +181,19 @@ public class DataSource {
     }
 
     public StringProperty getDateLastUpdatedProperty() {
-        return dateLastUpdated;
+        return dateLastUpdatedString;
     }
 
-    public String getDateLastUpdated() {
-        return dateLastUpdated.get();
+    public String getDateLastUpdatedString() {
+        return dateLastUpdatedString.get();
     }
 
-    public StringProperty dateLastUpdatedProperty() {
-        return dateLastUpdated;
+    public StringProperty dateLastUpdatedStringProperty() {
+        return dateLastUpdatedString;
     }
 
-    public void setDateLastUpdated(String dateLastUpdated) {
-        this.dateLastUpdated.set(dateLastUpdated);
+    public void setDateLastUpdatedString(String dateLastUpdatedString) {
+        this.dateLastUpdatedString.set(dateLastUpdatedString);
     }
 
     public Date getLastUpdatedDate() {
@@ -202,5 +202,6 @@ public class DataSource {
 
     public void setLastUpdatedDate(Date lastUpdatedDate) {
         this.lastUpdatedDate = lastUpdatedDate;
+        setDateLastUpdatedString(lastUpdatedDate.toString());
     }
 }

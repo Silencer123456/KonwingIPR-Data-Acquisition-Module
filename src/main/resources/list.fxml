@@ -6,6 +6,7 @@
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
@@ -21,10 +22,15 @@
    </rowConstraints>
    <children>
        <ListView fx:id="listView" GridPane.rowIndex="3" />
-      <Button fx:id="refreshButton" mnemonicParsing="false" onAction="#onRefreshButtonClicked" text="Refresh" GridPane.rowIndex="2" />
-      <Label prefHeight="11.0" prefWidth="237.0" text="Data Administration module">
+      <HBox prefHeight="100.0" prefWidth="200.0" spacing="10.0" GridPane.rowIndex="2">
+         <children>
+            <Button fx:id="refreshButton" mnemonicParsing="false" onAction="#onRefreshButtonClicked" text="Refresh" />
+            <Button mnemonicParsing="false" onAction="#onResetIntervalButtonClicked" text="Reset interval" />
+         </children>
+      </HBox>
+      <Label prefHeight="11.0" prefWidth="237.0" text="Data Administration">
          <font>
-            <Font size="19.0" />
+            <Font size="16.0" />
          </font>
          <padding>
             <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />

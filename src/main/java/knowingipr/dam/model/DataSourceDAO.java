@@ -73,7 +73,6 @@ public class DataSourceDAO implements IDataSourceDAO {
                 "\tWHERE sources.categoryTypeId=category_type.categoryTypeId " +
                 "AND sources.sourceId = " + id;
         return null;
-
     }
 
     @Override
@@ -100,6 +99,42 @@ public class DataSourceDAO implements IDataSourceDAO {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+
+        return false;
+    }
+
+    @Override
+    public boolean updateDataSource(DataSource dataSource) {
+        String sql = "UPDATE sources SET name = " + dataSource.getName() +
+                ", url = " + dataSource.getUrl() +
+                ", description = " + dataSource.getDescription() +
+                ", schemaPath = " + dataSource.getSchemaPath() +
+                ", mappingFilePath = " + dataSource.getMappingPath() +
+                ", licenceType = " + dataSource.getLicenceType() +
+                ", licenceFilePath = " + dataSource.getLicencePath() +
+                ", updateIntervalDays = " + dataSource.getUpdateIntervalDays() +
+                ", dateLastUpdated = " + dataSource.getDateLastUpdatedString() +
+                " WHERE sourceId = " + dataSource.getId();
+
+        try {
+            dbAccess.update(connection,
+                    "UPDATE sources SET name = ?, " +
+                            "url = ?, " +
+                            "description = ?, " +
+                            "schemaPath = ?, " +
+                            "mappingFilePath = ?, " +
+                            "licenceType = ?, " +
+                            "licenceFilePath = ?, " +
+                            "updateIntervalDays = ? " +
+                            "WHERE sourceId = ?", dataSource.getName(), dataSource.getUrl(), dataSource.getDescription(),
+                    dataSource.getSchemaPath(), dataSource.getMappingPath(), dataSource.getLicenceType(),
+                    dataSource.getLicencePath(), dataSource.getUpdateIntervalDays(), dataSource.getId());
+
+            return true;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
         return false;
     }
 

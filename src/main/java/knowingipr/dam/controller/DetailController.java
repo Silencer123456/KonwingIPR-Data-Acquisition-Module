@@ -85,7 +85,7 @@ public class DetailController {
                 mappingFileTextField.setText(newSource.getMappingPath());
                 licenceFileTextField.setText(newSource.getLicencePath());
                 licenceTypeTextField.setText(newSource.getLicenceType());
-                dateLastUpdatedLabel.setText(newSource.getDateLastUpdated());
+                dateLastUpdatedLabel.setText(newSource.getDateLastUpdatedString());
                 updateIntervalTextField.setText(newSource.getUpdateIntervalDays()+"");
                 categoryTypeComboBox.getSelectionModel().select(newSource.getCategoryType());
                 toggleEditMode(false);
@@ -173,9 +173,28 @@ public class DetailController {
             return;
         }
 
-        model.addNewDataSource(sourceNameTextField.getText(), descriptionTextField.getText(), urlTextField.getText(),
-                schemeFileTextField.getText(), mappingFileTextField.getText(), licenceTypeTextField.getText(), licenceFileTextField.getText(),
-                categoryTypeComboBox.getSelectionModel().getSelectedItem(), updateInterval);
+        // Editing newly created record
+        if (model.getCurrentSource().getId() == 0) {
+            model.addNewDataSource(sourceNameTextField.getText(), descriptionTextField.getText(), urlTextField.getText(),
+                    schemeFileTextField.getText(), mappingFileTextField.getText(), licenceTypeTextField.getText(), licenceFileTextField.getText(),
+                    categoryTypeComboBox.getSelectionModel().getSelectedItem(), updateInterval);
+        }
+        // Editing existing record, only update
+        else {
+            DataSource dataSource = new DataSource();
+            dataSource.setName(sourceNameTextField.getText());
+            dataSource.setDescription(descriptionTextField.getText());
+            dataSource.setUrl(urlTextField.getText());
+            dataSource.setSchemaPath(schemeFileTextField.getText());
+            dataSource.setMappingPath(mappingFileTextField.getText());
+            dataSource.setLicenceType(licenceTypeTextField.getText());
+            dataSource.setLicencePath(licenceFileTextField.getText());
+            dataSource.setCategoryType(categoryTypeComboBox.getSelectionModel().getSelectedItem());
+            dataSource.setUpdateIntervalDays(updateInterval);
+            dataSource.setId(model.getCurrentSource().getId());
+            model.updateDataSource(dataSource);
+        }
+
         toggleEditMode(false);
 
         model.loadData();

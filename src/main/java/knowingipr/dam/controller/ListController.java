@@ -3,7 +3,6 @@ package knowingipr.dam.controller;
 import javafx.collections.ListChangeListener;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
 import knowingipr.dam.controller.ui.ListViewCell;
 import knowingipr.dam.model.DataSourceModel;
@@ -56,5 +55,9 @@ public class ListController {
 
     public void onRefreshButtonClicked(ActionEvent actionEvent) {
         model.loadData();
+    }
+
+    public void onResetIntervalButtonClicked(ActionEvent actionEvent) {
+
     }
 }

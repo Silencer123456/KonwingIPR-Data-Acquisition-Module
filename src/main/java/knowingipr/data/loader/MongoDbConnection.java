@@ -1,5 +1,8 @@
 package knowingipr.data.loader;
 
+import com.mongodb.MongoClientURI;
+import com.mongodb.MongoCredential;
+import com.mongodb.ServerAddress;
 import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoClients;
 import com.mongodb.client.MongoCollection;
@@ -7,6 +10,7 @@ import com.mongodb.client.MongoDatabase;
 import com.mongodb.client.model.InsertManyOptions;
 import org.bson.Document;
 
+import java.util.Arrays;
 import java.util.logging.Logger;
 
 /**
@@ -28,6 +32,9 @@ public class MongoDbConnection implements SourceDbConnection {
         LOGGER.info("Connecting to the MongoDB database " + DB_NAME);
         MongoClient mongoClient = MongoClients.create();
         mongoDatabase = mongoClient.getDatabase(DB_NAME);
+
+        //MongoClient client = MongoClients.create("mongodb://dunabe:dkd8dD-d23dwdw@students/?authSource=dunabe");
+        //mongoDatabase = client.getDatabase(DB_NAME);
     }
 
     @Override

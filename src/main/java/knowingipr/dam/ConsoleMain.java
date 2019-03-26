@@ -9,7 +9,7 @@ import java.io.IOException;
 
 public class ConsoleMain {
 
-    SourceDbConnection dbConnection = new MongoDbConnection();
+    private SourceDbConnection dbConnection = new MongoDbConnection();
 
     public ConsoleMain(String[] args) {
         SourceDbLoader sourceDbLoader = new PatentLoader(dbConnection, args[2], args[0]);

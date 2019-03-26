@@ -59,6 +59,15 @@ public class DataSourceModel {
         return false;
     }
 
+    /**
+     * Updates a specified data source
+     * @param dataSource - data source to update
+     * @return - true if successful, else false
+     */
+    public boolean updateDataSource(DataSource dataSource) {
+        return dataSourceDAO.updateDataSource(dataSource);
+    }
+
     // TODO: CHANGE TO FETCH FROM DATABASE INSTEAD
     private DataSource getDataSourceWithId(long id) {
         for (DataSource dataSource : getSourcesList()) {
@@ -70,15 +79,12 @@ public class DataSourceModel {
         return null;
     }
 
+    /**
+     * Loads all the data sources from the db.
+     */
     public void loadData() {
         List<DataSource> loadedSources = dataSourceDAO.findAll();
         sourcesList.setAll(loadedSources);
-        // mock data
-        /*sourcesList.setAll(
-                new DataSource("test1", "this is test 1"),
-                new DataSource("test2", "this is test 2"),
-                new DataSource("test3", "this is test 3")
-        );*/
     }
 
     /**
@@ -98,6 +104,15 @@ public class DataSourceModel {
         todayCal.setTime(today);
 
         return expirationCal.getTime().before(todayCal.getTime());
+    }
+
+    /**
+     * Extends the expiration of the data source by
+     * setting the last updated date to today.
+     * @param dataSource - Data source to update
+     */
+    public void extendExpiration(DataSource dataSource) {
+        dataSource.setLastUpdatedDate(new Date());
     }
 
     public ObservableList<String> getCategoryTypesList() {
