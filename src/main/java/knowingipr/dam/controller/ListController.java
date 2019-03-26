@@ -58,6 +58,11 @@ public class ListController {
     }
 
     public void onResetIntervalButtonClicked(ActionEvent actionEvent) {
-
+        if (model.extendExpiration()) {
+            model.setCurrentStatus("Interval reset");
+            model.loadData();
+        } else {
+            model.setCurrentStatus("Interval could not be reset");
+        }
     }
 }

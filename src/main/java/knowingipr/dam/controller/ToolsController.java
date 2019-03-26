@@ -32,6 +32,7 @@ public class ToolsController {
         this.model = model;
     }
 
+
     public void onXmlToJsonButtonClick(ActionEvent actionEvent) {
         Task<Void> task = new Task<Void>() {
             @Override

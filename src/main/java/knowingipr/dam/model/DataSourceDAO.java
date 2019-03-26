@@ -105,17 +105,6 @@ public class DataSourceDAO implements IDataSourceDAO {
 
     @Override
     public boolean updateDataSource(DataSource dataSource) {
-        String sql = "UPDATE sources SET name = " + dataSource.getName() +
-                ", url = " + dataSource.getUrl() +
-                ", description = " + dataSource.getDescription() +
-                ", schemaPath = " + dataSource.getSchemaPath() +
-                ", mappingFilePath = " + dataSource.getMappingPath() +
-                ", licenceType = " + dataSource.getLicenceType() +
-                ", licenceFilePath = " + dataSource.getLicencePath() +
-                ", updateIntervalDays = " + dataSource.getUpdateIntervalDays() +
-                ", dateLastUpdated = " + dataSource.getDateLastUpdatedString() +
-                " WHERE sourceId = " + dataSource.getId();
-
         try {
             dbAccess.update(connection,
                     "UPDATE sources SET name = ?, " +
@@ -138,6 +127,19 @@ public class DataSourceDAO implements IDataSourceDAO {
         return false;
     }
 
+    @Override
+    public boolean updateDate(String date, Long id) {
+        try {
+            dbAccess.update(connection,
+                    "UPDATE sources SET dateLastUpdated = ? " +
+                            "WHERE sourceId = ?", date, id);
+
+            return true;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
 
     @Override
     public List<String> getCategoryTypes() {

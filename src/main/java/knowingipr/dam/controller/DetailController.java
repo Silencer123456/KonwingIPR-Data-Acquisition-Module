@@ -174,6 +174,7 @@ public class DetailController {
             model.addNewDataSource(sourceNameTextField.getText(), descriptionTextField.getText(), urlTextField.getText(),
                     schemeFileTextField.getText(), mappingFileTextField.getText(), licenceTypeTextField.getText(), licenceFileTextField.getText(),
                     categoryTypeComboBox.getSelectionModel().getSelectedItem(), updateInterval);
+
         }
         // Editing existing record, only update
         else {
@@ -188,7 +189,11 @@ public class DetailController {
             dataSource.setCategoryType(categoryTypeComboBox.getSelectionModel().getSelectedItem());
             dataSource.setUpdateIntervalDays(updateInterval);
             dataSource.setId(model.getCurrentSource().getId());
-            model.updateDataSource(dataSource);
+            if (model.updateDataSource(dataSource)) {
+                model.currentStatusProperty().setValue("Record updated");
+            } else {
+                model.currentStatusProperty().setValue("There was an error updating the record");
+            }
         }
 
         toggleEditMode(false);

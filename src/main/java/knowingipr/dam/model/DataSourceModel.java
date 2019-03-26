@@ -8,6 +8,8 @@ import javafx.beans.property.StringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
@@ -90,6 +92,7 @@ public class DataSourceModel {
     /**
      * Calculates if the source is expired and should be updated
      * @return - true if the source is expired, else false
+     * TODO: Test this method
      */
     public boolean isSourceExpired(DataSource dataSource) {
         Date lastUpdateDate = dataSource.getLastUpdatedDate();
@@ -109,10 +112,13 @@ public class DataSourceModel {
     /**
      * Extends the expiration of the data source by
      * setting the last updated date to today.
-     * @param dataSource - Data source to update
+     * @return true if success, else false
      */
-    public void extendExpiration(DataSource dataSource) {
-        dataSource.setLastUpdatedDate(new Date());
+    public boolean extendExpiration() {
+        DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        Date date = new Date();
+        String d = dateFormat.format(date);
+        return dataSourceDAO.updateDate(d, getCurrentSource().getId());
     }
 
     public ObservableList<String> getCategoryTypesList() {
