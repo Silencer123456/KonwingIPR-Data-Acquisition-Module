@@ -2,12 +2,9 @@ package knowingipr.dam;
 
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Insets;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
-import javafx.scene.input.KeyCode;
-import javafx.scene.input.MouseButton;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import knowingipr.dam.model.DataSource;
@@ -25,6 +22,8 @@ import knowingipr.dam.model.DataSourceDAO;
 import knowingipr.dam.model.DataSourceModel;
 import knowingipr.dam.model.IDataSourceDAO;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Date;
 import java.util.List;
 
@@ -35,8 +34,11 @@ public class MainTest extends ApplicationTest {
 
     private DataSourceModel model;
 
+    private TestHelper testHelper;
+
     @Before
     public void setUp() throws Exception {
+        testHelper = new TestHelper();
     }
 
     @After
@@ -86,7 +88,7 @@ public class MainTest extends ApplicationTest {
      * Also tests if the appropriate buttons are enabled and visible.
      */
     @Test
-    public void areFieldsEditableAfterEditButtonClicked() {
+    public void testFieldsEditableAfterEditButtonClicked() {
         Button editButton = GuiTest.find("#editButton");
         Button deleteButton = GuiTest.find("#deleteButton");
 
@@ -125,6 +127,99 @@ public class MainTest extends ApplicationTest {
         assertFalse(discardButton.isDisabled());
 
         assertTrue(editButton.isDisabled());
+        clickOn(discardButton);
+    }
+
+    @Test
+    public void testFormValidatesUpdateIntervalIsNotNumber() {
+        TextField schemeFileTextField = GuiTest.find("#schemeFileTextField");
+        TextField sourceNameTextField = GuiTest.find("#sourceNameTextField");
+        TextField descriptionTextField = GuiTest.find("#descriptionTextField");
+        TextField urlTextField = GuiTest.find("#urlTextField");
+        TextField licenceTypeTextField = GuiTest.find("#licenceTypeTextField");
+        TextField updateIntervalTextField = GuiTest.find("#updateIntervalTextField");
+        TextField mappingFileTextField = GuiTest.find("#mappingFileTextField");
+        TextField licenceFileTextField = GuiTest.find("#licenceFileTextField");
+        TextField loadPathTextField = GuiTest.find("#loadPathTextField");
+
+        clickOn("#addNewButton");
+
+        schemeFileTextField.setText("test");
+        sourceNameTextField.setText("test");
+        descriptionTextField.setText("Test");
+        urlTextField.setText("test");
+        licenceFileTextField.setText("Test");
+        licenceTypeTextField.setText("test");
+        updateIntervalTextField.setText("test");
+        mappingFileTextField.setText("test");
+        loadPathTextField.setText("test");
+
+        clickOn("#saveButton");
+
+        testHelper.alert_dialog_has_header_and_content("Error", "The update interval is not a number.");
+        clickOn("#discardButton");
+    }
+
+    @Test
+    public void testFormValidatesSourceNameTextFieldEmpty() {
+        TextField schemeFileTextField = GuiTest.find("#schemeFileTextField");
+        TextField sourceNameTextField = GuiTest.find("#sourceNameTextField");
+        TextField descriptionTextField = GuiTest.find("#descriptionTextField");
+        TextField urlTextField = GuiTest.find("#urlTextField");
+        TextField licenceTypeTextField = GuiTest.find("#licenceTypeTextField");
+        TextField updateIntervalTextField = GuiTest.find("#updateIntervalTextField");
+        TextField mappingFileTextField = GuiTest.find("#mappingFileTextField");
+        TextField licenceFileTextField = GuiTest.find("#licenceFileTextField");
+        TextField loadPathTextField = GuiTest.find("#loadPathTextField");
+
+        clickOn("#addNewButton");
+
+        schemeFileTextField.setText("test");
+        sourceNameTextField.setText("");
+        descriptionTextField.setText("Test");
+        urlTextField.setText("test");
+        licenceFileTextField.setText("Test");
+        licenceTypeTextField.setText("test");
+        updateIntervalTextField.setText("7");
+        mappingFileTextField.setText("test");
+        loadPathTextField.setText("test");
+
+        clickOn("#saveButton");
+
+        testHelper.alert_dialog_has_header_and_content("Error", "Source name cannot be empty.");
+
+        clickOn("#discardButton");
+    }
+
+    @Test
+    public void testFromValidatesMappingFileTextFieldEmpty() {
+        TextField schemeFileTextField = GuiTest.find("#schemeFileTextField");
+        TextField sourceNameTextField = GuiTest.find("#sourceNameTextField");
+        TextField descriptionTextField = GuiTest.find("#descriptionTextField");
+        TextField urlTextField = GuiTest.find("#urlTextField");
+        TextField licenceTypeTextField = GuiTest.find("#licenceTypeTextField");
+        TextField updateIntervalTextField = GuiTest.find("#updateIntervalTextField");
+        TextField mappingFileTextField = GuiTest.find("#mappingFileTextField");
+        TextField licenceFileTextField = GuiTest.find("#licenceFileTextField");
+        TextField loadPathTextField = GuiTest.find("#loadPathTextField");
+
+        clickOn("#addNewButton");
+
+        schemeFileTextField.setText("test");
+        sourceNameTextField.setText("test");
+        descriptionTextField.setText("Test");
+        urlTextField.setText("test");
+        licenceFileTextField.setText("Test");
+        licenceTypeTextField.setText("test");
+        updateIntervalTextField.setText("7");
+        mappingFileTextField.setText("");
+        loadPathTextField.setText("test");
+
+        clickOn("#saveButton");
+
+        testHelper.alert_dialog_has_header_and_content("Error", "Mapping file name cannot be empty.");
+
+        clickOn("#discardButton");
     }
 
     /**

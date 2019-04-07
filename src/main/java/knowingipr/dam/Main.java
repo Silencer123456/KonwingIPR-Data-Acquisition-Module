@@ -56,7 +56,7 @@ public class Main extends Application {
         statusBarController.initModel(model);
         toolsController.initModel(model);
 
-        Scene scene = new Scene(root, 800, 600);
+        Scene scene = new Scene(root, 900, 700);
         primaryStage.setScene(scene);
         primaryStage.setTitle("Data Administrator");
         primaryStage.show();

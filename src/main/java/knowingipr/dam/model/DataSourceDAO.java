@@ -64,7 +64,6 @@ public class DataSourceDAO implements IDataSourceDAO {
         return sourcesList;
     }
 
-    // TODO: finish
     @Override
     public DataSource findById(long id) {
         String query = "SELECT sources.*, category_type.name AS categoryName " +

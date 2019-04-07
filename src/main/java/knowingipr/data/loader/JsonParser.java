@@ -21,7 +21,6 @@ public class JsonParser {
     private final static Logger LOGGER = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
 
     /**
-     * TODO: Move to separate class, so that this class does not depend on the concrete file loading (JSON here)
      * Streams the file and from its contents creates a list of documents to be added to the database.
      *
      * @param file - File to be parsed

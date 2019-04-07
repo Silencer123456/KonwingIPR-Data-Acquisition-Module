@@ -7,6 +7,8 @@ import javafx.scene.control.*;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import knowingipr.dam.model.DataSource;
@@ -16,6 +18,9 @@ import knowingipr.data.loader.*;
 import java.awt.*;
 import java.io.File;
 import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.net.URL;
 
 public class DetailController {
 
@@ -49,6 +54,9 @@ public class DetailController {
     private TextField sourceNameTextField;
     @FXML
     private TextField descriptionTextField;
+
+    @FXML
+    public Button schemeFileButton;
 
     private DataSourceModel model;
 
@@ -101,6 +109,11 @@ public class DetailController {
                 editButton.setVisible(true);
             }
         });
+
+        //Image image = new Image(getClass().getResource("/main.fxml"));
+
+        //URL url = getClass().getResource("/icons/openFile.png");
+        //schemeFileButton.setGraphic(new ImageView(getClass().getResource("/icons/openFile.png")));
     }
 
     /**
@@ -161,13 +174,14 @@ public class DetailController {
     }
 
     public void onSaveButtonClicked(ActionEvent actionEvent) {
-        int updateInterval;
-        try {
-            updateInterval = Integer.parseInt(updateIntervalTextField.getText());
-        } catch (NumberFormatException e) {
-            showAlert(Alert.AlertType.ERROR, "The update interval is not a number.");
+
+        boolean valid = validateFields();
+
+        if (!valid) {
             return;
         }
+
+        int updateInterval = Integer.parseInt(updateIntervalTextField.getText());
 
         // Editing newly created record
         if (model.getCurrentSource().getId() == 0) {
@@ -199,6 +213,36 @@ public class DetailController {
         toggleEditMode(false);
 
         model.loadData();
+    }
+
+    /**
+     * Validates the form
+     * @return - true if valid, else false
+     */
+    private boolean validateFields() {
+        int updateInterval;
+        try {
+            updateInterval = Integer.parseInt(updateIntervalTextField.getText());
+        } catch (NumberFormatException e) {
+            showAlert(Alert.AlertType.ERROR, "The update interval is not a number.");
+            return false;
+        }
+
+        if (updateIntervalTextField.getText().isEmpty()) {
+            showAlert(Alert.AlertType.ERROR, "The update interval cannot be empty.");
+            return false;
+        }
+
+        if (sourceNameTextField.getText().isEmpty()) {
+            showAlert(Alert.AlertType.ERROR, "Source name cannot be empty.");
+            return false;
+        }
+        if (mappingFileTextField.getText().isEmpty()) {
+            showAlert(Alert.AlertType.ERROR, "Mapping file name cannot be empty.");
+            return false;
+        }
+
+        return true;
     }
 
     public void onDiscardButtonClicked(ActionEvent actionEvent) {
@@ -285,15 +329,35 @@ public class DetailController {
      */
     private void showAlert(Alert.AlertType alertType, String content) {
         Alert alert = new Alert(alertType, content);
+        alert.setTitle("Alert");
         alert.showAndWait();
     }
 
+    /**
+     * Handles deletion of the record
+     * @param actionEvent
+     */
     public void onDeleteButtonClicked(ActionEvent actionEvent) {
         boolean value = model.deleteDataSource(model.getCurrentSource().getId());
+        if (!value) {
+            model.setCurrentStatus("Could not delete");
+        }
         model.loadData();
     }
 
     public void onOpenLoadButtonClicked(ActionEvent actionEvent) {
 
+    }
+
+    /**
+     * Handles opening of the URL in the browser
+     * @param actionEvent
+     */
+    public void onOpenLinkButtonClicked(ActionEvent actionEvent) {
+        try {
+            Desktop.getDesktop().browse(new URI(urlTextField.getText()));
+        } catch (IOException | URISyntaxException e1) {
+            model.setCurrentStatus("Wrong URI");
+        }
     }
 }

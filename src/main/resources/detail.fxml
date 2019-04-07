@@ -10,6 +10,8 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
 
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <GridPane hgap="5.0" vgap="5.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="knowingipr.dam.controller.DetailController">
 
     <columnConstraints>
@@ -25,7 +27,12 @@
    <Label text="URL" GridPane.rowIndex="3" />
    <Label text="Category type" GridPane.rowIndex="4" />
    <Label text="Licence type" GridPane.rowIndex="5" />
-   <TextField fx:id="urlTextField" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+   <HBox GridPane.columnIndex="1" GridPane.rowIndex="3">
+      <children>
+         <TextField fx:id="urlTextField" editable="false" />
+         <Button fx:id="openLinkButton" mnemonicParsing="false" onAction="#onOpenLinkButtonClicked" text="Open" />
+      </children>
+   </HBox>
    <TextField fx:id="licenceTypeTextField" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="5" />
    <Label text="Scheme file" GridPane.rowIndex="8" />
    <Label text="Mapping file" GridPane.rowIndex="9" />
@@ -47,10 +54,17 @@
          <Button fx:id="discardButton" mnemonicParsing="false" onAction="#onDiscardButtonClicked" text="Discard" visible="false" GridPane.columnIndex="1" />
       </children>
    </GridPane>
+    <fx:define>
+        <Image fx:id="openFileImage" url="@icons/openFile.png" />
+    </fx:define>
    <HBox alignment="CENTER_LEFT" prefHeight="0.0" prefWidth="200.0" spacing="8.0" GridPane.columnIndex="1" GridPane.rowIndex="8">
       <children>
          <TextField fx:id="schemeFileTextField" editable="false" />
-         <Button mnemonicParsing="false" onAction="#onOpenSchemeFileButton" text="." />
+         <Button fx:id="schemeFileButton" mnemonicParsing="false" onAction="#onOpenSchemeFileButton" prefHeight="57.0" prefWidth="57.0"  text="Open" >
+             <graphic>
+                 <ImageView image="$openFileImage" />
+             </graphic>
+         </Button>
       </children>
       <GridPane.margin>
          <Insets />
@@ -66,13 +80,13 @@
    <HBox prefHeight="24.0" prefWidth="200.0" spacing="8.0" GridPane.columnIndex="1" GridPane.rowIndex="9">
       <children>
          <TextField fx:id="mappingFileTextField" editable="false" />
-         <Button mnemonicParsing="false" onAction="#onOpenMappingFileButton" text="." />
+         <Button mnemonicParsing="false" onAction="#onOpenMappingFileButton" />
       </children>
    </HBox>
    <HBox prefHeight="0.0" prefWidth="200.0" spacing="8.0" GridPane.columnIndex="1" GridPane.rowIndex="10">
       <children>
          <TextField fx:id="licenceFileTextField" editable="false" />
-         <Button mnemonicParsing="false" onAction="#onOpenLicenceFileButton" text="." />
+         <Button mnemonicParsing="false" onAction="#onOpenLicenceFileButton" />
       </children>
    </HBox>
    <Button fx:id="addNewButton" mnemonicParsing="false" onAction="#onAddNewButtonClicked" text="Add New Data Source" />
