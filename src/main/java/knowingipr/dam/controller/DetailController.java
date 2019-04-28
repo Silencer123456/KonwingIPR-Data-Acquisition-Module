@@ -9,6 +9,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.stage.DirectoryChooser;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import knowingipr.dam.model.DataSource;
@@ -266,6 +267,8 @@ public class DetailController {
         saveButton.setVisible(value);
         discardButton.setVisible(value);
 
+        categoryTypeComboBox.setDisable(!value);
+
         toggleEditableTextFields(value);
     }
 
@@ -313,17 +316,17 @@ public class DetailController {
      */
     private void showFileChooserAndSet(TextField textField) {
         Stage stage = (Stage) textField.getScene().getWindow();
-        FileChooser fileChooser = new FileChooser();
-        File selectedFile = fileChooser.showOpenDialog(stage);
-        if (selectedFile != null) {
+        DirectoryChooser dirChooser = new DirectoryChooser();
+        File selectedDir = dirChooser.showDialog(stage);
+        if (selectedDir != null) {
             try {
-                textField.setText("File selected: " + selectedFile.getCanonicalPath());
+                textField.setText(selectedDir.getCanonicalPath());
             } catch (IOException e) {
-                mappingFileTextField.setText("Selected file does not exist.");
+                model.setCurrentStatus("Selected directory does not exist.");
             }
         }
         else {
-            mappingFileTextField.setText("File selection cancelled.");
+            model.setCurrentStatus("Directory selection cancelled.");
         }
     }
 
@@ -351,7 +354,7 @@ public class DetailController {
     }
 
     public void onOpenLoadButtonClicked(ActionEvent actionEvent) {
-
+        showFileChooserAndSet(loadPathTextField);
     }
 
     /**

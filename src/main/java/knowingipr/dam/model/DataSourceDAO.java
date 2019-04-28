@@ -6,10 +6,7 @@ import org.apache.commons.dbutils.QueryRunner;
 import org.apache.commons.dbutils.handlers.ColumnListHandler;
 import org.apache.commons.dbutils.handlers.ScalarHandler;
 
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Date;
@@ -105,6 +102,16 @@ public class DataSourceDAO implements IDataSourceDAO {
     @Override
     public boolean updateDataSource(DataSource dataSource) {
         try {
+            String idQuery = "select categoryTypeId from category_type where name = ?";
+            PreparedStatement statement = connection.prepareStatement(idQuery);
+            statement.setString(1, dataSource.getCategoryType());
+            ResultSet resultSet = statement.executeQuery();
+
+            int categoryId = 0;
+            while(resultSet.next()) {
+                categoryId = resultSet.getInt("categoryTypeId");
+            }
+
             dbAccess.update(connection,
                     "UPDATE sources SET name = ?, " +
                             "url = ?, " +
@@ -113,10 +120,11 @@ public class DataSourceDAO implements IDataSourceDAO {
                             "mappingFilePath = ?, " +
                             "licenceType = ?, " +
                             "licenceFilePath = ?, " +
-                            "updateIntervalDays = ? " +
+                            "updateIntervalDays = ?, " +
+                            "categoryTypeId = ? " +
                             "WHERE sourceId = ?", dataSource.getName(), dataSource.getUrl(), dataSource.getDescription(),
                     dataSource.getSchemaPath(), dataSource.getMappingPath(), dataSource.getLicenceType(),
-                    dataSource.getLicencePath(), dataSource.getUpdateIntervalDays(), dataSource.getId());
+                    dataSource.getLicencePath(), dataSource.getUpdateIntervalDays(), categoryId, dataSource.getId());
 
             return true;
         } catch (SQLException e) {
