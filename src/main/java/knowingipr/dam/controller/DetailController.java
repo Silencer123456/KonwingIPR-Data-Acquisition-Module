@@ -134,11 +134,15 @@ public class DetailController {
     public void onLoadCollectionButtonClicked(ActionEvent actionEvent) {
         if (sourceNameTextField.getText().equals("uspto")) {
             sourceDbLoader = new PatentLoader(dbConnection, mappingFileTextField.getText(), categoryTypeComboBox.getSelectionModel().getSelectedItem());
-            doLoad();
+            doLoad(new String[]{"json"});
         }
         else if (sourceNameTextField.getText().equals("patstat")) {
             sourceDbLoader = new PatstatLoader(dbConnection, mappingFileTextField.getText(), categoryTypeComboBox.getSelectionModel().getSelectedItem());
-            doLoad();
+            doLoad(new String[]{"json"});
+        }
+        else if (sourceNameTextField.getText().equals("mag")) {
+            sourceDbLoader = new MagLoader(dbConnection, mappingFileTextField.getText(), categoryTypeComboBox.getSelectionModel().getSelectedItem());
+            doLoad(new String[]{"txt"});
         }
         else {
             Alert alert = new Alert(Alert.AlertType.WARNING, "The parser for selected data source does not exist yet");
@@ -148,12 +152,13 @@ public class DetailController {
 
     /**
      * Performs the loading of the data into the database.
+     * @param extensions - list of extensions to look for
      */
-    private void doLoad() {
+    private void doLoad(String[] extensions) {
         Task<Void> task = new Task<Void>() {
             @Override
             protected Void call() throws Exception {
-                sourceDbLoader.loadFromDirectory(loadPathTextField.getText(), new String[]{"json"});
+                sourceDbLoader.loadFromDirectory(loadPathTextField.getText(), extensions);
                 loadCollectionButton.setDisable(true);
                 return null;
             }

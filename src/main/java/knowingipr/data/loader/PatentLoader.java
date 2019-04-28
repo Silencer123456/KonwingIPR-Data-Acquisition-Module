@@ -11,7 +11,7 @@ import java.io.*;
 import java.util.List;
 
 /**
- * Implementation of the loader of patent data to the database.
+ * Implementation of the loader of USPTO patent data to the database.
  */
 public class PatentLoader extends SourceDbLoader {
 
