@@ -10,8 +10,6 @@ import knowingipr.dam.model.DataSourceModel;
 import knowingipr.dam.tools.XmlToJsonConverter;
 import knowingipr.dam.tools.ZipHandler;
 
-import java.io.IOException;
-
 /**
  * Controller for the tools bar
  */

@@ -5,9 +5,12 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.ListView;
 import knowingipr.dam.controller.ui.ListViewCell;
-import knowingipr.dam.model.DataSourceModel;
 import knowingipr.dam.model.DataSource;
+import knowingipr.dam.model.DataSourceModel;
 
+/**
+ * The controller handling user inputs from the list.fxml page
+ */
 public class ListController {
 
     @FXML
@@ -37,26 +40,18 @@ public class ListController {
 
         listView.getSelectionModel().select(0);
 
-        /*listView.setCellFactory( lv -> new ListCell<DataSource>() {
-            @Override
-            protected void updateItem(DataSource source, boolean empty) {
-                super.updateItem(source, empty);
-                if (empty) {
-                    setText(null);
-                } else {
-                    setText(source.getName() + " collection: " + source.getCategoryType() + " Expired: " + model.isSourceExpired(source));
-                }
-            }
-        });*/
-
         listView.setCellFactory(listView -> new ListViewCell(model));
-
     }
 
     public void onRefreshButtonClicked(ActionEvent actionEvent) {
         model.loadData();
     }
 
+    /**
+     * Resets the update interval for the selected data source item
+     *
+     * @param actionEvent
+     */
     public void onResetIntervalButtonClicked(ActionEvent actionEvent) {
         if (model.extendExpiration()) {
             model.setCurrentStatus("Interval reset");

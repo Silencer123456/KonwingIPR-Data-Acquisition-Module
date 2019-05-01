@@ -43,7 +43,8 @@ public class DataSourceDAO implements IDataSourceDAO {
                 int updateInterval = resultSet.getInt("updateIntervalDays");
                 Date dateLastUpdated = resultSet.getDate("dateLastUpdated");
 
-                DataSource dataSource = new DataSource(name, description, url, schemaPath, mappingPath, licenceType, licenceFilePath, categoryType, updateInterval, dateLastUpdated);
+                DataSource dataSource = new DataSource(name, description, url, schemaPath, mappingPath, licenceType,
+                        licenceFilePath, categoryType, updateInterval, dateLastUpdated);
                 dataSource.setId(id);
 
                 // TODO: Move to data model
@@ -77,8 +78,10 @@ public class DataSourceDAO implements IDataSourceDAO {
             long id = dbAccess.insert(connection, "INSERT INTO sources\n" +
                             "\t(name, url, description, updateIntervalDays, schemaPath, mappingFilePath, licenceType, licenceFilePath, categoryTypeId)\n" +
                             "\tVALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)",
-                    new ScalarHandler<>(), dataSource.getName(), dataSource.getUrl(), dataSource.getDescription(), dataSource.getUpdateIntervalDays(),
-                    dataSource.getSchemaPath(), dataSource.getMappingPath(), dataSource.getLicenceType(), dataSource.getLicencePath(), 1); // TODO: change category type
+                    new ScalarHandler<>(), dataSource.getName(), dataSource.getUrl(),
+                    dataSource.getDescription(), dataSource.getUpdateIntervalDays(),
+                    dataSource.getSchemaPath(), dataSource.getMappingPath(), dataSource.getLicenceType(),
+                    dataSource.getLicencePath(), 1); // TODO: change category type
             return id;
         } catch (SQLException e) {
             e.printStackTrace(); //TODO: Throw exception up

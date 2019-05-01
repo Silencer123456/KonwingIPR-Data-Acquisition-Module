@@ -9,7 +9,7 @@ import java.util.Properties;
 import java.util.logging.Logger;
 
 /**
- * Provides a connection to SQL Knowledge database.
+ * Provides a connection to SQL data sources database.
  */
 public class DbManager {
 
@@ -19,6 +19,15 @@ public class DbManager {
 
     private Connection connection;
 
+    /**
+     * Initiates a connection to the database.
+     * The connection information is read from an external
+     * configuration file
+     *
+     * @return
+     * @throws SQLException
+     * @throws ClassNotFoundException
+     */
     public Connection createConnection() throws SQLException, ClassNotFoundException {
         String configPath = "mydb.cfg";
         Properties prop = new Properties();

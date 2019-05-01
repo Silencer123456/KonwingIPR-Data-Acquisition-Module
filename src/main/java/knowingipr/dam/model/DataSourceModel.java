@@ -19,7 +19,7 @@ import java.util.List;
  */
 public class DataSourceModel {
 
-   private IDataSourceDAO dataSourceDAO;
+    private IDataSourceDAO dataSourceDAO;
 
     public DataSourceModel(IDataSourceDAO dataSourceDAO) {
         this.dataSourceDAO = dataSourceDAO;
@@ -32,8 +32,8 @@ public class DataSourceModel {
         loadCategoryTypes();
     }
 
-    private final ObservableList<DataSource> sourcesList = FXCollections.observableArrayList( source ->
-            new Observable[] {source.nameProperty(), source.descriptionProperty()});
+    private final ObservableList<DataSource> sourcesList = FXCollections.observableArrayList(source ->
+            new Observable[]{source.nameProperty(), source.descriptionProperty()});
 
     private final ObservableList<String> categoryTypesList = FXCollections.observableArrayList();
 
@@ -41,6 +41,9 @@ public class DataSourceModel {
 
     private final StringProperty currentStatus = new SimpleStringProperty();
 
+    /**
+     * Loads types of categories from the database
+     */
     public void loadCategoryTypes() {
         categoryTypesList.setAll(dataSourceDAO.getCategoryTypes());
     }
@@ -52,6 +55,12 @@ public class DataSourceModel {
         dataSourceDAO.insertDataSource(dataSource);
     }
 
+    /**
+     * Deletes data source from the database by its id
+     *
+     * @param id - id of data source to delete
+     * @return true if success, else false
+     */
     public boolean deleteDataSource(long id) {
         DataSource dataSource = getDataSourceWithId(id);
         if (dataSource != null) {
@@ -63,6 +72,7 @@ public class DataSourceModel {
 
     /**
      * Updates a specified data source
+     *
      * @param dataSource - data source to update
      * @return - true if successful, else false
      */
@@ -91,8 +101,8 @@ public class DataSourceModel {
 
     /**
      * Calculates if the source is expired and should be updated
+     *
      * @return - true if the source is expired, else false
-     * TODO: Test this method
      */
     public boolean isSourceExpired(DataSource dataSource) {
         Date lastUpdateDate = dataSource.getLastUpdatedDate();
@@ -112,6 +122,7 @@ public class DataSourceModel {
     /**
      * Extends the expiration of the data source by
      * setting the last updated date to today.
+     *
      * @return true if success, else false
      */
     public boolean extendExpiration() {

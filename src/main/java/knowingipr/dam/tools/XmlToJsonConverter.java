@@ -17,7 +17,8 @@ public class XmlToJsonConverter {
     /**
      * Converts all xml files in the specified directory to JSON format
      * amd moves it to the destination path. Includes files from subdirectories.
-     * @param pathToDir - Path to the parent directory from which to locate xml files
+     *
+     * @param pathToDir       - Path to the parent directory from which to locate xml files
      * @param destinationPath - The destination path, where converted JSON files should be moved
      * @throws IOException
      */
@@ -29,7 +30,7 @@ public class XmlToJsonConverter {
             return;
         }
 
-        String[] extensions = new String[] { "xml" };
+        String[] extensions = new String[]{"xml"};
         String dirName = dir.getName();
         List<File> files = (List<File>) FileUtils.listFiles(dir, extensions, true);
 
@@ -45,11 +46,12 @@ public class XmlToJsonConverter {
 
     /**
      * Converts a XML file to JSON.  It supports dtd entities.
-     * @param pathToXmlFile - The path to the XML file
+     *
+     * @param pathToXmlFile   - The path to the XML file
      * @param destinationPath - The destination path, where the converted JSON file should be saved.
      *                        The path has to end with the trailing slash '/'.
-     * @param overwrite - Flag specifying, whether the existing file in the destination path should be overwritten
-     *                  if it exists.
+     * @param overwrite       - Flag specifying, whether the existing file in the destination path should be overwritten
+     *                        if it exists.
      */
     private static void convert(String pathToXmlFile, String destinationPath, boolean overwrite) {
         File xmlFile = new File(pathToXmlFile);
@@ -86,6 +88,13 @@ public class XmlToJsonConverter {
         }
     }
 
+    /**
+     * Saves a file to the file system in path
+     *
+     * @param json     - contents of the file to be saved
+     * @param filepath - path, where the file should be saved
+     * @throws FileNotFoundException
+     */
     public static void save(String json, String filepath) throws FileNotFoundException {
         try (PrintWriter out = new PrintWriter(filepath)) {
             out.println(json);

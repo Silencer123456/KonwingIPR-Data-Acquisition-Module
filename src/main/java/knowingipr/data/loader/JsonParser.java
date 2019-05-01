@@ -9,7 +9,6 @@ import knowingipr.data.exception.MappingException;
 import org.bson.Document;
 
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;

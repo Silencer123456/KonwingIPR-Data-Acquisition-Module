@@ -2,6 +2,10 @@ package knowingipr.dam.model;
 
 import java.util.List;
 
+/**
+ * Data access object for handling database operations
+ * with data sources
+ */
 public interface IDataSourceDAO extends DAO {
     /**
      * Returns all the data sources from the database.

@@ -2,12 +2,14 @@ package knowingipr.data.loader;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.node.ObjectNode;
 import knowingipr.data.exception.MappingException;
 import knowingipr.data.mapper.JsonMappingTransformer;
 import org.bson.Document;
 
-import java.io.*;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.List;
 
 /**
@@ -112,6 +114,7 @@ public class PatentLoader extends SourceDbLoader {
      * Extracts a patent number from a string.
      * In USPTO, patent number field can look like this: USPP027521-20170103.XML
      * In this case, extracted patent number would be : USPP27521
+     *
      * @return patent number
      */
     private String extractPatentNumber(String patentId) {

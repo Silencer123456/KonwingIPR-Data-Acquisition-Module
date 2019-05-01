@@ -4,12 +4,15 @@ import java.io.IOException;
 import java.util.Date;
 import java.util.logging.*;
 
+/**
+ * Provides logging to the console and file
+ */
 public class MyLogger {
     static private FileHandler fileTxt;
     static private SimpleFormatter formatterTxt;
 
     public static void setup(String fileSuffix) throws IOException {
-        formatterTxt = new SimpleFormatter()  {
+        formatterTxt = new SimpleFormatter() {
             private static final String format = "[%1$tF %1$tT] [%2$-7s] %3$s %n";
 
             @Override

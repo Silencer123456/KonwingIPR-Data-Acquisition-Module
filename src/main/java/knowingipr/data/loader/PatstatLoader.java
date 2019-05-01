@@ -8,6 +8,9 @@ import java.io.File;
 import java.io.IOException;
 import java.util.List;
 
+/**
+ * Handles loading of data from PATSTAT to the sources database
+ */
 public class PatstatLoader extends SourceDbLoader {
 
     private String collectionName;

@@ -1,8 +1,5 @@
 package knowingipr.data.loader;
 
-import com.mongodb.MongoClientURI;
-import com.mongodb.MongoCredential;
-import com.mongodb.ServerAddress;
 import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoClients;
 import com.mongodb.client.MongoCollection;
@@ -10,7 +7,6 @@ import com.mongodb.client.MongoDatabase;
 import com.mongodb.client.model.InsertManyOptions;
 import org.bson.Document;
 
-import java.util.Arrays;
 import java.util.logging.Logger;
 
 /**
@@ -57,7 +53,6 @@ public class MongoDbConnection implements SourceDbConnection {
         LOGGER.finer("Beginning insert");
         collection.insertMany(mongoArgs.getDocuments(), options);
         LOGGER.finer("Inserting done");
-        //LOGGER.info("Total documents: " + collection.countDocuments());
     }
 
     @Override

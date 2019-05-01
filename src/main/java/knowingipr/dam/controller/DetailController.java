@@ -3,14 +3,11 @@ package knowingipr.dam.controller;
 import javafx.concurrent.Task;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.*;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
+import javafx.scene.control.*;
 import javafx.stage.DirectoryChooser;
-import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import knowingipr.dam.model.DataSource;
 import knowingipr.dam.model.DataSourceModel;
@@ -21,8 +18,10 @@ import java.io.File;
 import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
-import java.net.URL;
 
+/**
+ * The controller handling user inputs from the details.fxml page.
+ */
 public class DetailController {
 
     @FXML
@@ -95,7 +94,7 @@ public class DetailController {
                 licenceFileTextField.setText(newSource.getLicencePath());
                 licenceTypeTextField.setText(newSource.getLicenceType());
                 dateLastUpdatedLabel.setText(newSource.getDateLastUpdatedString());
-                updateIntervalTextField.setText(newSource.getUpdateIntervalDays()+"");
+                updateIntervalTextField.setText(newSource.getUpdateIntervalDays() + "");
                 categoryTypeComboBox.getSelectionModel().select(newSource.getCategoryType());
                 toggleEditMode(false);
             }
@@ -110,15 +109,11 @@ public class DetailController {
                 editButton.setVisible(true);
             }
         });
-
-        //Image image = new Image(getClass().getResource("/main.fxml"));
-
-        //URL url = getClass().getResource("/icons/openFile.png");
-        //schemeFileButton.setGraphic(new ImageView(getClass().getResource("/icons/openFile.png")));
     }
 
     /**
      * Toggles the editable value of the fields
+     *
      * @param value = value to toggle the editable value to.
      */
     private void toggleEditableTextFields(boolean value) {
@@ -132,20 +127,22 @@ public class DetailController {
         schemeFileTextField.setEditable(value);
     }
 
+    /**
+     * Handles loading of data to the sources database
+     *
+     * @param actionEvent
+     */
     public void onLoadCollectionButtonClicked(ActionEvent actionEvent) {
         if (sourceNameTextField.getText().equals("uspto")) {
             sourceDbLoader = new PatentLoader(dbConnection, mappingFileTextField.getText(), categoryTypeComboBox.getSelectionModel().getSelectedItem());
             doLoad(new String[]{"json"});
-        }
-        else if (sourceNameTextField.getText().equals("patstat")) {
+        } else if (sourceNameTextField.getText().equals("patstat")) {
             sourceDbLoader = new PatstatLoader(dbConnection, mappingFileTextField.getText(), categoryTypeComboBox.getSelectionModel().getSelectedItem());
             doLoad(new String[]{"json"});
-        }
-        else if (sourceNameTextField.getText().equals("mag")) {
+        } else if (sourceNameTextField.getText().equals("mag")) {
             sourceDbLoader = new MagLoader(dbConnection, mappingFileTextField.getText(), categoryTypeComboBox.getSelectionModel().getSelectedItem());
             doLoad(new String[]{"txt"});
-        }
-        else {
+        } else {
             Alert alert = new Alert(Alert.AlertType.WARNING, "The parser for selected data source does not exist yet");
             alert.showAndWait();
         }
@@ -153,6 +150,7 @@ public class DetailController {
 
     /**
      * Performs the loading of the data into the database.
+     *
      * @param extensions - list of extensions to look for
      */
     private void doLoad(String[] extensions) {
@@ -179,6 +177,13 @@ public class DetailController {
         });
     }
 
+    /**
+     * Handles saving of the data source item. If the
+     * data source is newly created, new record is inserted to
+     * the database, else the record is updated.
+     *
+     * @param actionEvent
+     */
     public void onSaveButtonClicked(ActionEvent actionEvent) {
 
         boolean valid = validateFields();
@@ -223,6 +228,7 @@ public class DetailController {
 
     /**
      * Validates the form
+     *
      * @return - true if valid, else false
      */
     private boolean validateFields() {
@@ -251,6 +257,11 @@ public class DetailController {
         return true;
     }
 
+    /**
+     * Disables the edit mode
+     *
+     * @param actionEvent
+     */
     public void onDiscardButtonClicked(ActionEvent actionEvent) {
         toggleEditMode(false);
 
@@ -260,6 +271,7 @@ public class DetailController {
     /**
      * Toggles the activeness of the edit mode, where the user can edit
      * the text fields.
+     *
      * @param value - value indicating whether to activate the edit mode
      */
     private void toggleEditMode(boolean value) {
@@ -276,6 +288,11 @@ public class DetailController {
         toggleEditMode(true);
     }
 
+    /**
+     * Handles creation of new data source item
+     *
+     * @param actionEvent
+     */
     public void onAddNewButtonClicked(ActionEvent actionEvent) {
         DataSource empty = new DataSource();
         model.getSourcesList().add(empty);
@@ -298,6 +315,7 @@ public class DetailController {
     /**
      * Attempts to open a file from desktop environment.
      * If the path does not exist, displays an error alert to the user.
+     *
      * @param path - Path to the file or folder to be opened
      */
     private void openDesktopPath(String path) {
@@ -312,6 +330,7 @@ public class DetailController {
     /**
      * Displays a File Chooser to the user. After the user selected the requested file,
      * the textField is set to its path.
+     *
      * @param textField - Textfield to be set after the user chooses the file.
      */
     private void showFileChooserAndSet(TextField textField) {
@@ -324,16 +343,16 @@ public class DetailController {
             } catch (IOException e) {
                 model.setCurrentStatus("Selected directory does not exist.");
             }
-        }
-        else {
+        } else {
             model.setCurrentStatus("Directory selection cancelled.");
         }
     }
 
     /**
      * Shows an alert to the user and waits for his response
+     *
      * @param alertType - The type of alert
-     * @param content - The text to be displayed in the alert
+     * @param content   - The text to be displayed in the alert
      */
     private void showAlert(Alert.AlertType alertType, String content) {
         Alert alert = new Alert(alertType, content);
@@ -343,6 +362,7 @@ public class DetailController {
 
     /**
      * Handles deletion of the record
+     *
      * @param actionEvent
      */
     public void onDeleteButtonClicked(ActionEvent actionEvent) {
@@ -353,12 +373,18 @@ public class DetailController {
         model.loadData();
     }
 
+    /**
+     * Shows file chooser and sets the result to the text field
+     *
+     * @param actionEvent
+     */
     public void onOpenLoadButtonClicked(ActionEvent actionEvent) {
         showFileChooserAndSet(loadPathTextField);
     }
 
     /**
      * Handles opening of the URL in the browser
+     *
      * @param actionEvent
      */
     public void onOpenLinkButtonClicked(ActionEvent actionEvent) {
