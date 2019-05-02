@@ -25,10 +25,9 @@ public class DbManager {
      * configuration file
      *
      * @return
-     * @throws SQLException
      * @throws ClassNotFoundException
      */
-    public Connection createConnection() throws SQLException, ClassNotFoundException {
+    public Connection createConnection() throws ClassNotFoundException {
         String configPath = "mydb.cfg";
         Properties prop = new Properties();
         String host;
@@ -58,8 +57,15 @@ public class DbManager {
         LOGGER.info("DRIVER: " + driver);
         LOGGER.info("Set Login Timeout: " + LoginTimeout);
         DriverManager.setLoginTimeout(LoginTimeout);
-        Connection connection = DriverManager.getConnection(host, username, password);
-        LOGGER.info("CONNECTION: " + connection);
+
+        Connection connection = null;
+        try {
+            connection = DriverManager.getConnection(host, username, password);
+            LOGGER.info("CONNECTION: " + connection);
+        } catch (SQLException e) {
+            LOGGER.severe("Could not establish connection to the database.");
+            System.exit(1);
+        }
 
         this.connection = connection;
         return connection;

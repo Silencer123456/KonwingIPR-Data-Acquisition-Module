@@ -1,5 +1,6 @@
 package knowingipr.dam.logging;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.Date;
 import java.util.logging.*;
@@ -37,9 +38,34 @@ public class MyLogger {
 
         logger.setLevel(Level.ALL);
 
+        setupConsoleHandler(logger);
+        setupFileHandler(logger, fileSuffix);
+    }
+
+    private static void setupConsoleHandler(Logger logger) {
         ConsoleHandler consoleHandler = new ConsoleHandler();
         consoleHandler.setLevel(Level.ALL);
         consoleHandler.setFormatter(formatterTxt);
         logger.addHandler(consoleHandler);
+    }
+
+    private static void setupFileHandler(Logger logger, String fileSuffix) {
+        try {
+            String logsDir = "logs";
+            File directory = new File(logsDir);
+            if (!directory.exists()) {
+                directory.mkdir();
+            }
+
+            Long timeStamp = System.currentTimeMillis();
+
+            FileHandler fhandler = new FileHandler(
+                    logsDir + "//log-" + timeStamp + "-" + fileSuffix + ".log");
+            fhandler.setFormatter(formatterTxt);
+            logger.addHandler(fhandler);
+
+        } catch (IOException | SecurityException ex) {
+            logger.log(Level.SEVERE, ex.getMessage(), ex);
+        }
     }
 }
