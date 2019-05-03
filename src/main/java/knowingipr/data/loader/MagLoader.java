@@ -21,7 +21,7 @@ public class MagLoader extends SourceDbLoader {
     public MagLoader(SourceDbConnection dbConnection, String mappingFile, String collectionName) {
         super(dbConnection, mappingFile);
 
-        this.collectionName = "test";
+        this.collectionName = collectionName;
     }
 
     @Override

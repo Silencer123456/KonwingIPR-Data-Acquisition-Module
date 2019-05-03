@@ -7,27 +7,51 @@ import com.mongodb.client.MongoDatabase;
 import com.mongodb.client.model.InsertManyOptions;
 import org.bson.Document;
 
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.Properties;
 import java.util.logging.Logger;
 
 /**
  * Manages the source database. (MongoDB)
+ * @author Stepan Baratta
  */
 public class MongoDbConnection implements SourceDbConnection {
 
     private final static Logger LOGGER = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
 
-    private static final String DB_NAME = "diploma";
+    //private static final String DB_NAME = "sources";
+
+    private static final String MONGO_CONFIG_PATH = "mongo-config.cfg";
+
+    private String dbName = "diploma";
 
     private MongoDatabase mongoDatabase;
 
     public MongoDbConnection() {
+        loadConfig();
         connect();
     }
 
+    /**
+     * Loads configuration of the MongoDB connection
+     */
+    private void loadConfig() {
+        Properties prop = new Properties();
+        try {
+            prop.load(new FileInputStream(MONGO_CONFIG_PATH));
+            dbName = prop.getProperty("db_name");
+        } catch (IOException e) {
+            LOGGER.severe("Unable to find " + MONGO_CONFIG_PATH + " file. Using default " +
+                    "database: " + dbName);
+            e.printStackTrace();
+        }
+    }
+
     public void connect() {
-        LOGGER.info("Connecting to the MongoDB database " + DB_NAME);
+        LOGGER.info("Connecting to the MongoDB database " + dbName);
         MongoClient mongoClient = MongoClients.create();
-        mongoDatabase = mongoClient.getDatabase(DB_NAME);
+        mongoDatabase = mongoClient.getDatabase(dbName);
 
         //MongoClient client = MongoClients.create("mongodb://dunabe:dkd8dD-d23dwdw@students/?authSource=dunabe");
         //mongoDatabase = client.getDatabase(DB_NAME);

@@ -61,7 +61,7 @@ public class DetailController {
     private DataSourceModel model;
 
     private SourceDbLoader sourceDbLoader;
-    SourceDbConnection dbConnection = new MongoDbConnection();
+    private SourceDbConnection dbConnection = new MongoDbConnection();
 
     public void initModel(DataSourceModel model) {
         if (this.model != null) {
@@ -154,6 +154,7 @@ public class DetailController {
      * @param extensions - list of extensions to look for
      */
     private void doLoad(String[] extensions) {
+        model.currentStatusProperty().setValue("Loading initiated");
         Task<Void> task = new Task<Void>() {
             @Override
             protected Void call() throws Exception {
