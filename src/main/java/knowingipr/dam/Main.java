@@ -11,15 +11,18 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 import knowingipr.dam.controller.*;
 import knowingipr.dam.logging.MyLogger;
-import knowingipr.dam.model.IDataSourceDAO;
-import knowingipr.dam.model.DataSourceModel;
 import knowingipr.dam.model.DataSourceDAO;
+import knowingipr.dam.model.DataSourceModel;
+import knowingipr.dam.model.IDataSourceDAO;
 
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.io.StringWriter;
+import java.util.logging.Logger;
 
 public class Main extends Application {
+
+    private final static Logger LOGGER = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
 
     @Override
     public void start(Stage primaryStage) throws Exception{
@@ -75,6 +78,12 @@ public class Main extends Application {
             System.err.println("An unexpected error occurred in "+t);
 
         }
+    }
+
+    @Override
+    public void stop() {
+        LOGGER.info("Closing the application");
+        Platform.exit();
     }
 
     private static void showErrorDialog(Throwable e) {

@@ -6,12 +6,9 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="Added logging to file">
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="Added loading of configuration of MongoDB connection from file system">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/knowingipr/dam/controller/DetailController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/knowingipr/dam/controller/DetailController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/knowingipr/data/loader/MagLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/knowingipr/data/loader/MagLoader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/knowingipr/data/loader/MongoDbConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/knowingipr/data/loader/MongoDbConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/knowingipr/dam/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/knowingipr/dam/Main.java" afterDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -90,8 +87,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/knowingipr/data/loader/MongoDbConnection.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="27" lean-forward="true" selection-start-line="20" selection-start-column="4" selection-end-line="27" />
+            <state relative-caret-position="289">
+              <caret line="20" column="4" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="85" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#2634#2635#0" expanded="true" />
@@ -106,8 +103,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/knowingipr/dam/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="134">
-              <caret line="26" column="8" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="30" />
+            <state relative-caret-position="92">
+              <caret line="85" column="24" selection-start-line="85" selection-start-column="24" selection-end-line="85" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -237,7 +234,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/resources/tools.fxml" />
         <option value="$PROJECT_DIR$/src/main/java/knowingipr/dam/tools/ZipHandler.java" />
         <option value="$PROJECT_DIR$/src/main/java/knowingipr/dam/model/DataSourceDbAccessor.java" />
         <option value="$PROJECT_DIR$/src/main/java/knowingipr/dam/model/DataModel.java" />
@@ -269,7 +265,6 @@
         <option value="$PROJECT_DIR$/src/test/java/knowingipr/dam/FormValidationTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/knowingipr/dam/TestHelper.java" />
         <option value="$PROJECT_DIR$/src/test/java/knowingipr/dam/MainTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/knowingipr/dam/Main.java" />
         <option value="$PROJECT_DIR$/src/main/resources/detail.fxml" />
         <option value="$PROJECT_DIR$/src/main/java/knowingipr/dam/model/DataSourceDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/knowingipr/dam/controller/ErrorController.java" />
@@ -288,6 +283,8 @@
         <option value="$PROJECT_DIR$/src/main/java/knowingipr/data/loader/MagLoader.java" />
         <option value="$PROJECT_DIR$/src/main/java/knowingipr/dam/controller/DetailController.java" />
         <option value="$PROJECT_DIR$/src/main/java/knowingipr/data/loader/MongoDbConnection.java" />
+        <option value="$PROJECT_DIR$/mongo-config.cfg" />
+        <option value="$PROJECT_DIR$/src/main/java/knowingipr/dam/Main.java" />
       </list>
     </option>
   </component>
@@ -438,7 +435,7 @@
     <property name="OverrideImplement.combined" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556864294260" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556866658657" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="dynamic.classpath" value="false" />
@@ -716,7 +713,7 @@
       <workItem from="1552837637841" duration="29708000" />
       <workItem from="1553678682992" duration="14154000" />
       <workItem from="1553852222939" duration="28520000" />
-      <workItem from="1556022326713" duration="20029000" />
+      <workItem from="1556022326713" duration="21887000" />
     </task>
     <task id="LOCAL-00001" summary="Added basic UI">
       <created>1549880763576</created>
@@ -886,7 +883,14 @@
       <option name="project" value="LOCAL" />
       <updated>1556804729346</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Added loading of configuration of MongoDB connection from file system">
+      <created>1556864352771</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1556864352771</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -922,7 +926,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="93713000" />
+    <option name="totallyTimeSpent" value="95571000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1294" height="694" extended-state="6" />
@@ -1039,7 +1043,8 @@
     <MESSAGE value="Fixed editing of sources category type" />
     <MESSAGE value="Added comments, reformatting of code" />
     <MESSAGE value="Added logging to file" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added logging to file" />
+    <MESSAGE value="Added loading of configuration of MongoDB connection from file system" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added loading of configuration of MongoDB connection from file system" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -1109,13 +1114,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/test/java/knowingipr/dam/controller/DetailControllerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="19" column="43" selection-start-line="19" selection-start-column="43" selection-end-line="19" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/testfx/testfx-core/4.0.1-alpha/testfx-core-4.0.1-alpha.jar!/org/testfx/toolkit/impl/ApplicationServiceImpl.class">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1702,10 +1700,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/knowingipr/dam/logging/MyLogger.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="18" column="21" lean-forward="true" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mongo-config.cfg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="15" selection-start-column="8" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/knowingipr/data/loader/MongoDbConnection.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="27" lean-forward="true" selection-start-line="20" selection-start-column="4" selection-end-line="27" />
+        <state relative-caret-position="289">
+          <caret line="20" column="4" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="85" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#2634#2635#0" expanded="true" />
@@ -1716,17 +1728,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/knowingipr/dam/logging/MyLogger.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="18" column="21" lean-forward="true" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/knowingipr/dam/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="26" column="8" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="30" />
+        <state relative-caret-position="92">
+          <caret line="85" column="24" selection-start-line="85" selection-start-column="24" selection-end-line="85" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

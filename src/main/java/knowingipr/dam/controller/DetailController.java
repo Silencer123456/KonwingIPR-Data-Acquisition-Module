@@ -163,7 +163,9 @@ public class DetailController {
                 return null;
             }
         };
-        new Thread(task).start();
+        Thread t = new Thread(task);
+        t.setDaemon(true);
+        t.start();
 
         task.setOnSucceeded(evt -> {
             System.out.println(task.getValue());
