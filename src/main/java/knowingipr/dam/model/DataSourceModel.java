@@ -126,6 +126,9 @@ public class DataSourceModel {
      * @return true if success, else false
      */
     public boolean extendExpiration() {
+        if (getCurrentSource() == null) {
+            return false;
+        }
         DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         Date date = new Date();
         String d = dateFormat.format(date);

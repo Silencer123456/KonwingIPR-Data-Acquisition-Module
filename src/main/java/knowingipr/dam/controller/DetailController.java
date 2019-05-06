@@ -369,6 +369,11 @@ public class DetailController {
      * @param actionEvent
      */
     public void onDeleteButtonClicked(ActionEvent actionEvent) {
+        if (model.getCurrentSource() == null) {
+            model.setCurrentStatus("Cannot remove. No item is selected.");
+            return;
+        }
+
         boolean value = model.deleteDataSource(model.getCurrentSource().getId());
         if (!value) {
             model.setCurrentStatus("Could not delete");
