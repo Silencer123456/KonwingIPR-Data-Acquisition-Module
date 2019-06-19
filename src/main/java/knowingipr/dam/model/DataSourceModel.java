@@ -7,6 +7,7 @@ import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import knowingipr.dam.controller.LogController;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -20,6 +21,7 @@ import java.util.List;
 public class DataSourceModel {
 
     private IDataSourceDAO dataSourceDAO;
+    private LogController logController;
 
     public DataSourceModel(IDataSourceDAO dataSourceDAO) {
         this.dataSourceDAO = dataSourceDAO;
@@ -165,5 +167,14 @@ public class DataSourceModel {
 
     public void setCurrentStatus(String currentStatus) {
         this.currentStatus.set(currentStatus);
+        addLogMessage(currentStatus);
+    }
+
+    public void addLogMessage(String msg) {
+        logController.appendLogMessage(msg);
+    }
+
+    public void setLoggerController(LogController logController) {
+        this.logController = logController;
     }
 }

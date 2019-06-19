@@ -9,7 +9,7 @@ import java.util.List;
 public class LogController {
 
     @FXML
-    public TextArea logTextArea;
+    private TextArea logTextArea;
 
     List<String> logMessages;
 
@@ -23,6 +23,6 @@ public class LogController {
      * @param logMessage - text to append
      */
     public void appendLogMessage(String logMessage) {
-        logTextArea.appendText(logMessage);
+        logTextArea.appendText(logMessage + "\n");
     }
 }

@@ -159,7 +159,7 @@ public class DetailController {
      * @param extensions - list of extensions to look for
      */
     private void doLoad(String[] extensions) {
-        model.currentStatusProperty().setValue("Loading initiated");
+        model.setCurrentStatus("Loading initiated");
         Task<Void> task = new Task<Void>() {
             @Override
             protected Void call() throws Exception {
@@ -174,12 +174,12 @@ public class DetailController {
 
         task.setOnSucceeded(evt -> {
             System.out.println(task.getValue());
-            model.currentStatusProperty().setValue("Loading finished");
+            model.setCurrentStatus("Loading finished");
             loadCollectionButton.setDisable(false);
         });
         task.setOnFailed(evt -> {
             System.err.println("The task failed with the following exception:");
-            model.currentStatusProperty().setValue(task.getException().getMessage());
+            model.setCurrentStatus(task.getException().getMessage());
             task.getException().printStackTrace(System.err);
             loadCollectionButton.setDisable(false);
         });
@@ -223,9 +223,9 @@ public class DetailController {
             dataSource.setUpdateIntervalDays(updateInterval);
             dataSource.setId(model.getCurrentSource().getId());
             if (model.updateDataSource(dataSource)) {
-                model.currentStatusProperty().setValue("Record updated");
+                model.setCurrentStatus("Record updated");
             } else {
-                model.currentStatusProperty().setValue("There was an error updating the record");
+                model.setCurrentStatus("There was an error updating the record");
             }
         }
 

@@ -57,8 +57,9 @@ public class Main extends Application {
         StatusBarController statusBarController = statusBarLoader.getController();
 
         IDataSourceDAO sourceDAO = new DataSourceDAO();
-
         DataSourceModel model = new DataSourceModel(sourceDAO);
+
+        model.setLoggerController(logLoader.getController());
         detailController.initModel(model);
         listController.initModel(model);
         statusBarController.initModel(model);
