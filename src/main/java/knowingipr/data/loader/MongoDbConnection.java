@@ -9,6 +9,7 @@ import org.bson.Document;
 
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.util.Collections;
 import java.util.Properties;
 import java.util.logging.Logger;
 
@@ -57,6 +58,11 @@ public class MongoDbConnection implements SourceDbConnection {
         //mongoDatabase = client.getDatabase(DB_NAME);
     }
 
+    /**
+     * The collection is emptied after the insert to the Mongo database
+     *
+     * @param loadArgs - The data structure to be loaded into the target database
+     */
     @Override
     public void insert(IDbLoadArgs loadArgs) {
         if (!(loadArgs instanceof MongoDbLoadArgs)) {
@@ -77,6 +83,8 @@ public class MongoDbConnection implements SourceDbConnection {
         LOGGER.finer("Beginning insert");
         collection.insertMany(mongoArgs.getDocuments(), options);
         LOGGER.finer("Inserting done");
+
+        mongoArgs.setDocuments(Collections.emptyList());
     }
 
     @Override

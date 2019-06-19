@@ -1,11 +1,14 @@
 package knowingipr.data.loader;
 
 import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import knowingipr.data.exception.MappingException;
 import knowingipr.data.utils.DirectoryHandler;
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.List;
 import java.util.logging.Logger;
 
@@ -24,8 +27,8 @@ public abstract class SourceDbLoader {
     }
 
     /**
-     * Inserts list of documents to the target database.
-     * @param file - File to be loaded into the database
+     * Inserts list of documents to the target database from a specified file.
+     * @param file - File, whose contents are to be loaded into the database
      * @throws IOException if the file loading fails
      * @throws MappingException in case of mapping file error
      */
@@ -47,4 +50,18 @@ public abstract class SourceDbLoader {
     }
 
     public abstract void preprocessNode(JsonNode nodeToPreprocess) throws MappingException, IOException;
+
+    /**
+     * Loads a mapping file from the specified path
+     * and returns a root json node for that file
+     *
+     * @return - root json node
+     * @throws IOException if the file could not be found
+     */
+    protected JsonNode loadMappingFile() throws IOException {
+        ObjectMapper objectMapper = new ObjectMapper();
+
+        InputStream input = new FileInputStream(mappingFilePath);
+        return objectMapper.readTree(input);
+    }
 }

@@ -2,6 +2,7 @@ package knowingipr.data.loader;
 
 import org.bson.Document;
 
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -22,6 +23,10 @@ public class MongoDbLoadArgs implements IDbLoadArgs {
     public MongoDbLoadArgs(String collectionName, List<Document> documents) {
         this.collectionName = collectionName;
         this.documents = documents;
+    }
+
+    public MongoDbLoadArgs(String collectionName) {
+        this(collectionName, Collections.emptyList());
     }
 
     public void setDocuments(List<Document> documents) {

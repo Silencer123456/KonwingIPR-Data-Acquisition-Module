@@ -1,15 +1,12 @@
 package knowingipr.data.loader;
 
 import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import knowingipr.data.exception.MappingException;
 import knowingipr.data.mapper.JsonMappingTransformer;
 import org.bson.Document;
 
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.IOException;
-import java.io.InputStream;
 import java.util.List;
 
 /**
@@ -17,7 +14,7 @@ import java.util.List;
  */
 public class PatentLoader extends SourceDbLoader {
 
-    JsonParser jsonParser;
+    private JsonParser jsonParser;
 
     private String collectionName;
 
@@ -28,10 +25,11 @@ public class PatentLoader extends SourceDbLoader {
         jsonParser = new JsonParser();
     }
 
+    // TODO: Decide if parse or load to memory by the size of the file
     @Override
     public void insertFromFile(File file) throws IOException, MappingException {
         LOGGER.finer("Parsing file " + file.getCanonicalPath());
-        List<Document> docs = jsonParser.parseFileStreaming(file, this, "us-patent-grant");
+        List<Document> docs = jsonParser.parseJsonStreaming(file, this, "us-patent-grant");
         LOGGER.finer("Parsing done");
 
         if (docs.isEmpty()) {
@@ -101,13 +99,6 @@ public class PatentLoader extends SourceDbLoader {
 
         // Data Source
         JsonMappingTransformer.putPair(nodeToPreprocess, "dataSource", "uspto");
-    }
-
-    private JsonNode loadMappingFile() throws IOException {
-        ObjectMapper objectMapper = new ObjectMapper();
-
-        InputStream input = new FileInputStream(mappingFilePath);
-        return objectMapper.readTree(input);
     }
 
     /**

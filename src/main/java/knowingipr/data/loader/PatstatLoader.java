@@ -26,7 +26,7 @@ public class PatstatLoader extends SourceDbLoader {
     @Override
     public void insertFromFile(File file) throws IOException, MappingException {
         LOGGER.finer("Parsing file " + file.getCanonicalPath());
-        List<Document> docs = jsonParser.parseFileStreaming(file, this, "PATSTAT");
+        List<Document> docs = jsonParser.parseJsonStreaming(file, this, "PATSTAT");
         LOGGER.finer("Parsing done");
 
         if (docs.isEmpty()) {
