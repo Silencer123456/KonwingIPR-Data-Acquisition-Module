@@ -167,14 +167,10 @@ public class DataSourceModel {
 
     public void setCurrentStatus(String currentStatus) {
         this.currentStatus.set(currentStatus);
-        addLogMessage(currentStatus);
-    }
-
-    public void addLogMessage(String msg) {
-        logController.appendLogMessage(msg);
     }
 
     public void setLoggerController(LogController logController) {
         this.logController = logController;
+        logController.addLogHandler();
     }
 }
