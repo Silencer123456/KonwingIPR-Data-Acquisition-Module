@@ -32,19 +32,24 @@ public class Main extends Application {
         BorderPane root = new BorderPane();
         root.setPadding(new Insets(10));
 
-        BorderPane centerPane = new BorderPane();
-        root.setCenter(centerPane);
-
         FXMLLoader listLoader = new FXMLLoader(getClass().getResource("/list.fxml"));
-        centerPane.setCenter(listLoader.load());
+        root.setCenter(listLoader.load());
         ListController listController = listLoader.getController();
 
         FXMLLoader toolLoader = new FXMLLoader(getClass().getResource("/tools.fxml"));
-        centerPane.setBottom(toolLoader.load());
+        root.setBottom(toolLoader.load());
+
         ToolsController toolsController = toolLoader.getController();
 
+        BorderPane detailPane = new BorderPane();
+
         FXMLLoader detailLoader = new FXMLLoader(getClass().getResource("/detail.fxml"));
-        root.setRight(detailLoader.load());
+        detailPane.setCenter(detailLoader.load());
+
+        FXMLLoader logLoader = new FXMLLoader(getClass().getResource("/log.fxml"));
+        detailPane.setBottom(logLoader.load());
+
+        root.setRight(detailPane);
         DetailController detailController = detailLoader.getController();
 
         FXMLLoader statusBarLoader = new FXMLLoader(getClass().getResource("/statusBar.fxml"));
@@ -59,8 +64,10 @@ public class Main extends Application {
         statusBarController.initModel(model);
         toolsController.initModel(model);
 
-        Scene scene = new Scene(root, 900, 700);
+        Scene scene = new Scene(root, 1000, 800);
         primaryStage.setScene(scene);
+        primaryStage.setMinWidth(750);
+        primaryStage.setMinHeight(800);
         primaryStage.setTitle("Data Administrator");
         primaryStage.show();
 

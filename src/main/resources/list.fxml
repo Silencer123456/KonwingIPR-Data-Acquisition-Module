@@ -6,13 +6,10 @@
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.ColumnConstraints?>
-<?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.*?>
 <?import javafx.scene.text.Font?>
-
-<GridPane xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="knowingipr.dam.controller.ListController">
+<GridPane vgap="5.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1"
+          fx:controller="knowingipr.dam.controller.ListController">
    <columnConstraints>
       <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
    </columnConstraints>
@@ -23,8 +20,8 @@
       <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
    </rowConstraints>
    <children>
-       <ListView fx:id="listView" GridPane.rowIndex="3" />
-      <HBox prefHeight="100.0" prefWidth="200.0" spacing="10.0" GridPane.rowIndex="2">
+      <ListView fx:id="listView" GridPane.rowIndex="3" GridPane.vgrow="ALWAYS"/>
+      <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="248.0" spacing="10.0" GridPane.rowIndex="2">
          <children>
             <Button fx:id="refreshButton" mnemonicParsing="false" onAction="#onRefreshButtonClicked">
                <graphic>
@@ -33,9 +30,13 @@
                         <Image url="@icons/refresh.png" />
                      </image>
                   </ImageView>
-               </graphic></Button>
+               </graphic>
+            </Button>
             <Button mnemonicParsing="false" onAction="#onResetIntervalButtonClicked" text="Reset interval" />
          </children>
+         <GridPane.margin>
+            <Insets/>
+         </GridPane.margin>
       </HBox>
       <Label prefHeight="11.0" prefWidth="237.0" text="Data Administration">
          <font>
@@ -46,4 +47,7 @@
          </padding>
       </Label>
    </children>
+   <padding>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+   </padding>
 </GridPane>

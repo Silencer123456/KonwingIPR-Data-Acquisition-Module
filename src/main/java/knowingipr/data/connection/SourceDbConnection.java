@@ -1,5 +1,7 @@
-package knowingipr.data.loader;
+package knowingipr.data.connection;
 
+
+import knowingipr.data.loader.IDbLoadArgs;
 
 /**
  * Specifies the connection to the main source database,

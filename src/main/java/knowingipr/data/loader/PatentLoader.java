@@ -1,6 +1,9 @@
 package knowingipr.data.loader;
 
 import com.fasterxml.jackson.databind.JsonNode;
+import knowingipr.data.connection.MongoDbConnection;
+import knowingipr.data.connection.MongoDbLoadArgs;
+import knowingipr.data.connection.SourceDbConnection;
 import knowingipr.data.exception.MappingException;
 import knowingipr.data.mapper.JsonMappingTransformer;
 import org.bson.Document;

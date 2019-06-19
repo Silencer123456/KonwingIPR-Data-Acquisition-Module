@@ -1,5 +1,6 @@
-package knowingipr.data.loader;
+package knowingipr.data.connection;
 
+import knowingipr.data.loader.IDbLoadArgs;
 import org.bson.Document;
 
 import java.util.Collections;

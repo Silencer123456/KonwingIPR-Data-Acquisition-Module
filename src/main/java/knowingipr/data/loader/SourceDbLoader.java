@@ -2,6 +2,7 @@ package knowingipr.data.loader;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import knowingipr.data.connection.SourceDbConnection;
 import knowingipr.data.exception.MappingException;
 import knowingipr.data.utils.DirectoryHandler;
 

@@ -1,23 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ComboBox?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.control.Tooltip?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.ColumnConstraints?>
-<?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.RowConstraints?>
-
-<GridPane hgap="5.0" vgap="5.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="knowingipr.dam.controller.DetailController">
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<GridPane hgap="5.0" prefHeight="481.0" prefWidth="434.0" vgap="5.0" xmlns="http://javafx.com/javafx/8.0.171"
+          xmlns:fx="http://javafx.com/fxml/1" fx:controller="knowingipr.dam.controller.DetailController">
 
     <columnConstraints>
-        <ColumnConstraints halignment="RIGHT" hgrow="NEVER" />
-        <ColumnConstraints halignment="LEFT" hgrow="ALWAYS" />
+        <ColumnConstraints halignment="LEFT" hgrow="NEVER" maxWidth="232.0" minWidth="118.0" prefWidth="142.0"/>
+        <ColumnConstraints halignment="LEFT" hgrow="ALWAYS" maxWidth="291.0" minWidth="177.0" prefWidth="267.0"/>
     </columnConstraints>
 
     <Label text="Name" GridPane.rowIndex="1" />
@@ -28,7 +20,7 @@
    <Label text="URL" GridPane.rowIndex="3" />
    <Label text="Category type" GridPane.rowIndex="4" />
    <Label text="Licence type" GridPane.rowIndex="5" />
-   <HBox GridPane.columnIndex="1" GridPane.rowIndex="3">
+    <HBox spacing="8.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
       <children>
          <TextField fx:id="urlTextField" editable="false" />
          <Button fx:id="openLinkButton" mnemonicParsing="false" onAction="#onOpenLinkButtonClicked">
@@ -62,7 +54,7 @@
          <Button fx:id="discardButton" mnemonicParsing="false" onAction="#onDiscardButtonClicked" text="Discard" visible="false" GridPane.columnIndex="1" />
       </children>
    </GridPane>
-   <HBox alignment="CENTER_LEFT" prefHeight="0.0" prefWidth="200.0" spacing="8.0" GridPane.columnIndex="1" GridPane.rowIndex="8">
+    <HBox alignment="CENTER_LEFT" prefHeight="0.0" spacing="8.0" GridPane.columnIndex="1" GridPane.rowIndex="8">
       <children>
          <TextField fx:id="schemeFileTextField" editable="false" />
          <Button fx:id="schemeFileButton" mnemonicParsing="false" onAction="#onOpenSchemeFileButton" prefHeight="15.0" prefWidth="15.0">
@@ -81,8 +73,9 @@
          <Insets />
       </GridPane.margin>
    </HBox>
-   <ComboBox fx:id="categoryTypeComboBox" disable="true" prefHeight="25.0" prefWidth="154.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-   <HBox prefHeight="0.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="12">
+    <ComboBox fx:id="categoryTypeComboBox" disable="true" prefHeight="31.0" prefWidth="187.0" GridPane.columnIndex="1"
+              GridPane.rowIndex="4"/>
+    <HBox prefHeight="0.0" spacing="8.0" GridPane.columnIndex="1" GridPane.rowIndex="12">
       <children>
          <Button mnemonicParsing="false" onAction="#onOpenLoadButtonClicked">
             <graphic>
@@ -94,8 +87,11 @@
             </graphic></Button>
          <Button fx:id="loadCollectionButton" mnemonicParsing="false" onAction="#onLoadCollectionButtonClicked" text="Load to collection" />
       </children>
+        <padding>
+            <Insets left="10.0"/>
+        </padding>
    </HBox>
-   <HBox prefHeight="24.0" prefWidth="200.0" spacing="8.0" GridPane.columnIndex="1" GridPane.rowIndex="9">
+    <HBox prefHeight="24.0" spacing="8.0" GridPane.columnIndex="1" GridPane.rowIndex="9">
       <children>
          <TextField fx:id="mappingFileTextField" editable="false" />
          <Button mnemonicParsing="false" onAction="#onOpenMappingFileButton">
@@ -111,7 +107,7 @@
             </graphic></Button>
       </children>
    </HBox>
-   <HBox prefHeight="0.0" prefWidth="200.0" spacing="8.0" GridPane.columnIndex="1" GridPane.rowIndex="10">
+    <HBox prefHeight="0.0" spacing="8.0" GridPane.columnIndex="1" GridPane.rowIndex="10">
       <children>
          <TextField fx:id="licenceFileTextField" editable="false" />
          <Button mnemonicParsing="false" onAction="#onOpenLicenceFileButton">

@@ -11,6 +11,8 @@ import javafx.stage.DirectoryChooser;
 import javafx.stage.Stage;
 import knowingipr.dam.model.DataSource;
 import knowingipr.dam.model.DataSourceModel;
+import knowingipr.data.connection.MongoDbConnection;
+import knowingipr.data.connection.SourceDbConnection;
 import knowingipr.data.loader.*;
 
 import java.awt.*;
@@ -142,6 +144,9 @@ public class DetailController {
         } else if (sourceNameTextField.getText().equals("mag")) {
             sourceDbLoader = new MagLoader(dbConnection, mappingFileTextField.getText(), categoryTypeComboBox.getSelectionModel().getSelectedItem());
             doLoad(new String[]{"txt"});
+        } else if (sourceNameTextField.getText().equals("springer")) {
+            sourceDbLoader = new SpringerLoader(dbConnection, mappingFileTextField.getText(), categoryTypeComboBox.getSelectionModel().getSelectedItem());
+            doLoad(new String[]{"jsonl"});
         } else {
             Alert alert = new Alert(Alert.AlertType.WARNING, "The parser for selected data source does not exist yet");
             alert.showAndWait();

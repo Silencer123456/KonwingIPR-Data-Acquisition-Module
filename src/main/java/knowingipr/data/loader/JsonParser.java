@@ -6,6 +6,8 @@ import com.fasterxml.jackson.core.JsonToken;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.MappingJsonFactory;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import knowingipr.data.connection.MongoDbConnection;
+import knowingipr.data.connection.MongoDbLoadArgs;
 import knowingipr.data.exception.MappingException;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.LineIterator;

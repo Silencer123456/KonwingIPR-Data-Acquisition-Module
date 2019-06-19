@@ -1,9 +1,9 @@
 package knowingipr.dam;
 
+import knowingipr.data.connection.MongoDbConnection;
+import knowingipr.data.connection.SourceDbConnection;
 import knowingipr.data.exception.MappingException;
-import knowingipr.data.loader.MongoDbConnection;
 import knowingipr.data.loader.PatentLoader;
-import knowingipr.data.loader.SourceDbConnection;
 import knowingipr.data.loader.SourceDbLoader;
 
 import java.io.IOException;
