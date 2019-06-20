@@ -9,7 +9,9 @@ public enum MappedFields {
     ABSTRACT("abstract"),
     YEAR("year"),
     AUTHORS("authors"),
-    OWNERS("owners");
+    OWNERS("owners"),
+    PUBLISHER("publisher"),
+    AFFILIATION(ABSTRACT.value + "/affiliation");
 
     public final String value;
 

@@ -8,6 +8,7 @@ import knowingipr.data.exception.MappingException;
 import knowingipr.data.loader.MappedFields;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.logging.Logger;
 
@@ -32,49 +33,55 @@ public class JsonMappingTransformer {
         JsonNode arrayNode = node.at(arrayRootPath);
 
         // In case the field consists of multiple fields, e.g. Authors first name and last name
-        List<String> valueParts = new ArrayList<>();
+
         JsonNode values = mappingNode.path("values");
         if (!values.isArray()) {
             LOGGER.severe("The field values must be an array!");
             throw new MappingException("The field values must be an array!");
         }
 
-        for (JsonNode valueNode : values) {
-            valueParts.add(valueNode.textValue());
-        }
-
-        // The final list of values from the array
-        List<String> arrayValues = new ArrayList<>();
-
-        if (arrayNode.isArray()) {
-            // Iterate elements of the array
-            for (JsonNode arrayElement : arrayNode) {
-                String value = getMergedValue(valueParts, arrayElement);
-                if (!value.isEmpty()) {
-                    arrayValues.add(value);
-                }
-            }
-        } else {
-            String value = getMergedValue(valueParts, arrayNode);
-            if (!value.isEmpty()) {
-                arrayValues.add(value);
-            }
-        }
-
-        return arrayValues;
+        return getMergedValues(values, arrayNode);
     }
 
     /**
-     * Returns a merged string value from multiple fields.
+     * Returns a list of merged strings values from array node with paths.
      *
-     * @param valuePartPaths - Paths in the json document to fields I want to merge
-     * @param node           - The json node in which I want to search the path
-     * @return The merged string value from multiple fields
+     * @param valuePaths - List of paths to Json nodes containing values
+     * @param node   - The json node array in which we want to search the path
+     * @return The merged list of strings values from multiple fields
      */
-    private static String getMergedValue(List<String> valuePartPaths, JsonNode node) {
+    private static List<String> getMergedValues(JsonNode valuePaths, JsonNode node) {
+        List<String> mergedValues = new ArrayList<>();
+
+        // Iterate elements of the array TODO: check if it is array
+        for (JsonNode arrayElement : node) {
+            getMergedValue(valuePaths, arrayElement);
+
+            String s = getMergedValue(valuePaths, arrayElement);
+            if (!s.isEmpty()) {
+                mergedValues.add(s);
+            }
+        }
+
+        return mergedValues;
+    }
+
+    /**
+     * Extracts single merged value from the list of paths
+     *
+     * @param valuePaths - List of paths to Json nodes containing values
+     * @param node       - The json node in which we want to search the path
+     * @return Single merged value
+     */
+    private static String getMergedValue(JsonNode valuePaths, JsonNode node) {
+        List<String> valuePartsPaths = new ArrayList<>();
+        for (JsonNode valueNode : valuePaths) {
+            valuePartsPaths.add(valueNode.textValue());
+        }
+
         StringBuilder resultValue = new StringBuilder();
         // Iterate the value parts that need to be merged into one string
-        for (String valuePartPath : valuePartPaths) {
+        for (String valuePartPath : valuePartsPaths) {
             String nodeText = node.at(valuePartPath).textValue();
             if (nodeText != null) {
                 resultValue.append(nodeText).append(" ");
@@ -156,5 +163,111 @@ public class JsonMappingTransformer {
         }
 
         return valuesList;
+    }
+
+    public static List<String> getValuesListFromArray(JsonNode mappingRoot, MappedFields field, JsonNode nodeToPreprocess) throws MappingException {
+        JsonNode mappingNode = mappingRoot.path(field.value);
+        List<String> valuesList = new ArrayList<>();
+        if (mappingNode.isArray()) {
+            for (JsonNode node : mappingNode) {
+                valuesList = JsonMappingTransformer.extractArrayValues(nodeToPreprocess, node);
+                if (!valuesList.isEmpty()) {
+                    return valuesList;
+                }
+            }
+        }
+
+        return valuesList;
+    }
+
+    /**
+     * Extracts values from an array whose path is specified in the mapping and returns a list
+     * of extracted values
+     *
+     * @param node        - Node from which to extract the values
+     * @param mappingNode - Mapping node holding the path to the array
+     * @return - list of string values of the array
+     * @throws MappingException - In case of mapping error
+     */
+    private static List<String> extractArrayValues(JsonNode node, JsonNode mappingNode) throws MappingException {
+        String arrayRootPath = mappingNode.path("array-root").textValue();
+        JsonNode arrayNode = node.at(arrayRootPath);
+
+        List<String> values = new ArrayList<>();
+
+        if (!arrayNode.isArray()) {
+            String err = "The field " + arrayRootPath + " must be an array!";
+            LOGGER.severe(err);
+            throw new MappingException(err);
+        }
+
+        for (JsonNode valueNode : arrayNode) {
+            values.add(valueNode.textValue());
+        }
+
+        return values;
+    }
+
+    public static List<JsonNode> getNodesList(JsonNode mappingRoot, MappedFields field, JsonNode nodeToPreprocess) throws MappingException {
+        JsonNode mappingNode = mappingRoot.path(field.value);
+
+        List<JsonNode> res = new ArrayList<>();
+        if (mappingNode.isArray()) {
+            for (JsonNode node : mappingNode) {
+                res = extractNodeByMapping(nodeToPreprocess, node);
+            }
+        }
+
+        return res; // change
+    }
+
+    /**
+     * Creates a list of nodes according to specified mapping
+     *
+     * @param node
+     * @param mappingNode
+     * @return
+     * @throws MappingException
+     */
+    public static List<JsonNode> extractNodeByMapping(JsonNode node, JsonNode mappingNode) throws MappingException {
+        String arrayRootPath = mappingNode.path("array-root").textValue();
+        JsonNode arrayNode = node.at(arrayRootPath);
+        if (!arrayNode.isArray()) {
+            String err = "The field " + arrayRootPath + " must be an array!";
+            LOGGER.severe(err);
+            throw new MappingException(err);
+        }
+
+        List<JsonNode> res = new ArrayList<>();
+
+        for (JsonNode valueNode : arrayNode) {
+            ObjectNode createdNode = JsonNodeFactory.instance.objectNode();
+
+            for (Iterator<String> it = mappingNode.fieldNames(); it.hasNext(); ) {
+                String key = it.next();
+                String path = mappingNode.path(key).textValue();
+                JsonNode n = valueNode.at(path);
+
+                // In case of array
+                if (mappingNode.path(key).isArray()) {
+                    String subArrayPath = mappingNode.path(key).get(0).path("array-root").textValue();
+                    if (subArrayPath != null) {
+                        n = valueNode.at(subArrayPath);
+                        createdNode.putArray(key).add(n);
+                    } else {
+                        // Neni tam array-root, spojime
+                        String name = getMergedValue(mappingNode.path(key), valueNode);
+                        createdNode.put(key, name);
+                    }
+
+                } else {
+                    createdNode.put(key, n.textValue());
+                }
+            }
+
+            res.add(createdNode);
+        }
+
+        return res;
     }
 }

@@ -4,14 +4,18 @@ import com.fasterxml.jackson.databind.JsonNode;
 import knowingipr.data.connection.MongoDbConnection;
 import knowingipr.data.connection.SourceDbConnection;
 import knowingipr.data.exception.MappingException;
+import knowingipr.data.mapper.JsonMappingTransformer;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.List;
 
 /**
  * Implementation of the loader of Springer LOD data.
  */
 public class SpringerLoader extends SourceDbLoader {
+
+    private final String SOURCE_NAME = "springer";
 
     private JsonParser jsonParser;
 
@@ -45,7 +49,51 @@ public class SpringerLoader extends SourceDbLoader {
      */
     @Override
     public void preprocessNode(JsonNode nodeToPreprocess) throws MappingException, IOException {
-        JsonNode mappingRoot = loadMappingFile().get("springer");
+        JsonNode mappingRoot = loadMappingFile().get(SOURCE_NAME);
+        if (mappingRoot == null) {
+            String err = "Mapping file does not contain node " + SOURCE_NAME;
+            LOGGER.severe(err);
+            throw new MappingException(err);
+        }
+        // Abstract
+        String abstractPath = mappingRoot.get(MappedFields.ABSTRACT.value).textValue();
+        JsonNode abstractNode = nodeToPreprocess.at(abstractPath);
+        StringBuilder abstractText = new StringBuilder();
+        if (abstractNode.isArray()) { // Sometimes the abstract is separated by new line into array. Do not know why
+            for (JsonNode curNode : abstractNode) {
+                abstractText.append(curNode.textValue());
+            }
+        } else {
+            abstractText.append(abstractNode.textValue());
+        }
 
+        if (!abstractText.toString().equals("null")) {
+            JsonMappingTransformer.putPair(nodeToPreprocess, MappedFields.ABSTRACT.value, abstractText.toString());
+        }
+
+        // Publisher
+        JsonMappingTransformer.putValueFromPath(mappingRoot, MappedFields.PUBLISHER, nodeToPreprocess);
+
+        // Authors Map
+        List<JsonNode> authorsNewNode = JsonMappingTransformer.getNodesList(mappingRoot, MappedFields.AUTHORS, nodeToPreprocess);
+
+        // Authors
+        List<String> authorsList = JsonMappingTransformer.getValuesListFromMappingArray(mappingRoot, MappedFields.AUTHORS, nodeToPreprocess);
+        JsonMappingTransformer.putArrayToNode(authorsList, nodeToPreprocess, MappedFields.AUTHORS, "name");
+
+        // Affiliation
+        List<String> affiliationList = JsonMappingTransformer.getValuesListFromArray(mappingRoot, MappedFields.AFFILIATION, nodeToPreprocess);
+        JsonMappingTransformer.putArrayToNode(affiliationList, nodeToPreprocess, MappedFields.AFFILIATION, "name");
+
+        // Title
+        JsonMappingTransformer.putValueFromPath(mappingRoot, MappedFields.TITLE, nodeToPreprocess);
+
+        // Year
+        String yearPath = mappingRoot.path(MappedFields.YEAR.value).path("path").textValue();
+        JsonNode yearNode = nodeToPreprocess.at(yearPath);
+        JsonMappingTransformer.putPair(nodeToPreprocess, MappedFields.YEAR.value, yearNode.toString().substring(0, 4));
+
+        // Data Source
+        JsonMappingTransformer.putPair(nodeToPreprocess, "dataSource", SOURCE_NAME);
     }
 }

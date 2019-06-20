@@ -1,0 +1,26 @@
+{
+  "springer": {
+    "title": "/name",
+    "abstract": "/description",
+    "publisher": "/sdPublisher/name",
+    "year": {
+      "path": "/datePublished",
+      "format": "YYYY-MM-DD"
+    },
+    "authors": [
+      {
+        "array-root": "/author",
+        "name": [
+          "/givenName",
+          "/familyName"
+        ],
+        "affiliation": [
+          {
+            "array-root": "/affiliation/name"
+          }
+        ],
+        "type": "/type"
+      }
+    ]
+  }
+}
