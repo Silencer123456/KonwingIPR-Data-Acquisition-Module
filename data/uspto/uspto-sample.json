@@ -1,0 +1,149 @@
+{"us-patent-grant": [
+    {
+        "country": "US",
+        "file": "USPP027521-20170103.XML",
+        "date-publ": 20170103,
+        "id": "us-patent-grant",
+        "abstract": {
+            "p": {
+                "num": "0000",
+                "id": "p-0001",
+                "content": "A new and distinct cultivar of Azalea plant named \u2018Lazamoropi\u2019, characterized by its medium purple-colored flowers, dark green-colored foliage, moderately vigorous, semi-upright growth habit, and strong multi-seasonal reblooming, is disclosed."
+            },
+            "id": "abstract"
+        },
+        "lang": "EN",
+        "dtd-version": "v4.5 2014-04-03",
+        "status": "PRODUCTION",
+        "date-produced": 20161219,
+        "us-bibliographic-data-grant": {
+            "publication-reference": {"document-id": {
+                "date": 20170103,
+                "country": "US",
+                "kind": "P2",
+                "doc-number": "PP027521"
+            }},
+            "figures": {
+                "number-of-drawing-sheets": 1,
+                "number-of-figures": 2
+            },
+            "examiners": {"primary-examiner": {
+                "department": 1661,
+                "first-name": "Susan",
+                "last-name": "McCormick Ewoldt"
+            }},
+            "number-of-claims": 1,
+            "assignees": {"assignee": [
+                {"addressbook": {
+                    "role": "04",
+                    "address": {
+                        "country": "US",
+                        "city": "Independence",
+                        "state": "LA"
+                    },
+                    "first-name": "Robert Edward",
+                    "last-name": "Lee"
+                }},
+                {"addressbook": {
+                    "role": "02",
+                    "address": {
+                        "country": "US",
+                        "city": "Loxley",
+                        "state": "AL"
+                    },
+                    "orgname": "Plant Development Services, Inc."
+                }}
+            ]},
+            "us-exemplary-claim": 1,
+            "invention-title": {
+                "id": "d2e43",
+                "content": "Azalea plant named \u2018Lazamoropi\u2019"
+            },
+            "classifications-ipcr": {"classification-ipcr": {
+                "classification-level": "A",
+                "subgroup": "00",
+                "classification-status": "B",
+                "section": "A",
+                "main-group": 5,
+                "ipc-version-indicator": {"date": 20060101},
+                "classification-value": "I",
+                "symbol-position": "F",
+                "generating-office": {"country": "US"},
+                "subclass": "H",
+                "classification-data-source": "H",
+                "action-date": {"date": 20170103},
+                "class": "01"
+            }},
+            "application-reference": {
+                "appl-type": "plant",
+                "document-id": {
+                    "date": 20150818,
+                    "country": "US",
+                    "doc-number": 14756215
+                }
+            },
+            "us-field-of-classification-search": {"classification-national": [
+                {
+                    "country": "US",
+                    "main-classification": "PLT238"
+                },
+                {
+                    "country": "US",
+                    "main-classification": "PLT239"
+                },
+                {
+                    "country": "US",
+                    "main-classification": "PLT240"
+                }
+            ]},
+            "classification-national": {
+                "country": "US",
+                "main-classification": "PLT238"
+            },
+            "us-application-series-code": 14,
+            "us-parties": {
+                "inventors": {"inventor": {
+                    "sequence": "001",
+                    "addressbook": {
+                        "address": {
+                            "country": "US",
+                            "city": "Independence",
+                            "state": "LA"
+                        },
+                        "first-name": "Robert Edward",
+                        "last-name": "Lee"
+                    },
+                    "designation": "us-only"
+                }},
+                "us-applicants": {"us-applicant": {
+                    "sequence": "001",
+                    "addressbook": {
+                        "address": {
+                            "country": "US",
+                            "city": "Independence",
+                            "state": "LA"
+                        },
+                        "first-name": "Robert Edward",
+                        "last-name": "Lee"
+                    },
+                    "designation": "us-only",
+                    "residence": {"country": "US"},
+                    "app-type": "applicant"
+                }},
+                "agents": {"agent": {
+                    "rep-type": "attorney",
+                    "sequence": "01",
+                    "addressbook": {
+                        "address": {"country": "unknown"},
+                        "first-name": "Audrey",
+                        "last-name": "Charles"
+                    }
+                }}
+            },
+            "us-botanic": {
+                "variety": "Lazamoropi",
+                "latin-name": "Rhododendron hybrid"
+            }
+        }
+    }]
+}

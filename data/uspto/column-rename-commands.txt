@@ -1,0 +1,10 @@
+db.patent.updateMany( {}, { $rename : { "us-bibliographic-data-grant.invention-title.content" : "title" } })
+db.patent.updateMany( {}, { $rename : { "abstract.p.content" : "abstract" } })
+db.patent.updateMany( {}, { $rename : { "date-publ" : "year" } })
+
+db.your_collection.update(
+  {},
+  { $set: {"new_field": 1} },
+  false,
+  true
+) -- add new field to entire collection

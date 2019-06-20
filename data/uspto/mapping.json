@@ -1,0 +1,43 @@
+{
+    "uspto": {
+        "title": "/us-bibliographic-data-grant/invention-title/content",
+        "abstract": "/abstract/p/content",
+        "number": "/file",
+        "year": {
+            "path": "/date-publ",
+            "format": "YYYYMMDD"
+        },
+        "authors": [
+            {
+                "array-root": "/us-bibliographic-data-grant/us-parties/inventors/inventor",
+                "values": [
+                    "/addressbook/first-name",
+                    "/addressbook/last-name"
+                ]
+            }
+        ],
+        "authors/affiliation": "",
+        "owners": [
+            {
+                "array-root": "/us-bibliographic-data-grant/us-parties/us-applicants/us-applicant",
+                "values": [
+                    "/addressbook/orgname"
+                ]
+            },
+            {
+                "array-root": "/us-bibliographic-data-grant/us-parties/us-applicants/us-applicant",
+                "values": [
+                    "/addressbook/first-name",
+                    "/addressbook/last-name"
+                ]
+            },
+            {
+                "array-root": "/us-bibliographic-data-grant/parties/applicants/applicant",
+                "values": [
+                    "/addressbook/first-name",
+                    "/addressbook/last-name"
+                ]
+            }
+        ]
+    }
+}

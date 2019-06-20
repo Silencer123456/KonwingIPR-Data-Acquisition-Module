@@ -1,0 +1,16 @@
+[{
+    "title": "4. Do They Get Help",
+    "year": 2015,
+    "authors": [
+        {
+            "name": "Richard Layard"
+        },
+        {
+            "name": "D. Clark"
+        }
+    ],
+    "publisher": "Princeton University Press",
+    "doi": "10.1515/9781400873333-006",
+    "id": "0184e150-392d-452e-9291-cee7eb2b91fc",
+    "doc_type": "BookChapter"
+}]
