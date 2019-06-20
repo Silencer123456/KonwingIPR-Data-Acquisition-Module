@@ -1,6 +1,7 @@
 package knowingipr.data.mapper;
 
 import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.fasterxml.jackson.databind.node.JsonNodeFactory;
 import com.fasterxml.jackson.databind.node.ObjectNode;
@@ -141,6 +142,10 @@ public class JsonMappingTransformer {
         ((ObjectNode) node).put(name, value);
     }
 
+    public static void putJsonArray(JsonNode node, ArrayNode array) {
+        ((ObjectNode) node).putArray("authors").addAll(array);
+    }
+
     /**
      * Gets a list of String values from a node specified in the mapping. The mapping node can be an array
      * (have multiple mappings for the same field -- mainly if the data source changes structure over time)
@@ -208,17 +213,22 @@ public class JsonMappingTransformer {
         return values;
     }
 
-    public static List<JsonNode> getNodesList(JsonNode mappingRoot, MappedFields field, JsonNode nodeToPreprocess) throws MappingException {
+    // TODO: Edit for multiple options
+    public static ArrayNode getNodesList(JsonNode mappingRoot, MappedFields field, JsonNode nodeToPreprocess) throws MappingException {
         JsonNode mappingNode = mappingRoot.path(field.value);
 
-        List<JsonNode> res = new ArrayList<>();
-        if (mappingNode.isArray()) {
-            for (JsonNode node : mappingNode) {
-                res = extractNodeByMapping(nodeToPreprocess, node);
-            }
+        ArrayNode res = null;
+
+        if (!mappingNode.isArray()) {
+            LOGGER.severe("Mapping field not an array");
+            throw new MappingException("Mapping field not an array");
         }
 
-        return res; // change
+        for (JsonNode node : mappingNode) {
+            res = extractNodeByMapping(nodeToPreprocess, node);
+        }
+
+        return res;
     }
 
     /**
@@ -229,14 +239,17 @@ public class JsonMappingTransformer {
      * @return
      * @throws MappingException
      */
-    public static List<JsonNode> extractNodeByMapping(JsonNode node, JsonNode mappingNode) throws MappingException {
+    public static ArrayNode extractNodeByMapping(JsonNode node, JsonNode mappingNode) throws MappingException {
         String arrayRootPath = mappingNode.path("array-root").textValue();
         JsonNode arrayNode = node.at(arrayRootPath);
         if (!arrayNode.isArray()) {
             String err = "The field " + arrayRootPath + " must be an array!";
-            LOGGER.severe(err);
-            throw new MappingException(err);
+            LOGGER.warning(err);
+            return null;
+            //throw new MappingException(err);
         }
+
+        LOGGER.warning("GOOD");
 
         List<JsonNode> res = new ArrayList<>();
 
@@ -253,7 +266,7 @@ public class JsonMappingTransformer {
                     String subArrayPath = mappingNode.path(key).get(0).path("array-root").textValue();
                     if (subArrayPath != null) {
                         n = valueNode.at(subArrayPath);
-                        createdNode.putArray(key).add(n);
+                        createdNode.set(key, n);
                     } else {
                         // Neni tam array-root, spojime
                         String name = getMergedValue(mappingNode.path(key), valueNode);
@@ -261,13 +274,17 @@ public class JsonMappingTransformer {
                     }
 
                 } else {
-                    createdNode.put(key, n.textValue());
+                    if (n.textValue() != null) {
+                        createdNode.put(key, n.textValue());
+                    }
                 }
             }
-
             res.add(createdNode);
         }
 
-        return res;
+        ObjectMapper mapper = new ObjectMapper();
+        ArrayNode array = mapper.valueToTree(res);
+
+        return array;
     }
 }

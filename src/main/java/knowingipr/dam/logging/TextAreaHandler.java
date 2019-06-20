@@ -19,6 +19,8 @@ public class TextAreaHandler extends Handler {
 
     private TextArea textArea;
 
+    private int linesCounter = 0;
+
     public TextAreaHandler(TextArea area) {
         this.textArea = area;
     }
@@ -27,7 +29,12 @@ public class TextAreaHandler extends Handler {
     public void publish(LogRecord record) {
         if (textArea == null) return;
 
-        Platform.runLater(() -> textArea.appendText(formatter.format(record)));
+        Platform.runLater(() -> {
+            if (linesCounter++ > 1000) {
+                textArea.clear();
+            }
+            textArea.appendText(formatter.format(record));
+        });
     }
 
     @Override

@@ -1,6 +1,7 @@
 package knowingipr.data.loader;
 
 import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.node.ArrayNode;
 import knowingipr.data.connection.MongoDbConnection;
 import knowingipr.data.connection.SourceDbConnection;
 import knowingipr.data.exception.MappingException;
@@ -24,7 +25,7 @@ public class SpringerLoader extends SourceDbLoader {
     public SpringerLoader(SourceDbConnection dbConnection, String mappingFilePath, String collectionName) {
         super(dbConnection, mappingFilePath);
 
-        this.collectionName = collectionName;
+        this.collectionName = "test";
         jsonParser = new JsonParser();
     }
 
@@ -74,12 +75,15 @@ public class SpringerLoader extends SourceDbLoader {
         // Publisher
         JsonMappingTransformer.putValueFromPath(mappingRoot, MappedFields.PUBLISHER, nodeToPreprocess);
 
-        // Authors Map
-        List<JsonNode> authorsNewNode = JsonMappingTransformer.getNodesList(mappingRoot, MappedFields.AUTHORS, nodeToPreprocess);
+        // Authors array
+        ArrayNode authorsArray = JsonMappingTransformer.getNodesList(mappingRoot, MappedFields.AUTHORS, nodeToPreprocess);
+        if (authorsArray != null) {
+            JsonMappingTransformer.putJsonArray(nodeToPreprocess, authorsArray);
+        }
 
         // Authors
-        List<String> authorsList = JsonMappingTransformer.getValuesListFromMappingArray(mappingRoot, MappedFields.AUTHORS, nodeToPreprocess);
-        JsonMappingTransformer.putArrayToNode(authorsList, nodeToPreprocess, MappedFields.AUTHORS, "name");
+        //List<String> authorsList = JsonMappingTransformer.getValuesListFromMappingArray(mappingRoot, MappedFields.AUTHORS, nodeToPreprocess);
+        //JsonMappingTransformer.putArrayToNode(authorsList, nodeToPreprocess, MappedFields.AUTHORS, "name");
 
         // Affiliation
         List<String> affiliationList = JsonMappingTransformer.getValuesListFromArray(mappingRoot, MappedFields.AFFILIATION, nodeToPreprocess);
@@ -88,10 +92,15 @@ public class SpringerLoader extends SourceDbLoader {
         // Title
         JsonMappingTransformer.putValueFromPath(mappingRoot, MappedFields.TITLE, nodeToPreprocess);
 
+        // Url
+        JsonMappingTransformer.putValueFromPath(mappingRoot, MappedFields.URL, nodeToPreprocess);
+
         // Year
         String yearPath = mappingRoot.path(MappedFields.YEAR.value).path("path").textValue();
-        JsonNode yearNode = nodeToPreprocess.at(yearPath);
-        JsonMappingTransformer.putPair(nodeToPreprocess, MappedFields.YEAR.value, yearNode.toString().substring(0, 4));
+        String date = nodeToPreprocess.at(yearPath).textValue();
+        if (date != null) {
+            JsonMappingTransformer.putPair(nodeToPreprocess, MappedFields.YEAR.value, date.substring(0, 4));
+        }
 
         // Data Source
         JsonMappingTransformer.putPair(nodeToPreprocess, "dataSource", SOURCE_NAME);

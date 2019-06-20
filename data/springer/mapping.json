@@ -3,6 +3,7 @@
     "title": "/name",
     "abstract": "/description",
     "publisher": "/sdPublisher/name",
+    "url": "/url",
     "year": {
       "path": "/datePublished",
       "format": "YYYY-MM-DD"

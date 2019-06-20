@@ -11,7 +11,8 @@ public enum MappedFields {
     AUTHORS("authors"),
     OWNERS("owners"),
     PUBLISHER("publisher"),
-    AFFILIATION(ABSTRACT.value + "/affiliation");
+    AFFILIATION(ABSTRACT.value + "/affiliation"),
+    URL("url");
 
     public final String value;
 
