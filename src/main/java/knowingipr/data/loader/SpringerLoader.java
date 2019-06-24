@@ -25,7 +25,7 @@ public class SpringerLoader extends SourceDbLoader {
     public SpringerLoader(SourceDbConnection dbConnection, String mappingFilePath, String collectionName) {
         super(dbConnection, mappingFilePath);
 
-        this.collectionName = "test";
+        this.collectionName = "test2";
         jsonParser = new JsonParser();
     }
 
@@ -77,13 +77,7 @@ public class SpringerLoader extends SourceDbLoader {
 
         // Authors array
         ArrayNode authorsArray = JsonMappingTransformer.getNodesList(mappingRoot, MappedFields.AUTHORS, nodeToPreprocess);
-        if (authorsArray != null) {
-            JsonMappingTransformer.putJsonArray(nodeToPreprocess, authorsArray);
-        }
-
-        // Authors
-        //List<String> authorsList = JsonMappingTransformer.getValuesListFromMappingArray(mappingRoot, MappedFields.AUTHORS, nodeToPreprocess);
-        //JsonMappingTransformer.putArrayToNode(authorsList, nodeToPreprocess, MappedFields.AUTHORS, "name");
+        JsonMappingTransformer.putJsonArray(nodeToPreprocess, authorsArray, "authors");
 
         // Affiliation
         List<String> affiliationList = JsonMappingTransformer.getValuesListFromArray(mappingRoot, MappedFields.AFFILIATION, nodeToPreprocess);

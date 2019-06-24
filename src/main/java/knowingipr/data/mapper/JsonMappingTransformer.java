@@ -126,6 +126,10 @@ public class JsonMappingTransformer {
     public static void putValueFromPath(JsonNode mappingRoot, MappedFields field, JsonNode nodeToPreprocess) {
         String path = mappingRoot.get(field.value).textValue();
         JsonNode searchedNode = nodeToPreprocess.at(path);
+        if (searchedNode.textValue() == null || searchedNode.textValue().isEmpty()) {
+            LOGGER.warning("Missing value for field " + field.value);
+            System.out.println("Missing value for field " + field.value);
+        }
         putPair(nodeToPreprocess, field.value, searchedNode.textValue());
 
         //((ObjectNode) nodeToPreprocess).remove(path);
@@ -142,8 +146,24 @@ public class JsonMappingTransformer {
         ((ObjectNode) node).put(name, value);
     }
 
-    public static void putJsonArray(JsonNode node, ArrayNode array) {
-        ((ObjectNode) node).putArray("authors").addAll(array);
+    static int empty = 0; // TMP
+    static int full = 0; // TMP
+
+    /**
+     * Wraps the putArray function which puts an array to a json node
+     * with the specified name
+     *
+     * @param node  - Node to which to put the array
+     * @param array - Array to put to the node
+     */
+    public static void putJsonArray(JsonNode node, ArrayNode array, String arrayName) {
+        if (array == null) {
+            LOGGER.warning("Array " + arrayName + " is empty. Empty: " + empty + ", full: " + full);
+            empty++;
+            return;
+        }
+        full++;
+        ((ObjectNode) node).putArray(arrayName).addAll(array);
     }
 
     /**
@@ -248,8 +268,6 @@ public class JsonMappingTransformer {
             return null;
             //throw new MappingException(err);
         }
-
-        LOGGER.warning("GOOD");
 
         List<JsonNode> res = new ArrayList<>();
 
