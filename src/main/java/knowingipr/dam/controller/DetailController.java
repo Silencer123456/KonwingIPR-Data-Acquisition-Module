@@ -135,21 +135,27 @@ public class DetailController {
      * @param actionEvent
      */
     public void onLoadCollectionButtonClicked(ActionEvent actionEvent) {
-        if (sourceNameTextField.getText().equals("uspto")) {
-            sourceDbLoader = new PatentLoader(dbConnection, mappingFileTextField.getText(), categoryTypeComboBox.getSelectionModel().getSelectedItem());
-            doLoad(new String[]{"json"});
-        } else if (sourceNameTextField.getText().equals("patstat")) {
-            sourceDbLoader = new PatstatLoader(dbConnection, mappingFileTextField.getText(), categoryTypeComboBox.getSelectionModel().getSelectedItem());
-            doLoad(new String[]{"json"});
-        } else if (sourceNameTextField.getText().equals("mag")) {
-            sourceDbLoader = new MagLoader(dbConnection, mappingFileTextField.getText(), categoryTypeComboBox.getSelectionModel().getSelectedItem());
-            doLoad(new String[]{"txt"});
-        } else if (sourceNameTextField.getText().equals("springer")) {
-            sourceDbLoader = new SpringerLoader(dbConnection, mappingFileTextField.getText(), categoryTypeComboBox.getSelectionModel().getSelectedItem());
-            doLoad(new String[]{"jsonl"});
-        } else {
-            Alert alert = new Alert(Alert.AlertType.WARNING, "The parser for selected data source does not exist yet");
-            alert.showAndWait();
+        switch (sourceNameTextField.getText()) {
+            case "uspto":
+                sourceDbLoader = new UsptoLoader(dbConnection, mappingFileTextField.getText(), categoryTypeComboBox.getSelectionModel().getSelectedItem());
+                doLoad(new String[]{"json"});
+                break;
+            case "patstat":
+                sourceDbLoader = new PatstatLoader(dbConnection, mappingFileTextField.getText(), categoryTypeComboBox.getSelectionModel().getSelectedItem());
+                doLoad(new String[]{"json"});
+                break;
+            case "mag":
+                sourceDbLoader = new MagLoader(dbConnection, mappingFileTextField.getText(), categoryTypeComboBox.getSelectionModel().getSelectedItem());
+                doLoad(new String[]{"txt"});
+                break;
+            case "springer":
+                sourceDbLoader = new SpringerLoader(dbConnection, mappingFileTextField.getText(), categoryTypeComboBox.getSelectionModel().getSelectedItem());
+                doLoad(new String[]{"jsonl"});
+                break;
+            default:
+                Alert alert = new Alert(Alert.AlertType.WARNING, "The parser for selected data source does not exist yet");
+                alert.showAndWait();
+                break;
         }
     }
 

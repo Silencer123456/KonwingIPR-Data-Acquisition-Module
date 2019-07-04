@@ -76,7 +76,7 @@ public class SpringerLoader extends SourceDbLoader {
         JsonMappingTransformer.putValueFromPath(mappingRoot, MappedFields.PUBLISHER, nodeToPreprocess);
 
         // Authors array
-        ArrayNode authorsArray = JsonMappingTransformer.getNodesList(mappingRoot, MappedFields.AUTHORS, nodeToPreprocess);
+        ArrayNode authorsArray = JsonMappingTransformer.getNodesArrayWithOptions(mappingRoot, MappedFields.AUTHORS, nodeToPreprocess);
         JsonMappingTransformer.putJsonArray(nodeToPreprocess, authorsArray, "authors");
 
         // Affiliation

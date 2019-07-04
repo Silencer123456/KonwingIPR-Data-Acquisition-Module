@@ -20,20 +20,20 @@
         "owners": [
             {
                 "array-root": "/us-bibliographic-data-grant/us-parties/us-applicants/us-applicant",
-                "values": [
+              "name": [
                     "/addressbook/orgname"
                 ]
             },
             {
                 "array-root": "/us-bibliographic-data-grant/us-parties/us-applicants/us-applicant",
-                "values": [
+              "name": [
                     "/addressbook/first-name",
                     "/addressbook/last-name"
                 ]
             },
             {
                 "array-root": "/us-bibliographic-data-grant/parties/applicants/applicant",
-                "values": [
+              "name": [
                     "/addressbook/first-name",
                     "/addressbook/last-name"
                 ]

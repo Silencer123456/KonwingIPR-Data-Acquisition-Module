@@ -3,8 +3,8 @@ package knowingipr.dam;
 import knowingipr.data.connection.MongoDbConnection;
 import knowingipr.data.connection.SourceDbConnection;
 import knowingipr.data.exception.MappingException;
-import knowingipr.data.loader.PatentLoader;
 import knowingipr.data.loader.SourceDbLoader;
+import knowingipr.data.loader.UsptoLoader;
 
 import java.io.IOException;
 
@@ -13,7 +13,7 @@ public class ConsoleMain {
     private SourceDbConnection dbConnection = new MongoDbConnection();
 
     public ConsoleMain(String[] args) {
-        SourceDbLoader sourceDbLoader = new PatentLoader(dbConnection, args[2], args[0]);
+        SourceDbLoader sourceDbLoader = new UsptoLoader(dbConnection, args[2], args[0]);
         try {
             sourceDbLoader.loadFromDirectory(args[1], new String[]{"json"});
         } catch (IOException | MappingException e) {

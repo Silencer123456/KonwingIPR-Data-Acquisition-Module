@@ -1,6 +1,7 @@
 package knowingipr.data.loader;
 
 import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.node.ArrayNode;
 import knowingipr.data.connection.MongoDbConnection;
 import knowingipr.data.connection.MongoDbLoadArgs;
 import knowingipr.data.connection.SourceDbConnection;
@@ -10,21 +11,25 @@ import org.bson.Document;
 
 import java.io.File;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 /**
  * Implementation of the loader of USPTO patent data to the database.
  */
-public class PatentLoader extends SourceDbLoader {
+public class UsptoLoader extends SourceDbLoader {
+
+    private static final String SOURCE_NAME = "uspto";
 
     private JsonParser jsonParser;
 
     private String collectionName;
 
-    public PatentLoader(SourceDbConnection dbConnection, String mappingFilePath, String collectionName) {
+    public UsptoLoader(SourceDbConnection dbConnection, String mappingFilePath, String collectionName) {
         super(dbConnection, mappingFilePath);
 
-        this.collectionName = collectionName;
+        this.collectionName = "test2";
         jsonParser = new JsonParser();
     }
 
@@ -60,7 +65,7 @@ public class PatentLoader extends SourceDbLoader {
      */
     @Override
     public void preprocessNode(JsonNode nodeToPreprocess) throws MappingException, IOException {
-        JsonNode mappingRoot = loadMappingFile().get("uspto");
+        JsonNode mappingRoot = loadMappingFile().get(SOURCE_NAME);
 
         // Abstract
         String abstractPath = mappingRoot.get(MappedFields.ABSTRACT.value).textValue();
@@ -83,13 +88,12 @@ public class PatentLoader extends SourceDbLoader {
         String patNumberId = nodeToPreprocess.at(patentIdPath).textValue();
         JsonMappingTransformer.putPair(nodeToPreprocess, MappedFields.ID.value, extractPatentNumber(patNumberId));
 
-        // Authors
-        List<String> authorsList = JsonMappingTransformer.getValuesListFromMappingArray(mappingRoot, MappedFields.AUTHORS, nodeToPreprocess);
-        JsonMappingTransformer.putArrayToNode(authorsList, nodeToPreprocess, MappedFields.AUTHORS, "name");
+        ArrayNode authorsArray = JsonMappingTransformer.getNodesArrayWithOptions(mappingRoot, MappedFields.AUTHORS, nodeToPreprocess);
+        JsonMappingTransformer.putJsonArray(nodeToPreprocess, authorsArray, MappedFields.AUTHORS.value);
 
-        // Owners
-        List<String> ownersList = JsonMappingTransformer.getValuesListFromMappingArray(mappingRoot, MappedFields.OWNERS, nodeToPreprocess);
-        JsonMappingTransformer.putArrayToNode(ownersList, nodeToPreprocess, MappedFields.OWNERS, "name");
+
+        ArrayNode ownersArray = JsonMappingTransformer.getNodesArrayWithOptions(mappingRoot, MappedFields.OWNERS, nodeToPreprocess);
+        JsonMappingTransformer.putJsonArray(nodeToPreprocess, ownersArray, MappedFields.OWNERS.value);
 
         // Title
         JsonMappingTransformer.putValueFromPath(mappingRoot, MappedFields.TITLE, nodeToPreprocess);
@@ -98,10 +102,13 @@ public class PatentLoader extends SourceDbLoader {
         String yearPath = mappingRoot.path(MappedFields.YEAR.value).path("path").textValue();
         JsonNode yearNode = nodeToPreprocess.at(yearPath);
         JsonMappingTransformer.putPair(nodeToPreprocess, MappedFields.YEAR.value, yearNode.toString().substring(0, 4));
-        //((ObjectNode) nodeToPreprocess).put(MappedFields.YEAR.value, yearNode.toString().substring(0, 4));
+
+        // Date
+        SimpleDateFormat dateFormat = new SimpleDateFormat("YYYYMMDD");
+        Date date = new Date();
 
         // Data Source
-        JsonMappingTransformer.putPair(nodeToPreprocess, "dataSource", "uspto");
+        JsonMappingTransformer.putPair(nodeToPreprocess, "dataSource", SOURCE_NAME);
     }
 
     /**

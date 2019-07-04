@@ -20,35 +20,13 @@ public class JsonMappingTransformer {
 
     private final static Logger LOGGER = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
 
-    /**
-     * Extracts all the array values from the paths specified in the mapping.
-     * If the node is not an array, it extracts present fields.
-     *
-     * @param node        - The target node from which to extract the values
-     * @param mappingNode - Node in the mapping file to process
-     * @return - List of values of the
-     * @throws MappingException
-     */
-    public static List<String> extractArrayFromMapping(JsonNode node, JsonNode mappingNode) throws MappingException {
-        String arrayRootPath = mappingNode.path("array-root").textValue();
-        JsonNode arrayNode = node.at(arrayRootPath);
-
-        // In case the field consists of multiple fields, e.g. Authors first name and last name
-
-        JsonNode values = mappingNode.path("values");
-        if (!values.isArray()) {
-            LOGGER.severe("The field values must be an array!");
-            throw new MappingException("The field values must be an array!");
-        }
-
-        return getMergedValues(values, arrayNode);
-    }
+    private static ObjectMapper mapper = new ObjectMapper();
 
     /**
      * Returns a list of merged strings values from array node with paths.
      *
      * @param valuePaths - List of paths to Json nodes containing values
-     * @param node   - The json node array in which we want to search the path
+     * @param node       - The json node array in which we want to search the path
      * @return The merged list of strings values from multiple fields
      */
     private static List<String> getMergedValues(JsonNode valuePaths, JsonNode node) {
@@ -56,7 +34,7 @@ public class JsonMappingTransformer {
 
         // Iterate elements of the array TODO: check if it is array
         for (JsonNode arrayElement : node) {
-            getMergedValue(valuePaths, arrayElement);
+            //getMergedValue(valuePaths, arrayElement);
 
             String s = getMergedValue(valuePaths, arrayElement);
             if (!s.isEmpty()) {
@@ -128,7 +106,6 @@ public class JsonMappingTransformer {
         JsonNode searchedNode = nodeToPreprocess.at(path);
         if (searchedNode.textValue() == null || searchedNode.textValue().isEmpty()) {
             LOGGER.warning("Missing value for field " + field.value);
-            System.out.println("Missing value for field " + field.value);
         }
         putPair(nodeToPreprocess, field.value, searchedNode.textValue());
 
@@ -146,9 +123,6 @@ public class JsonMappingTransformer {
         ((ObjectNode) node).put(name, value);
     }
 
-    static int empty = 0; // TMP
-    static int full = 0; // TMP
-
     /**
      * Wraps the putArray function which puts an array to a json node
      * with the specified name
@@ -157,37 +131,11 @@ public class JsonMappingTransformer {
      * @param array - Array to put to the node
      */
     public static void putJsonArray(JsonNode node, ArrayNode array, String arrayName) {
-        if (array == null) {
-            LOGGER.warning("Array " + arrayName + " is empty. Empty: " + empty + ", full: " + full);
-            empty++;
+        if (array == null || array.isMissingNode()) {
+            //LOGGER.warning("Array " + arrayName + " is empty. Empty: " + empty + ", full: " + full);
             return;
         }
-        full++;
         ((ObjectNode) node).putArray(arrayName).addAll(array);
-    }
-
-    /**
-     * Gets a list of String values from a node specified in the mapping. The mapping node can be an array
-     * (have multiple mappings for the same field -- mainly if the data source changes structure over time)
-     * @param mappingRoot - Root mapping node
-     * @param field - Field in the mapping to look for
-     * @param nodeToPreprocess - Node, in which we search mapped fields and add the new extracted fields
-     * @return list of String values extracted from the mapping
-     * @throws MappingException
-     */
-    public static List<String> getValuesListFromMappingArray(JsonNode mappingRoot, MappedFields field, JsonNode nodeToPreprocess) throws MappingException {
-        JsonNode mappingNode = mappingRoot.path(field.value);
-        List<String> valuesList = new ArrayList<>();
-        if (mappingNode.isArray()) {
-            for (JsonNode node : mappingNode) {
-                valuesList = JsonMappingTransformer.extractArrayFromMapping(nodeToPreprocess, node);
-                if (!valuesList.isEmpty()) {
-                    return valuesList;
-                }
-            }
-        }
-
-        return valuesList;
     }
 
     public static List<String> getValuesListFromArray(JsonNode mappingRoot, MappedFields field, JsonNode nodeToPreprocess) throws MappingException {
@@ -234,75 +182,159 @@ public class JsonMappingTransformer {
     }
 
     // TODO: Edit for multiple options
-    public static ArrayNode getNodesList(JsonNode mappingRoot, MappedFields field, JsonNode nodeToPreprocess) throws MappingException {
+
+    /**
+     * Iterates the specified path nodes in the mapping and for each path node
+     * extracts an array node containing all the fields specified by the mapping
+     *
+     * @param mappingRoot      -- The root node of the mapping structure
+     * @param field            - The field to search in the mapping (e.g. authors)
+     * @param nodeToPreprocess - The node from which we want to extract information
+     * @return - Array node with all the fields specified by the mapping
+     * @throws MappingException
+     */
+    public static ArrayNode getNodesArrayWithOptions(JsonNode mappingRoot, MappedFields field, JsonNode nodeToPreprocess) throws MappingException {
         JsonNode mappingNode = mappingRoot.path(field.value);
 
         ArrayNode res = null;
 
         if (!mappingNode.isArray()) {
-            LOGGER.severe("Mapping field not an array");
-            throw new MappingException("Mapping field not an array");
+            LOGGER.severe("Mapping field is not an array");
+            throw new MappingException("Mapping field is not an array");
         }
 
+        int count = 0;
         for (JsonNode node : mappingNode) {
-            res = extractNodeByMapping(nodeToPreprocess, node);
+            if (count > 0) {
+                System.out.println();
+            }
+            res = createArrayFromMapping(nodeToPreprocess, node);
+            if (res != null) return res;
+
+            count++;
         }
 
         return res;
     }
 
     /**
-     * Creates a list of nodes according to specified mapping
+     * TODO: Refactor, documentation
+     * Creates an array node containing all the fields specified by the mapping
+     * Max depth of traversing the json structure is 2
      *
-     * @param node
-     * @param mappingNode
+     * @param nodeToPreprocess
+     * @param mappingNode      Node from the mapping containing fields to be included in the final array along with paths for the nodeToPreprocess node
      * @return
      * @throws MappingException
      */
-    public static ArrayNode extractNodeByMapping(JsonNode node, JsonNode mappingNode) throws MappingException {
-        String arrayRootPath = mappingNode.path("array-root").textValue();
-        JsonNode arrayNode = node.at(arrayRootPath);
-        if (!arrayNode.isArray()) {
-            String err = "The field " + arrayRootPath + " must be an array!";
-            LOGGER.warning(err);
+    private static ArrayNode createArrayFromMapping(JsonNode nodeToPreprocess, JsonNode mappingNode) throws MappingException {
+        String arrayRootPath = mappingNode.path("array-root").textValue(); // get the array-root field , which specifies the root of the array, containing the relevant data
+        JsonNode arrayNode = nodeToPreprocess.at(arrayRootPath); // We navigate in the target node to the path specified by the array-root
+
+        List<JsonNode> resultList = new ArrayList<>();
+
+        if (arrayNode.isMissingNode()) {
             return null;
-            //throw new MappingException(err);
         }
 
-        List<JsonNode> res = new ArrayList<>();
+        if (!arrayNode.isArray()) {
+            ObjectNode createdNode = createNodeFromMapping(mappingNode, arrayNode); // Prepare a new node, where we will store the values from the array, but according to the mapping
+            resultList.add(createdNode);
+        } else {
+            for (JsonNode element : arrayNode) { // Iterate over the elements of the array node that we got from the path specified in the array-root
+                ObjectNode createdNode = createNodeFromMapping(mappingNode, element); // Prepare a new node, where we will store the values from the array, but according to the mapping
+                resultList.add(createdNode);
+            }
+        }
 
-        for (JsonNode valueNode : arrayNode) {
-            ObjectNode createdNode = JsonNodeFactory.instance.objectNode();
+        return mapper.valueToTree(resultList);
+    }
 
-            for (Iterator<String> it = mappingNode.fieldNames(); it.hasNext(); ) {
-                String key = it.next();
-                String path = mappingNode.path(key).textValue();
-                JsonNode n = valueNode.at(path);
+    /**
+     * Creates a single node according to the specified mapping
+     *
+     * @param mappingNode - The mapping node containing fields to be included in the created node
+     * @param element     - A single element of the array from the target node where to look for values, where the mapping paths point to
+     */
+    private static ObjectNode createNodeFromMapping(JsonNode mappingNode, JsonNode element) {
+        ObjectNode createdNode = JsonNodeFactory.instance.objectNode(); // Prepare a new node, where we will store the values from the array, but according to the mapping
 
-                // In case of array
-                if (mappingNode.path(key).isArray()) {
-                    String subArrayPath = mappingNode.path(key).get(0).path("array-root").textValue();
-                    if (subArrayPath != null) {
-                        n = valueNode.at(subArrayPath);
-                        createdNode.set(key, n);
-                    } else {
-                        // Neni tam array-root, spojime
-                        String name = getMergedValue(mappingNode.path(key), valueNode);
-                        createdNode.put(key, name);
-                    }
+        for (Iterator<String> it = mappingNode.fieldNames(); it.hasNext(); ) { // Iterate over all the fields in the mapping node
+            String fieldName = it.next(); // get the name of the field in the mapping
+            JsonNode fieldPathNode = mappingNode.path(fieldName);
+            String fieldPath = fieldPathNode.textValue(); // get the path for that field
+            JsonNode field = element.at(fieldPath); // Get single field node from the target node
 
+            // In case of array
+            if (fieldPathNode.isArray()) { // The mapping field can be specified as an array, which can contain another array-root
+                String subArrayPath = fieldPathNode.get(0).path("array-root").textValue();
+                if (subArrayPath != null) {
+                    field = element.at(subArrayPath);
+                    createdNode.set(fieldName, field);
                 } else {
-                    if (n.textValue() != null) {
-                        createdNode.put(key, n.textValue());
-                    }
+                    // Neni tam array-root, spojime
+                    String name = getMergedValue(fieldPathNode, element);
+                    createdNode.put(fieldName, name);
+                }
+
+            } else {
+                if (field.textValue() != null) {
+                    createdNode.put(fieldName, field.textValue());
                 }
             }
-            res.add(createdNode);
         }
 
-        ObjectMapper mapper = new ObjectMapper();
-        ArrayNode array = mapper.valueToTree(res);
+        return createdNode;
+    }
 
-        return array;
+
+    /**
+     * NOT USED, USE getNodesArrayWithOptions INSTEAD
+     * Gets a list of String values from a node specified in the mapping. The mapping node can be an array
+     * (have multiple mappings for the same field -- mainly if the data source changes structure over time)
+     *
+     * @param mappingRoot      - Root mapping node
+     * @param field            - Field in the mapping to look for
+     * @param nodeToPreprocess - Node, in which we search mapped fields and add the new extracted fields
+     * @return list of String values extracted from the mapping
+     * @throws MappingException
+     */
+    public static List<String> getValuesListFromMappingArray(JsonNode mappingRoot, MappedFields field, JsonNode nodeToPreprocess) throws MappingException {
+        JsonNode mappingNode = mappingRoot.path(field.value);
+        List<String> valuesList = new ArrayList<>();
+        if (mappingNode.isArray()) {
+            for (JsonNode node : mappingNode) {
+                valuesList = JsonMappingTransformer.extractArrayFromMapping(nodeToPreprocess, node);
+                if (!valuesList.isEmpty()) {
+                    return valuesList;
+                }
+            }
+        }
+
+        return valuesList;
+    }
+
+    /**
+     * Extracts all the array values from the paths specified in the mapping.
+     * If the node is not an array, it extracts present fields.
+     *
+     * @param node        - The target node from which to extract the values
+     * @param mappingNode - Node in the mapping file to process
+     * @return - List of values of the
+     * @throws MappingException
+     */
+    public static List<String> extractArrayFromMapping(JsonNode node, JsonNode mappingNode) throws MappingException {
+        String arrayRootPath = mappingNode.path("array-root").textValue();
+        JsonNode arrayNode = node.at(arrayRootPath);
+
+        // In case the field consists of multiple fields, e.g. Authors first name and last name
+
+        JsonNode values = mappingNode.path("values");
+        if (!values.isArray()) {
+            LOGGER.severe("The field values must be an array!");
+            throw new MappingException("The field values must be an array!");
+        }
+
+        return getMergedValues(values, arrayNode);
     }
 }
