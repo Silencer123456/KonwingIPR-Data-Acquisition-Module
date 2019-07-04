@@ -11,8 +11,8 @@ import org.bson.Document;
 
 import java.io.File;
 import java.io.IOException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 /**
@@ -29,7 +29,7 @@ public class UsptoLoader extends SourceDbLoader {
     public UsptoLoader(SourceDbConnection dbConnection, String mappingFilePath, String collectionName) {
         super(dbConnection, mappingFilePath);
 
-        this.collectionName = "test2";
+        this.collectionName = collectionName;
         jsonParser = new JsonParser();
     }
 
@@ -100,15 +100,34 @@ public class UsptoLoader extends SourceDbLoader {
 
         // Year
         String yearPath = mappingRoot.path(MappedFields.YEAR.value).path("path").textValue();
+        String format = mappingRoot.path(MappedFields.YEAR.value).path("format").textValue();
         JsonNode yearNode = nodeToPreprocess.at(yearPath);
         JsonMappingTransformer.putPair(nodeToPreprocess, MappedFields.YEAR.value, yearNode.toString().substring(0, 4));
 
         // Date
-        SimpleDateFormat dateFormat = new SimpleDateFormat("YYYYMMDD");
-        Date date = new Date();
+        LocalDate date = extractDate(yearNode.toString(), format);
+        if (date != null) {
+            JsonMappingTransformer.putPair(nodeToPreprocess, MappedFields.DATE.value, date.toString());
+        }
 
         // Data Source
         JsonMappingTransformer.putPair(nodeToPreprocess, "dataSource", SOURCE_NAME);
+    }
+
+    /**
+     * Extracts date from node according to the specified format
+     *
+     * @param dateString - Json node from which to extract the date
+     * @param format     - Format of the date
+     * @return Parsed Date instance
+     */
+    private LocalDate extractDate(String dateString, String format) {
+        try {
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern(format);
+            return LocalDate.parse(dateString, formatter);
+        } catch (IllegalArgumentException e) {
+            return null;
+        }
     }
 
     /**

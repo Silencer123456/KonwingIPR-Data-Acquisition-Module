@@ -8,6 +8,7 @@ public enum MappedFields {
     TITLE("title"),
     ABSTRACT("abstract"),
     YEAR("year"),
+    DATE("date"),
     AUTHORS("authors"),
     OWNERS("owners"),
     PUBLISHER("publisher"),

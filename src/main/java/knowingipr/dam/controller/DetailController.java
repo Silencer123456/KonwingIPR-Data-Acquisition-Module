@@ -166,11 +166,11 @@ public class DetailController {
      */
     private void doLoad(String[] extensions) {
         model.setCurrentStatus("Loading initiated");
+        loadCollectionButton.setDisable(true);
         Task<Void> task = new Task<Void>() {
             @Override
             protected Void call() throws Exception {
                 sourceDbLoader.loadFromDirectory(loadPathTextField.getText(), extensions);
-                loadCollectionButton.setDisable(true);
                 return null;
             }
         };

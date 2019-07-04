@@ -5,12 +5,12 @@
         "number": "/file",
         "year": {
             "path": "/date-publ",
-            "format": "YYYYMMDD"
+          "format": "yyyyMMdd"
         },
         "authors": [
             {
                 "array-root": "/us-bibliographic-data-grant/us-parties/inventors/inventor",
-                "values": [
+              "name": [
                     "/addressbook/first-name",
                     "/addressbook/last-name"
                 ]

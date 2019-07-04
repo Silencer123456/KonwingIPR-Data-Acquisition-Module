@@ -27,10 +27,9 @@
       <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_testfx_testfx_junit_4_0_1_alpha.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/uspto/mapping.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/uspto/mapping.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/knowingipr/dam/ConsoleMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/knowingipr/dam/ConsoleMain.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/knowingipr/dam/controller/DetailController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/knowingipr/dam/controller/DetailController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/knowingipr/data/loader/PatentLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/knowingipr/data/loader/UsptoLoader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/knowingipr/data/loader/SpringerLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/knowingipr/data/loader/SpringerLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/knowingipr/data/loader/MappedFields.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/knowingipr/data/loader/MappedFields.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/knowingipr/data/loader/UsptoLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/knowingipr/data/loader/UsptoLoader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/knowingipr/data/mapper/JsonMappingTransformer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/knowingipr/data/mapper/JsonMappingTransformer.java" afterDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
@@ -95,8 +94,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/knowingipr/data/loader/UsptoLoader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="557">
-              <caret line="106" column="64" selection-start-line="106" selection-start-column="64" selection-end-line="106" selection-end-column="64" />
+            <state relative-caret-position="578">
+              <caret line="34" column="44" selection-start-line="34" selection-start-column="44" selection-end-line="34" selection-end-column="44" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -107,8 +106,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/knowingipr/data/loader/MappedFields.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
+            <state relative-caret-position="136">
+              <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -116,8 +115,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/knowingipr/data/loader/SpringerLoader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="79" column="39" selection-start-line="79" selection-start-column="39" selection-end-line="79" selection-end-column="39" />
+            <state relative-caret-position="387">
+              <caret line="75" column="44" selection-start-line="75" selection-start-column="44" selection-end-line="75" selection-end-column="44" />
             </state>
           </provider>
         </entry>
@@ -125,8 +124,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/knowingipr/data/loader/JsonParser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="570">
-              <caret line="50" selection-start-line="50" selection-end-line="50" />
+            <state relative-caret-position="316">
+              <caret line="45" selection-start-line="45" selection-end-line="45" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/knowingipr/data/loader/PatstatLoader.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="527">
+              <caret line="31" column="41" selection-start-line="31" selection-start-column="41" selection-end-line="31" selection-end-column="41" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -137,8 +148,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/knowingipr/dam/controller/DetailController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="366">
-              <caret line="198" column="25" selection-start-line="198" selection-start-column="25" selection-end-line="198" selection-end-column="25" />
+            <state relative-caret-position="98">
+              <caret line="149" column="22" lean-forward="true" selection-start-line="149" selection-start-column="22" selection-end-line="149" selection-end-column="22" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -150,7 +161,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/knowingipr/data/mapper/JsonMappingTransformer.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="316">
-              <caret line="133" column="74" selection-start-line="133" selection-start-column="74" selection-end-line="133" selection-end-column="74" />
+              <caret line="103" column="32" selection-start-line="103" selection-start-column="32" selection-end-line="103" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -203,7 +214,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>test thi</find>
       <find>is not a</find>
       <find>onope</find>
       <find>onopenbut</find>
@@ -233,6 +243,7 @@
       <find>inventor</find>
       <find>applicant</find>
       <find>is empty</find>
+      <find>Missing value for field</find>
     </findStrings>
   </component>
   <component name="FindManager">
@@ -290,12 +301,12 @@
         <option value="$PROJECT_DIR$/src/main/java/knowingipr/dam/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/knowingipr/dam/model/DataSourceModel.java" />
         <option value="$PROJECT_DIR$/src/main/java/knowingipr/dam/controller/LogController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/knowingipr/data/loader/MappedFields.java" />
         <option value="$PROJECT_DIR$/src/main/java/knowingipr/dam/logging/TextAreaHandler.java" />
-        <option value="$PROJECT_DIR$/src/main/java/knowingipr/dam/controller/DetailController.java" />
         <option value="$PROJECT_DIR$/src/main/java/knowingipr/data/loader/PatentLoader.java" />
         <option value="$PROJECT_DIR$/src/main/java/knowingipr/data/loader/SpringerLoader.java" />
+        <option value="$PROJECT_DIR$/src/main/java/knowingipr/data/loader/MappedFields.java" />
         <option value="$PROJECT_DIR$/src/main/java/knowingipr/data/mapper/JsonMappingTransformer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/knowingipr/dam/controller/DetailController.java" />
         <option value="$PROJECT_DIR$/src/main/java/knowingipr/data/loader/UsptoLoader.java" />
       </list>
     </option>
@@ -723,7 +734,7 @@
       <workItem from="1560846279367" duration="1466000" />
       <workItem from="1560863456334" duration="2214000" />
       <workItem from="1561015327373" duration="22912000" />
-      <workItem from="1562224124565" duration="8028000" />
+      <workItem from="1562224124565" duration="10115000" />
     </task>
     <task id="LOCAL-00001" summary="Added basic UI">
       <created>1549880763576</created>
@@ -928,7 +939,14 @@
       <option name="project" value="LOCAL" />
       <updated>1561371356303</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Updated Uspto to use the new mapping methods.&#10;Fixed bugs in the mapping methods and refactoring">
+      <created>1562232903714</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1562232903714</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -964,11 +982,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="132198000" />
+    <option name="totallyTimeSpent" value="134285000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="2576" height="1416" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.12241653" />
       <window_info id="Structure" order="1" weight="0.25" />
@@ -1058,7 +1075,6 @@
       <path value="$PROJECT_DIR$" />
       <path value="$PROJECT_DIR$/Academic-Downloader" />
     </ignored-roots>
-    <MESSAGE value="Implemented tools for extracting zip files and converting from XML to JSON" />
     <MESSAGE value="Minor UI changes" />
     <MESSAGE value="Merged loading of USPTO data into this project. &#10;Now loading of USPTO patent data can be initiated from the GUI." />
     <MESSAGE value="Adding and deleting new sources records to the Knowledge database is now possible.&#10;Minor UI changes" />
@@ -1083,7 +1099,8 @@
     <MESSAGE value="Added loading of Springer LOD data to Mongo" />
     <MESSAGE value="Improved loading of Springer LOD data" />
     <MESSAGE value="Added null checks to the Json Mapper and other fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added null checks to the Json Mapper and other fixes" />
+    <MESSAGE value="Updated Uspto to use the new mapping methods.&#10;Fixed bugs in the mapping methods and refactoring" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated Uspto to use the new mapping methods.&#10;Fixed bugs in the mapping methods and refactoring" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -1097,10 +1114,10 @@
           <option name="timeStamp" value="7" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/knowingipr/data/mapper/JsonMappingTransformer.java</url>
-          <line>209</line>
+          <url>file://$PROJECT_DIR$/src/main/java/knowingipr/data/loader/UsptoLoader.java</url>
+          <line>110</line>
           <properties />
-          <option name="timeStamp" value="20" />
+          <option name="timeStamp" value="21" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -1112,44 +1129,53 @@
   <component name="debuggerHistoryManager">
     <expressions id="evaluateCodeFragment">
       <expression>
-        <expression-string>arrayNode</expression-string>
+        <expression-string>String input = &quot;20090512&quot;;
+DateTimeFormatter formatter = DateTimeFormatter.ofPattern( &quot;yyyyMMdd&quot; );
+LocalDate localDate = LocalDate.parse( input , formatter );</expression-string>
+        <language-id>JAVA</language-id>
+        <custom-info>java.time.format.DateTimeFormatter,java.time.LocalDate</custom-info>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>String input = &quot;12252013&quot;;
+DateTimeFormatter formatter = DateTimeFormatter.ofPattern( &quot;MMddyyyy&quot; );
+LocalDate localDate = LocalDate.parse( input , formatter );</expression-string>
+        <language-id>JAVA</language-id>
+        <custom-info>java.time.format.DateTimeFormatter,java.time.LocalDate</custom-info>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>new SimpleDateFormat(&quot;YYYYMMDD&quot;).parse(&quot;20040504&quot;);</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>element</expression-string>
+        <expression-string>new SimpleDateFormat(&quot;YYYYMMDD&quot;).parse(&quot;20040513&quot;);</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>ObjectMapper mapper = new ObjectMapper();
-
-element = mapper.readTree(&quot;{\&quot;sequence\&quot;:\&quot;001\&quot;,\&quot;addressbook\&quot;:{\&quot;address\&quot;:{\&quot;country\&quot;:\&quot;US\&quot;,\&quot;city\&quot;:\&quot;Seattle\&quot;,\&quot;state\&quot;:\&quot;WA\&quot;},\&quot;first-name\&quot;:\&quot;Matthew\&quot;,\&quot;last-name\&quot;:\&quot;Kosh\&quot;},\&quot;nationality\&quot;:{\&quot;country\&quot;:\&quot;omitted\&quot;},\&quot;designation\&quot;:\&quot;us-only\&quot;,\&quot;residence\&quot;:{\&quot;country\&quot;:\&quot;US\&quot;},\&quot;app-type\&quot;:\&quot;applicant-inventor\&quot;}&quot;);</expression-string>
+        <expression-string>new SimpleDateFormat(&quot;YYYYMMDD&quot;).parse(&quot;20090513&quot;);</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>nodeToPreprocess.at(arrayRootPath)</expression-string>
+        <expression-string>new SimpleDateFormat(&quot;YYYYMMDD&quot;).parse(&quot;20090713&quot;);</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>arrayRootPath</expression-string>
+        <expression-string>new SimpleDateFormat(&quot;YYYYMMDD&quot;).parse(&quot;20090712&quot;);</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>node</expression-string>
+        <expression-string>new SimpleDateFormat(format).parse(yearNode.toString());</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>node.at(&quot;/us-bibliographic-data-grant/us-parties/inventors/inventor&quot;)</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>node.at(arrayRootPath)</expression-string>
+        <expression-string>yearNode.toString()</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
       </expression>
@@ -1208,7 +1234,6 @@ element = mapper.readTree(&quot;{\&quot;sequence\&quot;:\&quot;001\&quot;,\&quot
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/test/java/knowingipr/dam/FormValidationTest.java" />
     <entry file="jar://$MAVEN_REPOSITORY$/org/testfx/testfx-core/4.0.1-alpha/testfx-core-4.0.1-alpha.jar!/org/testfx/api/FxRobotContext.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -1342,16 +1367,6 @@ element = mapper.readTree(&quot;{\&quot;sequence\&quot;:\&quot;001\&quot;,\&quot
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/knowingipr/data/loader/MongoDbLoadArgs.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/knowingipr/data/loader/PatstatLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="46" lean-forward="true" selection-start-line="46" selection-end-line="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/knowingipr/data/loader/SourceDbConnection.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/knowingipr/data/utils/DirectoryHandler.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1506,17 +1521,44 @@ element = mapper.readTree(&quot;{\&quot;sequence\&quot;:\&quot;001\&quot;,\&quot
         </state>
       </provider>
     </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-databind/2.9.8/jackson-databind-2.9.8.jar!/com/fasterxml/jackson/databind/node/ValueNode.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="38" selection-start-line="38" selection-end-line="38" />
+          <folding>
+            <element signature="e#1253#1254#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/knowingipr/data/loader/MappedFields.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/knowingipr/data/loader/SpringerLoader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="79" column="39" selection-start-line="79" selection-start-column="39" selection-end-line="79" selection-end-column="39" />
+        <state relative-caret-position="387">
+          <caret line="75" column="44" selection-start-line="75" selection-start-column="44" selection-end-line="75" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/knowingipr/data/mapper/JsonMappingTransformer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="316">
+          <caret line="103" column="32" selection-start-line="103" selection-start-column="32" selection-end-line="103" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/knowingipr/dam/controller/DetailController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="366">
-          <caret line="198" column="25" selection-start-line="198" selection-start-column="25" selection-end-line="198" selection-end-column="25" />
+        <state relative-caret-position="98">
+          <caret line="149" column="22" lean-forward="true" selection-start-line="149" selection-start-column="22" selection-end-line="149" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1525,25 +1567,18 @@ element = mapper.readTree(&quot;{\&quot;sequence\&quot;:\&quot;001\&quot;,\&quot
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/knowingipr/data/loader/JsonParser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="50" selection-start-line="50" selection-end-line="50" />
+        <state relative-caret-position="316">
+          <caret line="45" selection-start-line="45" selection-end-line="45" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/knowingipr/data/loader/MappedFields.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/knowingipr/data/loader/PatstatLoader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/knowingipr/data/mapper/JsonMappingTransformer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="133" column="74" selection-start-line="133" selection-start-column="74" selection-end-line="133" selection-end-column="74" />
+        <state relative-caret-position="527">
+          <caret line="31" column="41" selection-start-line="31" selection-start-column="41" selection-end-line="31" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1552,8 +1587,8 @@ element = mapper.readTree(&quot;{\&quot;sequence\&quot;:\&quot;001\&quot;,\&quot
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/knowingipr/data/loader/UsptoLoader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="557">
-          <caret line="106" column="64" selection-start-line="106" selection-start-column="64" selection-end-line="106" selection-end-column="64" />
+        <state relative-caret-position="578">
+          <caret line="34" column="44" selection-start-line="34" selection-start-column="44" selection-end-line="34" selection-end-column="44" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

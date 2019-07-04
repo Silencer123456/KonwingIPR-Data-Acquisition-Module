@@ -203,15 +203,9 @@ public class JsonMappingTransformer {
             throw new MappingException("Mapping field is not an array");
         }
 
-        int count = 0;
         for (JsonNode node : mappingNode) {
-            if (count > 0) {
-                System.out.println();
-            }
             res = createArrayFromMapping(nodeToPreprocess, node);
             if (res != null) return res;
-
-            count++;
         }
 
         return res;
