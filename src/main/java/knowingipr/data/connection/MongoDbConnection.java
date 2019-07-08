@@ -4,13 +4,17 @@ import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoClients;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
+import com.mongodb.client.model.Indexes;
 import com.mongodb.client.model.InsertManyOptions;
 import knowingipr.data.loader.IDbLoadArgs;
 import org.bson.Document;
+import org.bson.conversions.Bson;
 
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 import java.util.Properties;
 import java.util.logging.Logger;
 
@@ -22,11 +26,10 @@ public class MongoDbConnection implements SourceDbConnection {
 
     private final static Logger LOGGER = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
 
-    //private static final String DB_NAME = "sources";
-
+    private static final String DEFAULT_DB_NAME = "knowingipr";
     private static final String MONGO_CONFIG_PATH = "mongo-config.cfg";
 
-    private String dbName = "diploma";
+    private String dbName = DEFAULT_DB_NAME;
 
     private MongoDatabase mongoDatabase;
 
@@ -89,8 +92,33 @@ public class MongoDbConnection implements SourceDbConnection {
     }
 
     @Override
+    public void createTextIndex(String collectionName, String... fields) {
+        MongoCollection<Document> collection = getCollection(collectionName);
+        collection.createIndex(Indexes.compoundIndex(getFieldsAsBson(fields)));
+
+    }
+
+    private List<Bson> getFieldsAsBson(String... fields) {
+        List<Bson> bsonList = new ArrayList<>();
+        for (String field : fields) {
+            bsonList.add(Indexes.text(field));
+        }
+
+        return bsonList;
+    }
+
+    @Override
+    public void createIndexes(String collectionName, String... fields) {
+        MongoCollection<Document> collection = getCollection(collectionName);
+        for (String field : fields) {
+            collection.createIndex(Indexes.ascending(field));
+        }
+    }
+
+    @Override
     public void disconnect() {
     }
+
 
     public MongoCollection<Document> getCollection(String collName) {
         return mongoDatabase.getCollection(collName);

@@ -171,6 +171,7 @@ public class DetailController {
             @Override
             protected Void call() throws Exception {
                 sourceDbLoader.loadFromDirectory(loadPathTextField.getText(), extensions);
+                sourceDbLoader.createIndexes();
                 return null;
             }
         };

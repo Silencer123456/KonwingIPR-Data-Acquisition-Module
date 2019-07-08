@@ -52,6 +52,8 @@ public abstract class SourceDbLoader {
 
     public abstract void preprocessNode(JsonNode nodeToPreprocess) throws MappingException, IOException;
 
+    public abstract void createIndexes();
+
     /**
      * Loads a mapping file from the specified path
      * and returns a root json node for that file

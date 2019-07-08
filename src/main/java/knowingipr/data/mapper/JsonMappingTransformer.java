@@ -181,8 +181,6 @@ public class JsonMappingTransformer {
         return values;
     }
 
-    // TODO: Edit for multiple options
-
     /**
      * Iterates the specified path nodes in the mapping and for each path node
      * extracts an array node containing all the fields specified by the mapping
@@ -193,7 +191,7 @@ public class JsonMappingTransformer {
      * @return - Array node with all the fields specified by the mapping
      * @throws MappingException
      */
-    public static ArrayNode getNodesArrayWithOptions(JsonNode mappingRoot, MappedFields field, JsonNode nodeToPreprocess) throws MappingException {
+    public static ArrayNode getNodesArrayMultipleOptions(JsonNode mappingRoot, MappedFields field, JsonNode nodeToPreprocess) throws MappingException {
         JsonNode mappingNode = mappingRoot.path(field.value);
 
         ArrayNode res = null;
@@ -205,7 +203,8 @@ public class JsonMappingTransformer {
 
         for (JsonNode node : mappingNode) {
             res = createArrayFromMapping(nodeToPreprocess, node);
-            if (res != null) return res;
+            if (res == null || res.size() == 0) continue;
+            if (res.get(0).size() != 0) return res;
         }
 
         return res;
@@ -268,7 +267,11 @@ public class JsonMappingTransformer {
                 } else {
                     // Neni tam array-root, spojime
                     String name = getMergedValue(fieldPathNode, element);
-                    createdNode.put(fieldName, name);
+                    if (name.isEmpty()) {
+                        System.out.println();
+                    } else {
+                        createdNode.put(fieldName, name);
+                    }
                 }
 
             } else {
@@ -283,7 +286,7 @@ public class JsonMappingTransformer {
 
 
     /**
-     * NOT USED, USE getNodesArrayWithOptions INSTEAD
+     * NOT USED, USE getNodesArrayMultipleOptions INSTEAD
      * Gets a list of String values from a node specified in the mapping. The mapping node can be an array
      * (have multiple mappings for the same field -- mainly if the data source changes structure over time)
      *

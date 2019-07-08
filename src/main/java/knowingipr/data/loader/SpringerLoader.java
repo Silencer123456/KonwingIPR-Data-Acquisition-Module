@@ -76,7 +76,7 @@ public class SpringerLoader extends SourceDbLoader {
         JsonMappingTransformer.putValueFromPath(mappingRoot, MappedFields.PUBLISHER, nodeToPreprocess);
 
         // Authors array
-        ArrayNode authorsArray = JsonMappingTransformer.getNodesArrayWithOptions(mappingRoot, MappedFields.AUTHORS, nodeToPreprocess);
+        ArrayNode authorsArray = JsonMappingTransformer.getNodesArrayMultipleOptions(mappingRoot, MappedFields.AUTHORS, nodeToPreprocess);
         JsonMappingTransformer.putJsonArray(nodeToPreprocess, authorsArray, "authors");
 
         // Affiliation
@@ -98,5 +98,10 @@ public class SpringerLoader extends SourceDbLoader {
 
         // Data Source
         JsonMappingTransformer.putPair(nodeToPreprocess, "dataSource", SOURCE_NAME);
+    }
+
+    @Override
+    public void createIndexes() {
+
     }
 }

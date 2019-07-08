@@ -40,4 +40,9 @@ public class MagLoader extends SourceDbLoader {
     @Override
     public void preprocessNode(JsonNode nodeToPreprocess) throws MappingException, IOException {
     }
+
+    @Override
+    public void createIndexes() {
+
+    }
 }

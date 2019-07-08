@@ -20,6 +20,11 @@ public interface SourceDbConnection {
      */
     void insert(IDbLoadArgs loadArgs);
 
+    // TODO: segregate interface
+    void createTextIndex(String collectionName, String... fields);
+
+    void createIndexes(String collectionName, String... fields);
+
     /**
      * Disconnects from the source database
      */

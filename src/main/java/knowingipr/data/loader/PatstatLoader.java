@@ -52,4 +52,9 @@ public class PatstatLoader extends SourceDbLoader {
     public void preprocessNode(JsonNode nodeToPreprocess) throws MappingException {
 
     }
+
+    @Override
+    public void createIndexes() {
+
+    }
 }

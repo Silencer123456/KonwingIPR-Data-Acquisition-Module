@@ -29,7 +29,7 @@ public class UsptoLoader extends SourceDbLoader {
     public UsptoLoader(SourceDbConnection dbConnection, String mappingFilePath, String collectionName) {
         super(dbConnection, mappingFilePath);
 
-        this.collectionName = collectionName;
+        this.collectionName = "test";
         jsonParser = new JsonParser();
     }
 
@@ -88,11 +88,12 @@ public class UsptoLoader extends SourceDbLoader {
         String patNumberId = nodeToPreprocess.at(patentIdPath).textValue();
         JsonMappingTransformer.putPair(nodeToPreprocess, MappedFields.ID.value, extractPatentNumber(patNumberId));
 
-        ArrayNode authorsArray = JsonMappingTransformer.getNodesArrayWithOptions(mappingRoot, MappedFields.AUTHORS, nodeToPreprocess);
+        // Authors
+        ArrayNode authorsArray = JsonMappingTransformer.getNodesArrayMultipleOptions(mappingRoot, MappedFields.AUTHORS, nodeToPreprocess);
         JsonMappingTransformer.putJsonArray(nodeToPreprocess, authorsArray, MappedFields.AUTHORS.value);
 
-
-        ArrayNode ownersArray = JsonMappingTransformer.getNodesArrayWithOptions(mappingRoot, MappedFields.OWNERS, nodeToPreprocess);
+        // Owners
+        ArrayNode ownersArray = JsonMappingTransformer.getNodesArrayMultipleOptions(mappingRoot, MappedFields.OWNERS, nodeToPreprocess);
         JsonMappingTransformer.putJsonArray(nodeToPreprocess, ownersArray, MappedFields.OWNERS.value);
 
         // Title
@@ -112,6 +113,24 @@ public class UsptoLoader extends SourceDbLoader {
 
         // Data Source
         JsonMappingTransformer.putPair(nodeToPreprocess, "dataSource", SOURCE_NAME);
+    }
+
+    /**
+     * db.patent.createIndex(
+     * {
+     * title: "text",
+     * abstract: "text",
+     * "authors.name": "text",
+     * "owners.name": "text"
+     * }
+     * )
+     */
+    @Override
+    public void createIndexes() {
+        dbConnection.createTextIndex("test", MappedFields.TITLE.value, MappedFields.ABSTRACT.value,
+                "authors.name", "owners.name");
+
+        dbConnection.createIndexes("test", MappedFields.ID.value, MappedFields.TITLE.value);
     }
 
     /**
