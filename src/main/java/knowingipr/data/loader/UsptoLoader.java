@@ -29,7 +29,7 @@ public class UsptoLoader extends SourceDbLoader {
     public UsptoLoader(SourceDbConnection dbConnection, String mappingFilePath, String collectionName) {
         super(dbConnection, mappingFilePath);
 
-        this.collectionName = "test";
+        this.collectionName = collectionName;
         jsonParser = new JsonParser();
     }
 
@@ -127,10 +127,10 @@ public class UsptoLoader extends SourceDbLoader {
      */
     @Override
     public void createIndexes() {
-        dbConnection.createTextIndex("test", MappedFields.TITLE.value, MappedFields.ABSTRACT.value,
+        dbConnection.createTextIndex(collectionName, MappedFields.TITLE.value, MappedFields.ABSTRACT.value,
                 "authors.name", "owners.name");
 
-        dbConnection.createIndexes("test", MappedFields.ID.value, MappedFields.TITLE.value);
+        dbConnection.createIndexes(collectionName, MappedFields.ID.value, MappedFields.TITLE.value);
     }
 
     /**
