@@ -12,10 +12,7 @@ import org.bson.conversions.Bson;
 
 import java.io.FileInputStream;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Properties;
+import java.util.*;
 import java.util.logging.Logger;
 
 /**
@@ -93,8 +90,12 @@ public class MongoDbConnection implements SourceDbConnection {
 
     @Override
     public void createTextIndex(String collectionName, String... fields) {
+        LOGGER.info("Creating text index on fields : " + Arrays.toString(fields));
+
         MongoCollection<Document> collection = getCollection(collectionName);
         collection.createIndex(Indexes.compoundIndex(getFieldsAsBson(fields)));
+
+        LOGGER.info("Text index created");
 
     }
 
@@ -111,7 +112,11 @@ public class MongoDbConnection implements SourceDbConnection {
     public void createIndexes(String collectionName, String... fields) {
         MongoCollection<Document> collection = getCollection(collectionName);
         for (String field : fields) {
+            LOGGER.info("Creating index on field : " + field);
+
             collection.createIndex(Indexes.ascending(field));
+
+            LOGGER.info("Index on field " + field + " created.");
         }
     }
 
