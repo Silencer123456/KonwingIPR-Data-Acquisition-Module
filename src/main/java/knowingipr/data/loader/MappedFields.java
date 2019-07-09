@@ -13,7 +13,12 @@ public enum MappedFields {
     OWNERS("owners"),
     PUBLISHER("publisher"),
     AFFILIATION(ABSTRACT.value + "/affiliation"),
-    URL("url");
+    FOS("fos"),
+    ISSUE("issue"),
+    URL("url"),
+    KEYWORDS("keywords"),
+    VENUE("venue"),
+    LANG("lang");
 
     public final String value;
 
