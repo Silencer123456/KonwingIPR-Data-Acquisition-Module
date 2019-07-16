@@ -114,7 +114,11 @@ public class MongoDbConnection implements SourceDbConnection {
         for (String field : fields) {
             LOGGER.info("Creating index on field : " + field);
 
-            collection.createIndex(Indexes.ascending(field));
+            try {
+                collection.createIndex(Indexes.ascending(field));
+            } catch (Exception e) {
+                LOGGER.severe("Index on field " + field + " could not be created: " + e.getMessage());
+            }
 
             LOGGER.info("Index on field " + field + " created.");
         }

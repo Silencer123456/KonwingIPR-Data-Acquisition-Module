@@ -99,15 +99,16 @@ public class UsptoLoader extends SourceDbLoader {
         // Title
         JsonMappingTransformer.putValueFromPath(mappingRoot, MappedFields.TITLE, nodeToPreprocess);
 
-        // Year
+        // Date
         String yearPath = mappingRoot.path(MappedFields.YEAR.value).path("path").textValue();
         String format = mappingRoot.path(MappedFields.YEAR.value).path("format").textValue();
         JsonNode yearNode = nodeToPreprocess.at(yearPath);
-        JsonMappingTransformer.putPair(nodeToPreprocess, MappedFields.YEAR.value, yearNode.toString().substring(0, 4));
 
-        // Date
         LocalDate date = extractDate(yearNode.toString(), format);
+
+        // Year + Date
         if (date != null) {
+            JsonMappingTransformer.putPair(nodeToPreprocess, MappedFields.YEAR.value, date.getYear());
             JsonMappingTransformer.putPair(nodeToPreprocess, MappedFields.DATE.value, date.toString());
         }
 
@@ -130,7 +131,8 @@ public class UsptoLoader extends SourceDbLoader {
         dbConnection.createTextIndex(collectionName, MappedFields.TITLE.value, MappedFields.ABSTRACT.value,
                 "authors.name", "owners.name");
 
-        dbConnection.createIndexes(collectionName, MappedFields.ID.value, MappedFields.TITLE.value);
+        dbConnection.createIndexes(collectionName, MappedFields.ID.value, MappedFields.TITLE.value, "authors.name",
+                "owners.name");
     }
 
     /**

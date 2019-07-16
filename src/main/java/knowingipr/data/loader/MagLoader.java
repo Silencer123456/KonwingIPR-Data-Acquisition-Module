@@ -46,6 +46,6 @@ public class MagLoader extends SourceDbLoader {
         dbConnection.createTextIndex(collectionName, MappedFields.TITLE.value, MappedFields.ABSTRACT.value,
                 "authors.name", MappedFields.FOS.value, MappedFields.KEYWORDS.value);
 
-        dbConnection.createIndexes(collectionName, MappedFields.FOS.value, MappedFields.TITLE.value, MappedFields.KEYWORDS.value, MappedFields.LANG.value, MappedFields.PUBLISHER.value, MappedFields.VENUE.value);
+        dbConnection.createIndexes(collectionName, MappedFields.FOS.value, MappedFields.KEYWORDS.value, MappedFields.LANG.value, MappedFields.PUBLISHER.value, MappedFields.VENUE.value);
     }
 }

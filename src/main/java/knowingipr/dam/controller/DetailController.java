@@ -170,7 +170,7 @@ public class DetailController {
         Task<Void> task = new Task<Void>() {
             @Override
             protected Void call() throws Exception {
-                sourceDbLoader.loadFromDirectory(loadPathTextField.getText(), extensions);
+                //sourceDbLoader.loadFromDirectory(loadPathTextField.getText(), extensions);
                 sourceDbLoader.createIndexes();
                 return null;
             }

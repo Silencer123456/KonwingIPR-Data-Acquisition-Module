@@ -123,6 +123,10 @@ public class JsonMappingTransformer {
         ((ObjectNode) node).put(name, value);
     }
 
+    public static void putPair(JsonNode node, String name, int value) {
+        ((ObjectNode) node).put(name, value);
+    }
+
     /**
      * Wraps the putArray function which puts an array to a json node
      * with the specified name
