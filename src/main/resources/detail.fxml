@@ -164,6 +164,8 @@
       </children>
    </HBox>
    <TextField fx:id="loadPathTextField" GridPane.rowIndex="12" />
+    <Button fx:id="createIndexesButton" mnemonicParsing="false" onAction="#onCreateIndexesButtonClicked"
+            text="Create Indexes" GridPane.rowIndex="13"/>
     <fx:define>
         <Image fx:id="openFileImage" url="@icons/openFile.png" />
     </fx:define>
@@ -172,6 +174,7 @@
         <Insets bottom="10" left="10" right="10" top="10" />
     </padding>
    <rowConstraints>
+       <RowConstraints/>
       <RowConstraints />
       <RowConstraints />
       <RowConstraints />

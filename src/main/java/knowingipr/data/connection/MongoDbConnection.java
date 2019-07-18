@@ -4,8 +4,7 @@ import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoClients;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
-import com.mongodb.client.model.Indexes;
-import com.mongodb.client.model.InsertManyOptions;
+import com.mongodb.client.model.*;
 import knowingipr.data.loader.IDbLoadArgs;
 import org.bson.Document;
 import org.bson.conversions.Bson;
@@ -115,7 +114,7 @@ public class MongoDbConnection implements SourceDbConnection {
             LOGGER.info("Creating index on field : " + field);
 
             try {
-                collection.createIndex(Indexes.ascending(field));
+                collection.createIndex(Indexes.ascending(field), new IndexOptions().collation(Collation.builder().locale("en").collationStrength(CollationStrength.SECONDARY).build()));
             } catch (Exception e) {
                 LOGGER.severe("Index on field " + field + " could not be created: " + e.getMessage());
             }

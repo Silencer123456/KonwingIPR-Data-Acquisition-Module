@@ -135,22 +135,36 @@ public class DetailController {
      * @param actionEvent
      */
     public void onLoadCollectionButtonClicked(ActionEvent actionEvent) {
+        loadDataSource(false);
+    }
+
+    /**
+     * When the Create Indexes button is clicked, the indexes are created on the collection if they are not already
+     * created
+     *
+     * @param actionEvent
+     */
+    public void onCreateIndexesButtonClicked(ActionEvent actionEvent) {
+        loadDataSource(true);
+    }
+
+    private void loadDataSource(boolean onlyIndex) {
         switch (sourceNameTextField.getText()) {
             case "uspto":
                 sourceDbLoader = new UsptoLoader(dbConnection, mappingFileTextField.getText(), categoryTypeComboBox.getSelectionModel().getSelectedItem());
-                doLoad(new String[]{"json"});
+                doLoad(new String[]{"json"}, onlyIndex);
                 break;
             case "patstat":
                 sourceDbLoader = new PatstatLoader(dbConnection, mappingFileTextField.getText(), categoryTypeComboBox.getSelectionModel().getSelectedItem());
-                doLoad(new String[]{"json"});
+                doLoad(new String[]{"json"}, onlyIndex);
                 break;
             case "mag":
                 sourceDbLoader = new MagLoader(dbConnection, mappingFileTextField.getText(), categoryTypeComboBox.getSelectionModel().getSelectedItem());
-                doLoad(new String[]{"txt"});
+                doLoad(new String[]{"txt"}, onlyIndex);
                 break;
             case "springer":
                 sourceDbLoader = new SpringerLoader(dbConnection, mappingFileTextField.getText(), categoryTypeComboBox.getSelectionModel().getSelectedItem());
-                doLoad(new String[]{"jsonl"});
+                doLoad(new String[]{"jsonl"}, onlyIndex);
                 break;
             default:
                 Alert alert = new Alert(Alert.AlertType.WARNING, "The parser for selected data source does not exist yet");
@@ -164,13 +178,15 @@ public class DetailController {
      *
      * @param extensions - list of extensions to look for
      */
-    private void doLoad(String[] extensions) {
+    private void doLoad(String[] extensions, boolean onlyIndex) {
         model.setCurrentStatus("Loading initiated");
         loadCollectionButton.setDisable(true);
         Task<Void> task = new Task<Void>() {
             @Override
             protected Void call() throws Exception {
-                //sourceDbLoader.loadFromDirectory(loadPathTextField.getText(), extensions);
+                if (!onlyIndex) {
+                    sourceDbLoader.loadFromDirectory(loadPathTextField.getText(), extensions);
+                }
                 sourceDbLoader.createIndexes();
                 return null;
             }
