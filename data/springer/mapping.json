@@ -4,6 +4,7 @@
     "abstract": "/description",
     "publisher": "/sdPublisher/name",
     "url": "/url",
+    "lang": "/inLanguage",
     "year": {
       "path": "/datePublished",
       "format": "YYYY-MM-DD"
