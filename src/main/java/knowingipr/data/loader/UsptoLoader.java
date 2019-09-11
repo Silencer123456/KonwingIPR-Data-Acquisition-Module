@@ -70,16 +70,29 @@ public class UsptoLoader extends SourceDbLoader {
         // Abstract
         String abstractPath = mappingRoot.get(MappedFields.ABSTRACT.value).textValue();
         JsonNode abstractNode = nodeToPreprocess.at(abstractPath);
+
         StringBuilder abstractText = new StringBuilder();
-        if (abstractNode.isArray()) { // Sometimes the abstract is separated by new line into array. Do not know why
-            for (JsonNode curNode : abstractNode) {
-                abstractText.append(curNode.textValue());
+        // TODO: workaround, sometimees there are multiple abstract texts under p tag. Replace constantss
+        if (abstractNode.isMissingNode()) {
+            abstractNode = nodeToPreprocess.at("/abstract/p");
+            if (abstractNode.isArray()) {
+                for (JsonNode n : abstractNode) {
+                    abstractNode = n.at("/content");
+
+                    abstractText.append(abstractNode.textValue()).append("; ");
+                }
             }
         } else {
-            abstractText.append(abstractNode.textValue());
+            if (abstractNode.isArray()) { // Sometimes the abstract is separated by new line into array. Do not know why
+                for (JsonNode curNode : abstractNode) {
+                    abstractText.append(curNode.textValue());
+                }
+            } else {
+                abstractText.append(abstractNode.textValue());
+            }
         }
 
-        if (!abstractText.toString().equals("null")) {
+        if (!abstractText.toString().equals("null") && !abstractText.toString().isEmpty()) {
             JsonMappingTransformer.putPair(nodeToPreprocess, MappedFields.ABSTRACT.value, abstractText.toString());
         }
 
