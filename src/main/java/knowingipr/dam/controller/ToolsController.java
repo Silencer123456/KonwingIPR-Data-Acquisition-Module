@@ -30,12 +30,12 @@ public class ToolsController {
         this.model = model;
     }
 
-
     public void onXmlToJsonButtonClick(ActionEvent actionEvent) {
         Task<Void> task = new Task<Void>() {
             @Override
             protected Void call() throws Exception {
-                XmlToJsonConverter.convertDirectory(sourceDirectoryTextField.getText(), targetDirectoryTextField.getText());
+                xmlToJsonButton.setDisable(true);
+                new XmlToJsonConverter().convertDirectory(sourceDirectoryTextField.getText(), targetDirectoryTextField.getText());
                 return null;
             }
         };
@@ -44,6 +44,7 @@ public class ToolsController {
         task.setOnSucceeded(evt -> {
             System.out.println(task.getValue());
             model.currentStatusProperty().setValue("Conversion complete");
+            xmlToJsonButton.setDisable(false);
         });
 
         task.setOnFailed(evt -> {
@@ -51,6 +52,7 @@ public class ToolsController {
             alert.showAndWait();
             System.err.println("The task failed with the following exception:");
             task.getException().printStackTrace(System.err);
+            xmlToJsonButton.setDisable(false);
         });
     }
 
@@ -58,6 +60,7 @@ public class ToolsController {
         Task<Void> task = new Task<Void>() {
             @Override
             protected Void call() throws Exception {
+                zipExtractButton.setDisable(true);
                 ZipHandler.extractDirectory(sourceDirectoryTextField.getText(), targetDirectoryTextField.getText());
                 return null;
             }
@@ -67,6 +70,7 @@ public class ToolsController {
         task.setOnSucceeded(evt -> {
             System.out.println(task.getValue());
             model.currentStatusProperty().setValue("Extraction complete");
+            zipExtractButton.setDisable(false);
         });
 
         task.setOnFailed(evt -> {
@@ -74,6 +78,7 @@ public class ToolsController {
             alert.showAndWait();
             System.err.println("The task failed with the following exception:");
             task.getException().printStackTrace(System.err);
+            zipExtractButton.setDisable(false);
         });
     }
 }

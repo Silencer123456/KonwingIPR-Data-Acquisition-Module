@@ -1,0 +1,22 @@
+[2019-10-08 15:25:23] [INFO   ] Connecting to the MongoDB database knowingipr 
+[2019-10-08 15:25:24] [INFO   ] host: jdbc:mariadb://localhost/knowingipr_knowledge?usePipelineAuth=false
+username: root
+password: root
+driver: org.mariadb.jdbc.Driver 
+[2019-10-08 15:25:24] [INFO   ] -------------------------- 
+[2019-10-08 15:25:24] [INFO   ] DRIVER: org.mariadb.jdbc.Driver 
+[2019-10-08 15:25:24] [INFO   ] Set Login Timeout: 10 
+[2019-10-08 15:25:24] [INFO   ] CONNECTION: org.mariadb.jdbc.MariaDbConnection@47af9b61 
+[2019-10-08 15:25:36] [INFO   ] Converting: E:\Mongo Storage\Mongo\source data\Patent\test\ipgb20190101_wk01\ 
+[2019-10-08 15:25:36] [INFO   ] File E:\Mongo Storage\Mongo\source data\Patent\test\ipgb20190101_wk01\ipgb20190101.json already exists. Skipping... 
+[2019-10-08 15:25:36] [INFO   ] Converting: E:\Mongo Storage\Mongo\source data\Patent\test\ipgb20190108_wk02\ 
+[2019-10-08 15:25:36] [INFO   ] File E:\Mongo Storage\Mongo\source data\Patent\test\ipgb20190108_wk02\ipgb20190108.json already exists. Skipping... 
+[2019-10-08 15:25:36] [INFO   ] Converting: E:\Mongo Storage\Mongo\source data\Patent\test\ipgb20190115_wk03\ 
+[2019-10-08 15:25:36] [INFO   ] File E:\Mongo Storage\Mongo\source data\Patent\test\ipgb20190115_wk03\ipgb20190115.json already exists. Skipping... 
+[2019-10-08 15:25:36] [INFO   ] Converting: E:\Mongo Storage\Mongo\source data\Patent\test\ipgb20190122_wk04\ 
+[2019-10-08 15:25:36] [INFO   ] File E:\Mongo Storage\Mongo\source data\Patent\test\ipgb20190122_wk04\ipgb20190122.json already exists. Skipping... 
+[2019-10-08 15:25:36] [INFO   ] Converting: E:\Mongo Storage\Mongo\source data\Patent\test\ipgb20190129_wk05\ 
+[2019-10-08 15:25:36] [INFO   ] File E:\Mongo Storage\Mongo\source data\Patent\test\ipgb20190129_wk05\ipgb20190129.json already exists. Skipping... 
+[2019-10-08 15:25:36] [INFO   ] Converting: E:\Mongo Storage\Mongo\source data\Patent\test\ipgb20190205_wk06\ 
+[2019-10-08 15:26:12] [INFO   ] Converting: E:\Mongo Storage\Mongo\source data\Patent\test\ipgb20190212_wk07\ 
+[2019-10-08 15:26:45] [INFO   ] Converting: E:\Mongo Storage\Mongo\source data\Patent\test\ipgb20190219_wk08\ 

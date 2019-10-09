@@ -11,8 +11,12 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.List;
+import java.util.logging.Logger;
 
 public class XmlToJsonConverter {
+
+    private final static Logger LOGGER = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
+
 
     /**
      * Converts all xml files in the specified directory to JSON format
@@ -22,7 +26,7 @@ public class XmlToJsonConverter {
      * @param destinationPath - The destination path, where converted JSON files should be moved
      * @throws IOException
      */
-    public static void convertDirectory(String pathToDir, String destinationPath) throws IOException {
+    public void convertDirectory(String pathToDir, String destinationPath) throws IOException {
         // TODO: Extract listing all files to generic method
         File dir = new File(pathToDir);
         if (dir.isFile()) {
@@ -31,15 +35,14 @@ public class XmlToJsonConverter {
         }
 
         String[] extensions = new String[]{"xml"};
-        String dirName = dir.getName();
         List<File> files = (List<File>) FileUtils.listFiles(dir, extensions, true);
 
         for (File file : files) {
             String path = file.getParent();
-            path = path.substring(path.lastIndexOf(dirName));
-            path = destinationPath + path + "/";
+            path = path.substring(path.lastIndexOf(file.getParentFile().getName()));
+            path = destinationPath + "\\" + path + "\\";
 
-            System.out.println(path);
+            LOGGER.info("Converting: " + path);
             convert(file.getCanonicalPath(), path, false);
         }
     }
@@ -53,10 +56,10 @@ public class XmlToJsonConverter {
      * @param overwrite       - Flag specifying, whether the existing file in the destination path should be overwritten
      *                        if it exists.
      */
-    private static void convert(String pathToXmlFile, String destinationPath, boolean overwrite) {
+    private void convert(String pathToXmlFile, String destinationPath, boolean overwrite) {
         File xmlFile = new File(pathToXmlFile);
         if (!xmlFile.isFile()) {
-            System.err.println("The path " + pathToXmlFile + " is not a file.");
+            LOGGER.warning("The path " + pathToXmlFile + " is not a file.");
         }
         String nameWithoutExt = FilenameUtils.getBaseName(xmlFile.getName());
 
@@ -67,7 +70,7 @@ public class XmlToJsonConverter {
 
         // If already exists, skip it if overwrite is false
         if (!overwrite && new File(jsonFilePath).exists()) {
-            System.out.println("File " + jsonFilePath + " already exists. Skipping...");
+            LOGGER.info("File " + jsonFilePath + " already exists. Skipping...");
             return;
         }
 
@@ -75,16 +78,15 @@ public class XmlToJsonConverter {
             String xml = FileUtils.readFileToString(new File(pathToXmlFile), "utf-8");
 
             JSONObject xmlJSONObj = XML.toJSONObject(xml);
-            String jsonString = xmlJSONObj.toString(4);
+            xml = xmlJSONObj.toString(4);
 
-            save(jsonString, jsonFilePath);
-
+            save(xml, jsonFilePath);
         } catch (IOException e) {
             e.printStackTrace();
-            System.err.println("There was an error reading the XML file " + pathToXmlFile + ".");
+            LOGGER.warning("There was an error reading the XML file " + pathToXmlFile + ".");
         } catch (JSONException e) {
             e.printStackTrace();
-            System.err.println("There was an error converting the XML file " + pathToXmlFile + " to JSON.");
+            LOGGER.warning("There was an error converting the XML file " + pathToXmlFile + " to JSON.");
         }
     }
 
@@ -95,7 +97,7 @@ public class XmlToJsonConverter {
      * @param filepath - path, where the file should be saved
      * @throws FileNotFoundException
      */
-    public static void save(String json, String filepath) throws FileNotFoundException {
+    private void save(String json, String filepath) throws FileNotFoundException {
         try (PrintWriter out = new PrintWriter(filepath)) {
             out.println(json);
         }

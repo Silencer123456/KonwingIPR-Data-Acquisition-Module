@@ -2,17 +2,27 @@ package knowingipr.dam.tools;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.FilenameUtils;
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
 
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.Enumeration;
 import java.util.List;
+import java.util.logging.Logger;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipFile;
 
 public class ZipHandler {
+
+    private final static Logger LOGGER = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
 
     /**
      * Selects all the ZIP files from the directory and its subdirectories and
@@ -31,12 +41,11 @@ public class ZipHandler {
         }
 
         String[] extensions = new String[]{"zip"};
-        String dirName = dir.getName();
         List<File> files = (List<File>) FileUtils.listFiles(dir, extensions, true);
 
         for (File file : files) {
             String s = file.getParent();
-            s = s.substring(s.lastIndexOf(dirName));
+            s = s.substring(s.lastIndexOf(file.getParentFile().getName()));
             s = extractedPath + s + "/" + FilenameUtils.getBaseName(file.getName()) + "/";
 
             System.out.println(s);
@@ -60,8 +69,9 @@ public class ZipHandler {
             String name = zipEntry.getName();
             long size = zipEntry.getSize();
             long compressedSize = zipEntry.getCompressedSize();
-            System.out.printf("name: %-20s | size: %6d | compressed size: %6d\n",
-                    name, size, compressedSize);
+
+            LOGGER.info(String.format("name: %-20s | size: %6d | compressed size: %6d\n",
+                    name, size, compressedSize));
 
             File file = new File(outPath + name);
             if (name.endsWith("/")) {
@@ -86,5 +96,37 @@ public class ZipHandler {
 
         }
         zipFile.close();
+    }
+
+    /**
+     * TODO: Only extracts USPTO data for now, make generic
+     * @param url
+     * @param destination
+     * @throws IOException
+     */
+    public static void extractZipFromUrl(String url, String destination) throws IOException {
+        Document doc = Jsoup.connect(url).get();
+        Elements zipFiles = doc.select("a[href~=.*wk.*.zip$]");
+        for (Element zipPath : zipFiles) {
+            String linkUrl = zipPath.attr("abs:href");
+            LOGGER.info("Downloading " + linkUrl);
+            byte[] bytes = Jsoup.connect(linkUrl)
+                    .referrer(url)
+                    .ignoreContentType(true)
+                    .maxBodySize(0)
+                    .timeout(1000000)
+                    .execute()
+                    .bodyAsBytes();
+
+            Path dirPath = Paths.get(destination);
+            Files.createDirectories(dirPath);
+
+            String filename = zipPath.text();
+            FileOutputStream fos = new FileOutputStream(dirPath.normalize().toString() + "/" + filename);
+            fos.write(bytes);
+            fos.close();
+
+            LOGGER.info("File " + filename + " has been downloaded.");
+        }
     }
 }

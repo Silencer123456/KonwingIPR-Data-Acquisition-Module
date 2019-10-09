@@ -1,0 +1,2280 @@
+[2019-09-02 12:16:12] [INFO   ] Connecting to the MongoDB database knowingipr 
+[2019-09-02 12:16:12] [INFO   ] host: jdbc:mariadb://localhost/knowingipr_knowledge?usePipelineAuth=false
+username: root
+password: root
+driver: org.mariadb.jdbc.Driver 
+[2019-09-02 12:16:12] [INFO   ] -------------------------- 
+[2019-09-02 12:16:12] [INFO   ] DRIVER: org.mariadb.jdbc.Driver 
+[2019-09-02 12:16:12] [INFO   ] Set Login Timeout: 10 
+[2019-09-02 12:16:12] [INFO   ] CONNECTION: org.mariadb.jdbc.MariaDbConnection@6b2672aa 
+[2019-09-02 12:16:26] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_14.jsonl 
+[2019-09-02 12:16:26] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_14.jsonl 
+[2019-09-02 12:16:26] [FINER  ] Beginning insert 
+[2019-09-02 12:16:27] [FINER  ] Inserting done 
+[2019-09-02 12:16:27] [FINER  ] Parsing done 
+[2019-09-02 12:16:27] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_15.jsonl 
+[2019-09-02 12:16:27] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_15.jsonl 
+[2019-09-02 12:16:27] [FINER  ] Beginning insert 
+[2019-09-02 12:16:27] [FINER  ] Inserting done 
+[2019-09-02 12:16:27] [FINER  ] Parsing done 
+[2019-09-02 12:16:27] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_16.jsonl 
+[2019-09-02 12:16:27] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_16.jsonl 
+[2019-09-02 12:16:27] [FINER  ] Beginning insert 
+[2019-09-02 12:16:27] [FINER  ] Inserting done 
+[2019-09-02 12:16:27] [FINER  ] Parsing done 
+[2019-09-02 12:16:27] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_17.jsonl 
+[2019-09-02 12:16:27] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_17.jsonl 
+[2019-09-02 12:16:27] [FINER  ] Beginning insert 
+[2019-09-02 12:16:27] [FINER  ] Inserting done 
+[2019-09-02 12:16:27] [FINER  ] Parsing done 
+[2019-09-02 12:16:27] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_18.jsonl 
+[2019-09-02 12:16:27] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_18.jsonl 
+[2019-09-02 12:16:27] [FINER  ] Beginning insert 
+[2019-09-02 12:16:27] [FINER  ] Inserting done 
+[2019-09-02 12:16:27] [FINER  ] Parsing done 
+[2019-09-02 12:16:27] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_19.jsonl 
+[2019-09-02 12:16:27] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_19.jsonl 
+[2019-09-02 12:16:27] [FINER  ] Beginning insert 
+[2019-09-02 12:16:27] [FINER  ] Inserting done 
+[2019-09-02 12:16:27] [FINER  ] Parsing done 
+[2019-09-02 12:16:27] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_2.jsonl 
+[2019-09-02 12:16:27] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_2.jsonl 
+[2019-09-02 12:16:27] [FINER  ] Beginning insert 
+[2019-09-02 12:16:27] [FINER  ] Inserting done 
+[2019-09-02 12:16:27] [FINER  ] Parsing done 
+[2019-09-02 12:16:27] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_20.jsonl 
+[2019-09-02 12:16:27] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_20.jsonl 
+[2019-09-02 12:16:27] [FINER  ] Beginning insert 
+[2019-09-02 12:16:27] [FINER  ] Inserting done 
+[2019-09-02 12:16:27] [FINER  ] Parsing done 
+[2019-09-02 12:16:27] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_21.jsonl 
+[2019-09-02 12:16:27] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_21.jsonl 
+[2019-09-02 12:16:27] [FINER  ] Beginning insert 
+[2019-09-02 12:16:27] [FINER  ] Inserting done 
+[2019-09-02 12:16:27] [FINER  ] Parsing done 
+[2019-09-02 12:16:27] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_22.jsonl 
+[2019-09-02 12:16:27] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_22.jsonl 
+[2019-09-02 12:16:27] [FINER  ] Beginning insert 
+[2019-09-02 12:16:27] [FINER  ] Inserting done 
+[2019-09-02 12:16:27] [FINER  ] Parsing done 
+[2019-09-02 12:16:27] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_23.jsonl 
+[2019-09-02 12:16:27] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_23.jsonl 
+[2019-09-02 12:16:27] [FINER  ] Beginning insert 
+[2019-09-02 12:16:27] [FINER  ] Inserting done 
+[2019-09-02 12:16:27] [FINER  ] Parsing done 
+[2019-09-02 12:16:27] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_24.jsonl 
+[2019-09-02 12:16:27] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_24.jsonl 
+[2019-09-02 12:16:27] [FINER  ] Beginning insert 
+[2019-09-02 12:16:27] [FINER  ] Inserting done 
+[2019-09-02 12:16:27] [FINER  ] Parsing done 
+[2019-09-02 12:16:27] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_25.jsonl 
+[2019-09-02 12:16:27] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_25.jsonl 
+[2019-09-02 12:16:27] [FINER  ] Beginning insert 
+[2019-09-02 12:16:27] [FINER  ] Inserting done 
+[2019-09-02 12:16:27] [FINER  ] Parsing done 
+[2019-09-02 12:16:27] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_26.jsonl 
+[2019-09-02 12:16:27] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_26.jsonl 
+[2019-09-02 12:16:27] [FINER  ] Beginning insert 
+[2019-09-02 12:16:27] [FINER  ] Inserting done 
+[2019-09-02 12:16:27] [FINER  ] Parsing done 
+[2019-09-02 12:16:27] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_27.jsonl 
+[2019-09-02 12:16:27] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_27.jsonl 
+[2019-09-02 12:16:27] [FINER  ] Beginning insert 
+[2019-09-02 12:16:27] [FINER  ] Inserting done 
+[2019-09-02 12:16:27] [FINER  ] Parsing done 
+[2019-09-02 12:16:27] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_28.jsonl 
+[2019-09-02 12:16:27] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_28.jsonl 
+[2019-09-02 12:16:27] [FINER  ] Beginning insert 
+[2019-09-02 12:16:27] [FINER  ] Inserting done 
+[2019-09-02 12:16:27] [FINER  ] Parsing done 
+[2019-09-02 12:16:27] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_29.jsonl 
+[2019-09-02 12:16:27] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_29.jsonl 
+[2019-09-02 12:16:27] [FINER  ] Beginning insert 
+[2019-09-02 12:16:27] [FINER  ] Inserting done 
+[2019-09-02 12:16:27] [FINER  ] Parsing done 
+[2019-09-02 12:16:27] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_3.jsonl 
+[2019-09-02 12:16:27] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_3.jsonl 
+[2019-09-02 12:16:27] [FINER  ] Beginning insert 
+[2019-09-02 12:16:27] [FINER  ] Inserting done 
+[2019-09-02 12:16:27] [FINER  ] Parsing done 
+[2019-09-02 12:16:27] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_30.jsonl 
+[2019-09-02 12:16:27] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_30.jsonl 
+[2019-09-02 12:16:27] [FINER  ] Beginning insert 
+[2019-09-02 12:16:27] [FINER  ] Inserting done 
+[2019-09-02 12:16:27] [FINER  ] Parsing done 
+[2019-09-02 12:16:27] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_31.jsonl 
+[2019-09-02 12:16:27] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_31.jsonl 
+[2019-09-02 12:16:27] [FINER  ] Beginning insert 
+[2019-09-02 12:16:27] [FINER  ] Inserting done 
+[2019-09-02 12:16:27] [FINER  ] Parsing done 
+[2019-09-02 12:16:27] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_32.jsonl 
+[2019-09-02 12:16:27] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_32.jsonl 
+[2019-09-02 12:16:27] [FINER  ] Beginning insert 
+[2019-09-02 12:16:27] [FINER  ] Inserting done 
+[2019-09-02 12:16:27] [FINER  ] Parsing done 
+[2019-09-02 12:16:27] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_33.jsonl 
+[2019-09-02 12:16:27] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_33.jsonl 
+[2019-09-02 12:16:27] [FINER  ] Beginning insert 
+[2019-09-02 12:16:27] [FINER  ] Inserting done 
+[2019-09-02 12:16:27] [FINER  ] Parsing done 
+[2019-09-02 12:16:27] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_34.jsonl 
+[2019-09-02 12:16:27] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_34.jsonl 
+[2019-09-02 12:16:27] [FINER  ] Beginning insert 
+[2019-09-02 12:16:27] [FINER  ] Inserting done 
+[2019-09-02 12:16:27] [FINER  ] Parsing done 
+[2019-09-02 12:16:27] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_35.jsonl 
+[2019-09-02 12:16:27] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_35.jsonl 
+[2019-09-02 12:16:27] [FINER  ] Beginning insert 
+[2019-09-02 12:16:27] [FINER  ] Inserting done 
+[2019-09-02 12:16:27] [FINER  ] Parsing done 
+[2019-09-02 12:16:27] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_36.jsonl 
+[2019-09-02 12:16:27] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_36.jsonl 
+[2019-09-02 12:16:27] [FINER  ] Beginning insert 
+[2019-09-02 12:16:27] [FINER  ] Inserting done 
+[2019-09-02 12:16:27] [FINER  ] Parsing done 
+[2019-09-02 12:16:27] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_37.jsonl 
+[2019-09-02 12:16:27] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_37.jsonl 
+[2019-09-02 12:16:27] [FINER  ] Beginning insert 
+[2019-09-02 12:16:27] [FINER  ] Inserting done 
+[2019-09-02 12:16:27] [FINER  ] Parsing done 
+[2019-09-02 12:16:27] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_38.jsonl 
+[2019-09-02 12:16:27] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_38.jsonl 
+[2019-09-02 12:16:27] [FINER  ] Beginning insert 
+[2019-09-02 12:16:27] [FINER  ] Inserting done 
+[2019-09-02 12:16:27] [FINER  ] Parsing done 
+[2019-09-02 12:16:27] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_39.jsonl 
+[2019-09-02 12:16:27] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_39.jsonl 
+[2019-09-02 12:16:27] [FINER  ] Beginning insert 
+[2019-09-02 12:16:27] [FINER  ] Inserting done 
+[2019-09-02 12:16:27] [FINER  ] Parsing done 
+[2019-09-02 12:16:27] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_4.jsonl 
+[2019-09-02 12:16:27] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_4.jsonl 
+[2019-09-02 12:16:27] [FINER  ] Beginning insert 
+[2019-09-02 12:16:27] [FINER  ] Inserting done 
+[2019-09-02 12:16:27] [FINER  ] Parsing done 
+[2019-09-02 12:16:27] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_40.jsonl 
+[2019-09-02 12:16:27] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_40.jsonl 
+[2019-09-02 12:16:27] [FINER  ] Beginning insert 
+[2019-09-02 12:16:27] [FINER  ] Inserting done 
+[2019-09-02 12:16:27] [FINER  ] Parsing done 
+[2019-09-02 12:16:27] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_41.jsonl 
+[2019-09-02 12:16:27] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_41.jsonl 
+[2019-09-02 12:16:27] [FINER  ] Beginning insert 
+[2019-09-02 12:16:27] [FINER  ] Inserting done 
+[2019-09-02 12:16:27] [FINER  ] Parsing done 
+[2019-09-02 12:16:27] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_42.jsonl 
+[2019-09-02 12:16:27] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_42.jsonl 
+[2019-09-02 12:16:27] [FINER  ] Beginning insert 
+[2019-09-02 12:16:27] [FINER  ] Inserting done 
+[2019-09-02 12:16:27] [FINER  ] Parsing done 
+[2019-09-02 12:16:27] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_43.jsonl 
+[2019-09-02 12:16:27] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_43.jsonl 
+[2019-09-02 12:16:27] [FINER  ] Beginning insert 
+[2019-09-02 12:16:27] [FINER  ] Inserting done 
+[2019-09-02 12:16:27] [FINER  ] Parsing done 
+[2019-09-02 12:16:27] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_44.jsonl 
+[2019-09-02 12:16:27] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_44.jsonl 
+[2019-09-02 12:16:27] [FINER  ] Beginning insert 
+[2019-09-02 12:16:27] [FINER  ] Inserting done 
+[2019-09-02 12:16:27] [FINER  ] Parsing done 
+[2019-09-02 12:16:27] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_45.jsonl 
+[2019-09-02 12:16:27] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_45.jsonl 
+[2019-09-02 12:16:27] [FINER  ] Beginning insert 
+[2019-09-02 12:16:27] [FINER  ] Inserting done 
+[2019-09-02 12:16:27] [FINER  ] Parsing done 
+[2019-09-02 12:16:27] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_46.jsonl 
+[2019-09-02 12:16:27] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_46.jsonl 
+[2019-09-02 12:16:27] [FINER  ] Beginning insert 
+[2019-09-02 12:16:27] [FINER  ] Inserting done 
+[2019-09-02 12:16:27] [FINER  ] Parsing done 
+[2019-09-02 12:16:27] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_47.jsonl 
+[2019-09-02 12:16:27] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_47.jsonl 
+[2019-09-02 12:16:27] [FINER  ] Beginning insert 
+[2019-09-02 12:16:27] [FINER  ] Inserting done 
+[2019-09-02 12:16:27] [FINER  ] Parsing done 
+[2019-09-02 12:16:27] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_48.jsonl 
+[2019-09-02 12:16:27] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_48.jsonl 
+[2019-09-02 12:16:27] [FINER  ] Beginning insert 
+[2019-09-02 12:16:27] [FINER  ] Inserting done 
+[2019-09-02 12:16:27] [FINER  ] Parsing done 
+[2019-09-02 12:16:27] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_49.jsonl 
+[2019-09-02 12:16:27] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_49.jsonl 
+[2019-09-02 12:16:27] [FINER  ] Beginning insert 
+[2019-09-02 12:16:27] [FINER  ] Inserting done 
+[2019-09-02 12:16:27] [FINER  ] Parsing done 
+[2019-09-02 12:16:27] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_5.jsonl 
+[2019-09-02 12:16:27] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_5.jsonl 
+[2019-09-02 12:16:27] [FINER  ] Beginning insert 
+[2019-09-02 12:16:27] [FINER  ] Inserting done 
+[2019-09-02 12:16:27] [FINER  ] Parsing done 
+[2019-09-02 12:16:27] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_50.jsonl 
+[2019-09-02 12:16:27] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_50.jsonl 
+[2019-09-02 12:16:27] [FINER  ] Beginning insert 
+[2019-09-02 12:16:27] [FINER  ] Inserting done 
+[2019-09-02 12:16:27] [FINER  ] Parsing done 
+[2019-09-02 12:16:27] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_51.jsonl 
+[2019-09-02 12:16:27] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_51.jsonl 
+[2019-09-02 12:16:27] [FINER  ] Beginning insert 
+[2019-09-02 12:16:27] [FINER  ] Inserting done 
+[2019-09-02 12:16:27] [FINER  ] Parsing done 
+[2019-09-02 12:16:27] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_52.jsonl 
+[2019-09-02 12:16:27] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_52.jsonl 
+[2019-09-02 12:16:27] [FINER  ] Beginning insert 
+[2019-09-02 12:16:27] [FINER  ] Inserting done 
+[2019-09-02 12:16:27] [FINER  ] Parsing done 
+[2019-09-02 12:16:27] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_53.jsonl 
+[2019-09-02 12:16:27] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_53.jsonl 
+[2019-09-02 12:16:27] [FINER  ] Beginning insert 
+[2019-09-02 12:16:27] [FINER  ] Inserting done 
+[2019-09-02 12:16:27] [FINER  ] Parsing done 
+[2019-09-02 12:16:27] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_54.jsonl 
+[2019-09-02 12:16:27] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_54.jsonl 
+[2019-09-02 12:16:27] [FINER  ] Beginning insert 
+[2019-09-02 12:16:27] [FINER  ] Inserting done 
+[2019-09-02 12:16:27] [FINER  ] Parsing done 
+[2019-09-02 12:16:27] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_55.jsonl 
+[2019-09-02 12:16:27] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_55.jsonl 
+[2019-09-02 12:16:27] [FINER  ] Beginning insert 
+[2019-09-02 12:16:27] [FINER  ] Inserting done 
+[2019-09-02 12:16:27] [FINER  ] Parsing done 
+[2019-09-02 12:16:27] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_56.jsonl 
+[2019-09-02 12:16:27] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_56.jsonl 
+[2019-09-02 12:16:28] [FINER  ] Beginning insert 
+[2019-09-02 12:16:28] [FINER  ] Inserting done 
+[2019-09-02 12:16:28] [FINER  ] Parsing done 
+[2019-09-02 12:16:28] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_57.jsonl 
+[2019-09-02 12:16:28] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_57.jsonl 
+[2019-09-02 12:16:28] [FINER  ] Beginning insert 
+[2019-09-02 12:16:28] [FINER  ] Inserting done 
+[2019-09-02 12:16:28] [FINER  ] Parsing done 
+[2019-09-02 12:16:28] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_58.jsonl 
+[2019-09-02 12:16:28] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_58.jsonl 
+[2019-09-02 12:16:28] [FINER  ] Beginning insert 
+[2019-09-02 12:16:28] [FINER  ] Inserting done 
+[2019-09-02 12:16:28] [FINER  ] Parsing done 
+[2019-09-02 12:16:28] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_59.jsonl 
+[2019-09-02 12:16:28] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_59.jsonl 
+[2019-09-02 12:16:28] [FINER  ] Beginning insert 
+[2019-09-02 12:16:28] [FINER  ] Inserting done 
+[2019-09-02 12:16:28] [FINER  ] Parsing done 
+[2019-09-02 12:16:28] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_6.jsonl 
+[2019-09-02 12:16:28] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_6.jsonl 
+[2019-09-02 12:16:28] [FINER  ] Beginning insert 
+[2019-09-02 12:16:28] [FINER  ] Inserting done 
+[2019-09-02 12:16:28] [FINER  ] Parsing done 
+[2019-09-02 12:16:28] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_60.jsonl 
+[2019-09-02 12:16:28] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_60.jsonl 
+[2019-09-02 12:16:28] [FINER  ] Beginning insert 
+[2019-09-02 12:16:28] [FINER  ] Inserting done 
+[2019-09-02 12:16:28] [FINER  ] Parsing done 
+[2019-09-02 12:16:28] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_61.jsonl 
+[2019-09-02 12:16:28] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_61.jsonl 
+[2019-09-02 12:16:28] [FINER  ] Beginning insert 
+[2019-09-02 12:16:28] [FINER  ] Inserting done 
+[2019-09-02 12:16:28] [FINER  ] Parsing done 
+[2019-09-02 12:16:28] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_62.jsonl 
+[2019-09-02 12:16:28] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_62.jsonl 
+[2019-09-02 12:16:28] [FINER  ] Beginning insert 
+[2019-09-02 12:16:28] [FINER  ] Inserting done 
+[2019-09-02 12:16:28] [FINER  ] Parsing done 
+[2019-09-02 12:16:28] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_63.jsonl 
+[2019-09-02 12:16:28] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_63.jsonl 
+[2019-09-02 12:16:28] [FINER  ] Beginning insert 
+[2019-09-02 12:16:28] [FINER  ] Inserting done 
+[2019-09-02 12:16:28] [FINER  ] Parsing done 
+[2019-09-02 12:16:28] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_64.jsonl 
+[2019-09-02 12:16:28] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_64.jsonl 
+[2019-09-02 12:16:28] [FINER  ] Beginning insert 
+[2019-09-02 12:16:28] [FINER  ] Inserting done 
+[2019-09-02 12:16:28] [FINER  ] Parsing done 
+[2019-09-02 12:16:28] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_65.jsonl 
+[2019-09-02 12:16:28] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_65.jsonl 
+[2019-09-02 12:16:28] [FINER  ] Beginning insert 
+[2019-09-02 12:16:28] [FINER  ] Inserting done 
+[2019-09-02 12:16:28] [FINER  ] Parsing done 
+[2019-09-02 12:16:28] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_66.jsonl 
+[2019-09-02 12:16:28] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_66.jsonl 
+[2019-09-02 12:16:28] [FINER  ] Beginning insert 
+[2019-09-02 12:16:28] [FINER  ] Inserting done 
+[2019-09-02 12:16:28] [FINER  ] Parsing done 
+[2019-09-02 12:16:28] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_67.jsonl 
+[2019-09-02 12:16:28] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_67.jsonl 
+[2019-09-02 12:16:28] [FINER  ] Beginning insert 
+[2019-09-02 12:16:28] [FINER  ] Inserting done 
+[2019-09-02 12:16:28] [FINER  ] Parsing done 
+[2019-09-02 12:16:28] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_68.jsonl 
+[2019-09-02 12:16:28] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_68.jsonl 
+[2019-09-02 12:16:28] [FINER  ] Beginning insert 
+[2019-09-02 12:16:28] [FINER  ] Inserting done 
+[2019-09-02 12:16:28] [FINER  ] Parsing done 
+[2019-09-02 12:16:28] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_69.jsonl 
+[2019-09-02 12:16:28] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_69.jsonl 
+[2019-09-02 12:16:28] [FINER  ] Beginning insert 
+[2019-09-02 12:16:28] [FINER  ] Inserting done 
+[2019-09-02 12:16:28] [FINER  ] Parsing done 
+[2019-09-02 12:16:28] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_7.jsonl 
+[2019-09-02 12:16:28] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_7.jsonl 
+[2019-09-02 12:16:28] [FINER  ] Beginning insert 
+[2019-09-02 12:16:28] [FINER  ] Inserting done 
+[2019-09-02 12:16:28] [FINER  ] Parsing done 
+[2019-09-02 12:16:28] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_70.jsonl 
+[2019-09-02 12:16:28] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_70.jsonl 
+[2019-09-02 12:16:28] [FINER  ] Beginning insert 
+[2019-09-02 12:16:28] [FINER  ] Inserting done 
+[2019-09-02 12:16:28] [FINER  ] Parsing done 
+[2019-09-02 12:16:28] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_71.jsonl 
+[2019-09-02 12:16:28] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_71.jsonl 
+[2019-09-02 12:16:28] [FINER  ] Beginning insert 
+[2019-09-02 12:16:28] [FINER  ] Inserting done 
+[2019-09-02 12:16:28] [FINER  ] Parsing done 
+[2019-09-02 12:16:28] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_72.jsonl 
+[2019-09-02 12:16:28] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_72.jsonl 
+[2019-09-02 12:16:28] [FINER  ] Beginning insert 
+[2019-09-02 12:16:28] [FINER  ] Inserting done 
+[2019-09-02 12:16:28] [FINER  ] Parsing done 
+[2019-09-02 12:16:28] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_73.jsonl 
+[2019-09-02 12:16:28] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_73.jsonl 
+[2019-09-02 12:16:28] [FINER  ] Beginning insert 
+[2019-09-02 12:16:28] [FINER  ] Inserting done 
+[2019-09-02 12:16:28] [FINER  ] Parsing done 
+[2019-09-02 12:16:28] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_74.jsonl 
+[2019-09-02 12:16:28] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_74.jsonl 
+[2019-09-02 12:16:28] [FINER  ] Beginning insert 
+[2019-09-02 12:16:28] [FINER  ] Inserting done 
+[2019-09-02 12:16:28] [FINER  ] Parsing done 
+[2019-09-02 12:16:28] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_75.jsonl 
+[2019-09-02 12:16:28] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_75.jsonl 
+[2019-09-02 12:16:28] [FINER  ] Beginning insert 
+[2019-09-02 12:16:28] [FINER  ] Inserting done 
+[2019-09-02 12:16:28] [FINER  ] Parsing done 
+[2019-09-02 12:16:28] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_76.jsonl 
+[2019-09-02 12:16:28] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_76.jsonl 
+[2019-09-02 12:16:28] [FINER  ] Beginning insert 
+[2019-09-02 12:16:28] [FINER  ] Inserting done 
+[2019-09-02 12:16:28] [FINER  ] Parsing done 
+[2019-09-02 12:16:28] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_77.jsonl 
+[2019-09-02 12:16:28] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_77.jsonl 
+[2019-09-02 12:16:28] [FINER  ] Beginning insert 
+[2019-09-02 12:16:28] [FINER  ] Inserting done 
+[2019-09-02 12:16:28] [FINER  ] Parsing done 
+[2019-09-02 12:16:28] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_78.jsonl 
+[2019-09-02 12:16:28] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_78.jsonl 
+[2019-09-02 12:16:28] [FINER  ] Beginning insert 
+[2019-09-02 12:16:28] [FINER  ] Inserting done 
+[2019-09-02 12:16:28] [FINER  ] Parsing done 
+[2019-09-02 12:16:28] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_79.jsonl 
+[2019-09-02 12:16:28] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_79.jsonl 
+[2019-09-02 12:16:28] [FINER  ] Beginning insert 
+[2019-09-02 12:16:28] [FINER  ] Inserting done 
+[2019-09-02 12:16:28] [FINER  ] Parsing done 
+[2019-09-02 12:16:28] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_8.jsonl 
+[2019-09-02 12:16:28] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_8.jsonl 
+[2019-09-02 12:16:28] [FINER  ] Beginning insert 
+[2019-09-02 12:16:28] [FINER  ] Inserting done 
+[2019-09-02 12:16:28] [FINER  ] Parsing done 
+[2019-09-02 12:16:28] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_80.jsonl 
+[2019-09-02 12:16:28] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_80.jsonl 
+[2019-09-02 12:16:28] [FINER  ] Beginning insert 
+[2019-09-02 12:16:28] [FINER  ] Inserting done 
+[2019-09-02 12:16:28] [FINER  ] Parsing done 
+[2019-09-02 12:16:28] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_81.jsonl 
+[2019-09-02 12:16:28] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_81.jsonl 
+[2019-09-02 12:16:28] [FINER  ] Beginning insert 
+[2019-09-02 12:16:28] [FINER  ] Inserting done 
+[2019-09-02 12:16:28] [FINER  ] Parsing done 
+[2019-09-02 12:16:28] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_82.jsonl 
+[2019-09-02 12:16:28] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_82.jsonl 
+[2019-09-02 12:16:28] [FINER  ] Beginning insert 
+[2019-09-02 12:16:28] [FINER  ] Inserting done 
+[2019-09-02 12:16:28] [FINER  ] Parsing done 
+[2019-09-02 12:16:28] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_83.jsonl 
+[2019-09-02 12:16:28] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_83.jsonl 
+[2019-09-02 12:16:28] [FINER  ] Beginning insert 
+[2019-09-02 12:16:28] [FINER  ] Inserting done 
+[2019-09-02 12:16:28] [FINER  ] Parsing done 
+[2019-09-02 12:16:28] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_84.jsonl 
+[2019-09-02 12:16:28] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_84.jsonl 
+[2019-09-02 12:16:28] [FINER  ] Beginning insert 
+[2019-09-02 12:16:28] [FINER  ] Inserting done 
+[2019-09-02 12:16:28] [FINER  ] Parsing done 
+[2019-09-02 12:16:28] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_85.jsonl 
+[2019-09-02 12:16:28] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_85.jsonl 
+[2019-09-02 12:16:28] [FINER  ] Beginning insert 
+[2019-09-02 12:16:28] [FINER  ] Inserting done 
+[2019-09-02 12:16:28] [FINER  ] Parsing done 
+[2019-09-02 12:16:28] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_86.jsonl 
+[2019-09-02 12:16:28] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_86.jsonl 
+[2019-09-02 12:16:28] [FINER  ] Beginning insert 
+[2019-09-02 12:16:28] [FINER  ] Inserting done 
+[2019-09-02 12:16:28] [FINER  ] Parsing done 
+[2019-09-02 12:16:28] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_87.jsonl 
+[2019-09-02 12:16:28] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_87.jsonl 
+[2019-09-02 12:16:28] [FINER  ] Beginning insert 
+[2019-09-02 12:16:28] [FINER  ] Inserting done 
+[2019-09-02 12:16:28] [FINER  ] Parsing done 
+[2019-09-02 12:16:28] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_88.jsonl 
+[2019-09-02 12:16:28] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_88.jsonl 
+[2019-09-02 12:16:28] [FINER  ] Beginning insert 
+[2019-09-02 12:16:28] [FINER  ] Inserting done 
+[2019-09-02 12:16:28] [FINER  ] Parsing done 
+[2019-09-02 12:16:28] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_89.jsonl 
+[2019-09-02 12:16:28] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_89.jsonl 
+[2019-09-02 12:16:28] [FINER  ] Beginning insert 
+[2019-09-02 12:16:28] [FINER  ] Inserting done 
+[2019-09-02 12:16:28] [FINER  ] Parsing done 
+[2019-09-02 12:16:28] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9.jsonl 
+[2019-09-02 12:16:28] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9.jsonl 
+[2019-09-02 12:16:28] [FINER  ] Beginning insert 
+[2019-09-02 12:16:28] [FINER  ] Inserting done 
+[2019-09-02 12:16:28] [FINER  ] Parsing done 
+[2019-09-02 12:16:28] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_90.jsonl 
+[2019-09-02 12:16:28] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_90.jsonl 
+[2019-09-02 12:16:28] [FINER  ] Beginning insert 
+[2019-09-02 12:16:28] [FINER  ] Inserting done 
+[2019-09-02 12:16:28] [FINER  ] Parsing done 
+[2019-09-02 12:16:28] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9000.jsonl 
+[2019-09-02 12:16:28] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9000.jsonl 
+[2019-09-02 12:16:28] [FINER  ] Beginning insert 
+[2019-09-02 12:16:29] [FINER  ] Inserting done 
+[2019-09-02 12:16:29] [FINER  ] Parsing done 
+[2019-09-02 12:16:29] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9001.jsonl 
+[2019-09-02 12:16:29] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9001.jsonl 
+[2019-09-02 12:16:30] [FINER  ] Beginning insert 
+[2019-09-02 12:16:32] [FINER  ] Inserting done 
+[2019-09-02 12:16:32] [FINER  ] Parsing done 
+[2019-09-02 12:16:32] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9002.jsonl 
+[2019-09-02 12:16:32] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9002.jsonl 
+[2019-09-02 12:16:34] [FINER  ] Beginning insert 
+[2019-09-02 12:16:37] [FINER  ] Inserting done 
+[2019-09-02 12:16:37] [FINER  ] Parsing done 
+[2019-09-02 12:16:37] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9003.jsonl 
+[2019-09-02 12:16:37] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9003.jsonl 
+[2019-09-02 12:16:37] [FINER  ] Beginning insert 
+[2019-09-02 12:16:37] [FINER  ] Inserting done 
+[2019-09-02 12:16:37] [FINER  ] Parsing done 
+[2019-09-02 12:16:37] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9004.jsonl 
+[2019-09-02 12:16:37] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9004.jsonl 
+[2019-09-02 12:16:39] [FINER  ] Beginning insert 
+[2019-09-02 12:16:48] [FINER  ] Inserting done 
+[2019-09-02 12:16:48] [FINER  ] Parsing done 
+[2019-09-02 12:16:48] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9005.jsonl 
+[2019-09-02 12:16:48] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9005.jsonl 
+[2019-09-02 12:16:50] [FINER  ] Beginning insert 
+[2019-09-02 12:16:57] [FINER  ] Inserting done 
+[2019-09-02 12:16:57] [FINER  ] Parsing done 
+[2019-09-02 12:16:57] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9006.jsonl 
+[2019-09-02 12:16:57] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9006.jsonl 
+[2019-09-02 12:16:57] [FINER  ] Beginning insert 
+[2019-09-02 12:16:57] [FINER  ] Inserting done 
+[2019-09-02 12:16:57] [FINER  ] Parsing done 
+[2019-09-02 12:16:57] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9007.jsonl 
+[2019-09-02 12:16:57] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9007.jsonl 
+[2019-09-02 12:16:59] [FINER  ] Beginning insert 
+[2019-09-02 12:17:02] [FINER  ] Inserting done 
+[2019-09-02 12:17:02] [FINER  ] Parsing done 
+[2019-09-02 12:17:02] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9008.jsonl 
+[2019-09-02 12:17:02] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9008.jsonl 
+[2019-09-02 12:17:03] [FINER  ] Beginning insert 
+[2019-09-02 12:17:06] [FINER  ] Inserting done 
+[2019-09-02 12:17:06] [FINER  ] Parsing done 
+[2019-09-02 12:17:06] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9009.jsonl 
+[2019-09-02 12:17:06] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9009.jsonl 
+[2019-09-02 12:17:06] [FINER  ] Beginning insert 
+[2019-09-02 12:17:07] [FINER  ] Inserting done 
+[2019-09-02 12:17:07] [FINER  ] Parsing done 
+[2019-09-02 12:17:07] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9010.jsonl 
+[2019-09-02 12:17:07] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9010.jsonl 
+[2019-09-02 12:17:09] [FINER  ] Beginning insert 
+[2019-09-02 12:17:16] [FINER  ] Inserting done 
+[2019-09-02 12:17:16] [FINER  ] Parsing done 
+[2019-09-02 12:17:16] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9011.jsonl 
+[2019-09-02 12:17:16] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9011.jsonl 
+[2019-09-02 12:17:17] [FINER  ] Beginning insert 
+[2019-09-02 12:17:23] [FINER  ] Inserting done 
+[2019-09-02 12:17:23] [FINER  ] Parsing done 
+[2019-09-02 12:17:23] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9012.jsonl 
+[2019-09-02 12:17:23] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9012.jsonl 
+[2019-09-02 12:17:24] [FINER  ] Beginning insert 
+[2019-09-02 12:17:25] [FINER  ] Inserting done 
+[2019-09-02 12:17:25] [FINER  ] Parsing done 
+[2019-09-02 12:17:25] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9013.jsonl 
+[2019-09-02 12:17:25] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9013.jsonl 
+[2019-09-02 12:17:26] [FINER  ] Beginning insert 
+[2019-09-02 12:17:35] [FINER  ] Inserting done 
+[2019-09-02 12:17:35] [FINER  ] Parsing done 
+[2019-09-02 12:17:35] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9014.jsonl 
+[2019-09-02 12:17:35] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9014.jsonl 
+[2019-09-02 12:17:37] [FINER  ] Beginning insert 
+[2019-09-02 12:17:44] [FINER  ] Inserting done 
+[2019-09-02 12:17:44] [FINER  ] Parsing done 
+[2019-09-02 12:17:44] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9015.jsonl 
+[2019-09-02 12:17:44] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9015.jsonl 
+[2019-09-02 12:17:44] [FINER  ] Beginning insert 
+[2019-09-02 12:17:45] [FINER  ] Inserting done 
+[2019-09-02 12:17:45] [FINER  ] Parsing done 
+[2019-09-02 12:17:45] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9016.jsonl 
+[2019-09-02 12:17:45] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9016.jsonl 
+[2019-09-02 12:17:47] [FINER  ] Beginning insert 
+[2019-09-02 12:17:55] [FINER  ] Inserting done 
+[2019-09-02 12:17:55] [FINER  ] Parsing done 
+[2019-09-02 12:17:55] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9017.jsonl 
+[2019-09-02 12:17:55] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9017.jsonl 
+[2019-09-02 12:17:57] [FINER  ] Beginning insert 
+[2019-09-02 12:18:08] [FINER  ] Inserting done 
+[2019-09-02 12:18:08] [FINER  ] Parsing done 
+[2019-09-02 12:18:08] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9018.jsonl 
+[2019-09-02 12:18:08] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9018.jsonl 
+[2019-09-02 12:18:08] [FINER  ] Beginning insert 
+[2019-09-02 12:18:09] [FINER  ] Inserting done 
+[2019-09-02 12:18:09] [FINER  ] Parsing done 
+[2019-09-02 12:18:09] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9019.jsonl 
+[2019-09-02 12:18:09] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9019.jsonl 
+[2019-09-02 12:18:10] [FINER  ] Beginning insert 
+[2019-09-02 12:18:24] [FINER  ] Inserting done 
+[2019-09-02 12:18:24] [FINER  ] Parsing done 
+[2019-09-02 12:18:24] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9020.jsonl 
+[2019-09-02 12:18:24] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9020.jsonl 
+[2019-09-02 12:18:26] [FINER  ] Beginning insert 
+[2019-09-02 12:18:37] [FINER  ] Inserting done 
+[2019-09-02 12:18:37] [FINER  ] Parsing done 
+[2019-09-02 12:18:37] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9021.jsonl 
+[2019-09-02 12:18:37] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9021.jsonl 
+[2019-09-02 12:18:37] [FINER  ] Beginning insert 
+[2019-09-02 12:18:38] [FINER  ] Inserting done 
+[2019-09-02 12:18:38] [FINER  ] Parsing done 
+[2019-09-02 12:18:38] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9022.jsonl 
+[2019-09-02 12:18:38] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9022.jsonl 
+[2019-09-02 12:18:39] [FINER  ] Beginning insert 
+[2019-09-02 12:18:49] [FINER  ] Inserting done 
+[2019-09-02 12:18:49] [FINER  ] Parsing done 
+[2019-09-02 12:18:49] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9023.jsonl 
+[2019-09-02 12:18:49] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9023.jsonl 
+[2019-09-02 12:18:50] [FINER  ] Beginning insert 
+[2019-09-02 12:18:58] [FINER  ] Inserting done 
+[2019-09-02 12:18:58] [FINER  ] Parsing done 
+[2019-09-02 12:18:58] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9024.jsonl 
+[2019-09-02 12:18:58] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9024.jsonl 
+[2019-09-02 12:18:58] [FINER  ] Beginning insert 
+[2019-09-02 12:18:59] [FINER  ] Inserting done 
+[2019-09-02 12:18:59] [FINER  ] Parsing done 
+[2019-09-02 12:18:59] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9025.jsonl 
+[2019-09-02 12:18:59] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9025.jsonl 
+[2019-09-02 12:19:00] [FINER  ] Beginning insert 
+[2019-09-02 12:19:05] [FINER  ] Inserting done 
+[2019-09-02 12:19:05] [FINER  ] Parsing done 
+[2019-09-02 12:19:05] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9026.jsonl 
+[2019-09-02 12:19:05] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9026.jsonl 
+[2019-09-02 12:19:07] [FINER  ] Beginning insert 
+[2019-09-02 12:19:20] [FINER  ] Inserting done 
+[2019-09-02 12:19:20] [FINER  ] Parsing done 
+[2019-09-02 12:19:20] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9027.jsonl 
+[2019-09-02 12:19:20] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9027.jsonl 
+[2019-09-02 12:19:20] [FINER  ] Beginning insert 
+[2019-09-02 12:19:21] [FINER  ] Inserting done 
+[2019-09-02 12:19:21] [FINER  ] Parsing done 
+[2019-09-02 12:19:21] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9028.jsonl 
+[2019-09-02 12:19:21] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9028.jsonl 
+[2019-09-02 12:19:23] [FINER  ] Beginning insert 
+[2019-09-02 12:19:35] [FINER  ] Inserting done 
+[2019-09-02 12:19:35] [FINER  ] Parsing done 
+[2019-09-02 12:19:35] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9029.jsonl 
+[2019-09-02 12:19:35] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9029.jsonl 
+[2019-09-02 12:19:37] [FINER  ] Beginning insert 
+[2019-09-02 12:19:46] [FINER  ] Inserting done 
+[2019-09-02 12:19:46] [FINER  ] Parsing done 
+[2019-09-02 12:19:46] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9030.jsonl 
+[2019-09-02 12:19:46] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9030.jsonl 
+[2019-09-02 12:19:47] [FINER  ] Beginning insert 
+[2019-09-02 12:19:48] [FINER  ] Inserting done 
+[2019-09-02 12:19:48] [FINER  ] Parsing done 
+[2019-09-02 12:19:48] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9031.jsonl 
+[2019-09-02 12:19:48] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9031.jsonl 
+[2019-09-02 12:19:49] [FINER  ] Beginning insert 
+[2019-09-02 12:19:52] [FINER  ] Inserting done 
+[2019-09-02 12:19:52] [FINER  ] Parsing done 
+[2019-09-02 12:19:52] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9032.jsonl 
+[2019-09-02 12:19:52] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9032.jsonl 
+[2019-09-02 12:19:54] [FINER  ] Beginning insert 
+[2019-09-02 12:20:01] [FINER  ] Inserting done 
+[2019-09-02 12:20:01] [FINER  ] Parsing done 
+[2019-09-02 12:20:01] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9033.jsonl 
+[2019-09-02 12:20:01] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9033.jsonl 
+[2019-09-02 12:20:02] [FINER  ] Beginning insert 
+[2019-09-02 12:20:04] [FINER  ] Inserting done 
+[2019-09-02 12:20:04] [FINER  ] Parsing done 
+[2019-09-02 12:20:04] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9034.jsonl 
+[2019-09-02 12:20:04] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9034.jsonl 
+[2019-09-02 12:20:05] [FINER  ] Beginning insert 
+[2019-09-02 12:20:05] [FINER  ] Inserting done 
+[2019-09-02 12:20:05] [FINER  ] Parsing done 
+[2019-09-02 12:20:05] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9035.jsonl 
+[2019-09-02 12:20:05] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9035.jsonl 
+[2019-09-02 12:20:07] [FINER  ] Beginning insert 
+[2019-09-02 12:20:23] [FINER  ] Inserting done 
+[2019-09-02 12:20:23] [FINER  ] Parsing done 
+[2019-09-02 12:20:23] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9036.jsonl 
+[2019-09-02 12:20:23] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9036.jsonl 
+[2019-09-02 12:20:24] [FINER  ] Beginning insert 
+[2019-09-02 12:20:26] [FINER  ] Inserting done 
+[2019-09-02 12:20:26] [FINER  ] Parsing done 
+[2019-09-02 12:20:26] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9037.jsonl 
+[2019-09-02 12:20:26] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9037.jsonl 
+[2019-09-02 12:20:27] [FINER  ] Beginning insert 
+[2019-09-02 12:20:31] [FINER  ] Inserting done 
+[2019-09-02 12:20:31] [FINER  ] Parsing done 
+[2019-09-02 12:20:31] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9038.jsonl 
+[2019-09-02 12:20:31] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9038.jsonl 
+[2019-09-02 12:20:33] [FINER  ] Beginning insert 
+[2019-09-02 12:20:41] [FINER  ] Inserting done 
+[2019-09-02 12:20:41] [FINER  ] Parsing done 
+[2019-09-02 12:20:41] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9039.jsonl 
+[2019-09-02 12:20:41] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9039.jsonl 
+[2019-09-02 12:20:42] [FINER  ] Beginning insert 
+[2019-09-02 12:20:45] [FINER  ] Inserting done 
+[2019-09-02 12:20:45] [FINER  ] Parsing done 
+[2019-09-02 12:20:45] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9040.jsonl 
+[2019-09-02 12:20:45] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9040.jsonl 
+[2019-09-02 12:20:45] [FINER  ] Beginning insert 
+[2019-09-02 12:20:45] [FINER  ] Inserting done 
+[2019-09-02 12:20:45] [FINER  ] Parsing done 
+[2019-09-02 12:20:45] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9041.jsonl 
+[2019-09-02 12:20:45] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9041.jsonl 
+[2019-09-02 12:20:47] [FINER  ] Beginning insert 
+[2019-09-02 12:20:59] [FINER  ] Inserting done 
+[2019-09-02 12:20:59] [FINER  ] Parsing done 
+[2019-09-02 12:20:59] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9042.jsonl 
+[2019-09-02 12:20:59] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9042.jsonl 
+[2019-09-02 12:20:59] [FINER  ] Beginning insert 
+[2019-09-02 12:21:02] [FINER  ] Inserting done 
+[2019-09-02 12:21:02] [FINER  ] Parsing done 
+[2019-09-02 12:21:02] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9043.jsonl 
+[2019-09-02 12:21:02] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9043.jsonl 
+[2019-09-02 12:21:03] [FINER  ] Beginning insert 
+[2019-09-02 12:21:04] [FINER  ] Inserting done 
+[2019-09-02 12:21:04] [FINER  ] Parsing done 
+[2019-09-02 12:21:04] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9044.jsonl 
+[2019-09-02 12:21:04] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9044.jsonl 
+[2019-09-02 12:21:05] [FINER  ] Beginning insert 
+[2019-09-02 12:21:14] [FINER  ] Inserting done 
+[2019-09-02 12:21:14] [FINER  ] Parsing done 
+[2019-09-02 12:21:14] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9045.jsonl 
+[2019-09-02 12:21:14] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9045.jsonl 
+[2019-09-02 12:21:14] [FINER  ] Beginning insert 
+[2019-09-02 12:21:17] [FINER  ] Inserting done 
+[2019-09-02 12:21:17] [FINER  ] Parsing done 
+[2019-09-02 12:21:17] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9046.jsonl 
+[2019-09-02 12:21:17] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9046.jsonl 
+[2019-09-02 12:21:17] [FINER  ] Beginning insert 
+[2019-09-02 12:21:17] [FINER  ] Inserting done 
+[2019-09-02 12:21:17] [FINER  ] Parsing done 
+[2019-09-02 12:21:17] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9047.jsonl 
+[2019-09-02 12:21:17] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9047.jsonl 
+[2019-09-02 12:21:19] [FINER  ] Beginning insert 
+[2019-09-02 12:21:29] [FINER  ] Inserting done 
+[2019-09-02 12:21:29] [FINER  ] Parsing done 
+[2019-09-02 12:21:29] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9048.jsonl 
+[2019-09-02 12:21:29] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9048.jsonl 
+[2019-09-02 12:21:30] [FINER  ] Beginning insert 
+[2019-09-02 12:21:31] [FINER  ] Inserting done 
+[2019-09-02 12:21:31] [FINER  ] Parsing done 
+[2019-09-02 12:21:31] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9049.jsonl 
+[2019-09-02 12:21:31] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9049.jsonl 
+[2019-09-02 12:21:32] [FINER  ] Beginning insert 
+[2019-09-02 12:21:35] [FINER  ] Inserting done 
+[2019-09-02 12:21:35] [FINER  ] Parsing done 
+[2019-09-02 12:21:35] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9050.jsonl 
+[2019-09-02 12:21:35] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9050.jsonl 
+[2019-09-02 12:21:37] [FINER  ] Beginning insert 
+[2019-09-02 12:21:44] [FINER  ] Inserting done 
+[2019-09-02 12:21:44] [FINER  ] Parsing done 
+[2019-09-02 12:21:44] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9051.jsonl 
+[2019-09-02 12:21:44] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9051.jsonl 
+[2019-09-02 12:21:44] [FINER  ] Beginning insert 
+[2019-09-02 12:21:47] [FINER  ] Inserting done 
+[2019-09-02 12:21:47] [FINER  ] Parsing done 
+[2019-09-02 12:21:47] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9052.jsonl 
+[2019-09-02 12:21:47] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9052.jsonl 
+[2019-09-02 12:21:47] [FINER  ] Beginning insert 
+[2019-09-02 12:21:47] [FINER  ] Inserting done 
+[2019-09-02 12:21:47] [FINER  ] Parsing done 
+[2019-09-02 12:21:47] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9053.jsonl 
+[2019-09-02 12:21:47] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9053.jsonl 
+[2019-09-02 12:21:49] [FINER  ] Beginning insert 
+[2019-09-02 12:21:58] [FINER  ] Inserting done 
+[2019-09-02 12:21:58] [FINER  ] Parsing done 
+[2019-09-02 12:21:58] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9054.jsonl 
+[2019-09-02 12:21:58] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9054.jsonl 
+[2019-09-02 12:21:58] [FINER  ] Beginning insert 
+[2019-09-02 12:21:59] [FINER  ] Inserting done 
+[2019-09-02 12:21:59] [FINER  ] Parsing done 
+[2019-09-02 12:21:59] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9055.jsonl 
+[2019-09-02 12:21:59] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9055.jsonl 
+[2019-09-02 12:21:59] [FINER  ] Beginning insert 
+[2019-09-02 12:22:02] [FINER  ] Inserting done 
+[2019-09-02 12:22:02] [FINER  ] Parsing done 
+[2019-09-02 12:22:02] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9056.jsonl 
+[2019-09-02 12:22:02] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9056.jsonl 
+[2019-09-02 12:22:04] [FINER  ] Beginning insert 
+[2019-09-02 12:22:09] [FINER  ] Inserting done 
+[2019-09-02 12:22:09] [FINER  ] Parsing done 
+[2019-09-02 12:22:09] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9057.jsonl 
+[2019-09-02 12:22:09] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9057.jsonl 
+[2019-09-02 12:22:10] [FINER  ] Beginning insert 
+[2019-09-02 12:22:10] [FINER  ] Inserting done 
+[2019-09-02 12:22:10] [FINER  ] Parsing done 
+[2019-09-02 12:22:10] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9058.jsonl 
+[2019-09-02 12:22:10] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9058.jsonl 
+[2019-09-02 12:22:10] [FINER  ] Beginning insert 
+[2019-09-02 12:22:11] [FINER  ] Inserting done 
+[2019-09-02 12:22:11] [FINER  ] Parsing done 
+[2019-09-02 12:22:11] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9059.jsonl 
+[2019-09-02 12:22:11] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9059.jsonl 
+[2019-09-02 12:22:12] [FINER  ] Beginning insert 
+[2019-09-02 12:22:24] [FINER  ] Inserting done 
+[2019-09-02 12:22:24] [FINER  ] Parsing done 
+[2019-09-02 12:22:24] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9060.jsonl 
+[2019-09-02 12:22:24] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9060.jsonl 
+[2019-09-02 12:22:24] [FINER  ] Beginning insert 
+[2019-09-02 12:22:25] [FINER  ] Inserting done 
+[2019-09-02 12:22:25] [FINER  ] Parsing done 
+[2019-09-02 12:22:25] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9061.jsonl 
+[2019-09-02 12:22:25] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9061.jsonl 
+[2019-09-02 12:22:25] [FINER  ] Beginning insert 
+[2019-09-02 12:22:27] [FINER  ] Inserting done 
+[2019-09-02 12:22:27] [FINER  ] Parsing done 
+[2019-09-02 12:22:27] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9062.jsonl 
+[2019-09-02 12:22:27] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9062.jsonl 
+[2019-09-02 12:22:28] [FINER  ] Beginning insert 
+[2019-09-02 12:22:33] [FINER  ] Inserting done 
+[2019-09-02 12:22:33] [FINER  ] Parsing done 
+[2019-09-02 12:22:33] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9063.jsonl 
+[2019-09-02 12:22:33] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9063.jsonl 
+[2019-09-02 12:22:33] [FINER  ] Beginning insert 
+[2019-09-02 12:22:35] [FINER  ] Inserting done 
+[2019-09-02 12:22:35] [FINER  ] Parsing done 
+[2019-09-02 12:22:35] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9064.jsonl 
+[2019-09-02 12:22:35] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9064.jsonl 
+[2019-09-02 12:22:35] [FINER  ] Beginning insert 
+[2019-09-02 12:22:35] [FINER  ] Inserting done 
+[2019-09-02 12:22:35] [FINER  ] Parsing done 
+[2019-09-02 12:22:35] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9065.jsonl 
+[2019-09-02 12:22:35] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9065.jsonl 
+[2019-09-02 12:22:37] [FINER  ] Beginning insert 
+[2019-09-02 12:22:42] [FINER  ] Inserting done 
+[2019-09-02 12:22:42] [FINER  ] Parsing done 
+[2019-09-02 12:22:42] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9066.jsonl 
+[2019-09-02 12:22:42] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9066.jsonl 
+[2019-09-02 12:22:42] [FINER  ] Beginning insert 
+[2019-09-02 12:22:43] [FINER  ] Inserting done 
+[2019-09-02 12:22:43] [FINER  ] Parsing done 
+[2019-09-02 12:22:43] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9067.jsonl 
+[2019-09-02 12:22:43] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9067.jsonl 
+[2019-09-02 12:22:43] [FINER  ] Beginning insert 
+[2019-09-02 12:22:45] [FINER  ] Inserting done 
+[2019-09-02 12:22:45] [FINER  ] Parsing done 
+[2019-09-02 12:22:45] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9068.jsonl 
+[2019-09-02 12:22:45] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9068.jsonl 
+[2019-09-02 12:22:47] [FINER  ] Beginning insert 
+[2019-09-02 12:22:49] [FINER  ] Inserting done 
+[2019-09-02 12:22:49] [FINER  ] Parsing done 
+[2019-09-02 12:22:49] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9069.jsonl 
+[2019-09-02 12:22:49] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9069.jsonl 
+[2019-09-02 12:22:50] [FINER  ] Beginning insert 
+[2019-09-02 12:22:51] [FINER  ] Inserting done 
+[2019-09-02 12:22:51] [FINER  ] Parsing done 
+[2019-09-02 12:22:51] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9070.jsonl 
+[2019-09-02 12:22:51] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9070.jsonl 
+[2019-09-02 12:22:51] [FINER  ] Beginning insert 
+[2019-09-02 12:22:51] [FINER  ] Inserting done 
+[2019-09-02 12:22:51] [FINER  ] Parsing done 
+[2019-09-02 12:22:51] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9071.jsonl 
+[2019-09-02 12:22:51] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9071.jsonl 
+[2019-09-02 12:22:53] [FINER  ] Beginning insert 
+[2019-09-02 12:22:57] [FINER  ] Inserting done 
+[2019-09-02 12:22:57] [FINER  ] Parsing done 
+[2019-09-02 12:22:57] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9072.jsonl 
+[2019-09-02 12:22:57] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9072.jsonl 
+[2019-09-02 12:22:57] [FINER  ] Beginning insert 
+[2019-09-02 12:22:58] [FINER  ] Inserting done 
+[2019-09-02 12:22:58] [FINER  ] Parsing done 
+[2019-09-02 12:22:58] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9073.jsonl 
+[2019-09-02 12:22:58] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9073.jsonl 
+[2019-09-02 12:22:59] [FINER  ] Beginning insert 
+[2019-09-02 12:23:00] [FINER  ] Inserting done 
+[2019-09-02 12:23:00] [FINER  ] Parsing done 
+[2019-09-02 12:23:00] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9074.jsonl 
+[2019-09-02 12:23:00] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9074.jsonl 
+[2019-09-02 12:23:02] [FINER  ] Beginning insert 
+[2019-09-02 12:23:05] [FINER  ] Inserting done 
+[2019-09-02 12:23:05] [FINER  ] Parsing done 
+[2019-09-02 12:23:05] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9075.jsonl 
+[2019-09-02 12:23:05] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9075.jsonl 
+[2019-09-02 12:23:05] [FINER  ] Beginning insert 
+[2019-09-02 12:23:06] [FINER  ] Inserting done 
+[2019-09-02 12:23:06] [FINER  ] Parsing done 
+[2019-09-02 12:23:06] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9076.jsonl 
+[2019-09-02 12:23:06] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9076.jsonl 
+[2019-09-02 12:23:06] [FINER  ] Beginning insert 
+[2019-09-02 12:23:06] [FINER  ] Inserting done 
+[2019-09-02 12:23:06] [FINER  ] Parsing done 
+[2019-09-02 12:23:06] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9077.jsonl 
+[2019-09-02 12:23:06] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9077.jsonl 
+[2019-09-02 12:23:08] [FINER  ] Beginning insert 
+[2019-09-02 12:23:13] [FINER  ] Inserting done 
+[2019-09-02 12:23:13] [FINER  ] Parsing done 
+[2019-09-02 12:23:13] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9078.jsonl 
+[2019-09-02 12:23:13] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9078.jsonl 
+[2019-09-02 12:23:14] [FINER  ] Beginning insert 
+[2019-09-02 12:23:14] [FINER  ] Inserting done 
+[2019-09-02 12:23:14] [FINER  ] Parsing done 
+[2019-09-02 12:23:14] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9079.jsonl 
+[2019-09-02 12:23:14] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9079.jsonl 
+[2019-09-02 12:23:15] [FINER  ] Beginning insert 
+[2019-09-02 12:23:17] [FINER  ] Inserting done 
+[2019-09-02 12:23:17] [FINER  ] Parsing done 
+[2019-09-02 12:23:17] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9080.jsonl 
+[2019-09-02 12:23:17] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9080.jsonl 
+[2019-09-02 12:23:18] [FINER  ] Beginning insert 
+[2019-09-02 12:23:21] [FINER  ] Inserting done 
+[2019-09-02 12:23:21] [FINER  ] Parsing done 
+[2019-09-02 12:23:21] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9081.jsonl 
+[2019-09-02 12:23:21] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9081.jsonl 
+[2019-09-02 12:23:21] [FINER  ] Beginning insert 
+[2019-09-02 12:23:22] [FINER  ] Inserting done 
+[2019-09-02 12:23:22] [FINER  ] Parsing done 
+[2019-09-02 12:23:22] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9082.jsonl 
+[2019-09-02 12:23:22] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9082.jsonl 
+[2019-09-02 12:23:22] [FINER  ] Beginning insert 
+[2019-09-02 12:23:23] [FINER  ] Inserting done 
+[2019-09-02 12:23:23] [FINER  ] Parsing done 
+[2019-09-02 12:23:23] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9083.jsonl 
+[2019-09-02 12:23:23] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9083.jsonl 
+[2019-09-02 12:23:24] [FINER  ] Beginning insert 
+[2019-09-02 12:23:27] [FINER  ] Inserting done 
+[2019-09-02 12:23:27] [FINER  ] Parsing done 
+[2019-09-02 12:23:27] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9084.jsonl 
+[2019-09-02 12:23:27] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9084.jsonl 
+[2019-09-02 12:23:27] [FINER  ] Beginning insert 
+[2019-09-02 12:23:28] [FINER  ] Inserting done 
+[2019-09-02 12:23:28] [FINER  ] Parsing done 
+[2019-09-02 12:23:28] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9085.jsonl 
+[2019-09-02 12:23:28] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9085.jsonl 
+[2019-09-02 12:23:28] [FINER  ] Beginning insert 
+[2019-09-02 12:23:29] [FINER  ] Inserting done 
+[2019-09-02 12:23:29] [FINER  ] Parsing done 
+[2019-09-02 12:23:29] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9086.jsonl 
+[2019-09-02 12:23:29] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9086.jsonl 
+[2019-09-02 12:23:30] [FINER  ] Beginning insert 
+[2019-09-02 12:23:32] [FINER  ] Inserting done 
+[2019-09-02 12:23:32] [FINER  ] Parsing done 
+[2019-09-02 12:23:32] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9087.jsonl 
+[2019-09-02 12:23:32] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9087.jsonl 
+[2019-09-02 12:23:33] [FINER  ] Beginning insert 
+[2019-09-02 12:23:35] [FINER  ] Inserting done 
+[2019-09-02 12:23:35] [FINER  ] Parsing done 
+[2019-09-02 12:23:35] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9088.jsonl 
+[2019-09-02 12:23:35] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9088.jsonl 
+[2019-09-02 12:23:35] [FINER  ] Beginning insert 
+[2019-09-02 12:23:35] [FINER  ] Inserting done 
+[2019-09-02 12:23:35] [FINER  ] Parsing done 
+[2019-09-02 12:23:35] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9089.jsonl 
+[2019-09-02 12:23:35] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9089.jsonl 
+[2019-09-02 12:23:37] [FINER  ] Beginning insert 
+[2019-09-02 12:23:44] [FINER  ] Inserting done 
+[2019-09-02 12:23:44] [FINER  ] Parsing done 
+[2019-09-02 12:23:44] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9090.jsonl 
+[2019-09-02 12:23:44] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9090.jsonl 
+[2019-09-02 12:23:44] [FINER  ] Beginning insert 
+[2019-09-02 12:23:45] [FINER  ] Inserting done 
+[2019-09-02 12:23:45] [FINER  ] Parsing done 
+[2019-09-02 12:23:45] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9091.jsonl 
+[2019-09-02 12:23:45] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9091.jsonl 
+[2019-09-02 12:23:46] [FINER  ] Beginning insert 
+[2019-09-02 12:23:47] [FINER  ] Inserting done 
+[2019-09-02 12:23:47] [FINER  ] Parsing done 
+[2019-09-02 12:23:47] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9092.jsonl 
+[2019-09-02 12:23:47] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9092.jsonl 
+[2019-09-02 12:23:48] [FINER  ] Beginning insert 
+[2019-09-02 12:23:51] [FINER  ] Inserting done 
+[2019-09-02 12:23:51] [FINER  ] Parsing done 
+[2019-09-02 12:23:51] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9093.jsonl 
+[2019-09-02 12:23:51] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9093.jsonl 
+[2019-09-02 12:23:51] [FINER  ] Beginning insert 
+[2019-09-02 12:23:52] [FINER  ] Inserting done 
+[2019-09-02 12:23:52] [FINER  ] Parsing done 
+[2019-09-02 12:23:52] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9094.jsonl 
+[2019-09-02 12:23:52] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9094.jsonl 
+[2019-09-02 12:23:52] [FINER  ] Beginning insert 
+[2019-09-02 12:23:52] [FINER  ] Inserting done 
+[2019-09-02 12:23:52] [FINER  ] Parsing done 
+[2019-09-02 12:23:52] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9095.jsonl 
+[2019-09-02 12:23:52] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9095.jsonl 
+[2019-09-02 12:23:54] [FINER  ] Beginning insert 
+[2019-09-02 12:24:06] [FINER  ] Inserting done 
+[2019-09-02 12:24:06] [FINER  ] Parsing done 
+[2019-09-02 12:24:06] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9096.jsonl 
+[2019-09-02 12:24:06] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9096.jsonl 
+[2019-09-02 12:24:07] [FINER  ] Beginning insert 
+[2019-09-02 12:24:08] [FINER  ] Inserting done 
+[2019-09-02 12:24:08] [FINER  ] Parsing done 
+[2019-09-02 12:24:08] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9097.jsonl 
+[2019-09-02 12:24:08] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9097.jsonl 
+[2019-09-02 12:24:08] [FINER  ] Beginning insert 
+[2019-09-02 12:24:11] [FINER  ] Inserting done 
+[2019-09-02 12:24:11] [FINER  ] Parsing done 
+[2019-09-02 12:24:11] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9098.jsonl 
+[2019-09-02 12:24:11] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9098.jsonl 
+[2019-09-02 12:24:12] [FINER  ] Beginning insert 
+[2019-09-02 12:24:15] [FINER  ] Inserting done 
+[2019-09-02 12:24:15] [FINER  ] Parsing done 
+[2019-09-02 12:24:15] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9099.jsonl 
+[2019-09-02 12:24:15] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9099.jsonl 
+[2019-09-02 12:24:16] [FINER  ] Beginning insert 
+[2019-09-02 12:24:17] [FINER  ] Inserting done 
+[2019-09-02 12:24:17] [FINER  ] Parsing done 
+[2019-09-02 12:24:17] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_91.jsonl 
+[2019-09-02 12:24:17] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_91.jsonl 
+[2019-09-02 12:24:17] [FINER  ] Beginning insert 
+[2019-09-02 12:24:17] [FINER  ] Inserting done 
+[2019-09-02 12:24:17] [FINER  ] Parsing done 
+[2019-09-02 12:24:17] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9100.jsonl 
+[2019-09-02 12:24:17] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9100.jsonl 
+[2019-09-02 12:24:17] [FINER  ] Beginning insert 
+[2019-09-02 12:24:17] [FINER  ] Inserting done 
+[2019-09-02 12:24:17] [FINER  ] Parsing done 
+[2019-09-02 12:24:17] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9101.jsonl 
+[2019-09-02 12:24:17] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9101.jsonl 
+[2019-09-02 12:24:19] [FINER  ] Beginning insert 
+[2019-09-02 12:24:21] [FINER  ] Inserting done 
+[2019-09-02 12:24:21] [FINER  ] Parsing done 
+[2019-09-02 12:24:21] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9102.jsonl 
+[2019-09-02 12:24:21] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9102.jsonl 
+[2019-09-02 12:24:21] [FINER  ] Beginning insert 
+[2019-09-02 12:24:22] [FINER  ] Inserting done 
+[2019-09-02 12:24:22] [FINER  ] Parsing done 
+[2019-09-02 12:24:22] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9103.jsonl 
+[2019-09-02 12:24:22] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9103.jsonl 
+[2019-09-02 12:24:22] [FINER  ] Beginning insert 
+[2019-09-02 12:24:23] [FINER  ] Inserting done 
+[2019-09-02 12:24:23] [FINER  ] Parsing done 
+[2019-09-02 12:24:23] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9104.jsonl 
+[2019-09-02 12:24:23] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9104.jsonl 
+[2019-09-02 12:24:24] [FINER  ] Beginning insert 
+[2019-09-02 12:24:34] [FINER  ] Inserting done 
+[2019-09-02 12:24:34] [FINER  ] Parsing done 
+[2019-09-02 12:24:34] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9105.jsonl 
+[2019-09-02 12:24:34] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9105.jsonl 
+[2019-09-02 12:24:35] [FINER  ] Beginning insert 
+[2019-09-02 12:24:38] [FINER  ] Inserting done 
+[2019-09-02 12:24:38] [FINER  ] Parsing done 
+[2019-09-02 12:24:38] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9106.jsonl 
+[2019-09-02 12:24:38] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9106.jsonl 
+[2019-09-02 12:24:38] [FINER  ] Beginning insert 
+[2019-09-02 12:24:38] [FINER  ] Inserting done 
+[2019-09-02 12:24:38] [FINER  ] Parsing done 
+[2019-09-02 12:24:38] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9107.jsonl 
+[2019-09-02 12:24:38] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9107.jsonl 
+[2019-09-02 12:24:40] [FINER  ] Beginning insert 
+[2019-09-02 12:24:45] [FINER  ] Inserting done 
+[2019-09-02 12:24:45] [FINER  ] Parsing done 
+[2019-09-02 12:24:45] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9108.jsonl 
+[2019-09-02 12:24:45] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9108.jsonl 
+[2019-09-02 12:24:46] [FINER  ] Beginning insert 
+[2019-09-02 12:24:46] [FINER  ] Inserting done 
+[2019-09-02 12:24:46] [FINER  ] Parsing done 
+[2019-09-02 12:24:46] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9109.jsonl 
+[2019-09-02 12:24:46] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9109.jsonl 
+[2019-09-02 12:24:46] [FINER  ] Beginning insert 
+[2019-09-02 12:24:49] [FINER  ] Inserting done 
+[2019-09-02 12:24:49] [FINER  ] Parsing done 
+[2019-09-02 12:24:49] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9110.jsonl 
+[2019-09-02 12:24:49] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9110.jsonl 
+[2019-09-02 12:24:50] [FINER  ] Beginning insert 
+[2019-09-02 12:24:51] [FINER  ] Inserting done 
+[2019-09-02 12:24:51] [FINER  ] Parsing done 
+[2019-09-02 12:24:51] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9111.jsonl 
+[2019-09-02 12:24:51] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9111.jsonl 
+[2019-09-02 12:24:52] [FINER  ] Beginning insert 
+[2019-09-02 12:24:52] [FINER  ] Inserting done 
+[2019-09-02 12:24:52] [FINER  ] Parsing done 
+[2019-09-02 12:24:52] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9112.jsonl 
+[2019-09-02 12:24:52] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9112.jsonl 
+[2019-09-02 12:24:53] [FINER  ] Beginning insert 
+[2019-09-02 12:24:53] [FINER  ] Inserting done 
+[2019-09-02 12:24:53] [FINER  ] Parsing done 
+[2019-09-02 12:24:53] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9113.jsonl 
+[2019-09-02 12:24:53] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9113.jsonl 
+[2019-09-02 12:24:54] [FINER  ] Beginning insert 
+[2019-09-02 12:24:57] [FINER  ] Inserting done 
+[2019-09-02 12:24:57] [FINER  ] Parsing done 
+[2019-09-02 12:24:57] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9114.jsonl 
+[2019-09-02 12:24:57] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9114.jsonl 
+[2019-09-02 12:24:58] [FINER  ] Beginning insert 
+[2019-09-02 12:24:59] [FINER  ] Inserting done 
+[2019-09-02 12:24:59] [FINER  ] Parsing done 
+[2019-09-02 12:24:59] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9115.jsonl 
+[2019-09-02 12:24:59] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9115.jsonl 
+[2019-09-02 12:24:59] [FINER  ] Beginning insert 
+[2019-09-02 12:25:01] [FINER  ] Inserting done 
+[2019-09-02 12:25:01] [FINER  ] Parsing done 
+[2019-09-02 12:25:01] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9116.jsonl 
+[2019-09-02 12:25:01] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9116.jsonl 
+[2019-09-02 12:25:02] [FINER  ] Beginning insert 
+[2019-09-02 12:25:04] [FINER  ] Inserting done 
+[2019-09-02 12:25:04] [FINER  ] Parsing done 
+[2019-09-02 12:25:04] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9117.jsonl 
+[2019-09-02 12:25:04] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9117.jsonl 
+[2019-09-02 12:25:04] [FINER  ] Beginning insert 
+[2019-09-02 12:25:05] [FINER  ] Inserting done 
+[2019-09-02 12:25:05] [FINER  ] Parsing done 
+[2019-09-02 12:25:05] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9118.jsonl 
+[2019-09-02 12:25:05] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9118.jsonl 
+[2019-09-02 12:25:05] [FINER  ] Beginning insert 
+[2019-09-02 12:25:05] [FINER  ] Inserting done 
+[2019-09-02 12:25:05] [FINER  ] Parsing done 
+[2019-09-02 12:25:05] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9119.jsonl 
+[2019-09-02 12:25:05] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9119.jsonl 
+[2019-09-02 12:25:07] [FINER  ] Beginning insert 
+[2019-09-02 12:25:09] [FINER  ] Inserting done 
+[2019-09-02 12:25:09] [FINER  ] Parsing done 
+[2019-09-02 12:25:09] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9120.jsonl 
+[2019-09-02 12:25:09] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9120.jsonl 
+[2019-09-02 12:25:10] [FINER  ] Beginning insert 
+[2019-09-02 12:25:10] [FINER  ] Inserting done 
+[2019-09-02 12:25:10] [FINER  ] Parsing done 
+[2019-09-02 12:25:10] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9121.jsonl 
+[2019-09-02 12:25:10] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9121.jsonl 
+[2019-09-02 12:25:10] [FINER  ] Beginning insert 
+[2019-09-02 12:25:11] [FINER  ] Inserting done 
+[2019-09-02 12:25:11] [FINER  ] Parsing done 
+[2019-09-02 12:25:11] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9122.jsonl 
+[2019-09-02 12:25:11] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9122.jsonl 
+[2019-09-02 12:25:13] [FINER  ] Beginning insert 
+[2019-09-02 12:25:14] [FINER  ] Inserting done 
+[2019-09-02 12:25:14] [FINER  ] Parsing done 
+[2019-09-02 12:25:14] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9123.jsonl 
+[2019-09-02 12:25:14] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9123.jsonl 
+[2019-09-02 12:25:14] [FINER  ] Beginning insert 
+[2019-09-02 12:25:15] [FINER  ] Inserting done 
+[2019-09-02 12:25:15] [FINER  ] Parsing done 
+[2019-09-02 12:25:15] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9124.jsonl 
+[2019-09-02 12:25:15] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9124.jsonl 
+[2019-09-02 12:25:15] [FINER  ] Beginning insert 
+[2019-09-02 12:25:15] [FINER  ] Inserting done 
+[2019-09-02 12:25:15] [FINER  ] Parsing done 
+[2019-09-02 12:25:15] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9125.jsonl 
+[2019-09-02 12:25:15] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9125.jsonl 
+[2019-09-02 12:25:17] [FINER  ] Beginning insert 
+[2019-09-02 12:25:25] [FINER  ] Inserting done 
+[2019-09-02 12:25:25] [FINER  ] Parsing done 
+[2019-09-02 12:25:25] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9126.jsonl 
+[2019-09-02 12:25:25] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9126.jsonl 
+[2019-09-02 12:25:26] [FINER  ] Beginning insert 
+[2019-09-02 12:25:27] [FINER  ] Inserting done 
+[2019-09-02 12:25:27] [FINER  ] Parsing done 
+[2019-09-02 12:25:27] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9127.jsonl 
+[2019-09-02 12:25:27] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9127.jsonl 
+[2019-09-02 12:25:28] [FINER  ] Beginning insert 
+[2019-09-02 12:25:29] [FINER  ] Inserting done 
+[2019-09-02 12:25:29] [FINER  ] Parsing done 
+[2019-09-02 12:25:29] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9128.jsonl 
+[2019-09-02 12:25:29] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9128.jsonl 
+[2019-09-02 12:25:29] [FINER  ] Beginning insert 
+[2019-09-02 12:25:30] [FINER  ] Inserting done 
+[2019-09-02 12:25:30] [FINER  ] Parsing done 
+[2019-09-02 12:25:30] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9129.jsonl 
+[2019-09-02 12:25:30] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9129.jsonl 
+[2019-09-02 12:25:30] [FINER  ] Beginning insert 
+[2019-09-02 12:25:31] [FINER  ] Inserting done 
+[2019-09-02 12:25:31] [FINER  ] Parsing done 
+[2019-09-02 12:25:31] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9130.jsonl 
+[2019-09-02 12:25:31] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9130.jsonl 
+[2019-09-02 12:25:31] [FINER  ] Beginning insert 
+[2019-09-02 12:25:32] [FINER  ] Inserting done 
+[2019-09-02 12:25:32] [FINER  ] Parsing done 
+[2019-09-02 12:25:32] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9131.jsonl 
+[2019-09-02 12:25:32] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9131.jsonl 
+[2019-09-02 12:25:32] [FINER  ] Beginning insert 
+[2019-09-02 12:25:33] [FINER  ] Inserting done 
+[2019-09-02 12:25:33] [FINER  ] Parsing done 
+[2019-09-02 12:25:33] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9132.jsonl 
+[2019-09-02 12:25:33] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9132.jsonl 
+[2019-09-02 12:25:33] [FINER  ] Beginning insert 
+[2019-09-02 12:25:33] [FINER  ] Inserting done 
+[2019-09-02 12:25:33] [FINER  ] Parsing done 
+[2019-09-02 12:25:33] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9133.jsonl 
+[2019-09-02 12:25:33] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9133.jsonl 
+[2019-09-02 12:25:34] [FINER  ] Beginning insert 
+[2019-09-02 12:25:34] [FINER  ] Inserting done 
+[2019-09-02 12:25:34] [FINER  ] Parsing done 
+[2019-09-02 12:25:34] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9134.jsonl 
+[2019-09-02 12:25:34] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9134.jsonl 
+[2019-09-02 12:25:34] [FINER  ] Beginning insert 
+[2019-09-02 12:25:35] [FINER  ] Inserting done 
+[2019-09-02 12:25:35] [FINER  ] Parsing done 
+[2019-09-02 12:25:35] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9135.jsonl 
+[2019-09-02 12:25:35] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9135.jsonl 
+[2019-09-02 12:25:35] [FINER  ] Beginning insert 
+[2019-09-02 12:25:35] [FINER  ] Inserting done 
+[2019-09-02 12:25:35] [FINER  ] Parsing done 
+[2019-09-02 12:25:35] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9136.jsonl 
+[2019-09-02 12:25:35] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9136.jsonl 
+[2019-09-02 12:25:36] [FINER  ] Beginning insert 
+[2019-09-02 12:25:36] [FINER  ] Inserting done 
+[2019-09-02 12:25:36] [FINER  ] Parsing done 
+[2019-09-02 12:25:36] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9137.jsonl 
+[2019-09-02 12:25:36] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9137.jsonl 
+[2019-09-02 12:25:36] [FINER  ] Beginning insert 
+[2019-09-02 12:25:37] [FINER  ] Inserting done 
+[2019-09-02 12:25:37] [FINER  ] Parsing done 
+[2019-09-02 12:25:37] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9138.jsonl 
+[2019-09-02 12:25:37] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9138.jsonl 
+[2019-09-02 12:25:37] [FINER  ] Beginning insert 
+[2019-09-02 12:25:37] [FINER  ] Inserting done 
+[2019-09-02 12:25:37] [FINER  ] Parsing done 
+[2019-09-02 12:25:37] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9139.jsonl 
+[2019-09-02 12:25:37] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9139.jsonl 
+[2019-09-02 12:25:38] [FINER  ] Beginning insert 
+[2019-09-02 12:25:39] [FINER  ] Inserting done 
+[2019-09-02 12:25:39] [FINER  ] Parsing done 
+[2019-09-02 12:25:39] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9140.jsonl 
+[2019-09-02 12:25:39] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9140.jsonl 
+[2019-09-02 12:25:39] [FINER  ] Beginning insert 
+[2019-09-02 12:25:40] [FINER  ] Inserting done 
+[2019-09-02 12:25:40] [FINER  ] Parsing done 
+[2019-09-02 12:25:40] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9141.jsonl 
+[2019-09-02 12:25:40] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9141.jsonl 
+[2019-09-02 12:25:40] [FINER  ] Beginning insert 
+[2019-09-02 12:25:41] [FINER  ] Inserting done 
+[2019-09-02 12:25:41] [FINER  ] Parsing done 
+[2019-09-02 12:25:41] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9142.jsonl 
+[2019-09-02 12:25:41] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9142.jsonl 
+[2019-09-02 12:25:41] [FINER  ] Beginning insert 
+[2019-09-02 12:25:42] [FINER  ] Inserting done 
+[2019-09-02 12:25:42] [FINER  ] Parsing done 
+[2019-09-02 12:25:42] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9143.jsonl 
+[2019-09-02 12:25:42] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9143.jsonl 
+[2019-09-02 12:25:42] [FINER  ] Beginning insert 
+[2019-09-02 12:25:44] [FINER  ] Inserting done 
+[2019-09-02 12:25:44] [FINER  ] Parsing done 
+[2019-09-02 12:25:44] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9144.jsonl 
+[2019-09-02 12:25:44] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9144.jsonl 
+[2019-09-02 12:25:44] [FINER  ] Beginning insert 
+[2019-09-02 12:25:44] [FINER  ] Inserting done 
+[2019-09-02 12:25:44] [FINER  ] Parsing done 
+[2019-09-02 12:25:44] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9145.jsonl 
+[2019-09-02 12:25:44] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9145.jsonl 
+[2019-09-02 12:25:45] [FINER  ] Beginning insert 
+[2019-09-02 12:25:45] [FINER  ] Inserting done 
+[2019-09-02 12:25:45] [FINER  ] Parsing done 
+[2019-09-02 12:25:45] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9146.jsonl 
+[2019-09-02 12:25:45] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9146.jsonl 
+[2019-09-02 12:25:46] [FINER  ] Beginning insert 
+[2019-09-02 12:25:46] [FINER  ] Inserting done 
+[2019-09-02 12:25:46] [FINER  ] Parsing done 
+[2019-09-02 12:25:46] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9147.jsonl 
+[2019-09-02 12:25:46] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9147.jsonl 
+[2019-09-02 12:25:46] [FINER  ] Beginning insert 
+[2019-09-02 12:25:47] [FINER  ] Inserting done 
+[2019-09-02 12:25:47] [FINER  ] Parsing done 
+[2019-09-02 12:25:47] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9148.jsonl 
+[2019-09-02 12:25:47] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9148.jsonl 
+[2019-09-02 12:25:48] [FINER  ] Beginning insert 
+[2019-09-02 12:25:48] [FINER  ] Inserting done 
+[2019-09-02 12:25:48] [FINER  ] Parsing done 
+[2019-09-02 12:25:48] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9149.jsonl 
+[2019-09-02 12:25:48] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9149.jsonl 
+[2019-09-02 12:25:48] [FINER  ] Beginning insert 
+[2019-09-02 12:25:49] [FINER  ] Inserting done 
+[2019-09-02 12:25:49] [FINER  ] Parsing done 
+[2019-09-02 12:25:49] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9150.jsonl 
+[2019-09-02 12:25:49] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9150.jsonl 
+[2019-09-02 12:25:49] [FINER  ] Beginning insert 
+[2019-09-02 12:25:50] [FINER  ] Inserting done 
+[2019-09-02 12:25:50] [FINER  ] Parsing done 
+[2019-09-02 12:25:50] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9151.jsonl 
+[2019-09-02 12:25:50] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9151.jsonl 
+[2019-09-02 12:25:50] [FINER  ] Beginning insert 
+[2019-09-02 12:25:51] [FINER  ] Inserting done 
+[2019-09-02 12:25:51] [FINER  ] Parsing done 
+[2019-09-02 12:25:51] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9152.jsonl 
+[2019-09-02 12:25:51] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9152.jsonl 
+[2019-09-02 12:25:51] [FINER  ] Beginning insert 
+[2019-09-02 12:25:51] [FINER  ] Inserting done 
+[2019-09-02 12:25:51] [FINER  ] Parsing done 
+[2019-09-02 12:25:51] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9153.jsonl 
+[2019-09-02 12:25:51] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9153.jsonl 
+[2019-09-02 12:25:52] [FINER  ] Beginning insert 
+[2019-09-02 12:25:52] [FINER  ] Inserting done 
+[2019-09-02 12:25:52] [FINER  ] Parsing done 
+[2019-09-02 12:25:52] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9154.jsonl 
+[2019-09-02 12:25:52] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9154.jsonl 
+[2019-09-02 12:25:52] [FINER  ] Beginning insert 
+[2019-09-02 12:25:53] [FINER  ] Inserting done 
+[2019-09-02 12:25:53] [FINER  ] Parsing done 
+[2019-09-02 12:25:53] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9155.jsonl 
+[2019-09-02 12:25:53] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9155.jsonl 
+[2019-09-02 12:25:53] [FINER  ] Beginning insert 
+[2019-09-02 12:25:54] [FINER  ] Inserting done 
+[2019-09-02 12:25:54] [FINER  ] Parsing done 
+[2019-09-02 12:25:54] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9156.jsonl 
+[2019-09-02 12:25:54] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9156.jsonl 
+[2019-09-02 12:25:54] [FINER  ] Beginning insert 
+[2019-09-02 12:25:54] [FINER  ] Inserting done 
+[2019-09-02 12:25:54] [FINER  ] Parsing done 
+[2019-09-02 12:25:54] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9157.jsonl 
+[2019-09-02 12:25:54] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9157.jsonl 
+[2019-09-02 12:25:55] [FINER  ] Beginning insert 
+[2019-09-02 12:25:55] [FINER  ] Inserting done 
+[2019-09-02 12:25:55] [FINER  ] Parsing done 
+[2019-09-02 12:25:55] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9158.jsonl 
+[2019-09-02 12:25:55] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9158.jsonl 
+[2019-09-02 12:25:55] [FINER  ] Beginning insert 
+[2019-09-02 12:25:55] [FINER  ] Inserting done 
+[2019-09-02 12:25:55] [FINER  ] Parsing done 
+[2019-09-02 12:25:55] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9159.jsonl 
+[2019-09-02 12:25:55] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9159.jsonl 
+[2019-09-02 12:25:56] [FINER  ] Beginning insert 
+[2019-09-02 12:25:57] [FINER  ] Inserting done 
+[2019-09-02 12:25:57] [FINER  ] Parsing done 
+[2019-09-02 12:25:57] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9160.jsonl 
+[2019-09-02 12:25:57] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9160.jsonl 
+[2019-09-02 12:25:57] [FINER  ] Beginning insert 
+[2019-09-02 12:25:58] [FINER  ] Inserting done 
+[2019-09-02 12:25:58] [FINER  ] Parsing done 
+[2019-09-02 12:25:58] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9161.jsonl 
+[2019-09-02 12:25:58] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9161.jsonl 
+[2019-09-02 12:25:58] [FINER  ] Beginning insert 
+[2019-09-02 12:25:58] [FINER  ] Inserting done 
+[2019-09-02 12:25:58] [FINER  ] Parsing done 
+[2019-09-02 12:25:58] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9162.jsonl 
+[2019-09-02 12:25:58] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9162.jsonl 
+[2019-09-02 12:25:58] [FINER  ] Beginning insert 
+[2019-09-02 12:25:59] [FINER  ] Inserting done 
+[2019-09-02 12:25:59] [FINER  ] Parsing done 
+[2019-09-02 12:25:59] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9163.jsonl 
+[2019-09-02 12:25:59] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9163.jsonl 
+[2019-09-02 12:25:59] [FINER  ] Beginning insert 
+[2019-09-02 12:26:00] [FINER  ] Inserting done 
+[2019-09-02 12:26:00] [FINER  ] Parsing done 
+[2019-09-02 12:26:00] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9164.jsonl 
+[2019-09-02 12:26:00] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9164.jsonl 
+[2019-09-02 12:26:00] [FINER  ] Beginning insert 
+[2019-09-02 12:26:00] [FINER  ] Inserting done 
+[2019-09-02 12:26:00] [FINER  ] Parsing done 
+[2019-09-02 12:26:00] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9165.jsonl 
+[2019-09-02 12:26:00] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9165.jsonl 
+[2019-09-02 12:26:01] [FINER  ] Beginning insert 
+[2019-09-02 12:26:02] [FINER  ] Inserting done 
+[2019-09-02 12:26:02] [FINER  ] Parsing done 
+[2019-09-02 12:26:02] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9166.jsonl 
+[2019-09-02 12:26:02] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9166.jsonl 
+[2019-09-02 12:26:02] [FINER  ] Beginning insert 
+[2019-09-02 12:26:03] [FINER  ] Inserting done 
+[2019-09-02 12:26:03] [FINER  ] Parsing done 
+[2019-09-02 12:26:03] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9167.jsonl 
+[2019-09-02 12:26:03] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9167.jsonl 
+[2019-09-02 12:26:03] [FINER  ] Beginning insert 
+[2019-09-02 12:26:03] [FINER  ] Inserting done 
+[2019-09-02 12:26:03] [FINER  ] Parsing done 
+[2019-09-02 12:26:03] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9168.jsonl 
+[2019-09-02 12:26:03] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9168.jsonl 
+[2019-09-02 12:26:03] [FINER  ] Beginning insert 
+[2019-09-02 12:26:04] [FINER  ] Inserting done 
+[2019-09-02 12:26:04] [FINER  ] Parsing done 
+[2019-09-02 12:26:04] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9169.jsonl 
+[2019-09-02 12:26:04] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9169.jsonl 
+[2019-09-02 12:26:05] [FINER  ] Beginning insert 
+[2019-09-02 12:26:05] [FINER  ] Inserting done 
+[2019-09-02 12:26:05] [FINER  ] Parsing done 
+[2019-09-02 12:26:05] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9170.jsonl 
+[2019-09-02 12:26:05] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9170.jsonl 
+[2019-09-02 12:26:05] [FINER  ] Beginning insert 
+[2019-09-02 12:26:05] [FINER  ] Inserting done 
+[2019-09-02 12:26:05] [FINER  ] Parsing done 
+[2019-09-02 12:26:05] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9171.jsonl 
+[2019-09-02 12:26:05] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9171.jsonl 
+[2019-09-02 12:26:06] [FINER  ] Beginning insert 
+[2019-09-02 12:26:06] [FINER  ] Inserting done 
+[2019-09-02 12:26:06] [FINER  ] Parsing done 
+[2019-09-02 12:26:06] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9172.jsonl 
+[2019-09-02 12:26:06] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9172.jsonl 
+[2019-09-02 12:26:07] [FINER  ] Beginning insert 
+[2019-09-02 12:26:07] [FINER  ] Inserting done 
+[2019-09-02 12:26:07] [FINER  ] Parsing done 
+[2019-09-02 12:26:07] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9173.jsonl 
+[2019-09-02 12:26:07] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9173.jsonl 
+[2019-09-02 12:26:07] [FINER  ] Beginning insert 
+[2019-09-02 12:26:07] [FINER  ] Inserting done 
+[2019-09-02 12:26:07] [FINER  ] Parsing done 
+[2019-09-02 12:26:07] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9174.jsonl 
+[2019-09-02 12:26:07] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9174.jsonl 
+[2019-09-02 12:26:08] [FINER  ] Beginning insert 
+[2019-09-02 12:26:09] [FINER  ] Inserting done 
+[2019-09-02 12:26:09] [FINER  ] Parsing done 
+[2019-09-02 12:26:09] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9175.jsonl 
+[2019-09-02 12:26:09] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9175.jsonl 
+[2019-09-02 12:26:09] [FINER  ] Beginning insert 
+[2019-09-02 12:26:11] [FINER  ] Inserting done 
+[2019-09-02 12:26:11] [FINER  ] Parsing done 
+[2019-09-02 12:26:11] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9176.jsonl 
+[2019-09-02 12:26:11] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9176.jsonl 
+[2019-09-02 12:26:11] [FINER  ] Beginning insert 
+[2019-09-02 12:26:11] [FINER  ] Inserting done 
+[2019-09-02 12:26:11] [FINER  ] Parsing done 
+[2019-09-02 12:26:11] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9177.jsonl 
+[2019-09-02 12:26:11] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9177.jsonl 
+[2019-09-02 12:26:12] [FINER  ] Beginning insert 
+[2019-09-02 12:26:15] [FINER  ] Inserting done 
+[2019-09-02 12:26:15] [FINER  ] Parsing done 
+[2019-09-02 12:26:15] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9178.jsonl 
+[2019-09-02 12:26:15] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9178.jsonl 
+[2019-09-02 12:26:15] [FINER  ] Beginning insert 
+[2019-09-02 12:26:16] [FINER  ] Inserting done 
+[2019-09-02 12:26:16] [FINER  ] Parsing done 
+[2019-09-02 12:26:16] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9179.jsonl 
+[2019-09-02 12:26:16] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9179.jsonl 
+[2019-09-02 12:26:16] [FINER  ] Beginning insert 
+[2019-09-02 12:26:17] [FINER  ] Inserting done 
+[2019-09-02 12:26:17] [FINER  ] Parsing done 
+[2019-09-02 12:26:17] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9180.jsonl 
+[2019-09-02 12:26:17] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9180.jsonl 
+[2019-09-02 12:26:17] [FINER  ] Beginning insert 
+[2019-09-02 12:26:18] [FINER  ] Inserting done 
+[2019-09-02 12:26:18] [FINER  ] Parsing done 
+[2019-09-02 12:26:18] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9181.jsonl 
+[2019-09-02 12:26:18] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9181.jsonl 
+[2019-09-02 12:26:19] [FINER  ] Beginning insert 
+[2019-09-02 12:26:19] [FINER  ] Inserting done 
+[2019-09-02 12:26:19] [FINER  ] Parsing done 
+[2019-09-02 12:26:19] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9182.jsonl 
+[2019-09-02 12:26:19] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9182.jsonl 
+[2019-09-02 12:26:20] [FINER  ] Beginning insert 
+[2019-09-02 12:26:20] [FINER  ] Inserting done 
+[2019-09-02 12:26:20] [FINER  ] Parsing done 
+[2019-09-02 12:26:20] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9183.jsonl 
+[2019-09-02 12:26:20] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9183.jsonl 
+[2019-09-02 12:26:20] [FINER  ] Beginning insert 
+[2019-09-02 12:26:22] [FINER  ] Inserting done 
+[2019-09-02 12:26:22] [FINER  ] Parsing done 
+[2019-09-02 12:26:22] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9184.jsonl 
+[2019-09-02 12:26:22] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9184.jsonl 
+[2019-09-02 12:26:22] [FINER  ] Beginning insert 
+[2019-09-02 12:26:23] [FINER  ] Inserting done 
+[2019-09-02 12:26:23] [FINER  ] Parsing done 
+[2019-09-02 12:26:23] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9185.jsonl 
+[2019-09-02 12:26:23] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9185.jsonl 
+[2019-09-02 12:26:23] [FINER  ] Beginning insert 
+[2019-09-02 12:26:23] [FINER  ] Inserting done 
+[2019-09-02 12:26:23] [FINER  ] Parsing done 
+[2019-09-02 12:26:23] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9186.jsonl 
+[2019-09-02 12:26:23] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9186.jsonl 
+[2019-09-02 12:26:24] [FINER  ] Beginning insert 
+[2019-09-02 12:26:26] [FINER  ] Inserting done 
+[2019-09-02 12:26:26] [FINER  ] Parsing done 
+[2019-09-02 12:26:26] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9187.jsonl 
+[2019-09-02 12:26:26] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9187.jsonl 
+[2019-09-02 12:26:26] [FINER  ] Beginning insert 
+[2019-09-02 12:26:27] [FINER  ] Inserting done 
+[2019-09-02 12:26:27] [FINER  ] Parsing done 
+[2019-09-02 12:26:27] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9188.jsonl 
+[2019-09-02 12:26:27] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9188.jsonl 
+[2019-09-02 12:26:27] [FINER  ] Beginning insert 
+[2019-09-02 12:26:27] [FINER  ] Inserting done 
+[2019-09-02 12:26:27] [FINER  ] Parsing done 
+[2019-09-02 12:26:27] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9189.jsonl 
+[2019-09-02 12:26:27] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9189.jsonl 
+[2019-09-02 12:26:28] [FINER  ] Beginning insert 
+[2019-09-02 12:26:30] [FINER  ] Inserting done 
+[2019-09-02 12:26:30] [FINER  ] Parsing done 
+[2019-09-02 12:26:30] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9190.jsonl 
+[2019-09-02 12:26:30] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9190.jsonl 
+[2019-09-02 12:26:30] [FINER  ] Beginning insert 
+[2019-09-02 12:26:30] [FINER  ] Inserting done 
+[2019-09-02 12:26:30] [FINER  ] Parsing done 
+[2019-09-02 12:26:30] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9191.jsonl 
+[2019-09-02 12:26:30] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9191.jsonl 
+[2019-09-02 12:26:30] [FINER  ] Beginning insert 
+[2019-09-02 12:26:30] [FINER  ] Inserting done 
+[2019-09-02 12:26:30] [FINER  ] Parsing done 
+[2019-09-02 12:26:30] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9192.jsonl 
+[2019-09-02 12:26:30] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9192.jsonl 
+[2019-09-02 12:26:31] [FINER  ] Beginning insert 
+[2019-09-02 12:26:32] [FINER  ] Inserting done 
+[2019-09-02 12:26:32] [FINER  ] Parsing done 
+[2019-09-02 12:26:32] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9193.jsonl 
+[2019-09-02 12:26:32] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9193.jsonl 
+[2019-09-02 12:26:33] [FINER  ] Beginning insert 
+[2019-09-02 12:26:34] [FINER  ] Inserting done 
+[2019-09-02 12:26:34] [FINER  ] Parsing done 
+[2019-09-02 12:26:34] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9194.jsonl 
+[2019-09-02 12:26:34] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9194.jsonl 
+[2019-09-02 12:26:34] [FINER  ] Beginning insert 
+[2019-09-02 12:26:34] [FINER  ] Inserting done 
+[2019-09-02 12:26:34] [FINER  ] Parsing done 
+[2019-09-02 12:26:34] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9195.jsonl 
+[2019-09-02 12:26:34] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9195.jsonl 
+[2019-09-02 12:26:35] [FINER  ] Beginning insert 
+[2019-09-02 12:26:38] [FINER  ] Inserting done 
+[2019-09-02 12:26:38] [FINER  ] Parsing done 
+[2019-09-02 12:26:38] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9196.jsonl 
+[2019-09-02 12:26:38] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9196.jsonl 
+[2019-09-02 12:26:39] [FINER  ] Beginning insert 
+[2019-09-02 12:26:41] [FINER  ] Inserting done 
+[2019-09-02 12:26:41] [FINER  ] Parsing done 
+[2019-09-02 12:26:41] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9197.jsonl 
+[2019-09-02 12:26:41] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9197.jsonl 
+[2019-09-02 12:26:41] [FINER  ] Beginning insert 
+[2019-09-02 12:26:42] [FINER  ] Inserting done 
+[2019-09-02 12:26:42] [FINER  ] Parsing done 
+[2019-09-02 12:26:42] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9198.jsonl 
+[2019-09-02 12:26:42] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9198.jsonl 
+[2019-09-02 12:26:42] [FINER  ] Beginning insert 
+[2019-09-02 12:26:46] [FINER  ] Inserting done 
+[2019-09-02 12:26:46] [FINER  ] Parsing done 
+[2019-09-02 12:26:46] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9199.jsonl 
+[2019-09-02 12:26:46] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9199.jsonl 
+[2019-09-02 12:26:46] [FINER  ] Beginning insert 
+[2019-09-02 12:26:48] [FINER  ] Inserting done 
+[2019-09-02 12:26:48] [FINER  ] Parsing done 
+[2019-09-02 12:26:48] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_92.jsonl 
+[2019-09-02 12:26:48] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_92.jsonl 
+[2019-09-02 12:26:48] [FINER  ] Beginning insert 
+[2019-09-02 12:26:48] [FINER  ] Inserting done 
+[2019-09-02 12:26:48] [FINER  ] Parsing done 
+[2019-09-02 12:26:48] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9200.jsonl 
+[2019-09-02 12:26:48] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9200.jsonl 
+[2019-09-02 12:26:48] [FINER  ] Beginning insert 
+[2019-09-02 12:26:48] [FINER  ] Inserting done 
+[2019-09-02 12:26:48] [FINER  ] Parsing done 
+[2019-09-02 12:26:48] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9201.jsonl 
+[2019-09-02 12:26:48] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9201.jsonl 
+[2019-09-02 12:26:49] [FINER  ] Beginning insert 
+[2019-09-02 12:26:50] [FINER  ] Inserting done 
+[2019-09-02 12:26:50] [FINER  ] Parsing done 
+[2019-09-02 12:26:50] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9202.jsonl 
+[2019-09-02 12:26:50] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9202.jsonl 
+[2019-09-02 12:26:51] [FINER  ] Beginning insert 
+[2019-09-02 12:26:52] [FINER  ] Inserting done 
+[2019-09-02 12:26:52] [FINER  ] Parsing done 
+[2019-09-02 12:26:52] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9203.jsonl 
+[2019-09-02 12:26:52] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9203.jsonl 
+[2019-09-02 12:26:52] [FINER  ] Beginning insert 
+[2019-09-02 12:26:52] [FINER  ] Inserting done 
+[2019-09-02 12:26:52] [FINER  ] Parsing done 
+[2019-09-02 12:26:52] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9204.jsonl 
+[2019-09-02 12:26:52] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9204.jsonl 
+[2019-09-02 12:26:53] [FINER  ] Beginning insert 
+[2019-09-02 12:26:55] [FINER  ] Inserting done 
+[2019-09-02 12:26:55] [FINER  ] Parsing done 
+[2019-09-02 12:26:55] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9205.jsonl 
+[2019-09-02 12:26:55] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9205.jsonl 
+[2019-09-02 12:26:55] [FINER  ] Beginning insert 
+[2019-09-02 12:26:57] [FINER  ] Inserting done 
+[2019-09-02 12:26:57] [FINER  ] Parsing done 
+[2019-09-02 12:26:57] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9206.jsonl 
+[2019-09-02 12:26:57] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9206.jsonl 
+[2019-09-02 12:26:58] [FINER  ] Beginning insert 
+[2019-09-02 12:26:58] [FINER  ] Inserting done 
+[2019-09-02 12:26:58] [FINER  ] Parsing done 
+[2019-09-02 12:26:58] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9207.jsonl 
+[2019-09-02 12:26:58] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9207.jsonl 
+[2019-09-02 12:26:58] [FINER  ] Beginning insert 
+[2019-09-02 12:27:00] [FINER  ] Inserting done 
+[2019-09-02 12:27:00] [FINER  ] Parsing done 
+[2019-09-02 12:27:00] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9208.jsonl 
+[2019-09-02 12:27:00] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9208.jsonl 
+[2019-09-02 12:27:01] [FINER  ] Beginning insert 
+[2019-09-02 12:27:01] [FINER  ] Inserting done 
+[2019-09-02 12:27:01] [FINER  ] Parsing done 
+[2019-09-02 12:27:01] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9209.jsonl 
+[2019-09-02 12:27:01] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9209.jsonl 
+[2019-09-02 12:27:01] [FINER  ] Beginning insert 
+[2019-09-02 12:27:01] [FINER  ] Inserting done 
+[2019-09-02 12:27:01] [FINER  ] Parsing done 
+[2019-09-02 12:27:01] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9210.jsonl 
+[2019-09-02 12:27:01] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9210.jsonl 
+[2019-09-02 12:27:01] [FINER  ] Beginning insert 
+[2019-09-02 12:27:03] [FINER  ] Inserting done 
+[2019-09-02 12:27:03] [FINER  ] Parsing done 
+[2019-09-02 12:27:03] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9211.jsonl 
+[2019-09-02 12:27:03] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9211.jsonl 
+[2019-09-02 12:27:03] [FINER  ] Beginning insert 
+[2019-09-02 12:27:04] [FINER  ] Inserting done 
+[2019-09-02 12:27:04] [FINER  ] Parsing done 
+[2019-09-02 12:27:04] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9212.jsonl 
+[2019-09-02 12:27:04] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9212.jsonl 
+[2019-09-02 12:27:05] [FINER  ] Beginning insert 
+[2019-09-02 12:27:07] [FINER  ] Inserting done 
+[2019-09-02 12:27:07] [FINER  ] Parsing done 
+[2019-09-02 12:27:07] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9213.jsonl 
+[2019-09-02 12:27:07] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9213.jsonl 
+[2019-09-02 12:27:07] [FINER  ] Beginning insert 
+[2019-09-02 12:27:07] [FINER  ] Inserting done 
+[2019-09-02 12:27:07] [FINER  ] Parsing done 
+[2019-09-02 12:27:07] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9214.jsonl 
+[2019-09-02 12:27:07] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9214.jsonl 
+[2019-09-02 12:27:07] [FINER  ] Beginning insert 
+[2019-09-02 12:27:07] [FINER  ] Inserting done 
+[2019-09-02 12:27:07] [FINER  ] Parsing done 
+[2019-09-02 12:27:07] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9215.jsonl 
+[2019-09-02 12:27:07] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9215.jsonl 
+[2019-09-02 12:27:07] [FINER  ] Beginning insert 
+[2019-09-02 12:27:09] [FINER  ] Inserting done 
+[2019-09-02 12:27:09] [FINER  ] Parsing done 
+[2019-09-02 12:27:09] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9216.jsonl 
+[2019-09-02 12:27:09] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9216.jsonl 
+[2019-09-02 12:27:09] [FINER  ] Beginning insert 
+[2019-09-02 12:27:09] [FINER  ] Inserting done 
+[2019-09-02 12:27:09] [FINER  ] Parsing done 
+[2019-09-02 12:27:09] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9217.jsonl 
+[2019-09-02 12:27:09] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9217.jsonl 
+[2019-09-02 12:27:10] [FINER  ] Beginning insert 
+[2019-09-02 12:27:11] [FINER  ] Inserting done 
+[2019-09-02 12:27:11] [FINER  ] Parsing done 
+[2019-09-02 12:27:11] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9218.jsonl 
+[2019-09-02 12:27:11] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9218.jsonl 
+[2019-09-02 12:27:11] [FINER  ] Beginning insert 
+[2019-09-02 12:27:11] [FINER  ] Inserting done 
+[2019-09-02 12:27:11] [FINER  ] Parsing done 
+[2019-09-02 12:27:11] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9219.jsonl 
+[2019-09-02 12:27:11] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9219.jsonl 
+[2019-09-02 12:27:11] [FINER  ] Beginning insert 
+[2019-09-02 12:27:11] [FINER  ] Inserting done 
+[2019-09-02 12:27:11] [FINER  ] Parsing done 
+[2019-09-02 12:27:11] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9220.jsonl 
+[2019-09-02 12:27:11] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9220.jsonl 
+[2019-09-02 12:27:12] [FINER  ] Beginning insert 
+[2019-09-02 12:27:13] [FINER  ] Inserting done 
+[2019-09-02 12:27:13] [FINER  ] Parsing done 
+[2019-09-02 12:27:13] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9221.jsonl 
+[2019-09-02 12:27:13] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9221.jsonl 
+[2019-09-02 12:27:13] [FINER  ] Beginning insert 
+[2019-09-02 12:27:14] [FINER  ] Inserting done 
+[2019-09-02 12:27:14] [FINER  ] Parsing done 
+[2019-09-02 12:27:14] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9222.jsonl 
+[2019-09-02 12:27:14] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9222.jsonl 
+[2019-09-02 12:27:15] [FINER  ] Beginning insert 
+[2019-09-02 12:27:16] [FINER  ] Inserting done 
+[2019-09-02 12:27:16] [FINER  ] Parsing done 
+[2019-09-02 12:27:16] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9223.jsonl 
+[2019-09-02 12:27:16] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9223.jsonl 
+[2019-09-02 12:27:16] [FINER  ] Beginning insert 
+[2019-09-02 12:27:16] [FINER  ] Inserting done 
+[2019-09-02 12:27:16] [FINER  ] Parsing done 
+[2019-09-02 12:27:16] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9224.jsonl 
+[2019-09-02 12:27:16] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9224.jsonl 
+[2019-09-02 12:27:16] [FINER  ] Beginning insert 
+[2019-09-02 12:27:16] [FINER  ] Inserting done 
+[2019-09-02 12:27:16] [FINER  ] Parsing done 
+[2019-09-02 12:27:16] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9225.jsonl 
+[2019-09-02 12:27:16] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9225.jsonl 
+[2019-09-02 12:27:17] [FINER  ] Beginning insert 
+[2019-09-02 12:27:17] [FINER  ] Inserting done 
+[2019-09-02 12:27:17] [FINER  ] Parsing done 
+[2019-09-02 12:27:17] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9226.jsonl 
+[2019-09-02 12:27:17] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9226.jsonl 
+[2019-09-02 12:27:18] [FINER  ] Beginning insert 
+[2019-09-02 12:27:18] [FINER  ] Inserting done 
+[2019-09-02 12:27:18] [FINER  ] Parsing done 
+[2019-09-02 12:27:18] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9227.jsonl 
+[2019-09-02 12:27:18] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9227.jsonl 
+[2019-09-02 12:27:18] [FINER  ] Beginning insert 
+[2019-09-02 12:27:20] [FINER  ] Inserting done 
+[2019-09-02 12:27:20] [FINER  ] Parsing done 
+[2019-09-02 12:27:20] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9228.jsonl 
+[2019-09-02 12:27:20] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9228.jsonl 
+[2019-09-02 12:27:20] [FINER  ] Beginning insert 
+[2019-09-02 12:27:20] [FINER  ] Inserting done 
+[2019-09-02 12:27:20] [FINER  ] Parsing done 
+[2019-09-02 12:27:20] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9229.jsonl 
+[2019-09-02 12:27:20] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9229.jsonl 
+[2019-09-02 12:27:20] [FINER  ] Beginning insert 
+[2019-09-02 12:27:20] [FINER  ] Inserting done 
+[2019-09-02 12:27:20] [FINER  ] Parsing done 
+[2019-09-02 12:27:20] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9230.jsonl 
+[2019-09-02 12:27:20] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9230.jsonl 
+[2019-09-02 12:27:20] [FINER  ] Beginning insert 
+[2019-09-02 12:27:21] [FINER  ] Inserting done 
+[2019-09-02 12:27:21] [FINER  ] Parsing done 
+[2019-09-02 12:27:21] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9231.jsonl 
+[2019-09-02 12:27:21] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9231.jsonl 
+[2019-09-02 12:27:22] [FINER  ] Beginning insert 
+[2019-09-02 12:27:22] [FINER  ] Inserting done 
+[2019-09-02 12:27:22] [FINER  ] Parsing done 
+[2019-09-02 12:27:22] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9232.jsonl 
+[2019-09-02 12:27:22] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9232.jsonl 
+[2019-09-02 12:27:22] [FINER  ] Beginning insert 
+[2019-09-02 12:27:23] [FINER  ] Inserting done 
+[2019-09-02 12:27:23] [FINER  ] Parsing done 
+[2019-09-02 12:27:23] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9233.jsonl 
+[2019-09-02 12:27:23] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9233.jsonl 
+[2019-09-02 12:27:23] [FINER  ] Beginning insert 
+[2019-09-02 12:27:23] [FINER  ] Inserting done 
+[2019-09-02 12:27:23] [FINER  ] Parsing done 
+[2019-09-02 12:27:23] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9234.jsonl 
+[2019-09-02 12:27:23] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9234.jsonl 
+[2019-09-02 12:27:23] [FINER  ] Beginning insert 
+[2019-09-02 12:27:23] [FINER  ] Inserting done 
+[2019-09-02 12:27:23] [FINER  ] Parsing done 
+[2019-09-02 12:27:23] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9235.jsonl 
+[2019-09-02 12:27:23] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9235.jsonl 
+[2019-09-02 12:27:24] [FINER  ] Beginning insert 
+[2019-09-02 12:27:25] [FINER  ] Inserting done 
+[2019-09-02 12:27:25] [FINER  ] Parsing done 
+[2019-09-02 12:27:25] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9236.jsonl 
+[2019-09-02 12:27:25] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9236.jsonl 
+[2019-09-02 12:27:26] [FINER  ] Beginning insert 
+[2019-09-02 12:27:26] [FINER  ] Inserting done 
+[2019-09-02 12:27:26] [FINER  ] Parsing done 
+[2019-09-02 12:27:26] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9237.jsonl 
+[2019-09-02 12:27:26] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9237.jsonl 
+[2019-09-02 12:27:27] [FINER  ] Beginning insert 
+[2019-09-02 12:27:28] [FINER  ] Inserting done 
+[2019-09-02 12:27:28] [FINER  ] Parsing done 
+[2019-09-02 12:27:28] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9238.jsonl 
+[2019-09-02 12:27:28] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9238.jsonl 
+[2019-09-02 12:27:28] [FINER  ] Beginning insert 
+[2019-09-02 12:27:28] [FINER  ] Inserting done 
+[2019-09-02 12:27:28] [FINER  ] Parsing done 
+[2019-09-02 12:27:28] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9239.jsonl 
+[2019-09-02 12:27:28] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9239.jsonl 
+[2019-09-02 12:27:28] [FINER  ] Beginning insert 
+[2019-09-02 12:27:28] [FINER  ] Inserting done 
+[2019-09-02 12:27:28] [FINER  ] Parsing done 
+[2019-09-02 12:27:28] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9240.jsonl 
+[2019-09-02 12:27:28] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9240.jsonl 
+[2019-09-02 12:27:28] [FINER  ] Beginning insert 
+[2019-09-02 12:27:29] [FINER  ] Inserting done 
+[2019-09-02 12:27:29] [FINER  ] Parsing done 
+[2019-09-02 12:27:29] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9241.jsonl 
+[2019-09-02 12:27:29] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9241.jsonl 
+[2019-09-02 12:27:29] [FINER  ] Beginning insert 
+[2019-09-02 12:27:29] [FINER  ] Inserting done 
+[2019-09-02 12:27:29] [FINER  ] Parsing done 
+[2019-09-02 12:27:29] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9242.jsonl 
+[2019-09-02 12:27:29] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9242.jsonl 
+[2019-09-02 12:27:30] [FINER  ] Beginning insert 
+[2019-09-02 12:27:31] [FINER  ] Inserting done 
+[2019-09-02 12:27:31] [FINER  ] Parsing done 
+[2019-09-02 12:27:31] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9243.jsonl 
+[2019-09-02 12:27:31] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9243.jsonl 
+[2019-09-02 12:27:31] [FINER  ] Beginning insert 
+[2019-09-02 12:27:31] [FINER  ] Inserting done 
+[2019-09-02 12:27:31] [FINER  ] Parsing done 
+[2019-09-02 12:27:31] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9244.jsonl 
+[2019-09-02 12:27:31] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9244.jsonl 
+[2019-09-02 12:27:32] [FINER  ] Beginning insert 
+[2019-09-02 12:27:33] [FINER  ] Inserting done 
+[2019-09-02 12:27:33] [FINER  ] Parsing done 
+[2019-09-02 12:27:33] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9245.jsonl 
+[2019-09-02 12:27:33] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9245.jsonl 
+[2019-09-02 12:27:33] [FINER  ] Beginning insert 
+[2019-09-02 12:27:34] [FINER  ] Inserting done 
+[2019-09-02 12:27:34] [FINER  ] Parsing done 
+[2019-09-02 12:27:34] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9246.jsonl 
+[2019-09-02 12:27:34] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9246.jsonl 
+[2019-09-02 12:27:35] [FINER  ] Beginning insert 
+[2019-09-02 12:27:36] [FINER  ] Inserting done 
+[2019-09-02 12:27:36] [FINER  ] Parsing done 
+[2019-09-02 12:27:36] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9247.jsonl 
+[2019-09-02 12:27:36] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9247.jsonl 
+[2019-09-02 12:27:36] [FINER  ] Beginning insert 
+[2019-09-02 12:27:36] [FINER  ] Inserting done 
+[2019-09-02 12:27:36] [FINER  ] Parsing done 
+[2019-09-02 12:27:36] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9248.jsonl 
+[2019-09-02 12:27:36] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9248.jsonl 
+[2019-09-02 12:27:36] [FINER  ] Beginning insert 
+[2019-09-02 12:27:36] [FINER  ] Inserting done 
+[2019-09-02 12:27:36] [FINER  ] Parsing done 
+[2019-09-02 12:27:36] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9249.jsonl 
+[2019-09-02 12:27:36] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9249.jsonl 
+[2019-09-02 12:27:37] [FINER  ] Beginning insert 
+[2019-09-02 12:27:37] [FINER  ] Inserting done 
+[2019-09-02 12:27:37] [FINER  ] Parsing done 
+[2019-09-02 12:27:37] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9250.jsonl 
+[2019-09-02 12:27:37] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9250.jsonl 
+[2019-09-02 12:27:37] [FINER  ] Beginning insert 
+[2019-09-02 12:27:38] [FINER  ] Inserting done 
+[2019-09-02 12:27:38] [FINER  ] Parsing done 
+[2019-09-02 12:27:38] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9251.jsonl 
+[2019-09-02 12:27:38] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9251.jsonl 
+[2019-09-02 12:27:38] [FINER  ] Beginning insert 
+[2019-09-02 12:27:39] [FINER  ] Inserting done 
+[2019-09-02 12:27:39] [FINER  ] Parsing done 
+[2019-09-02 12:27:39] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9252.jsonl 
+[2019-09-02 12:27:39] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9252.jsonl 
+[2019-09-02 12:27:39] [FINER  ] Beginning insert 
+[2019-09-02 12:27:39] [FINER  ] Inserting done 
+[2019-09-02 12:27:39] [FINER  ] Parsing done 
+[2019-09-02 12:27:39] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9253.jsonl 
+[2019-09-02 12:27:39] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9253.jsonl 
+[2019-09-02 12:27:39] [FINER  ] Beginning insert 
+[2019-09-02 12:27:40] [FINER  ] Inserting done 
+[2019-09-02 12:27:40] [FINER  ] Parsing done 
+[2019-09-02 12:27:40] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9254.jsonl 
+[2019-09-02 12:27:40] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9254.jsonl 
+[2019-09-02 12:27:40] [FINER  ] Beginning insert 
+[2019-09-02 12:27:40] [FINER  ] Inserting done 
+[2019-09-02 12:27:40] [FINER  ] Parsing done 
+[2019-09-02 12:27:40] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9255.jsonl 
+[2019-09-02 12:27:40] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9255.jsonl 
+[2019-09-02 12:27:41] [FINER  ] Beginning insert 
+[2019-09-02 12:27:42] [FINER  ] Inserting done 
+[2019-09-02 12:27:42] [FINER  ] Parsing done 
+[2019-09-02 12:27:42] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9256.jsonl 
+[2019-09-02 12:27:42] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9256.jsonl 
+[2019-09-02 12:27:42] [FINER  ] Beginning insert 
+[2019-09-02 12:27:42] [FINER  ] Inserting done 
+[2019-09-02 12:27:42] [FINER  ] Parsing done 
+[2019-09-02 12:27:42] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9257.jsonl 
+[2019-09-02 12:27:42] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9257.jsonl 
+[2019-09-02 12:27:42] [FINER  ] Beginning insert 
+[2019-09-02 12:27:43] [FINER  ] Inserting done 
+[2019-09-02 12:27:43] [FINER  ] Parsing done 
+[2019-09-02 12:27:43] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9258.jsonl 
+[2019-09-02 12:27:43] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9258.jsonl 
+[2019-09-02 12:27:43] [FINER  ] Beginning insert 
+[2019-09-02 12:27:44] [FINER  ] Inserting done 
+[2019-09-02 12:27:44] [FINER  ] Parsing done 
+[2019-09-02 12:27:44] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9259.jsonl 
+[2019-09-02 12:27:44] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9259.jsonl 
+[2019-09-02 12:27:44] [FINER  ] Beginning insert 
+[2019-09-02 12:27:47] [FINER  ] Inserting done 
+[2019-09-02 12:27:47] [FINER  ] Parsing done 
+[2019-09-02 12:27:47] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9260.jsonl 
+[2019-09-02 12:27:47] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9260.jsonl 
+[2019-09-02 12:27:47] [FINER  ] Beginning insert 
+[2019-09-02 12:27:47] [FINER  ] Inserting done 
+[2019-09-02 12:27:47] [FINER  ] Parsing done 
+[2019-09-02 12:27:47] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9261.jsonl 
+[2019-09-02 12:27:47] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9261.jsonl 
+[2019-09-02 12:27:47] [FINER  ] Beginning insert 
+[2019-09-02 12:27:48] [FINER  ] Inserting done 
+[2019-09-02 12:27:48] [FINER  ] Parsing done 
+[2019-09-02 12:27:48] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9262.jsonl 
+[2019-09-02 12:27:48] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9262.jsonl 
+[2019-09-02 12:27:49] [FINER  ] Beginning insert 
+[2019-09-02 12:27:49] [FINER  ] Inserting done 
+[2019-09-02 12:27:49] [FINER  ] Parsing done 
+[2019-09-02 12:27:49] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9263.jsonl 
+[2019-09-02 12:27:49] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9263.jsonl 
+[2019-09-02 12:27:50] [FINER  ] Beginning insert 
+[2019-09-02 12:27:51] [FINER  ] Inserting done 
+[2019-09-02 12:27:51] [FINER  ] Parsing done 
+[2019-09-02 12:27:51] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9264.jsonl 
+[2019-09-02 12:27:51] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9264.jsonl 
+[2019-09-02 12:27:51] [FINER  ] Beginning insert 
+[2019-09-02 12:27:51] [FINER  ] Inserting done 
+[2019-09-02 12:27:51] [FINER  ] Parsing done 
+[2019-09-02 12:27:51] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9265.jsonl 
+[2019-09-02 12:27:51] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9265.jsonl 
+[2019-09-02 12:27:52] [FINER  ] Beginning insert 
+[2019-09-02 12:27:53] [FINER  ] Inserting done 
+[2019-09-02 12:27:53] [FINER  ] Parsing done 
+[2019-09-02 12:27:53] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9266.jsonl 
+[2019-09-02 12:27:53] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9266.jsonl 
+[2019-09-02 12:27:53] [FINER  ] Beginning insert 
+[2019-09-02 12:27:54] [FINER  ] Inserting done 
+[2019-09-02 12:27:54] [FINER  ] Parsing done 
+[2019-09-02 12:27:54] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9267.jsonl 
+[2019-09-02 12:27:54] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9267.jsonl 
+[2019-09-02 12:27:55] [FINER  ] Beginning insert 
+[2019-09-02 12:27:55] [FINER  ] Inserting done 
+[2019-09-02 12:27:55] [FINER  ] Parsing done 
+[2019-09-02 12:27:55] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9268.jsonl 
+[2019-09-02 12:27:55] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9268.jsonl 
+[2019-09-02 12:27:55] [FINER  ] Beginning insert 
+[2019-09-02 12:27:55] [FINER  ] Inserting done 
+[2019-09-02 12:27:55] [FINER  ] Parsing done 
+[2019-09-02 12:27:55] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9269.jsonl 
+[2019-09-02 12:27:55] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9269.jsonl 
+[2019-09-02 12:27:56] [FINER  ] Beginning insert 
+[2019-09-02 12:27:56] [FINER  ] Inserting done 
+[2019-09-02 12:27:56] [FINER  ] Parsing done 
+[2019-09-02 12:27:56] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9270.jsonl 
+[2019-09-02 12:27:56] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9270.jsonl 
+[2019-09-02 12:27:57] [FINER  ] Beginning insert 
+[2019-09-02 12:27:57] [FINER  ] Inserting done 
+[2019-09-02 12:27:57] [FINER  ] Parsing done 
+[2019-09-02 12:27:57] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9271.jsonl 
+[2019-09-02 12:27:57] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9271.jsonl 
+[2019-09-02 12:27:57] [FINER  ] Beginning insert 
+[2019-09-02 12:27:59] [FINER  ] Inserting done 
+[2019-09-02 12:27:59] [FINER  ] Parsing done 
+[2019-09-02 12:27:59] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9272.jsonl 
+[2019-09-02 12:27:59] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9272.jsonl 
+[2019-09-02 12:27:59] [FINER  ] Beginning insert 
+[2019-09-02 12:27:59] [FINER  ] Inserting done 
+[2019-09-02 12:27:59] [FINER  ] Parsing done 
+[2019-09-02 12:27:59] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9273.jsonl 
+[2019-09-02 12:27:59] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9273.jsonl 
+[2019-09-02 12:27:59] [FINER  ] Beginning insert 
+[2019-09-02 12:28:00] [FINER  ] Inserting done 
+[2019-09-02 12:28:00] [FINER  ] Parsing done 
+[2019-09-02 12:28:00] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9274.jsonl 
+[2019-09-02 12:28:00] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9274.jsonl 
+[2019-09-02 12:28:00] [FINER  ] Beginning insert 
+[2019-09-02 12:28:00] [FINER  ] Inserting done 
+[2019-09-02 12:28:00] [FINER  ] Parsing done 
+[2019-09-02 12:28:00] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9275.jsonl 
+[2019-09-02 12:28:00] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9275.jsonl 
+[2019-09-02 12:28:01] [FINER  ] Beginning insert 
+[2019-09-02 12:28:02] [FINER  ] Inserting done 
+[2019-09-02 12:28:02] [FINER  ] Parsing done 
+[2019-09-02 12:28:02] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9276.jsonl 
+[2019-09-02 12:28:02] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9276.jsonl 
+[2019-09-02 12:28:02] [FINER  ] Beginning insert 
+[2019-09-02 12:28:02] [FINER  ] Inserting done 
+[2019-09-02 12:28:02] [FINER  ] Parsing done 
+[2019-09-02 12:28:02] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9277.jsonl 
+[2019-09-02 12:28:02] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9277.jsonl 
+[2019-09-02 12:28:02] [FINER  ] Beginning insert 
+[2019-09-02 12:28:03] [FINER  ] Inserting done 
+[2019-09-02 12:28:03] [FINER  ] Parsing done 
+[2019-09-02 12:28:03] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9278.jsonl 
+[2019-09-02 12:28:03] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9278.jsonl 
+[2019-09-02 12:28:03] [FINER  ] Beginning insert 
+[2019-09-02 12:28:04] [FINER  ] Inserting done 
+[2019-09-02 12:28:04] [FINER  ] Parsing done 
+[2019-09-02 12:28:04] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9279.jsonl 
+[2019-09-02 12:28:04] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9279.jsonl 
+[2019-09-02 12:28:04] [FINER  ] Beginning insert 
+[2019-09-02 12:28:05] [FINER  ] Inserting done 
+[2019-09-02 12:28:05] [FINER  ] Parsing done 
+[2019-09-02 12:28:05] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9280.jsonl 
+[2019-09-02 12:28:05] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9280.jsonl 
+[2019-09-02 12:28:05] [FINER  ] Beginning insert 
+[2019-09-02 12:28:05] [FINER  ] Inserting done 
+[2019-09-02 12:28:05] [FINER  ] Parsing done 
+[2019-09-02 12:28:05] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9281.jsonl 
+[2019-09-02 12:28:05] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9281.jsonl 
+[2019-09-02 12:28:06] [FINER  ] Beginning insert 
+[2019-09-02 12:28:06] [FINER  ] Inserting done 
+[2019-09-02 12:28:06] [FINER  ] Parsing done 
+[2019-09-02 12:28:06] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9282.jsonl 
+[2019-09-02 12:28:06] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9282.jsonl 
+[2019-09-02 12:28:07] [FINER  ] Beginning insert 
+[2019-09-02 12:28:07] [FINER  ] Inserting done 
+[2019-09-02 12:28:07] [FINER  ] Parsing done 
+[2019-09-02 12:28:07] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9283.jsonl 
+[2019-09-02 12:28:07] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9283.jsonl 
+[2019-09-02 12:28:07] [FINER  ] Beginning insert 
+[2019-09-02 12:28:07] [FINER  ] Inserting done 
+[2019-09-02 12:28:07] [FINER  ] Parsing done 
+[2019-09-02 12:28:07] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9284.jsonl 
+[2019-09-02 12:28:07] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9284.jsonl 
+[2019-09-02 12:28:08] [FINER  ] Beginning insert 
+[2019-09-02 12:28:09] [FINER  ] Inserting done 
+[2019-09-02 12:28:09] [FINER  ] Parsing done 
+[2019-09-02 12:28:09] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9285.jsonl 
+[2019-09-02 12:28:09] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9285.jsonl 
+[2019-09-02 12:28:09] [FINER  ] Beginning insert 
+[2019-09-02 12:28:09] [FINER  ] Inserting done 
+[2019-09-02 12:28:09] [FINER  ] Parsing done 
+[2019-09-02 12:28:09] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9286.jsonl 
+[2019-09-02 12:28:09] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9286.jsonl 
+[2019-09-02 12:28:09] [FINER  ] Beginning insert 
+[2019-09-02 12:28:09] [FINER  ] Inserting done 
+[2019-09-02 12:28:09] [FINER  ] Parsing done 
+[2019-09-02 12:28:09] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9287.jsonl 
+[2019-09-02 12:28:09] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9287.jsonl 
+[2019-09-02 12:28:10] [FINER  ] Beginning insert 
+[2019-09-02 12:28:11] [FINER  ] Inserting done 
+[2019-09-02 12:28:11] [FINER  ] Parsing done 
+[2019-09-02 12:28:11] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9288.jsonl 
+[2019-09-02 12:28:11] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9288.jsonl 
+[2019-09-02 12:28:11] [FINER  ] Beginning insert 
+[2019-09-02 12:28:11] [FINER  ] Inserting done 
+[2019-09-02 12:28:11] [FINER  ] Parsing done 
+[2019-09-02 12:28:11] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9289.jsonl 
+[2019-09-02 12:28:11] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9289.jsonl 
+[2019-09-02 12:28:11] [FINER  ] Beginning insert 
+[2019-09-02 12:28:11] [FINER  ] Inserting done 
+[2019-09-02 12:28:11] [FINER  ] Parsing done 
+[2019-09-02 12:28:11] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9290.jsonl 
+[2019-09-02 12:28:11] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9290.jsonl 
+[2019-09-02 12:28:12] [FINER  ] Beginning insert 
+[2019-09-02 12:28:12] [FINER  ] Inserting done 
+[2019-09-02 12:28:12] [FINER  ] Parsing done 
+[2019-09-02 12:28:12] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9291.jsonl 
+[2019-09-02 12:28:12] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9291.jsonl 
+[2019-09-02 12:28:13] [FINER  ] Beginning insert 
+[2019-09-02 12:28:13] [FINER  ] Inserting done 
+[2019-09-02 12:28:13] [FINER  ] Parsing done 
+[2019-09-02 12:28:13] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9292.jsonl 
+[2019-09-02 12:28:13] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9292.jsonl 
+[2019-09-02 12:28:13] [FINER  ] Beginning insert 
+[2019-09-02 12:28:13] [FINER  ] Inserting done 
+[2019-09-02 12:28:13] [FINER  ] Parsing done 
+[2019-09-02 12:28:13] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9293.jsonl 
+[2019-09-02 12:28:13] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9293.jsonl 
+[2019-09-02 12:28:14] [FINER  ] Beginning insert 
+[2019-09-02 12:28:15] [FINER  ] Inserting done 
+[2019-09-02 12:28:15] [FINER  ] Parsing done 
+[2019-09-02 12:28:15] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9294.jsonl 
+[2019-09-02 12:28:15] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9294.jsonl 
+[2019-09-02 12:28:15] [FINER  ] Beginning insert 
+[2019-09-02 12:28:15] [FINER  ] Inserting done 
+[2019-09-02 12:28:15] [FINER  ] Parsing done 
+[2019-09-02 12:28:15] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9295.jsonl 
+[2019-09-02 12:28:15] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9295.jsonl 
+[2019-09-02 12:28:15] [FINER  ] Beginning insert 
+[2019-09-02 12:28:15] [FINER  ] Inserting done 
+[2019-09-02 12:28:15] [FINER  ] Parsing done 
+[2019-09-02 12:28:15] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9296.jsonl 
+[2019-09-02 12:28:15] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9296.jsonl 
+[2019-09-02 12:28:16] [FINER  ] Beginning insert 
+[2019-09-02 12:28:17] [FINER  ] Inserting done 
+[2019-09-02 12:28:17] [FINER  ] Parsing done 
+[2019-09-02 12:28:17] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9297.jsonl 
+[2019-09-02 12:28:17] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9297.jsonl 
+[2019-09-02 12:28:17] [FINER  ] Beginning insert 
+[2019-09-02 12:28:17] [FINER  ] Inserting done 
+[2019-09-02 12:28:17] [FINER  ] Parsing done 
+[2019-09-02 12:28:17] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9298.jsonl 
+[2019-09-02 12:28:17] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9298.jsonl 
+[2019-09-02 12:28:17] [FINER  ] Beginning insert 
+[2019-09-02 12:28:17] [FINER  ] Inserting done 
+[2019-09-02 12:28:17] [FINER  ] Parsing done 
+[2019-09-02 12:28:17] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9299.jsonl 
+[2019-09-02 12:28:17] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9299.jsonl 
+[2019-09-02 12:28:18] [FINER  ] Beginning insert 
+[2019-09-02 12:28:19] [FINER  ] Inserting done 
+[2019-09-02 12:28:19] [FINER  ] Parsing done 
+[2019-09-02 12:28:19] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_93.jsonl 
+[2019-09-02 12:28:19] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_93.jsonl 
+[2019-09-02 12:28:19] [FINER  ] Beginning insert 
+[2019-09-02 12:28:19] [FINER  ] Inserting done 
+[2019-09-02 12:28:19] [FINER  ] Parsing done 
+[2019-09-02 12:28:19] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9300.jsonl 
+[2019-09-02 12:28:19] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9300.jsonl 
+[2019-09-02 12:28:19] [FINER  ] Beginning insert 
+[2019-09-02 12:28:19] [FINER  ] Inserting done 
+[2019-09-02 12:28:19] [FINER  ] Parsing done 
+[2019-09-02 12:28:19] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9301.jsonl 
+[2019-09-02 12:28:19] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9301.jsonl 
+[2019-09-02 12:28:20] [FINER  ] Beginning insert 
+[2019-09-02 12:28:20] [FINER  ] Inserting done 
+[2019-09-02 12:28:20] [FINER  ] Parsing done 
+[2019-09-02 12:28:20] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9302.jsonl 
+[2019-09-02 12:28:20] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9302.jsonl 
+[2019-09-02 12:28:20] [FINER  ] Beginning insert 
+[2019-09-02 12:28:21] [FINER  ] Inserting done 
+[2019-09-02 12:28:21] [FINER  ] Parsing done 
+[2019-09-02 12:28:21] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9303.jsonl 
+[2019-09-02 12:28:21] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9303.jsonl 
+[2019-09-02 12:28:22] [FINER  ] Beginning insert 
+[2019-09-02 12:28:23] [FINER  ] Inserting done 
+[2019-09-02 12:28:23] [FINER  ] Parsing done 
+[2019-09-02 12:28:23] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9304.jsonl 
+[2019-09-02 12:28:23] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9304.jsonl 
+[2019-09-02 12:28:23] [FINER  ] Beginning insert 
+[2019-09-02 12:28:23] [FINER  ] Inserting done 
+[2019-09-02 12:28:23] [FINER  ] Parsing done 
+[2019-09-02 12:28:23] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9305.jsonl 
+[2019-09-02 12:28:23] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9305.jsonl 
+[2019-09-02 12:28:24] [FINER  ] Beginning insert 
+[2019-09-02 12:28:26] [FINER  ] Inserting done 
+[2019-09-02 12:28:26] [FINER  ] Parsing done 
+[2019-09-02 12:28:26] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9306.jsonl 
+[2019-09-02 12:28:26] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9306.jsonl 
+[2019-09-02 12:28:26] [FINER  ] Beginning insert 
+[2019-09-02 12:28:28] [FINER  ] Inserting done 
+[2019-09-02 12:28:28] [FINER  ] Parsing done 
+[2019-09-02 12:28:28] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9307.jsonl 
+[2019-09-02 12:28:28] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9307.jsonl 
+[2019-09-02 12:28:28] [FINER  ] Beginning insert 
+[2019-09-02 12:28:28] [FINER  ] Inserting done 
+[2019-09-02 12:28:28] [FINER  ] Parsing done 
+[2019-09-02 12:28:28] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9308.jsonl 
+[2019-09-02 12:28:28] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9308.jsonl 
+[2019-09-02 12:28:29] [FINER  ] Beginning insert 
+[2019-09-02 12:28:31] [FINER  ] Inserting done 
+[2019-09-02 12:28:31] [FINER  ] Parsing done 
+[2019-09-02 12:28:31] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9309.jsonl 
+[2019-09-02 12:28:31] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9309.jsonl 
+[2019-09-02 12:28:32] [FINER  ] Beginning insert 
+[2019-09-02 12:28:32] [FINER  ] Inserting done 
+[2019-09-02 12:28:32] [FINER  ] Parsing done 
+[2019-09-02 12:28:32] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9310.jsonl 
+[2019-09-02 12:28:32] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9310.jsonl 
+[2019-09-02 12:28:32] [FINER  ] Beginning insert 
+[2019-09-02 12:28:33] [FINER  ] Inserting done 
+[2019-09-02 12:28:33] [FINER  ] Parsing done 
+[2019-09-02 12:28:33] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9311.jsonl 
+[2019-09-02 12:28:33] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9311.jsonl 
+[2019-09-02 12:28:33] [FINER  ] Beginning insert 
+[2019-09-02 12:28:35] [FINER  ] Inserting done 
+[2019-09-02 12:28:35] [FINER  ] Parsing done 
+[2019-09-02 12:28:35] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9312.jsonl 
+[2019-09-02 12:28:35] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9312.jsonl 
+[2019-09-02 12:28:35] [FINER  ] Beginning insert 
+[2019-09-02 12:28:36] [FINER  ] Inserting done 
+[2019-09-02 12:28:36] [FINER  ] Parsing done 
+[2019-09-02 12:28:36] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9313.jsonl 
+[2019-09-02 12:28:36] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9313.jsonl 
+[2019-09-02 12:28:36] [FINER  ] Beginning insert 
+[2019-09-02 12:28:36] [FINER  ] Inserting done 
+[2019-09-02 12:28:36] [FINER  ] Parsing done 
+[2019-09-02 12:28:36] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9314.jsonl 
+[2019-09-02 12:28:36] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9314.jsonl 
+[2019-09-02 12:28:37] [FINER  ] Beginning insert 
+[2019-09-02 12:28:38] [FINER  ] Inserting done 
+[2019-09-02 12:28:38] [FINER  ] Parsing done 
+[2019-09-02 12:28:38] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9315.jsonl 
+[2019-09-02 12:28:38] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9315.jsonl 
+[2019-09-02 12:28:39] [FINER  ] Beginning insert 
+[2019-09-02 12:28:39] [FINER  ] Inserting done 
+[2019-09-02 12:28:39] [FINER  ] Parsing done 
+[2019-09-02 12:28:39] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9316.jsonl 
+[2019-09-02 12:28:39] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9316.jsonl 
+[2019-09-02 12:28:39] [FINER  ] Beginning insert 
+[2019-09-02 12:28:39] [FINER  ] Inserting done 
+[2019-09-02 12:28:39] [FINER  ] Parsing done 
+[2019-09-02 12:28:39] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9317.jsonl 
+[2019-09-02 12:28:39] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9317.jsonl 
+[2019-09-02 12:28:40] [FINER  ] Beginning insert 
+[2019-09-02 12:28:41] [FINER  ] Inserting done 
+[2019-09-02 12:28:41] [FINER  ] Parsing done 
+[2019-09-02 12:28:41] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9318.jsonl 
+[2019-09-02 12:28:41] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9318.jsonl 
+[2019-09-02 12:28:41] [FINER  ] Beginning insert 
+[2019-09-02 12:28:42] [FINER  ] Inserting done 
+[2019-09-02 12:28:42] [FINER  ] Parsing done 
+[2019-09-02 12:28:42] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9319.jsonl 
+[2019-09-02 12:28:42] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9319.jsonl 
+[2019-09-02 12:28:42] [FINER  ] Beginning insert 
+[2019-09-02 12:28:42] [FINER  ] Inserting done 
+[2019-09-02 12:28:42] [FINER  ] Parsing done 
+[2019-09-02 12:28:42] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9320.jsonl 
+[2019-09-02 12:28:42] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9320.jsonl 
+[2019-09-02 12:28:42] [FINER  ] Beginning insert 
+[2019-09-02 12:28:43] [FINER  ] Inserting done 
+[2019-09-02 12:28:43] [FINER  ] Parsing done 
+[2019-09-02 12:28:43] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9321.jsonl 
+[2019-09-02 12:28:43] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9321.jsonl 
+[2019-09-02 12:28:43] [FINER  ] Beginning insert 
+[2019-09-02 12:28:44] [FINER  ] Inserting done 
+[2019-09-02 12:28:44] [FINER  ] Parsing done 
+[2019-09-02 12:28:44] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9322.jsonl 
+[2019-09-02 12:28:44] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9322.jsonl 
+[2019-09-02 12:28:44] [FINER  ] Beginning insert 
+[2019-09-02 12:28:44] [FINER  ] Inserting done 
+[2019-09-02 12:28:44] [FINER  ] Parsing done 
+[2019-09-02 12:28:44] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9323.jsonl 
+[2019-09-02 12:28:44] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9323.jsonl 
+[2019-09-02 12:28:44] [FINER  ] Beginning insert 
+[2019-09-02 12:28:45] [FINER  ] Inserting done 
+[2019-09-02 12:28:45] [FINER  ] Parsing done 
+[2019-09-02 12:28:45] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9324.jsonl 
+[2019-09-02 12:28:45] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9324.jsonl 
+[2019-09-02 12:28:45] [FINER  ] Beginning insert 
+[2019-09-02 12:28:45] [FINER  ] Inserting done 
+[2019-09-02 12:28:45] [FINER  ] Parsing done 
+[2019-09-02 12:28:45] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9325.jsonl 
+[2019-09-02 12:28:45] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9325.jsonl 
+[2019-09-02 12:28:45] [FINER  ] Beginning insert 
+[2019-09-02 12:28:46] [FINER  ] Inserting done 
+[2019-09-02 12:28:46] [FINER  ] Parsing done 
+[2019-09-02 12:28:46] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9326.jsonl 
+[2019-09-02 12:28:46] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9326.jsonl 
+[2019-09-02 12:28:46] [FINER  ] Beginning insert 
+[2019-09-02 12:28:47] [FINER  ] Inserting done 
+[2019-09-02 12:28:47] [FINER  ] Parsing done 
+[2019-09-02 12:28:47] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9327.jsonl 
+[2019-09-02 12:28:47] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9327.jsonl 
+[2019-09-02 12:28:47] [FINER  ] Beginning insert 
+[2019-09-02 12:28:47] [FINER  ] Inserting done 
+[2019-09-02 12:28:47] [FINER  ] Parsing done 
+[2019-09-02 12:28:47] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9328.jsonl 
+[2019-09-02 12:28:47] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9328.jsonl 
+[2019-09-02 12:28:48] [FINER  ] Beginning insert 
+[2019-09-02 12:28:48] [FINER  ] Inserting done 
+[2019-09-02 12:28:48] [FINER  ] Parsing done 
+[2019-09-02 12:28:48] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9329.jsonl 
+[2019-09-02 12:28:48] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9329.jsonl 
+[2019-09-02 12:28:48] [FINER  ] Beginning insert 
+[2019-09-02 12:28:48] [FINER  ] Inserting done 
+[2019-09-02 12:28:48] [FINER  ] Parsing done 
+[2019-09-02 12:28:48] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9330.jsonl 
+[2019-09-02 12:28:48] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9330.jsonl 
+[2019-09-02 12:28:49] [FINER  ] Beginning insert 
+[2019-09-02 12:28:49] [FINER  ] Inserting done 
+[2019-09-02 12:28:49] [FINER  ] Parsing done 
+[2019-09-02 12:28:49] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9331.jsonl 
+[2019-09-02 12:28:49] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9331.jsonl 
+[2019-09-02 12:28:49] [FINER  ] Beginning insert 
+[2019-09-02 12:28:49] [FINER  ] Inserting done 
+[2019-09-02 12:28:49] [FINER  ] Parsing done 
+[2019-09-02 12:28:49] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9332.jsonl 
+[2019-09-02 12:28:49] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9332.jsonl 
+[2019-09-02 12:28:50] [FINER  ] Beginning insert 
+[2019-09-02 12:28:50] [FINER  ] Inserting done 
+[2019-09-02 12:28:50] [FINER  ] Parsing done 
+[2019-09-02 12:28:50] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9333.jsonl 
+[2019-09-02 12:28:50] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9333.jsonl 
+[2019-09-02 12:28:50] [FINER  ] Beginning insert 
+[2019-09-02 12:28:50] [FINER  ] Inserting done 
+[2019-09-02 12:28:50] [FINER  ] Parsing done 
+[2019-09-02 12:28:50] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9334.jsonl 
+[2019-09-02 12:28:50] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9334.jsonl 
+[2019-09-02 12:28:51] [FINER  ] Beginning insert 
+[2019-09-02 12:28:51] [FINER  ] Inserting done 
+[2019-09-02 12:28:51] [FINER  ] Parsing done 
+[2019-09-02 12:28:51] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9335.jsonl 
+[2019-09-02 12:28:51] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9335.jsonl 
+[2019-09-02 12:28:51] [FINER  ] Beginning insert 
+[2019-09-02 12:28:51] [FINER  ] Inserting done 
+[2019-09-02 12:28:51] [FINER  ] Parsing done 
+[2019-09-02 12:28:51] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9336.jsonl 
+[2019-09-02 12:28:51] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9336.jsonl 
+[2019-09-02 12:28:52] [FINER  ] Beginning insert 
+[2019-09-02 12:28:52] [FINER  ] Inserting done 
+[2019-09-02 12:28:52] [FINER  ] Parsing done 
+[2019-09-02 12:28:52] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9337.jsonl 
+[2019-09-02 12:28:52] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9337.jsonl 
+[2019-09-02 12:28:52] [FINER  ] Beginning insert 
+[2019-09-02 12:28:52] [FINER  ] Inserting done 
+[2019-09-02 12:28:52] [FINER  ] Parsing done 
+[2019-09-02 12:28:52] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9338.jsonl 
+[2019-09-02 12:28:52] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9338.jsonl 
+[2019-09-02 12:28:53] [FINER  ] Beginning insert 
+[2019-09-02 12:28:53] [FINER  ] Inserting done 
+[2019-09-02 12:28:53] [FINER  ] Parsing done 
+[2019-09-02 12:28:53] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9339.jsonl 
+[2019-09-02 12:28:53] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9339.jsonl 
+[2019-09-02 12:28:53] [FINER  ] Beginning insert 
+[2019-09-02 12:28:53] [FINER  ] Inserting done 
+[2019-09-02 12:28:53] [FINER  ] Parsing done 
+[2019-09-02 12:28:53] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9340.jsonl 
+[2019-09-02 12:28:53] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9340.jsonl 
+[2019-09-02 12:28:53] [FINER  ] Beginning insert 
+[2019-09-02 12:28:53] [FINER  ] Inserting done 
+[2019-09-02 12:28:53] [FINER  ] Parsing done 
+[2019-09-02 12:28:53] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9341.jsonl 
+[2019-09-02 12:28:53] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9341.jsonl 
+[2019-09-02 12:28:54] [FINER  ] Beginning insert 
+[2019-09-02 12:28:54] [FINER  ] Inserting done 
+[2019-09-02 12:28:54] [FINER  ] Parsing done 
+[2019-09-02 12:28:54] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9342.jsonl 
+[2019-09-02 12:28:54] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9342.jsonl 
+[2019-09-02 12:28:54] [FINER  ] Beginning insert 
+[2019-09-02 12:28:54] [FINER  ] Inserting done 
+[2019-09-02 12:28:54] [FINER  ] Parsing done 
+[2019-09-02 12:28:54] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9343.jsonl 
+[2019-09-02 12:28:54] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9343.jsonl 
+[2019-09-02 12:28:55] [FINER  ] Beginning insert 
+[2019-09-02 12:28:55] [FINER  ] Inserting done 
+[2019-09-02 12:28:55] [FINER  ] Parsing done 
+[2019-09-02 12:28:55] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9344.jsonl 
+[2019-09-02 12:28:55] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9344.jsonl 
+[2019-09-02 12:28:55] [FINER  ] Beginning insert 
+[2019-09-02 12:28:55] [FINER  ] Inserting done 
+[2019-09-02 12:28:55] [FINER  ] Parsing done 
+[2019-09-02 12:28:55] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9345.jsonl 
+[2019-09-02 12:28:55] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9345.jsonl 
+[2019-09-02 12:28:56] [FINER  ] Beginning insert 
+[2019-09-02 12:28:56] [FINER  ] Inserting done 
+[2019-09-02 12:28:56] [FINER  ] Parsing done 
+[2019-09-02 12:28:56] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9346.jsonl 
+[2019-09-02 12:28:56] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9346.jsonl 
+[2019-09-02 12:28:56] [FINER  ] Beginning insert 
+[2019-09-02 12:28:56] [FINER  ] Inserting done 
+[2019-09-02 12:28:56] [FINER  ] Parsing done 
+[2019-09-02 12:28:56] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9347.jsonl 
+[2019-09-02 12:28:56] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9347.jsonl 
+[2019-09-02 12:28:57] [FINER  ] Beginning insert 
+[2019-09-02 12:28:57] [FINER  ] Inserting done 
+[2019-09-02 12:28:57] [FINER  ] Parsing done 
+[2019-09-02 12:28:57] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9348.jsonl 
+[2019-09-02 12:28:57] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9348.jsonl 
+[2019-09-02 12:28:57] [FINER  ] Beginning insert 
+[2019-09-02 12:28:57] [FINER  ] Inserting done 
+[2019-09-02 12:28:57] [FINER  ] Parsing done 
+[2019-09-02 12:28:57] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9349.jsonl 
+[2019-09-02 12:28:57] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9349.jsonl 
+[2019-09-02 12:28:58] [FINER  ] Beginning insert 
+[2019-09-02 12:28:58] [FINER  ] Inserting done 
+[2019-09-02 12:28:58] [FINER  ] Parsing done 
+[2019-09-02 12:28:58] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9350.jsonl 
+[2019-09-02 12:28:58] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9350.jsonl 
+[2019-09-02 12:28:58] [FINER  ] Beginning insert 
+[2019-09-02 12:28:58] [FINER  ] Inserting done 
+[2019-09-02 12:28:58] [FINER  ] Parsing done 
+[2019-09-02 12:28:58] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9351.jsonl 
+[2019-09-02 12:28:58] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9351.jsonl 
+[2019-09-02 12:28:59] [FINER  ] Beginning insert 
+[2019-09-02 12:28:59] [FINER  ] Inserting done 
+[2019-09-02 12:28:59] [FINER  ] Parsing done 
+[2019-09-02 12:28:59] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9352.jsonl 
+[2019-09-02 12:28:59] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9352.jsonl 
+[2019-09-02 12:28:59] [FINER  ] Beginning insert 
+[2019-09-02 12:28:59] [FINER  ] Inserting done 
+[2019-09-02 12:28:59] [FINER  ] Parsing done 
+[2019-09-02 12:28:59] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9353.jsonl 
+[2019-09-02 12:28:59] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9353.jsonl 
+[2019-09-02 12:29:00] [FINER  ] Beginning insert 
+[2019-09-02 12:29:00] [FINER  ] Inserting done 
+[2019-09-02 12:29:00] [FINER  ] Parsing done 
+[2019-09-02 12:29:00] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9354.jsonl 
+[2019-09-02 12:29:00] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9354.jsonl 
+[2019-09-02 12:29:00] [FINER  ] Beginning insert 
+[2019-09-02 12:29:00] [FINER  ] Inserting done 
+[2019-09-02 12:29:00] [FINER  ] Parsing done 
+[2019-09-02 12:29:00] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9355.jsonl 
+[2019-09-02 12:29:00] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9355.jsonl 
+[2019-09-02 12:29:01] [FINER  ] Beginning insert 
+[2019-09-02 12:29:01] [FINER  ] Inserting done 
+[2019-09-02 12:29:01] [FINER  ] Parsing done 
+[2019-09-02 12:29:01] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9356.jsonl 
+[2019-09-02 12:29:01] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9356.jsonl 
+[2019-09-02 12:29:01] [FINER  ] Beginning insert 
+[2019-09-02 12:29:01] [FINER  ] Inserting done 
+[2019-09-02 12:29:01] [FINER  ] Parsing done 
+[2019-09-02 12:29:01] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9357.jsonl 
+[2019-09-02 12:29:01] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9357.jsonl 
+[2019-09-02 12:29:02] [FINER  ] Beginning insert 
+[2019-09-02 12:29:02] [FINER  ] Inserting done 
+[2019-09-02 12:29:02] [FINER  ] Parsing done 
+[2019-09-02 12:29:02] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9358.jsonl 
+[2019-09-02 12:29:02] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9358.jsonl 
+[2019-09-02 12:29:02] [FINER  ] Beginning insert 
+[2019-09-02 12:29:02] [FINER  ] Inserting done 
+[2019-09-02 12:29:02] [FINER  ] Parsing done 
+[2019-09-02 12:29:02] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_9359.jsonl 
+[2019-09-02 12:29:02] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_9359.jsonl 
+[2019-09-02 12:29:03] [FINER  ] Beginning insert 
+[2019-09-02 12:29:04] [FINER  ] Inserting done 
+[2019-09-02 12:29:04] [FINER  ] Parsing done 
+[2019-09-02 12:29:04] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_94.jsonl 
+[2019-09-02 12:29:04] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_94.jsonl 
+[2019-09-02 12:29:05] [FINER  ] Beginning insert 
+[2019-09-02 12:29:05] [FINER  ] Inserting done 
+[2019-09-02 12:29:05] [FINER  ] Parsing done 
+[2019-09-02 12:29:05] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_95.jsonl 
+[2019-09-02 12:29:05] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_95.jsonl 
+[2019-09-02 12:29:05] [FINER  ] Beginning insert 
+[2019-09-02 12:29:05] [FINER  ] Inserting done 
+[2019-09-02 12:29:05] [FINER  ] Parsing done 
+[2019-09-02 12:29:05] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_96.jsonl 
+[2019-09-02 12:29:05] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_96.jsonl 
+[2019-09-02 12:29:06] [FINER  ] Beginning insert 
+[2019-09-02 12:29:09] [FINER  ] Inserting done 
+[2019-09-02 12:29:09] [FINER  ] Parsing done 
+[2019-09-02 12:29:09] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_97.jsonl 
+[2019-09-02 12:29:09] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_97.jsonl 
+[2019-09-02 12:29:10] [FINER  ] Beginning insert 
+[2019-09-02 12:29:12] [FINER  ] Inserting done 
+[2019-09-02 12:29:12] [FINER  ] Parsing done 
+[2019-09-02 12:29:12] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_98.jsonl 
+[2019-09-02 12:29:12] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_98.jsonl 
+[2019-09-02 12:29:12] [FINER  ] Beginning insert 
+[2019-09-02 12:29:12] [FINER  ] Inserting done 
+[2019-09-02 12:29:12] [FINER  ] Parsing done 
+[2019-09-02 12:29:12] [INFO   ] Processing E:\BorutStorage\Springer LOD\articles\tmpDone\article_99.jsonl 
+[2019-09-02 12:29:12] [FINER  ] Parsing file E:\BorutStorage\Springer LOD\articles\tmpDone\article_99.jsonl 
+[2019-09-02 12:29:12] [FINER  ] Beginning insert 
+[2019-09-02 12:29:12] [FINER  ] Inserting done 
+[2019-09-02 12:29:12] [FINER  ] Parsing done 
+[2019-09-02 12:49:35] [INFO   ] Closing the application 

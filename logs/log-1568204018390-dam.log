@@ -1,0 +1,11 @@
+[2019-09-11 14:13:38] [INFO   ] Connecting to the MongoDB database knowingipr 
+[2019-09-11 14:13:39] [INFO   ] host: jdbc:mariadb://localhost/knowingipr_knowledge?usePipelineAuth=false
+username: root
+password: root
+driver: org.mariadb.jdbc.Driver 
+[2019-09-11 14:13:39] [INFO   ] -------------------------- 
+[2019-09-11 14:13:39] [INFO   ] DRIVER: org.mariadb.jdbc.Driver 
+[2019-09-11 14:13:39] [INFO   ] Set Login Timeout: 10 
+[2019-09-11 14:13:39] [INFO   ] CONNECTION: org.mariadb.jdbc.MariaDbConnection@3636839f 
+[2019-09-11 14:13:52] [INFO   ] Processing E:\Mongo Storage\Mongo\source data\Patent\2013\ipgb20130101_wk01\ipgb20130101.json 
+[2019-09-11 14:13:52] [FINER  ] Parsing file E:\Mongo Storage\Mongo\source data\Patent\2013\ipgb20130101_wk01\ipgb20130101.json 

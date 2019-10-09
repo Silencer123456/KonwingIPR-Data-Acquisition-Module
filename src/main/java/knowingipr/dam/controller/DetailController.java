@@ -11,6 +11,7 @@ import javafx.stage.DirectoryChooser;
 import javafx.stage.Stage;
 import knowingipr.dam.model.DataSource;
 import knowingipr.dam.model.DataSourceModel;
+import knowingipr.dam.tools.ZipHandler;
 import knowingipr.data.connection.MongoDbConnection;
 import knowingipr.data.connection.SourceDbConnection;
 import knowingipr.data.loader.*;
@@ -59,6 +60,12 @@ public class DetailController {
 
     @FXML
     public Button schemeFileButton;
+
+    @FXML
+    public Button downloadButton;
+
+    @FXML
+    public TextField downloadTextField;
 
     private DataSourceModel model;
 
@@ -187,7 +194,7 @@ public class DetailController {
                 if (!onlyIndex) {
                     sourceDbLoader.loadFromDirectory(loadPathTextField.getText(), extensions);
                 }
-                sourceDbLoader.createIndexes();
+                //sourceDbLoader.createIndexes();
                 return null;
             }
         };
@@ -429,5 +436,26 @@ public class DetailController {
         } catch (IOException | URISyntaxException e1) {
             model.setCurrentStatus("Wrong URI");
         }
+    }
+
+    public void onDownloadButtonClicked(ActionEvent actionEvent) {
+        if (!sourceNameTextField.getText().equals("uspto")) return; // Works only for USPTO
+
+        String s = "E:\\Mongo Storage\\Mongo\\source data\\Patent\\";
+        try {
+            ZipHandler.extractZipFromUrl(downloadTextField.getText(), s);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        /*try {
+            int year = 2014;
+            for (int i = 0; i < 14; i++) {
+                ZipHandler.extractZipFromUrl("https://bulkdata.uspto.gov/data/patent/grant/redbook/bibliographic/" + year + "/", "F:/DP/Data/Patent/" + year);
+                year--;
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }*/
     }
 }

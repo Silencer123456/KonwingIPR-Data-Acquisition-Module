@@ -1,0 +1,17 @@
+[2019-10-08 15:23:14] [INFO   ] Connecting to the MongoDB database knowingipr 
+[2019-10-08 15:23:15] [INFO   ] host: jdbc:mariadb://localhost/knowingipr_knowledge?usePipelineAuth=false
+username: root
+password: root
+driver: org.mariadb.jdbc.Driver 
+[2019-10-08 15:23:15] [INFO   ] -------------------------- 
+[2019-10-08 15:23:15] [INFO   ] DRIVER: org.mariadb.jdbc.Driver 
+[2019-10-08 15:23:15] [INFO   ] Set Login Timeout: 10 
+[2019-10-08 15:23:15] [INFO   ] CONNECTION: org.mariadb.jdbc.MariaDbConnection@2522ba52 
+[2019-10-08 15:23:31] [INFO   ] Converting: E:\Mongo Storage\Mongo\source data\Patent\test\ipgb20190101_wk01\ 
+[2019-10-08 15:23:31] [INFO   ] File E:\Mongo Storage\Mongo\source data\Patent\test\ipgb20190101_wk01\ipgb20190101.json already exists. Skipping... 
+[2019-10-08 15:23:31] [INFO   ] Converting: E:\Mongo Storage\Mongo\source data\Patent\test\ipgb20190108_wk02\ 
+[2019-10-08 15:23:31] [INFO   ] File E:\Mongo Storage\Mongo\source data\Patent\test\ipgb20190108_wk02\ipgb20190108.json already exists. Skipping... 
+[2019-10-08 15:23:31] [INFO   ] Converting: E:\Mongo Storage\Mongo\source data\Patent\test\ipgb20190115_wk03\ 
+[2019-10-08 15:23:47] [INFO   ] Converting: E:\Mongo Storage\Mongo\source data\Patent\test\ipgb20190122_wk04\ 
+[2019-10-08 15:24:21] [INFO   ] Converting: E:\Mongo Storage\Mongo\source data\Patent\test\ipgb20190129_wk05\ 
+[2019-10-08 15:24:59] [INFO   ] Converting: E:\Mongo Storage\Mongo\source data\Patent\test\ipgb20190205_wk06\ 

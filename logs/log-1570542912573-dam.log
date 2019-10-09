@@ -1,0 +1,33 @@
+[2019-10-08 15:55:13] [INFO   ] Connecting to the MongoDB database knowingipr 
+[2019-10-08 15:55:13] [INFO   ] host: jdbc:mariadb://localhost/knowingipr_knowledge?usePipelineAuth=false
+username: root
+password: root
+driver: org.mariadb.jdbc.Driver 
+[2019-10-08 15:55:13] [INFO   ] -------------------------- 
+[2019-10-08 15:55:13] [INFO   ] DRIVER: org.mariadb.jdbc.Driver 
+[2019-10-08 15:55:13] [INFO   ] Set Login Timeout: 10 
+[2019-10-08 15:55:14] [INFO   ] CONNECTION: org.mariadb.jdbc.MariaDbConnection@47af9b61 
+[2019-10-08 15:55:42] [INFO   ] Processing E:\Mongo Storage\Mongo\source data\Patent\2005\ipgb20050104_wk01\ipgb20050104.json 
+[2019-10-08 15:55:42] [FINER  ] Parsing file E:\Mongo Storage\Mongo\source data\Patent\2005\ipgb20050104_wk01\ipgb20050104.json 
+[2019-10-08 15:55:46] [FINER  ] Parsing done 
+[2019-10-08 15:55:46] [FINER  ] Beginning insert 
+[2019-10-08 15:55:49] [FINER  ] Inserting done 
+[2019-10-08 15:55:49] [INFO   ] Processing E:\Mongo Storage\Mongo\source data\Patent\2005\ipgb20050111_wk02\ipgb20050111.json 
+[2019-10-08 15:55:49] [FINER  ] Parsing file E:\Mongo Storage\Mongo\source data\Patent\2005\ipgb20050111_wk02\ipgb20050111.json 
+[2019-10-08 15:55:52] [FINER  ] Parsing done 
+[2019-10-08 15:55:52] [FINER  ] Beginning insert 
+[2019-10-08 15:55:56] [FINER  ] Inserting done 
+[2019-10-08 15:55:56] [INFO   ] Processing E:\Mongo Storage\Mongo\source data\Patent\2005\ipgb20050118_wk03\ipgb20050118.json 
+[2019-10-08 15:55:56] [FINER  ] Parsing file E:\Mongo Storage\Mongo\source data\Patent\2005\ipgb20050118_wk03\ipgb20050118.json 
+[2019-10-08 15:55:58] [FINER  ] Parsing done 
+[2019-10-08 15:55:58] [FINER  ] Beginning insert 
+[2019-10-08 15:56:00] [FINER  ] Inserting done 
+[2019-10-08 15:56:00] [INFO   ] Processing E:\Mongo Storage\Mongo\source data\Patent\2005\ipgb20050125_wk04\ipgb20050125.json 
+[2019-10-08 15:56:00] [FINER  ] Parsing file E:\Mongo Storage\Mongo\source data\Patent\2005\ipgb20050125_wk04\ipgb20050125.json 
+[2019-10-08 15:56:02] [FINER  ] Parsing done 
+[2019-10-08 15:56:02] [FINER  ] Beginning insert 
+[2019-10-08 15:56:07] [FINER  ] Inserting done 
+[2019-10-08 15:56:07] [INFO   ] Processing E:\Mongo Storage\Mongo\source data\Patent\2005\ipgb20050201_wk05\ipgb20050201.json 
+[2019-10-08 15:56:07] [FINER  ] Parsing file E:\Mongo Storage\Mongo\source data\Patent\2005\ipgb20050201_wk05\ipgb20050201.json 
+[2019-10-08 15:56:08] [FINER  ] Parsing done 
+[2019-10-08 15:56:08] [FINER  ] Beginning insert 
