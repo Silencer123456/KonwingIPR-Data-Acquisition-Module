@@ -6,25 +6,9 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="Fixed error when clicking delete button and reset interval button when no item is selected">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_9_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_9_8.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_9_8.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_14_0_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_2_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jettison_jettison_1_4_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_all_1_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_junit_2_0_0_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_java_hamcrest_2_0_0_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_json_json_20180813.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_loadui_testFx_3_1_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mariadb_jdbc_mariadb_java_client_2_4_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mongodb_mongo_java_driver_3_9_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_testfx_testfx_core_4_0_1_alpha.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_testfx_testfx_junit_4_0_1_alpha.xml" afterDir="false" />
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="Edited USPTO parsing of abstracts">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -85,11 +69,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/knowingipr/data/loader/UsptoLoader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="117" column="7" lean-forward="true" selection-start-line="117" selection-start-column="7" selection-end-line="117" selection-end-column="7" />
+            <state relative-caret-position="731">
+              <caret line="160" column="58" lean-forward="true" selection-start-line="160" selection-start-column="58" selection-end-line="160" selection-end-column="58" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -98,28 +82,80 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/knowingipr/data/loader/MappedFields.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/knowingipr/data/loader/JsonParser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
+            <state relative-caret-position="541">
+              <caret line="94" column="46" lean-forward="true" selection-start-line="94" selection-start-column="46" selection-end-line="94" selection-end-column="46" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/knowingipr/data/loader/SpringerLoader.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/knowingipr/dam/controller/LogController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="779">
-              <caret line="104" selection-start-line="104" selection-end-line="104" />
+            <state relative-caret-position="476">
+              <caret line="38" column="45" selection-start-line="38" selection-start-column="45" selection-end-line="38" selection-end-column="45" />
+              <folding>
+                <element signature="e#912#913#0" expanded="true" />
+                <element signature="e#969#970#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/knowingipr/data/loader/PatstatLoader.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/knowingipr/dam/controller/DetailController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="779">
-              <caret line="57" selection-start-line="57" selection-end-line="57" />
+            <state relative-caret-position="1461">
+              <caret line="196" column="18" selection-start-line="196" selection-start-column="18" selection-end-line="196" selection-end-column="18" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#4748#4749#0" expanded="true" />
+                <element signature="e#4785#4786#0" expanded="true" />
+                <element signature="e#11490#11491#0" expanded="true" />
+                <element signature="e#11526#11527#0" expanded="true" />
+                <element signature="e#11931#11932#0" expanded="true" />
+                <element signature="e#11993#11994#0" expanded="true" />
+                <element signature="e#12061#12062#0" expanded="true" />
+                <element signature="e#12124#12125#0" expanded="true" />
+                <element signature="e#12192#12193#0" expanded="true" />
+                <element signature="e#12255#12256#0" expanded="true" />
+                <element signature="e#14652#14653#0" expanded="true" />
+                <element signature="e#14708#14709#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/knowingipr/dam/controller/ToolsController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="356">
+              <caret line="44" column="27" selection-start-line="44" selection-start-column="27" selection-end-line="44" selection-end-column="27" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/knowingipr/dam/tools/ZipHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1221">
+              <caret line="126" column="24" lean-forward="true" selection-start-line="126" selection-start-column="24" selection-end-line="126" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/knowingipr/dam/tools/XmlToJsonConverter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="215">
+              <caret line="51" column="6" lean-forward="true" selection-start-line="51" selection-start-column="6" selection-end-line="51" selection-end-column="6" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -130,8 +166,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/knowingipr/data/connection/MongoDbConnection.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="422">
-              <caret line="114" column="62" lean-forward="true" selection-start-line="114" selection-start-column="62" selection-end-line="114" selection-end-column="62" />
+            <state relative-caret-position="320">
+              <caret line="27" column="25" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -140,10 +176,13 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/knowingipr/data/connection/SourceDbConnection.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/knowingipr/dam/database/DbManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="25" column="20" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="20" />
+            <state relative-caret-position="255">
+              <caret line="15" selection-start-line="15" selection-end-line="16" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -151,44 +190,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/knowingipr/data/loader/MagLoader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="731">
-              <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/knowingipr/dam/controller/DetailController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="509">
-              <caret line="183" column="55" lean-forward="true" selection-start-line="183" selection-start-column="55" selection-end-line="183" selection-end-column="55" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/knowingipr/data/mapper/JsonMappingTransformer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="305">
-              <caret line="206" selection-start-line="206" selection-end-line="206" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/knowingipr/data/loader/SourceDbLoader.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="439">
-              <caret line="54" column="25" selection-start-line="54" selection-start-column="25" selection-end-line="54" selection-end-column="25" />
+            <state relative-caret-position="422">
+              <caret line="34" column="26" lean-forward="true" selection-start-line="34" selection-start-column="26" selection-end-line="34" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -211,16 +214,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>is not a</find>
-      <find>onope</find>
-      <find>onopenbut</find>
-      <find>scheme</find>
-      <find>year</find>
-      <find>parsefil</find>
-      <find>open</find>
-      <find>Open</find>
-      <find>onOpenLoadButtonClicked</find>
-      <find>editbuttoncli</find>
       <find>disabl</find>
       <find>savebuttoncl</find>
       <find>parsing fil</find>
@@ -241,6 +234,16 @@
       <find>applicant</find>
       <find>is empty</find>
       <find>Missing value for field</find>
+      <find>Default exception handler</find>
+      <find>log</find>
+      <find>logger</find>
+      <find>info</find>
+      <find>Parsing don</find>
+      <find>beginning in</find>
+      <find>Missing value for field title</find>
+      <find>\n</find>
+      <find>Parsing done</find>
+      <find>l</find>
     </findStrings>
   </component>
   <component name="FindManager">
@@ -254,7 +257,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/knowingipr/dam/data/loader/DbLoader.java" />
         <option value="$PROJECT_DIR$/src/main/java/knowingipr/dam/data/PatentLoader.java" />
         <option value="$PROJECT_DIR$/src/main/java/knowingipr/dam/utils/DirectoryHandler.java" />
         <option value="$PROJECT_DIR$/src/main/java/knowingipr/data/PatentLoader.java" />
@@ -280,31 +282,32 @@
         <option value="$PROJECT_DIR$/src/main/java/knowingipr/dam/model/DataSourceDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/knowingipr/dam/controller/ErrorController.java" />
         <option value="$PROJECT_DIR$/src/main/java/knowingipr/dam/controller/ListController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/knowingipr/dam/controller/ToolsController.java" />
         <option value="$PROJECT_DIR$/src/main/java/knowingipr/dam/model/DAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/knowingipr/dam/model/IDataSourceDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/knowingipr/dam/tools/XmlToJsonConverter.java" />
         <option value="$PROJECT_DIR$/src/main/java/knowingipr/data/loader/JsonParser.java" />
         <option value="$PROJECT_DIR$/src/main/java/knowingipr/dam/database/DbManager.java" />
         <option value="$PROJECT_DIR$/src/main/java/knowingipr/dam/logging/MyLogger.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/knowingipr/data/loader/MongoDbConnection.java" />
         <option value="$PROJECT_DIR$/mongo-config.cfg" />
-        <option value="$PROJECT_DIR$/src/main/java/knowingipr/dam/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/knowingipr/dam/model/DataSourceModel.java" />
         <option value="$PROJECT_DIR$/src/main/java/knowingipr/dam/controller/LogController.java" />
         <option value="$PROJECT_DIR$/src/main/java/knowingipr/dam/logging/TextAreaHandler.java" />
         <option value="$PROJECT_DIR$/src/main/java/knowingipr/data/loader/PatentLoader.java" />
-        <option value="$PROJECT_DIR$/src/main/java/knowingipr/data/loader/MappedFields.java" />
-        <option value="$PROJECT_DIR$/src/main/java/knowingipr/data/mapper/JsonMappingTransformer.java" />
         <option value="$PROJECT_DIR$/src/main/java/knowingipr/data/loader/SourceDbLoader.java" />
         <option value="$PROJECT_DIR$/src/main/java/knowingipr/data/loader/SpringerLoader.java" />
         <option value="$PROJECT_DIR$/src/main/java/knowingipr/data/loader/PatstatLoader.java" />
-        <option value="$PROJECT_DIR$/src/main/java/knowingipr/data/loader/MagLoader.java" />
         <option value="$PROJECT_DIR$/src/main/java/knowingipr/data/connection/SourceDbConnection.java" />
-        <option value="$PROJECT_DIR$/src/main/java/knowingipr/data/loader/UsptoLoader.java" />
-        <option value="$PROJECT_DIR$/src/main/java/knowingipr/dam/controller/DetailController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/knowingipr/data/loader/MappedFields.java" />
+        <option value="$PROJECT_DIR$/src/main/java/knowingipr/data/loader/MagLoader.java" />
+        <option value="$PROJECT_DIR$/src/main/java/knowingipr/data/mapper/JsonMappingTransformer.java" />
         <option value="$PROJECT_DIR$/src/main/java/knowingipr/data/connection/MongoDbConnection.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/knowingipr/dam/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/knowingipr/dam/tools/ZipHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/knowingipr/dam/tools/XmlToJsonConverter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/knowingipr/dam/controller/ToolsController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/knowingipr/dam/controller/DetailController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/knowingipr/data/loader/UsptoLoader.java" />
       </list>
     </option>
   </component>
@@ -343,10 +346,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-128" />
-    <option name="y" value="534" />
-    <option name="width" value="2323" />
-    <option name="height" value="1286" />
+    <option name="x" value="140" />
+    <option name="y" value="-8" />
+    <option name="width" value="1795" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectReloadState">
@@ -407,7 +410,17 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="knowingipr" type="462c0819:PsiDirectoryNode" />
               <item name="dam" type="462c0819:PsiDirectoryNode" />
-              <item name="logging" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="KonwingIPR-Data-Acquisition-Module" type="b2602c69:ProjectViewProjectNode" />
+              <item name="KonwingIPR-Data-Acquisition-Module" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="knowingipr" type="462c0819:PsiDirectoryNode" />
+              <item name="dam" type="462c0819:PsiDirectoryNode" />
+              <item name="tools" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="KonwingIPR-Data-Acquisition-Module" type="b2602c69:ProjectViewProjectNode" />
@@ -417,16 +430,6 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="knowingipr" type="462c0819:PsiDirectoryNode" />
               <item name="data" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="KonwingIPR-Data-Acquisition-Module" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KonwingIPR-Data-Acquisition-Module" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="knowingipr" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-              <item name="connection" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="KonwingIPR-Data-Acquisition-Module" type="b2602c69:ProjectViewProjectNode" />
@@ -438,12 +441,19 @@
               <item name="data" type="462c0819:PsiDirectoryNode" />
               <item name="loader" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="KonwingIPR-Data-Acquisition-Module" type="b2602c69:ProjectViewProjectNode" />
+              <item name="KonwingIPR-Data-Acquisition-Module" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -543,7 +553,7 @@
     <configuration name="Main" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="knowingipr.dam.Main" />
       <module name="repos" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="VM_PARAMETERS" value="-Xms256m -Xmx8g" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="knowingipr.dam.*" />
@@ -741,7 +751,14 @@
       <workItem from="1560846279367" duration="1466000" />
       <workItem from="1560863456334" duration="2214000" />
       <workItem from="1561015327373" duration="22912000" />
-      <workItem from="1562224124565" duration="14816000" />
+      <workItem from="1562224124565" duration="22869000" />
+      <workItem from="1562756300235" duration="6681000" />
+      <workItem from="1563951919039" duration="575000" />
+      <workItem from="1564041794953" duration="599000" />
+      <workItem from="1564046254113" duration="607000" />
+      <workItem from="1564051920175" duration="9637000" />
+      <workItem from="1570012537396" duration="142000" />
+      <workItem from="1570012847626" duration="13207000" />
     </task>
     <task id="LOCAL-00001" summary="Added basic UI">
       <created>1549880763576</created>
@@ -974,7 +991,42 @@
       <option name="project" value="LOCAL" />
       <updated>1562575414573</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="Removed temporary collection name variable">
+      <created>1562575728769</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1562575728769</updated>
+    </task>
+    <task id="LOCAL-00035" summary="Added automatic creation of indexes on publications collection">
+      <created>1562674890970</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1562674890970</updated>
+    </task>
+    <task id="LOCAL-00036" summary="Fixed loading of USPTO data, now the year is in int format instead of string">
+      <created>1563274467952</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1563274467952</updated>
+    </task>
+    <task id="LOCAL-00037" summary="Added new button Create indexes, which only creates all the specified indexes on the &#10;collection.">
+      <created>1563443396020</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1563443396020</updated>
+    </task>
+    <task id="LOCAL-00038" summary="Edited USPTO parsing of abstracts">
+      <created>1568205185899</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1568205185899</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1010,13 +1062,21 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="138986000" />
+    <option name="totallyTimeSpent" value="178487000" />
+  </component>
+  <component name="TodoView" selected-index="4">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="2576" height="1416" extended-state="7" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="2576" height="1416" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.12241653" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.1200318" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" />
       <window_info id="Designer" order="3" />
@@ -1025,13 +1085,13 @@
       <window_info id="Capture Tool" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.15588464" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.22369447" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.3289166" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.16913484" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3289166" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32969603" />
       <window_info anchor="bottom" id="Application Servers" order="7" />
-      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32936078" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="8" visible="true" weight="0.3289166" />
       <window_info anchor="bottom" id="Problems" order="9" />
       <window_info anchor="bottom" id="Changes" order="10" />
       <window_info anchor="bottom" id="Profiler" order="11" />
@@ -1041,7 +1101,7 @@
       <window_info anchor="bottom" id="Docker" order="15" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="16" />
       <window_info anchor="bottom" id="Dependency Viewer" order="17" weight="0.19176598" />
-      <window_info anchor="bottom" id="Statistic" order="18" weight="0.4911032" />
+      <window_info anchor="bottom" id="Statistic" order="18" weight="0.49103662" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -1104,11 +1164,6 @@
       <path value="$PROJECT_DIR$" />
       <path value="$PROJECT_DIR$/Academic-Downloader" />
     </ignored-roots>
-    <MESSAGE value="Added owners to USPTO data. Refactoring of the json node preprocessing" />
-    <MESSAGE value="Refactoring of transformation of the json files to be inserted into database&#10;to have the required structure.&#10;Top level now contains &#10;year, abstract, title, owners, authors" />
-    <MESSAGE value="If the source is expired, warning icon with tooltip shows up" />
-    <MESSAGE value="Added support for multiple mappings to the same field.&#10;The Mongo query is now run on collections specified in the body of the REST API request." />
-    <MESSAGE value="Refactoring of data loaders, added new patstat loader, not yet implemented" />
     <MESSAGE value="Added patent number for USPTO to be part of the final json" />
     <MESSAGE value="Added new main class for running the application as a console app" />
     <MESSAGE value="Added ability to edit existing records in the database" />
@@ -1129,7 +1184,12 @@
     <MESSAGE value="Fixed error when loading data to Mongo&#10;Added automatic adding of indexes in Mongo" />
     <MESSAGE value="Fixed error when loading data to Mongo. Now empty fields are not added to the &#10;final json &#10;Added automatic adding of indexes in Mongo" />
     <MESSAGE value="Added logging info" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added logging info" />
+    <MESSAGE value="Removed temporary collection name variable" />
+    <MESSAGE value="Added automatic creation of indexes on publications collection" />
+    <MESSAGE value="Fixed loading of USPTO data, now the year is in int format instead of string" />
+    <MESSAGE value="Added new button Create indexes, which only creates all the specified indexes on the &#10;collection." />
+    <MESSAGE value="Edited USPTO parsing of abstracts" />
+    <option name="LAST_COMMIT_MESSAGE" value="Edited USPTO parsing of abstracts" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -1143,10 +1203,10 @@
           <option name="timeStamp" value="7" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/knowingipr/data/mapper/JsonMappingTransformer.java</url>
-          <line>270</line>
+          <url>file://$PROJECT_DIR$/src/main/java/knowingipr/data/connection/MongoDbConnection.java</url>
+          <line>111</line>
           <properties />
-          <option name="timeStamp" value="23" />
+          <option name="timeStamp" value="28" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -1158,54 +1218,56 @@
   <component name="debuggerHistoryManager">
     <expressions id="evaluateCodeFragment">
       <expression>
+        <expression-string>String path = file.getParent();
+path = path.substring(path.lastIndexOf(file.getParentFile().getName()));</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>String path = file.getParent();
+path = path.substring(path.lastIndexOf(dirName));</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>String path = file.getParent();
+path = path.substring(path.lastIndexOf(dirName));
+
+file.getName()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>String path = file.getParent();
+path = path.substring(path.lastIndexOf(file.getParent()));</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>String path = file.getParent();
+path = path.substring(path.lastIndexOf(path));</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>String path = file.getParent();
+path = path.substring(path.lastIndexOf(path
+))</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>String path = file.getParent();</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>file.getParent()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
         <expression-string>res.get(0).size()</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>res.get(0)</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>res.size()</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>createdNode.size() == 0</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>createdNode.isEmpty()</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>createdNode.isEmpty(
-)</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>String input = &quot;20090512&quot;;
-DateTimeFormatter formatter = DateTimeFormatter.ofPattern( &quot;yyyyMMdd&quot; );
-LocalDate localDate = LocalDate.parse( input , formatter );</expression-string>
-        <language-id>JAVA</language-id>
-        <custom-info>java.time.format.DateTimeFormatter,java.time.LocalDate</custom-info>
-        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>String input = &quot;12252013&quot;;
-DateTimeFormatter formatter = DateTimeFormatter.ofPattern( &quot;MMddyyyy&quot; );
-LocalDate localDate = LocalDate.parse( input , formatter );</expression-string>
-        <language-id>JAVA</language-id>
-        <custom-info>java.time.format.DateTimeFormatter,java.time.LocalDate</custom-info>
-        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>new SimpleDateFormat(&quot;YYYYMMDD&quot;).parse(&quot;20040504&quot;);</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
       </expression>
@@ -1264,58 +1326,10 @@ LocalDate localDate = LocalDate.parse( input , formatter );</expression-string>
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/resources/icons/openFile.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_192/javafx-src.zip!/javafx/scene/control/TextInputControl.java" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_192/javafx-src.zip!/javafx/scene/control/ComboBox.java" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_192/javafx-src.zip!/javafx/scene/control/SelectionModel.java" />
-    <entry file="file://$PROJECT_DIR$/src/test/java/knowingipr/dam/MainTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2897">
-          <caret line="194" column="58" selection-start-line="194" selection-start-column="16" selection-end-line="194" selection-end-column="58" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/detail.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="86" column="62" selection-start-line="86" selection-start-column="62" selection-end-line="86" selection-end-column="62" />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/knowingipr/dam/controller/ErrorController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="9" lean-forward="true" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#258#259#0" expanded="true" />
-            <element signature="e#300#301#0" expanded="true" />
-            <element signature="e#338#339#0" expanded="true" />
-            <element signature="e#396#397#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/knowingipr/dam/controller/StatusBarController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/knowingipr/dam/controller/ToolsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="66" column="36" selection-start-line="66" selection-start-column="36" selection-end-line="66" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1355,27 +1369,10 @@ LocalDate localDate = LocalDate.parse( input , formatter );</expression-string>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/knowingipr/dam/tools/XmlToJsonConverter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="94" column="61" selection-start-line="94" selection-start-column="61" selection-end-line="94" selection-end-column="61" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/knowingipr/data/loader/IDbLoadArgs.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/knowingipr/dam/tools/ZipHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1063">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -1406,13 +1403,6 @@ LocalDate localDate = LocalDate.parse( input , formatter );</expression-string>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2397">
-          <caret line="141" column="40" selection-start-line="141" selection-start-column="40" selection-end-line="141" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/knowingipr/data/loader/MongoDbConnection.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/knowingipr/dam/controller/ListController.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1427,23 +1417,6 @@ LocalDate localDate = LocalDate.parse( input , formatter );</expression-string>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_192/src.zip!/java/lang/Runnable.java" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_192/src.zip!/java/util/logging/Logger.java" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_192/javafx-src.zip!/javafx/fxml/FXMLLoader.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/knowingipr/dam/logging/MyLogger.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="14" column="23" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/knowingipr/dam/database/DbManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="782">
-          <caret line="52" selection-start-line="52" selection-end-line="52" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/knowingipr/dam/model/DataSourceDAO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2805">
@@ -1454,28 +1427,11 @@ LocalDate localDate = LocalDate.parse( input , formatter );</expression-string>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/knowingipr/dam/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="44" selection-start-line="44" selection-end-line="44" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/log.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="527">
           <caret line="31" column="18" selection-start-line="31" selection-start-column="18" selection-end-line="31" selection-end-column="18" />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_211/javafx-src.zip!/javafx/concurrent/Task.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="657">
-          <caret line="1462" selection-start-line="1462" selection-end-line="1462" />
         </state>
       </provider>
     </entry>
@@ -1490,13 +1446,6 @@ LocalDate localDate = LocalDate.parse( input , formatter );</expression-string>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="11" column="66" lean-forward="true" selection-start-line="11" selection-start-column="66" selection-end-line="11" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/knowingipr/dam/controller/LogController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="38" column="11" selection-start-line="38" selection-start-column="11" selection-end-line="38" selection-end-column="11" />
         </state>
       </provider>
     </entry>
@@ -1517,53 +1466,6 @@ LocalDate localDate = LocalDate.parse( input , formatter );</expression-string>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/knowingipr/data/loader/JsonParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="45" selection-start-line="45" selection-end-line="45" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/knowingipr/data/mapper/JsonMappingTransformer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="206" selection-start-line="206" selection-end-line="206" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/knowingipr/data/loader/SpringerLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="779">
-          <caret line="104" selection-start-line="104" selection-end-line="104" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/knowingipr/data/loader/PatstatLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="779">
-          <caret line="57" selection-start-line="57" selection-end-line="57" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/knowingipr/data/loader/MagLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="731">
-          <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/mongodb/mongo-java-driver/3.9.1/mongo-java-driver-3.9.1.jar!/com/mongodb/client/MongoDatabase.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -1571,16 +1473,12 @@ LocalDate localDate = LocalDate.parse( input , formatter );</expression-string>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/knowingipr/data/loader/MappedFields.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/logs/log-1562675309993-dam.log">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/knowingipr/data/loader/SourceDbLoader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="439">
+        <state relative-caret-position="597">
           <caret line="54" column="25" selection-start-line="54" selection-start-column="25" selection-end-line="54" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1588,17 +1486,120 @@ LocalDate localDate = LocalDate.parse( input , formatter );</expression-string>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/knowingipr/data/connection/SourceDbConnection.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/knowingipr/data/loader/PatstatLoader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="20" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="20" />
+        <state relative-caret-position="816">
+          <caret line="57" selection-start-line="57" selection-end-line="57" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/knowingipr/dam/controller/DetailController.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_211/javafx-src.zip!/javafx/concurrent/Task.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="509">
-          <caret line="183" column="55" lean-forward="true" selection-start-line="183" selection-start-column="55" selection-end-line="183" selection-end-column="55" />
+        <state relative-caret-position="300">
+          <caret line="1441" selection-start-line="1441" selection-end-line="1441" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/knowingipr/data/loader/MappedFields.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/knowingipr/data/mapper/JsonMappingTransformer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4114">
+          <caret line="257" selection-start-line="257" selection-end-line="257" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#4808#4809#0" expanded="true" />
+            <element signature="e#4860#4861#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/knowingipr/data/loader/SpringerLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="27" column="38" selection-start-line="27" selection-start-column="38" selection-end-line="27" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/knowingipr/data/connection/SourceDbConnection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="9" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/detail.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="175" column="79" selection-start-line="175" selection-start-column="79" selection-end-line="175" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="765">
+          <caret line="57" selection-start-line="57" selection-end-line="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mydb.cfg">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_211/javafx-src.zip!/javafx/scene/control/Labeled.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="278">
+          <caret line="145" column="35" selection-start-line="145" selection-start-column="35" selection-end-line="145" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_211/javafx-src.zip!/javafx/fxml/FXMLLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="1772" selection-start-line="1772" selection-end-line="1772" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/tools.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/knowingipr/dam/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="713">
+          <caret line="73" column="37" selection-start-line="73" selection-start-column="37" selection-end-line="73" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/json/json/20180813/json-20180813.jar!/org/json/XML.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="278">
+          <caret line="297" column="29" selection-start-line="297" selection-start-column="29" selection-end-line="297" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/knowingipr/dam/logging/MyLogger.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="271">
+          <caret line="29" column="15" selection-start-line="29" selection-start-column="15" selection-end-line="29" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/knowingipr/dam/database/DbManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" selection-start-line="15" selection-end-line="16" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1607,18 +1608,98 @@ LocalDate localDate = LocalDate.parse( input , formatter );</expression-string>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/knowingipr/data/connection/MongoDbConnection.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="422">
-          <caret line="114" column="62" lean-forward="true" selection-start-line="114" selection-start-column="62" selection-end-line="114" selection-end-column="62" />
+        <state relative-caret-position="320">
+          <caret line="27" column="25" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/knowingipr/data/loader/MagLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="422">
+          <caret line="34" column="26" lean-forward="true" selection-start-line="34" selection-start-column="26" selection-end-line="34" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/knowingipr/data/loader/JsonParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="541">
+          <caret line="94" column="46" lean-forward="true" selection-start-line="94" selection-start-column="46" selection-end-line="94" selection-end-column="46" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/knowingipr/dam/controller/LogController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="38" column="45" selection-start-line="38" selection-start-column="45" selection-end-line="38" selection-end-column="45" />
+          <folding>
+            <element signature="e#912#913#0" expanded="true" />
+            <element signature="e#969#970#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/knowingipr/data/loader/UsptoLoader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="117" column="7" lean-forward="true" selection-start-line="117" selection-start-column="7" selection-end-line="117" selection-end-column="7" />
+        <state relative-caret-position="731">
+          <caret line="160" column="58" lean-forward="true" selection-start-line="160" selection-start-column="58" selection-end-line="160" selection-end-column="58" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/knowingipr/dam/controller/ToolsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="356">
+          <caret line="44" column="27" selection-start-line="44" selection-start-column="27" selection-end-line="44" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/knowingipr/dam/controller/DetailController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1461">
+          <caret line="196" column="18" selection-start-line="196" selection-start-column="18" selection-end-line="196" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#4748#4749#0" expanded="true" />
+            <element signature="e#4785#4786#0" expanded="true" />
+            <element signature="e#11490#11491#0" expanded="true" />
+            <element signature="e#11526#11527#0" expanded="true" />
+            <element signature="e#11931#11932#0" expanded="true" />
+            <element signature="e#11993#11994#0" expanded="true" />
+            <element signature="e#12061#12062#0" expanded="true" />
+            <element signature="e#12124#12125#0" expanded="true" />
+            <element signature="e#12192#12193#0" expanded="true" />
+            <element signature="e#12255#12256#0" expanded="true" />
+            <element signature="e#14652#14653#0" expanded="true" />
+            <element signature="e#14708#14709#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/knowingipr/dam/tools/ZipHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1221">
+          <caret line="126" column="24" lean-forward="true" selection-start-line="126" selection-start-column="24" selection-end-line="126" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/knowingipr/dam/tools/XmlToJsonConverter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="215">
+          <caret line="51" column="6" lean-forward="true" selection-start-line="51" selection-start-column="6" selection-end-line="51" selection-end-column="6" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
