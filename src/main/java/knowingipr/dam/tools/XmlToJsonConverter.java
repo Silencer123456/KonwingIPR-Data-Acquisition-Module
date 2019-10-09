@@ -81,12 +81,22 @@ public class XmlToJsonConverter {
             xml = xmlJSONObj.toString(4);
 
             save(xml, jsonFilePath);
+
+            xml = null;
+            xmlJSONObj = null; // Need to set to null, so that the garbage collection is invoked
+
+            System.gc();
+
         } catch (IOException e) {
             e.printStackTrace();
             LOGGER.warning("There was an error reading the XML file " + pathToXmlFile + ".");
         } catch (JSONException e) {
             e.printStackTrace();
             LOGGER.warning("There was an error converting the XML file " + pathToXmlFile + " to JSON.");
+        } catch (OutOfMemoryError e) {
+
+        } finally {
+            System.gc();
         }
     }
 
