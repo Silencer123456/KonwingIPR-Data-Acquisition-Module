@@ -96,7 +96,10 @@ public class SpringerLoader extends SourceDbLoader {
         String yearPath = mappingRoot.path(MappedFields.YEAR.value).path("path").textValue();
         String dateStr = nodeToPreprocess.at(yearPath).textValue();
 
+        if (dateStr == null) dateStr = "";
+
         String format = mappingRoot.path(MappedFields.YEAR.value).path("format").textValue();
+        if (format == null) throw new MappingException("Mapping field format does not exist");
 
         LocalDate date = LoaderUtils.extractDate(dateStr, format);
 
