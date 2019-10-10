@@ -6,9 +6,12 @@ import knowingipr.data.connection.MongoDbConnection;
 import knowingipr.data.connection.SourceDbConnection;
 import knowingipr.data.exception.MappingException;
 import knowingipr.data.mapper.JsonMappingTransformer;
+import knowingipr.data.utils.LoaderUtils;
 
 import java.io.File;
 import java.io.IOException;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 /**
@@ -91,9 +94,17 @@ public class SpringerLoader extends SourceDbLoader {
 
         // Year
         String yearPath = mappingRoot.path(MappedFields.YEAR.value).path("path").textValue();
-        String date = nodeToPreprocess.at(yearPath).textValue();
+        String dateStr = nodeToPreprocess.at(yearPath).textValue();
+
+        String format = mappingRoot.path(MappedFields.YEAR.value).path("format").textValue();
+
+        LocalDate date = LoaderUtils.extractDate(dateStr, format);
+
+        if (date == null && dateStr.length() >= 4) {
+            JsonMappingTransformer.putPair(nodeToPreprocess, MappedFields.YEAR.value, dateStr.substring(0, 4));
+        }
         if (date != null) {
-            JsonMappingTransformer.putPair(nodeToPreprocess, MappedFields.YEAR.value, date.substring(0, 4));
+            JsonMappingTransformer.putPair(nodeToPreprocess, MappedFields.DATE.value, date.toString());
         }
 
         // Data Source
@@ -103,5 +114,21 @@ public class SpringerLoader extends SourceDbLoader {
     @Override
     public void createIndexes() {
 
+    }
+
+    /**
+     * Extracts date from node according to the specified format
+     *
+     * @param dateString - Json node from which to extract the date
+     * @param format     - Format of the date
+     * @return Parsed Date instance
+     */
+    private LocalDate extractDate(String dateString, String format) {
+        try {
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern(format);
+            return LocalDate.parse(dateString, formatter);
+        } catch (IllegalArgumentException e) {
+            return null;
+        }
     }
 }

@@ -7,12 +7,12 @@ import knowingipr.data.connection.MongoDbLoadArgs;
 import knowingipr.data.connection.SourceDbConnection;
 import knowingipr.data.exception.MappingException;
 import knowingipr.data.mapper.JsonMappingTransformer;
+import knowingipr.data.utils.LoaderUtils;
 import org.bson.Document;
 
 import java.io.File;
 import java.io.IOException;
 import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 /**
@@ -54,6 +54,9 @@ public class UsptoLoader extends SourceDbLoader {
         }
 
         dbConnection.insert(loadArgs);
+
+        docs = null;
+        System.gc();
     }
 
     /**
@@ -117,7 +120,7 @@ public class UsptoLoader extends SourceDbLoader {
         String format = mappingRoot.path(MappedFields.YEAR.value).path("format").textValue();
         JsonNode yearNode = nodeToPreprocess.at(yearPath);
 
-        LocalDate date = extractDate(yearNode.toString(), format);
+        LocalDate date = LoaderUtils.extractDate(yearNode.toString(), format);
 
         // Year + Date
         if (date != null) {
@@ -146,22 +149,6 @@ public class UsptoLoader extends SourceDbLoader {
 
         dbConnection.createIndexes(collectionName, MappedFields.ID.value, MappedFields.TITLE.value, "authors.name",
                 "owners.name");
-    }
-
-    /**
-     * Extracts date from node according to the specified format
-     *
-     * @param dateString - Json node from which to extract the date
-     * @param format     - Format of the date
-     * @return Parsed Date instance
-     */
-    private LocalDate extractDate(String dateString, String format) {
-        try {
-            DateTimeFormatter formatter = DateTimeFormatter.ofPattern(format);
-            return LocalDate.parse(dateString, formatter);
-        } catch (IllegalArgumentException e) {
-            return null;
-        }
     }
 
     /**

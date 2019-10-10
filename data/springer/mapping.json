@@ -7,7 +7,7 @@
     "lang": "/inLanguage",
     "year": {
       "path": "/datePublished",
-      "format": "YYYY-MM-DD"
+      "format": "yyyy-MM-dd"
     },
     "authors": [
       {

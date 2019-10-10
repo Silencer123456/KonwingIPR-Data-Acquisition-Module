@@ -81,6 +81,11 @@ public class XmlToJsonConverter {
             xml = xmlJSONObj.toString(4);
 
             save(xml, jsonFilePath);
+
+            xmlJSONObj = null;
+            xml = null;
+            System.gc(); // Need to perform garbage collection
+
         } catch (IOException e) {
             e.printStackTrace();
             LOGGER.warning("There was an error reading the XML file " + pathToXmlFile + ".");
