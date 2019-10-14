@@ -2,6 +2,7 @@ package knowingipr.data.loader;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.node.ArrayNode;
+import com.fasterxml.jackson.databind.node.ObjectNode;
 import knowingipr.data.connection.MongoDbConnection;
 import knowingipr.data.connection.SourceDbConnection;
 import knowingipr.data.exception.MappingException;
@@ -95,6 +96,9 @@ public class SpringerLoader extends SourceDbLoader {
         // Url
         JsonMappingTransformer.moveValueFromPathToTopLevel(mappingRoot, MappedFields.URL, nodeToPreprocess, true);
 
+        // DOI
+        putDoi(nodeToPreprocess);
+
         // Language
         JsonMappingTransformer.moveArrayFromPathToTopLevel(mappingRoot, MappedFields.LANG, nodeToPreprocess, true);
 
@@ -118,6 +122,23 @@ public class SpringerLoader extends SourceDbLoader {
 
         // Data Source
         JsonMappingTransformer.putPair(nodeToPreprocess, "dataSource", SOURCE_NAME);
+    }
+
+    private void putDoi(JsonNode nodeToPreprocess) {
+        JsonNode productIdNode = nodeToPreprocess.get("productId");
+        if (!productIdNode.isArray()) {
+            return;
+        }
+
+        for (JsonNode node : productIdNode) {
+            if (node.get("name").textValue().equals("doi")) {
+
+                JsonNode doiValueNode = node.get("value");
+                if (!doiValueNode.isArray() && doiValueNode.size() < 1) return;
+
+                ((ObjectNode) nodeToPreprocess).set("doi", node.get("value").get(0));
+            }
+        }
     }
 
     @Override

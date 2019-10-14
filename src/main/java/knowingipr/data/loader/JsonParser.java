@@ -69,7 +69,7 @@ public class JsonParser {
      *
      * @param file - File to be loaded to the db
      */
-    public void parseJsonByLines(File file, MongoDbConnection dbConnection, String collectionName, SourceDbLoader loader) throws IOException {
+    public void parseJsonByLines(File file, MongoDbConnection dbConnection, String collectionName, SourceDbLoader loader) throws IOException, org.bson.json.JsonParseException {
         ObjectMapper mapper = new ObjectMapper();
 
         MongoDbLoadArgs loadArgs = new MongoDbLoadArgs(collectionName);
@@ -95,8 +95,6 @@ public class JsonParser {
                 dbConnection.insert(loadArgs);
             }
 
-        } catch (IOException e) {
-            LOGGER.warning("Error parsing file " + file.getCanonicalPath());
         } catch (MappingException e) {
             LOGGER.warning("Mapping error while preprocessing a node.");
             e.printStackTrace();

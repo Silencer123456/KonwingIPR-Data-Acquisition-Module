@@ -32,6 +32,7 @@ public class TextAreaHandler extends Handler {
         Platform.runLater(() -> {
             if (linesCounter++ > 1000) {
                 textArea.clear();
+                linesCounter = 0;
             }
             textArea.appendText(formatter.format(record));
         });

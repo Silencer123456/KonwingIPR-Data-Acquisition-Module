@@ -42,11 +42,16 @@ public abstract class SourceDbLoader {
      * @param extensions - The extensions of the files to get
      * @throws IOException if there was error reading or accessing files
      */
-    public void loadFromDirectory(String dirPath, String[] extensions) throws IOException, MappingException {
+    public void loadFromDirectory(String dirPath, String[] extensions) throws IOException, MappingException, org.bson.json.JsonParseException {
         List<File> files = DirectoryHandler.ListFilesFromDirectory(dirPath, extensions, true);
         for (File file : files) {
             LOGGER.info("Processing " + file.getCanonicalPath());
-            insertFromFile(file);
+            try {
+                insertFromFile(file);
+            } catch (org.bson.json.JsonParseException e) {
+                LOGGER.severe("Json parsing error: " + e.getMessage());
+                continue;
+            }
         }
     }
 
