@@ -36,11 +36,6 @@ public class Main extends Application {
         root.setCenter(listLoader.load());
         ListController listController = listLoader.getController();
 
-        FXMLLoader toolLoader = new FXMLLoader(getClass().getResource("/tools.fxml"));
-        root.setBottom(toolLoader.load());
-
-        ToolsController toolsController = toolLoader.getController();
-
         BorderPane detailPane = new BorderPane();
 
         FXMLLoader detailLoader = new FXMLLoader(getClass().getResource("/detail.fxml"));
@@ -52,9 +47,17 @@ public class Main extends Application {
         root.setRight(detailPane);
         DetailController detailController = detailLoader.getController();
 
+        BorderPane bottomPane = new BorderPane();
+
+        FXMLLoader toolLoader = new FXMLLoader(getClass().getResource("/tools.fxml"));
+        bottomPane.setCenter(toolLoader.load());
+        ToolsController toolsController = toolLoader.getController();
+
         FXMLLoader statusBarLoader = new FXMLLoader(getClass().getResource("/statusBar.fxml"));
-        root.setBottom(statusBarLoader.load());
+        bottomPane.setBottom(statusBarLoader.load());
         StatusBarController statusBarController = statusBarLoader.getController();
+
+        root.setBottom(bottomPane);
 
         IDataSourceDAO sourceDAO = new DataSourceDAO();
         DataSourceModel model = new DataSourceModel(sourceDAO);
@@ -65,10 +68,10 @@ public class Main extends Application {
         statusBarController.initModel(model);
         toolsController.initModel(model);
 
-        Scene scene = new Scene(root, 1000, 800);
+        Scene scene = new Scene(root, 1000, 900);
         primaryStage.setScene(scene);
         primaryStage.setMinWidth(750);
-        primaryStage.setMinHeight(800);
+        primaryStage.setMinHeight(900);
         primaryStage.setTitle("Data Administrator");
         primaryStage.show();
 
@@ -82,6 +85,7 @@ public class Main extends Application {
         System.err.println("***Default exception handler***");
         if (Platform.isFxApplicationThread()) {
             showErrorDialog(e);
+            e.printStackTrace();
         } else {
             System.err.println("An unexpected error occurred in "+t);
 

@@ -1,0 +1,46 @@
+[2019-09-11 14:22:10] [INFO   ] Connecting to the MongoDB database knowingipr 
+[2019-09-11 14:22:10] [INFO   ] host: jdbc:mariadb://localhost/knowingipr_knowledge?usePipelineAuth=false
+username: root
+password: root
+driver: org.mariadb.jdbc.Driver 
+[2019-09-11 14:22:10] [INFO   ] -------------------------- 
+[2019-09-11 14:22:10] [INFO   ] DRIVER: org.mariadb.jdbc.Driver 
+[2019-09-11 14:22:10] [INFO   ] Set Login Timeout: 10 
+[2019-09-11 14:22:10] [INFO   ] CONNECTION: org.mariadb.jdbc.MariaDbConnection@3636839f 
+[2019-09-11 14:22:23] [INFO   ] Processing E:\Mongo Storage\Mongo\source data\Patent\2013\ipgb20130101_wk01\ipgb20130101.json 
+[2019-09-11 14:22:23] [FINER  ] Parsing file E:\Mongo Storage\Mongo\source data\Patent\2013\ipgb20130101_wk01\ipgb20130101.json 
+[2019-09-11 14:24:13] [WARNING] Missing value for field title 
+[2019-09-11 14:24:13] [WARNING] Missing value for field title 
+[2019-09-11 14:24:13] [WARNING] Missing value for field title 
+[2019-09-11 14:24:13] [WARNING] Missing value for field title 
+[2019-09-11 14:24:14] [WARNING] Missing value for field title 
+[2019-09-11 14:24:14] [WARNING] Missing value for field title 
+[2019-09-11 14:24:14] [WARNING] Missing value for field title 
+[2019-09-11 14:24:14] [WARNING] Missing value for field title 
+[2019-09-11 14:24:18] [WARNING] Missing value for field title 
+[2019-09-11 14:24:18] [WARNING] Missing value for field title 
+[2019-09-11 14:24:18] [WARNING] Missing value for field title 
+[2019-09-11 14:24:18] [WARNING] Missing value for field title 
+[2019-09-11 14:24:18] [WARNING] Missing value for field title 
+[2019-09-11 14:24:18] [WARNING] Missing value for field title 
+[2019-09-11 14:24:38] [WARNING] Missing value for field title 
+[2019-09-11 14:25:09] [FINER  ] Parsing done 
+[2019-09-11 14:25:15] [FINER  ] Beginning insert 
+[2019-09-11 14:26:27] [FINER  ] Inserting done 
+[2019-09-11 14:26:27] [INFO   ] Processing E:\Mongo Storage\Mongo\source data\Patent\2013\ipgb20130108_wk02\ipgb20130108.json 
+[2019-09-11 14:26:27] [FINER  ] Parsing file E:\Mongo Storage\Mongo\source data\Patent\2013\ipgb20130108_wk02\ipgb20130108.json 
+[2019-09-11 14:26:33] [WARNING] Missing value for field title 
+[2019-09-11 14:26:38] [WARNING] Missing value for field title 
+[2019-09-11 14:26:40] [WARNING] Missing value for field title 
+[2019-09-11 14:26:41] [WARNING] Missing value for field title 
+[2019-09-11 14:26:41] [WARNING] Missing value for field title 
+[2019-09-11 14:26:41] [WARNING] Missing value for field title 
+[2019-09-11 14:26:41] [WARNING] Missing value for field title 
+[2019-09-11 14:26:41] [WARNING] Missing value for field title 
+[2019-09-11 14:26:57] [WARNING] Missing value for field title 
+[2019-09-11 14:26:58] [WARNING] Missing value for field title 
+[2019-09-11 14:26:58] [WARNING] Missing value for field title 
+[2019-09-11 14:26:58] [WARNING] Missing value for field title 
+[2019-09-11 14:26:58] [WARNING] Missing value for field title 
+[2019-09-11 14:27:03] [FINER  ] Parsing done 
+[2019-09-11 14:27:03] [FINER  ] Beginning insert 

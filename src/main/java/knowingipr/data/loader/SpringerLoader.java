@@ -6,9 +6,12 @@ import knowingipr.data.connection.MongoDbConnection;
 import knowingipr.data.connection.SourceDbConnection;
 import knowingipr.data.exception.MappingException;
 import knowingipr.data.mapper.JsonMappingTransformer;
+import knowingipr.data.utils.LoaderUtils;
 
 import java.io.File;
 import java.io.IOException;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 /**
@@ -25,7 +28,7 @@ public class SpringerLoader extends SourceDbLoader {
     public SpringerLoader(SourceDbConnection dbConnection, String mappingFilePath, String collectionName) {
         super(dbConnection, mappingFilePath);
 
-        this.collectionName = "test2";
+        this.collectionName = SOURCE_NAME;
         jsonParser = new JsonParser();
     }
 
@@ -73,7 +76,7 @@ public class SpringerLoader extends SourceDbLoader {
         }
 
         // Publisher
-        JsonMappingTransformer.putValueFromPath(mappingRoot, MappedFields.PUBLISHER, nodeToPreprocess);
+        JsonMappingTransformer.moveValueFromPathToTopLevel(mappingRoot, MappedFields.PUBLISHER, nodeToPreprocess, false);
 
         // Authors array
         ArrayNode authorsArray = JsonMappingTransformer.getNodesArrayMultipleOptions(mappingRoot, MappedFields.AUTHORS, nodeToPreprocess);
@@ -81,19 +84,36 @@ public class SpringerLoader extends SourceDbLoader {
 
         // Affiliation
         List<String> affiliationList = JsonMappingTransformer.getValuesListFromArray(mappingRoot, MappedFields.AFFILIATION, nodeToPreprocess);
+        if (affiliationList.contains("null")) {
+            System.out.println("test");
+        }
         JsonMappingTransformer.putArrayToNode(affiliationList, nodeToPreprocess, MappedFields.AFFILIATION, "name");
 
         // Title
-        JsonMappingTransformer.putValueFromPath(mappingRoot, MappedFields.TITLE, nodeToPreprocess);
+        JsonMappingTransformer.moveValueFromPathToTopLevel(mappingRoot, MappedFields.TITLE, nodeToPreprocess, true);
 
         // Url
-        JsonMappingTransformer.putValueFromPath(mappingRoot, MappedFields.URL, nodeToPreprocess);
+        JsonMappingTransformer.moveValueFromPathToTopLevel(mappingRoot, MappedFields.URL, nodeToPreprocess, true);
+
+        // Language
+        JsonMappingTransformer.moveArrayFromPathToTopLevel(mappingRoot, MappedFields.LANG, nodeToPreprocess, true);
 
         // Year
         String yearPath = mappingRoot.path(MappedFields.YEAR.value).path("path").textValue();
-        String date = nodeToPreprocess.at(yearPath).textValue();
+        String dateStr = nodeToPreprocess.at(yearPath).textValue();
+
+        if (dateStr == null) dateStr = "";
+
+        String format = mappingRoot.path(MappedFields.YEAR.value).path("format").textValue();
+        if (format == null) throw new MappingException("Mapping field format does not exist");
+
+        LocalDate date = LoaderUtils.extractDate(dateStr, format);
+
+        if (date == null && dateStr.length() >= 4) {
+            JsonMappingTransformer.putPair(nodeToPreprocess, MappedFields.YEAR.value, dateStr.substring(0, 4));
+        }
         if (date != null) {
-            JsonMappingTransformer.putPair(nodeToPreprocess, MappedFields.YEAR.value, date.substring(0, 4));
+            JsonMappingTransformer.putPair(nodeToPreprocess, MappedFields.DATE.value, date.toString());
         }
 
         // Data Source
@@ -103,5 +123,21 @@ public class SpringerLoader extends SourceDbLoader {
     @Override
     public void createIndexes() {
 
+    }
+
+    /**
+     * Extracts date from node according to the specified format
+     *
+     * @param dateString - Json node from which to extract the date
+     * @param format     - Format of the date
+     * @return Parsed Date instance
+     */
+    private LocalDate extractDate(String dateString, String format) {
+        try {
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern(format);
+            return LocalDate.parse(dateString, formatter);
+        } catch (IllegalArgumentException e) {
+            return null;
+        }
     }
 }

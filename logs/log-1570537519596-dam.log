@@ -1,0 +1,9 @@
+[2019-10-08 14:25:19] [INFO   ] Connecting to the MongoDB database knowingipr 
+[2019-10-08 14:25:20] [INFO   ] host: jdbc:mariadb://localhost/knowingipr_knowledge?usePipelineAuth=false
+username: root
+password: root
+driver: org.mariadb.jdbc.Driver 
+[2019-10-08 14:25:20] [INFO   ] -------------------------- 
+[2019-10-08 14:25:20] [INFO   ] DRIVER: org.mariadb.jdbc.Driver 
+[2019-10-08 14:25:20] [INFO   ] Set Login Timeout: 10 
+[2019-10-08 14:25:20] [INFO   ] CONNECTION: org.mariadb.jdbc.MariaDbConnection@33d9fecc 

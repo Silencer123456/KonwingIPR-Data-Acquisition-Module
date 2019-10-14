@@ -1,0 +1,14 @@
+[2019-07-09 14:28:30] [INFO   ] Connecting to the MongoDB database knowingipr 
+[2019-07-09 14:28:30] [INFO   ] host: jdbc:mariadb://localhost/knowingipr_knowledge?usePipelineAuth=false
+username: root
+password: root
+driver: org.mariadb.jdbc.Driver 
+[2019-07-09 14:28:30] [INFO   ] -------------------------- 
+[2019-07-09 14:28:30] [INFO   ] DRIVER: org.mariadb.jdbc.Driver 
+[2019-07-09 14:28:30] [INFO   ] Set Login Timeout: 10 
+[2019-07-09 14:28:30] [INFO   ] CONNECTION: org.mariadb.jdbc.MariaDbConnection@60a571ca 
+[2019-07-09 14:28:48] [INFO   ] Creating text index on fields : [title, abstract, authors.name, fos, keywords] 
+[2019-07-10 06:27:17] [INFO   ] Text index created 
+[2019-07-10 06:27:17] [INFO   ] Creating index on field : fos 
+[2019-07-10 08:58:48] [INFO   ] Index on field fos created. 
+[2019-07-10 08:58:48] [INFO   ] Creating index on field : title 

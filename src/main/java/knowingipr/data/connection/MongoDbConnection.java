@@ -80,7 +80,7 @@ public class MongoDbConnection implements SourceDbConnection {
         MongoDbLoadArgs mongoArgs = (MongoDbLoadArgs) loadArgs;
 
         MongoCollection<Document> collection = getCollection(mongoArgs.getCollectionName());
-        LOGGER.finer("Beginning insert");
+        LOGGER.finer("Beginning insert to " + mongoArgs.getCollectionName());
         collection.insertMany(mongoArgs.getDocuments(), options);
         LOGGER.finer("Inserting done");
 

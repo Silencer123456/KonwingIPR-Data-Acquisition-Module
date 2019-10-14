@@ -1,0 +1,32 @@
+[2019-10-08 15:33:42] [INFO   ] Connecting to the MongoDB database knowingipr 
+[2019-10-08 15:33:42] [INFO   ] host: jdbc:mariadb://localhost/knowingipr_knowledge?usePipelineAuth=false
+username: root
+password: root
+driver: org.mariadb.jdbc.Driver 
+[2019-10-08 15:33:42] [INFO   ] -------------------------- 
+[2019-10-08 15:33:42] [INFO   ] DRIVER: org.mariadb.jdbc.Driver 
+[2019-10-08 15:33:42] [INFO   ] Set Login Timeout: 10 
+[2019-10-08 15:33:43] [INFO   ] CONNECTION: org.mariadb.jdbc.MariaDbConnection@33d9fecc 
+[2019-10-08 15:33:57] [INFO   ] Converting: E:\Mongo Storage\Mongo\source data\Patent\test\ipgb20190101_wk01\ 
+[2019-10-08 15:33:57] [INFO   ] File E:\Mongo Storage\Mongo\source data\Patent\test\ipgb20190101_wk01\ipgb20190101.json already exists. Skipping... 
+[2019-10-08 15:33:57] [INFO   ] Converting: E:\Mongo Storage\Mongo\source data\Patent\test\ipgb20190108_wk02\ 
+[2019-10-08 15:33:57] [INFO   ] File E:\Mongo Storage\Mongo\source data\Patent\test\ipgb20190108_wk02\ipgb20190108.json already exists. Skipping... 
+[2019-10-08 15:33:57] [INFO   ] Converting: E:\Mongo Storage\Mongo\source data\Patent\test\ipgb20190115_wk03\ 
+[2019-10-08 15:33:57] [INFO   ] File E:\Mongo Storage\Mongo\source data\Patent\test\ipgb20190115_wk03\ipgb20190115.json already exists. Skipping... 
+[2019-10-08 15:33:57] [INFO   ] Converting: E:\Mongo Storage\Mongo\source data\Patent\test\ipgb20190122_wk04\ 
+[2019-10-08 15:33:57] [INFO   ] File E:\Mongo Storage\Mongo\source data\Patent\test\ipgb20190122_wk04\ipgb20190122.json already exists. Skipping... 
+[2019-10-08 15:33:57] [INFO   ] Converting: E:\Mongo Storage\Mongo\source data\Patent\test\ipgb20190129_wk05\ 
+[2019-10-08 15:33:57] [INFO   ] File E:\Mongo Storage\Mongo\source data\Patent\test\ipgb20190129_wk05\ipgb20190129.json already exists. Skipping... 
+[2019-10-08 15:33:57] [INFO   ] Converting: E:\Mongo Storage\Mongo\source data\Patent\test\ipgb20190205_wk06\ 
+[2019-10-08 15:33:57] [INFO   ] File E:\Mongo Storage\Mongo\source data\Patent\test\ipgb20190205_wk06\ipgb20190205.json already exists. Skipping... 
+[2019-10-08 15:33:57] [INFO   ] Converting: E:\Mongo Storage\Mongo\source data\Patent\test\ipgb20190212_wk07\ 
+[2019-10-08 15:33:57] [INFO   ] File E:\Mongo Storage\Mongo\source data\Patent\test\ipgb20190212_wk07\ipgb20190212.json already exists. Skipping... 
+[2019-10-08 15:33:57] [INFO   ] Converting: E:\Mongo Storage\Mongo\source data\Patent\test\ipgb20190219_wk08\ 
+[2019-10-08 15:34:19] [INFO   ] Converting: E:\Mongo Storage\Mongo\source data\Patent\test\ipgb20190226_wk09\ 
+[2019-10-08 15:34:56] [INFO   ] Converting: E:\Mongo Storage\Mongo\source data\Patent\test\ipgb20190305_wk10\ 
+[2019-10-08 15:35:39] [INFO   ] Converting: E:\Mongo Storage\Mongo\source data\Patent\test\ipgb20190312_wk11\ 
+[2019-10-08 15:36:12] [INFO   ] Converting: E:\Mongo Storage\Mongo\source data\Patent\test\ipgb20190319_wk12\ 
+[2019-10-08 15:36:49] [INFO   ] Converting: E:\Mongo Storage\Mongo\source data\Patent\test\ipgb20190326_wk13\ 
+[2019-10-08 15:37:28] [INFO   ] Converting: E:\Mongo Storage\Mongo\source data\Patent\test\ipgb20190402_wk14\ 
+[2019-10-08 15:38:10] [INFO   ] Converting: E:\Mongo Storage\Mongo\source data\Patent\test\ipgb20190409_wk15\ 
+[2019-10-08 15:39:12] [INFO   ] Closing the application 

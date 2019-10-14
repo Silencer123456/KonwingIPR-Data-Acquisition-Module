@@ -1,0 +1,30 @@
+[2019-09-11 14:27:58] [INFO   ] Connecting to the MongoDB database knowingipr 
+[2019-09-11 14:27:59] [INFO   ] host: jdbc:mariadb://localhost/knowingipr_knowledge?usePipelineAuth=false
+username: root
+password: root
+driver: org.mariadb.jdbc.Driver 
+[2019-09-11 14:27:59] [INFO   ] -------------------------- 
+[2019-09-11 14:27:59] [INFO   ] DRIVER: org.mariadb.jdbc.Driver 
+[2019-09-11 14:27:59] [INFO   ] Set Login Timeout: 10 
+[2019-09-11 14:27:59] [INFO   ] CONNECTION: org.mariadb.jdbc.MariaDbConnection@22b18bb8 
+[2019-09-11 14:28:13] [INFO   ] Processing E:\Mongo Storage\Mongo\source data\Patent\2015\ipgb20150106_wk01\ipgb20150106.json 
+[2019-09-11 14:28:13] [FINER  ] Parsing file E:\Mongo Storage\Mongo\source data\Patent\2015\ipgb20150106_wk01\ipgb20150106.json 
+[2019-09-11 14:28:14] [WARNING] Missing value for field title 
+[2019-09-11 14:28:18] [WARNING] Missing value for field title 
+[2019-09-11 14:28:18] [WARNING] Missing value for field title 
+[2019-09-11 14:28:18] [WARNING] Missing value for field title 
+[2019-09-11 14:28:18] [WARNING] Missing value for field title 
+[2019-09-11 14:28:18] [WARNING] Missing value for field title 
+[2019-09-11 14:28:18] [WARNING] Missing value for field title 
+[2019-09-11 14:28:20] [WARNING] Missing value for field title 
+[2019-09-11 14:28:21] [WARNING] Missing value for field title 
+[2019-09-11 14:28:21] [WARNING] Missing value for field title 
+[2019-09-11 14:28:21] [WARNING] Missing value for field title 
+[2019-09-11 14:28:21] [WARNING] Missing value for field title 
+[2019-09-11 14:28:21] [WARNING] Missing value for field title 
+[2019-09-11 14:28:21] [WARNING] Missing value for field title 
+[2019-09-11 14:28:21] [WARNING] Missing value for field title 
+[2019-09-11 14:28:21] [WARNING] Missing value for field title 
+[2019-09-11 14:28:22] [WARNING] Missing value for field title 
+[2019-09-11 14:28:28] [FINER  ] Parsing done 
+[2019-09-11 14:28:29] [FINER  ] Beginning insert 

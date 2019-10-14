@@ -1,5 +1,6 @@
 package knowingipr.data.mapper;
 
+import com.fasterxml.jackson.core.JsonPointer;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ArrayNode;
@@ -83,10 +84,10 @@ public class JsonMappingTransformer {
             ArrayNode array = ((ObjectNode) targetNode).putArray(arrayName.value);
 
             JsonNodeFactory f = JsonNodeFactory.instance;
-            for (String authorName : valuesList) {
+            for (String name : valuesList) {
                 ObjectNode att = f.objectNode();
 
-                att.put(fieldName, authorName);
+                att.put(fieldName, name);
                 array.add(att);
             }
         }
@@ -99,9 +100,9 @@ public class JsonMappingTransformer {
      * @param mappingRoot      - Root node of the mapping json file
      * @param field            - Field, that we want the path to be extracted from in the mapping
      * @param nodeToPreprocess - Json node that we want to put the value into.
-     *                         TODO: Handle deletion of the old record, change method to moveValueFromPathToTopLevel
+     *                         TODO: change method to moveValueFromPathToTopLevel
      */
-    public static void putValueFromPath(JsonNode mappingRoot, MappedFields field, JsonNode nodeToPreprocess) {
+    public static void moveValueFromPathToTopLevel(JsonNode mappingRoot, MappedFields field, JsonNode nodeToPreprocess, boolean deleteOriginal) {
         String path = mappingRoot.get(field.value).textValue();
         JsonNode searchedNode = nodeToPreprocess.at(path);
         if (searchedNode.textValue() == null || searchedNode.textValue().isEmpty()) {
@@ -109,7 +110,25 @@ public class JsonMappingTransformer {
         }
         putPair(nodeToPreprocess, field.value, searchedNode.textValue());
 
-        //((ObjectNode) nodeToPreprocess).remove(path);
+        if (deleteOriginal) {
+            JsonPointer pointer = JsonPointer.compile(path);
+            ((ObjectNode) nodeToPreprocess).remove(pointer.last().getMatchingProperty());
+        }
+    }
+
+    public static void moveArrayFromPathToTopLevel(JsonNode mappingRoot, MappedFields field, JsonNode nodeToPreprocess, boolean deleteOriginal) {
+        String path = mappingRoot.get(field.value).textValue();
+        JsonNode searchedNode = nodeToPreprocess.at(path);
+        if (!searchedNode.isArray()) {
+            LOGGER.warning(path + " not an array in " + searchedNode.asText());
+        }
+
+        ((ObjectNode) nodeToPreprocess).set(field.value, searchedNode);
+
+        if (deleteOriginal) {
+            JsonPointer pointer = JsonPointer.compile(path);
+            ((ObjectNode) nodeToPreprocess).remove(pointer.last().getMatchingProperty());
+        }
     }
 
     /**
@@ -267,12 +286,15 @@ public class JsonMappingTransformer {
                 String subArrayPath = fieldPathNode.get(0).path("array-root").textValue();
                 if (subArrayPath != null) {
                     field = element.at(subArrayPath);
-                    createdNode.set(fieldName, field);
+                    if (!field.isMissingNode()) {
+                        createdNode.set(fieldName, field);
+                    }
                 } else {
                     // Neni tam array-root, spojime
                     String name = getMergedValue(fieldPathNode, element);
                     if (name.isEmpty()) {
-                        System.out.println();
+                        LOGGER.warning("Merged value not created for " + fieldPathNode);
+                        //System.out.println();
                     } else {
                         createdNode.put(fieldName, name);
                     }

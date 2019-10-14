@@ -1,0 +1,12 @@
+[2019-09-11 14:16:37] [INFO   ] Connecting to the MongoDB database knowingipr 
+[2019-09-11 14:16:40] [INFO   ] host: jdbc:mariadb://localhost/knowingipr_knowledge?usePipelineAuth=false
+username: root
+password: root
+driver: org.mariadb.jdbc.Driver 
+[2019-09-11 14:16:40] [INFO   ] -------------------------- 
+[2019-09-11 14:16:40] [INFO   ] DRIVER: org.mariadb.jdbc.Driver 
+[2019-09-11 14:16:40] [INFO   ] Set Login Timeout: 10 
+[2019-09-11 14:16:40] [INFO   ] CONNECTION: org.mariadb.jdbc.MariaDbConnection@5181739e 
+[2019-09-11 14:16:52] [INFO   ] Processing E:\Mongo Storage\Mongo\source data\Patent\2015\ipgb20150106_wk01\ipgb20150106.json 
+[2019-09-11 14:16:52] [FINER  ] Parsing file E:\Mongo Storage\Mongo\source data\Patent\2015\ipgb20150106_wk01\ipgb20150106.json 
+[2019-09-11 14:17:10] [WARNING] Missing value for field title 
