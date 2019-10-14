@@ -6,7 +6,7 @@
     "url": "/url",
     "lang": "/inLanguage",
     "year": {
-      "path": "/datePublished",
+      "path": "/datePublishedReg",
       "format": "yyyy-MM-dd"
     },
     "authors": [

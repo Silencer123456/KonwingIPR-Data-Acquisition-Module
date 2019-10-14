@@ -113,7 +113,7 @@ public class UsptoLoader extends SourceDbLoader {
         JsonMappingTransformer.putJsonArray(nodeToPreprocess, ownersArray, MappedFields.OWNERS.value);
 
         // Title
-        JsonMappingTransformer.putValueFromPath(mappingRoot, MappedFields.TITLE, nodeToPreprocess);
+        JsonMappingTransformer.moveValueFromPathToTopLevel(mappingRoot, MappedFields.TITLE, nodeToPreprocess, true);
 
         // Date
         String yearPath = mappingRoot.path(MappedFields.YEAR.value).path("path").textValue();

@@ -28,7 +28,7 @@ public class SpringerLoader extends SourceDbLoader {
     public SpringerLoader(SourceDbConnection dbConnection, String mappingFilePath, String collectionName) {
         super(dbConnection, mappingFilePath);
 
-        this.collectionName = "test2";
+        this.collectionName = SOURCE_NAME;
         jsonParser = new JsonParser();
     }
 
@@ -76,7 +76,7 @@ public class SpringerLoader extends SourceDbLoader {
         }
 
         // Publisher
-        JsonMappingTransformer.putValueFromPath(mappingRoot, MappedFields.PUBLISHER, nodeToPreprocess);
+        JsonMappingTransformer.moveValueFromPathToTopLevel(mappingRoot, MappedFields.PUBLISHER, nodeToPreprocess, false);
 
         // Authors array
         ArrayNode authorsArray = JsonMappingTransformer.getNodesArrayMultipleOptions(mappingRoot, MappedFields.AUTHORS, nodeToPreprocess);
@@ -84,13 +84,19 @@ public class SpringerLoader extends SourceDbLoader {
 
         // Affiliation
         List<String> affiliationList = JsonMappingTransformer.getValuesListFromArray(mappingRoot, MappedFields.AFFILIATION, nodeToPreprocess);
+        if (affiliationList.contains("null")) {
+            System.out.println("test");
+        }
         JsonMappingTransformer.putArrayToNode(affiliationList, nodeToPreprocess, MappedFields.AFFILIATION, "name");
 
         // Title
-        JsonMappingTransformer.putValueFromPath(mappingRoot, MappedFields.TITLE, nodeToPreprocess);
+        JsonMappingTransformer.moveValueFromPathToTopLevel(mappingRoot, MappedFields.TITLE, nodeToPreprocess, true);
 
         // Url
-        JsonMappingTransformer.putValueFromPath(mappingRoot, MappedFields.URL, nodeToPreprocess);
+        JsonMappingTransformer.moveValueFromPathToTopLevel(mappingRoot, MappedFields.URL, nodeToPreprocess, true);
+
+        // Language
+        JsonMappingTransformer.moveArrayFromPathToTopLevel(mappingRoot, MappedFields.LANG, nodeToPreprocess, true);
 
         // Year
         String yearPath = mappingRoot.path(MappedFields.YEAR.value).path("path").textValue();
