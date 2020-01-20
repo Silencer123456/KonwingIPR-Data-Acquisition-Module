@@ -69,7 +69,7 @@ public class JsonParser {
      *
      * @param file - File to be loaded to the db
      */
-    public void parseJsonByLines(File file, MongoDbConnection dbConnection, String collectionName, SourceDbLoader loader) throws IOException, org.bson.json.JsonParseException {
+    public void parseJsonByLines(File file, MongoDbConnection dbConnection, String collectionName, SourceDbLoader loader, int step) throws IOException, org.bson.json.JsonParseException {
         ObjectMapper mapper = new ObjectMapper();
 
         MongoDbLoadArgs loadArgs = new MongoDbLoadArgs(collectionName);
@@ -82,7 +82,7 @@ public class JsonParser {
 
                 Document doc = Document.parse(node.toString());
                 docs.add(doc);
-                if (docs.size() == 10000) {
+                if (docs.size() == step) {
                     loadArgs.setDocuments(docs);
 
                     dbConnection.insert(loadArgs);

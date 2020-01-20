@@ -20,14 +20,14 @@ import java.util.List;
  */
 public class SpringerLoader extends SourceDbLoader {
 
-    private final String SOURCE_NAME = "springer";
+    private static final String SOURCE_NAME = "springer";
 
     private JsonParser jsonParser;
 
     private String collectionName;
 
     public SpringerLoader(SourceDbConnection dbConnection, String mappingFilePath, String collectionName) {
-        super(dbConnection, mappingFilePath);
+        super(dbConnection, mappingFilePath, SOURCE_NAME);
 
         this.collectionName = SOURCE_NAME;
         jsonParser = new JsonParser();
@@ -41,7 +41,7 @@ public class SpringerLoader extends SourceDbLoader {
         }
 
         MongoDbConnection mongoDbConnection = (MongoDbConnection) dbConnection;
-        jsonParser.parseJsonByLines(file, mongoDbConnection, collectionName, this);
+        jsonParser.parseJsonByLines(file, mongoDbConnection, collectionName, this, 10000);
         LOGGER.finer("Parsing done");
     }
 
@@ -120,8 +120,7 @@ public class SpringerLoader extends SourceDbLoader {
             JsonMappingTransformer.putPair(nodeToPreprocess, MappedFields.DATE.value, date.toString());
         }
 
-        // Data Source
-        JsonMappingTransformer.putPair(nodeToPreprocess, "dataSource", SOURCE_NAME);
+        super.preprocessNode(nodeToPreprocess);
     }
 
     private void putDoi(JsonNode nodeToPreprocess) {

@@ -4,6 +4,7 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import knowingipr.data.connection.SourceDbConnection;
 import knowingipr.data.exception.MappingException;
+import knowingipr.data.mapper.JsonMappingTransformer;
 import knowingipr.data.utils.DirectoryHandler;
 
 import java.io.File;
@@ -21,10 +22,12 @@ public abstract class SourceDbLoader {
 
     protected SourceDbConnection dbConnection;
     protected String mappingFilePath;
+    private String sourceName;
 
-    public SourceDbLoader(SourceDbConnection dbConnection, String mappingFile) {
+    public SourceDbLoader(SourceDbConnection dbConnection, String mappingFile, String sourceName) {
         this.dbConnection = dbConnection;
         this.mappingFilePath = mappingFile;
+        this.sourceName = sourceName;
     }
 
     /**
@@ -55,7 +58,10 @@ public abstract class SourceDbLoader {
         }
     }
 
-    public abstract void preprocessNode(JsonNode nodeToPreprocess) throws MappingException, IOException;
+    public void preprocessNode(JsonNode nodeToPreprocess) throws MappingException, IOException {
+        // Data Source
+        JsonMappingTransformer.putPair(nodeToPreprocess, "dataSource", sourceName);
+    }
 
     public abstract void createIndexes();
 

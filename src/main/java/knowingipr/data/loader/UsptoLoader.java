@@ -27,7 +27,7 @@ public class UsptoLoader extends SourceDbLoader {
     private String collectionName;
 
     public UsptoLoader(SourceDbConnection dbConnection, String mappingFilePath, String collectionName) {
-        super(dbConnection, mappingFilePath);
+        super(dbConnection, mappingFilePath, SOURCE_NAME);
 
         this.collectionName = collectionName;
         jsonParser = new JsonParser();
@@ -128,8 +128,7 @@ public class UsptoLoader extends SourceDbLoader {
             JsonMappingTransformer.putPair(nodeToPreprocess, MappedFields.DATE.value, date.toString());
         }
 
-        // Data Source
-        JsonMappingTransformer.putPair(nodeToPreprocess, "dataSource", SOURCE_NAME);
+        super.preprocessNode(nodeToPreprocess);
     }
 
     /**

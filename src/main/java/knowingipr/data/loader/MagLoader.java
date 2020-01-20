@@ -14,10 +14,12 @@ import java.io.IOException;
 public class MagLoader extends SourceDbLoader {
     private String collectionName;
 
+    private static final String SOURCE_NAME = "mag";
+
     private JsonParser jsonParser;
 
     public MagLoader(SourceDbConnection dbConnection, String mappingFile, String collectionName) {
-        super(dbConnection, mappingFile);
+        super(dbConnection, mappingFile, SOURCE_NAME);
 
         this.collectionName = collectionName;
 
@@ -32,7 +34,7 @@ public class MagLoader extends SourceDbLoader {
         }
 
         MongoDbConnection mongoDbConnection = (MongoDbConnection) dbConnection;
-        jsonParser.parseJsonByLines(file, mongoDbConnection, collectionName, this);
+        jsonParser.parseJsonByLines(file, mongoDbConnection, collectionName, this, 10000);
         LOGGER.finer("Parsing done");
     }
 
