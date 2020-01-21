@@ -13,16 +13,15 @@ import java.io.IOException;
  */
 public class PatstatLoader extends SourceDbLoader {
 
-    private static final String SOURCE_NAME = "patstat";
+    private static final LoaderName SOURCE_NAME = LoaderName.PATSTAT_LOADER;
 
     private String collectionName;
-    JsonParser jsonParser;
+    private JsonParser jsonParser;
 
     public PatstatLoader(SourceDbConnection dbConnection, String mappingFile, String collectionName) {
-        super(dbConnection, mappingFile, SOURCE_NAME);
+        super(dbConnection, mappingFile, SOURCE_NAME.name);
 
-        //this.collectionName = collectionName;
-        this.collectionName = "patstat";
+        this.collectionName = SOURCE_NAME.name;
         jsonParser = new JsonParser();
     }
 
